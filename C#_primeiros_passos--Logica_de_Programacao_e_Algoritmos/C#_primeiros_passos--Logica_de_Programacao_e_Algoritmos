@@ -1,0 +1,52 @@
+# C# primeiros passos: Lógica de Programação e Algoritmos
+
+## Visão geral sobre o curso
+
+- Panorama sobre a formação como programador;
+  - Association for Computing Machinery
+    - Básico / Fundamentos:
+      - Lógica de Programação;
+      - Programação Orientada a Objetos;
+      - Estruturas de Dados;
+      - Técnicas de algoritmos;
+      - Fundamentos de Banco de dados.
+    - Profissional / Comercial:
+      - Engenharia e Projeto de Software:
+        - Análise e Projeto de Software;
+        - Qualidade e validação de software;
+        - Processo de Desenvolvimento de Software.
+      - Backend
+        - Camada de domínio;
+        - Aceso a Dados;
+        - Webservices REST;
+        - Ferramentas.
+      - Frontend
+        - Web: HTML + CSS + JavaScript;
+        - App para dispositivos Móveis;
+        - Ferramentas.
+- Conteúdo do curso;
+  - Introdução / conceitos;
+    - Capítulo 1: Apresentação
+    - Capítulo 2: Introdução / Conceitos:
+      - Algoritmo / Programa de COmputador / Linguagem de Progrmação / IDE / Compilador & Inerpretador / Máquina Virtual / Código fonte / Bytecode / Modelos de execução de programas;
+      - Microsoft Visual Studio.
+  - Estrutura sequencial;
+    - Capítulo 3: Estrutura sequencial:
+      - Expressões aritméticas + - / * %
+      - Variáveis e tipos básicos em C#
+      - Entrada de dados / Processamento de dados / Saída de dados
+      - Funções matemáticas
+      - Microsoft Visual Studio - edição e depuração
+      - Exercícios:
+        - 5 resolvidos;
+        - 20 propostos;
+        - Total: 25 exercícios.
+  - Estrutura condicional;
+    - Capítulo 4: Estrutura condicional
+    - PAREI 8:59
+  - Estruturas repetitivas;
+  - Vetores;
+  - Matrizes.
+- Pré-requisitos para fazer o curso;
+- A quem se destina este curso;
+- Apresentação do professor;
