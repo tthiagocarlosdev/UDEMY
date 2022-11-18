@@ -43,10 +43,60 @@
         - Total: 25 exercícios.
   - Estrutura condicional;
     - Capítulo 4: Estrutura condicional
-    - PAREI 8:59
+      - Expressões comparativas  >  <  >=  <=  ==  !=
+      - Expressões lógicas &&  ||  !
+      - Estrutura condicional simples
+      - Estrutura condicional composta
+      - Encadeamento de estruturas condicionais
+      - Exercícios
+        - 3 resolvidos
+        - 22 propostos
+        - Total: 25 exercícios
   - Estruturas repetitivas;
+    - Capítulo 5: Estruturas repetitivas
+      - Estrutura repetitiva enquanto
+      - Estrutura repetitiva para
+      - Estrutura repetitiva faça-enquanto
+      - Testes de mesa manuais
+      - Exercícios
+        - 12 testes de mesa
+        - 4 resolvidos
+        - 39 propostos
+        - Total: 43 exercícios
   - Vetores;
+    - Teoria
+    - Declaração
+    - Instanciação
+    - Acesso
+    - Testes de mesa manuais
+    - Exercícios
+      - 6 testes de mesa
+      - 2 resolvidos
+      - 9 propostos
+      - Total: 11 exercícios
   - Matrizes.
+    - Teoria
+    - Declaração
+    - Instanciação
+    - Acesso
+    - Testes de mesa manuais
+    - Exercícios
+      - 6 testes de mesa
+      - 2 resolvidos
+      - 7 propostos
+      - Total: 9 exercícios
+  - Exercícios na plataforma URI Online Judge (estilo Maratona de Programação)
+    - Descrição inicial
+    - Descrição dos dados de entrada
+    - Descrição dos dados de saída
+    - Exemplo(s); Entrada / saída
 - Pré-requisitos para fazer o curso;
 - A quem se destina este curso;
+  - Iniciantes que desejam aprender a programar usando C# como linguagem
+  - Interessados em cursar ou revisar a disciplina de Lógica de Programação
+  - Interessados em desenvolver aplicativos e games, mas que precisam dos fundamentos iniciais de programação
 - Apresentação do professor;
+  - Professor Dr. Nelio Alves
+  - Bacharel em Ciência da Computação
+  - Mestrado e doutorado em Engenharia de Software
+  - Professor universitário desde 2001
