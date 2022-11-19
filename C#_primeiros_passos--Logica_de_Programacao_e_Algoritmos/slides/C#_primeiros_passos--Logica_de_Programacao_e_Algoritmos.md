@@ -100,3 +100,206 @@
   - Bacharel em Ciência da Computação
   - Mestrado e doutorado em Engenharia de Software
   - Professor universitário desde 2001
+
+## Aula 15 - saída de dados
+
+``` c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      double x = 10.35784;
+      int y = 32;
+      string z = "Maria";
+      char w = 'F';
+
+      Console.Write("Olá mundo!");
+      Console.WriteLine("Bom dia!");
+      Console.WriteLine("Até mais.");
+      Console.WriteLine();
+      Console.WriteLine(x);
+      Console.WriteLine(x.ToString("F2"));
+      Console.WriteLine(x.ToString("F4"));
+      Console.WriteLine(x.ToString("F2", CultureInfo.InvariantCulture));
+      Console.WriteLine();
+      Console.WriteLine("RESULTADO = " + x);
+      Console.WriteLine("O valor do troco é " + x + " reais");
+      Console.WriteLine("O valor do troco é " + x.ToString("F2") + " reais");
+      Console.WriteLine();
+      Console.WriteLine("A paciente " + z + " tem " + y + " anos e seu sexo é: " + w);
+      Console.ReadLine();
+    }
+  }
+}
+```
+
+## Aula 16 - Processamento de dados
+
+- Exemplo 1
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      int x, y;
+
+      x = 5;
+
+      y = 2 * x;
+
+      Console.WriteLine(x);
+      Console.WriteLine(y);
+      
+      Console.ReadLine();
+    }
+  }
+}
+```
+
+- Exemplo 2
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      int x;
+      double y;
+
+      x = 5;
+
+      y = 2 * x;
+
+      Console.WriteLine(x);
+      Console.WriteLine(y);
+
+      Console.ReadLine();
+    }
+  }
+}
+```
+
+- Exemplo 3 - Calcular a área de um trapézio
+
+```c#
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      double b, B, h, area;
+
+      b = 6.0;
+      B = 8.0;
+      h = 5.0;
+
+      area = ((B + b) / 2.0) * h;
+
+      Console.WriteLine(area);
+
+      Console.ReadLine();
+    }
+  }
+}
+```
+
+- Exemplo 4
+
+  Casting - é a conversão explícita de uim tipo para outro. É necessário quando o compilador não é capaz de "adivinhar" que o resultado de uma expressão deve ser de outro tipo.
+
+```c#
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      int a, b;
+      double resultado;
+
+      a = 5;
+      b = 2;
+
+      resultado = (double) a / b;
+
+      Console.WriteLine(resultado);
+
+      Console.ReadLine();
+    }
+  }
+}
+```
+
+- Exemplo 5
+
+```c#
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      double a;
+      int b;
+
+      a = 5.0;
+      b = (int) a;
+
+      Console.WriteLine(b);
+
+      Console.ReadLine();
+    }
+  }
+}
+```
+
+## Aula 17 - Entrada de dados
+
+- Comando para leitura de entrada de dados
+- Lê da entrada padrão até a quebra de linha
+- Retorna os dados lidos na forma de string
+
+```c#
+Console.ReadLine();
+```
+
+```c#
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      string frase, x, y, z, a, b, c;
+
+      Console.Clear();
+      Console.Write("Digite uma frase: ");
+      frase = Console.ReadLine();
+      Console.Write("Digite uma cor: ");
+      x = Console.ReadLine();
+      Console.Write("Digite uma cor em inglês: ");
+      y = Console.ReadLine();
+      Console.Write("Digite outra cor em inglês: ");
+      z = Console.ReadLine();
+      Console.Write("Digite 3 cores: ");
+      string[] v = Console.ReadLine().Split(' ');
+      a = v[0];
+      b = v[1];
+      c = v[2];
+
+      Console.Clear();
+
+      Console.WriteLine("Você digitou: " + frase);
+      Console.WriteLine("Cor digitada: " + x);
+      Console.WriteLine("Cor em inglês: " + y);
+      Console.WriteLine("2a cor em inglês: " + z);
+      Console.WriteLine("Cores: " + a + ", " + b + ", " + c);
+
+      Console.ReadLine();
+    }
+  }
+}
+```
+
