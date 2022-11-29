@@ -303,3 +303,179 @@ namespace ConsoleApplication2 {
 }
 ```
 
+## Aula 18 - Entrada de dados em C# - Parte 2
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      int n1;
+      char ch;
+      double n2;
+      string nome;
+      char sexo;
+      int idade;
+      double altura;
+      
+
+      Console.Clear();
+      Console.Write("Digite um número inteiro: ");
+      n1 = int.Parse(Console.ReadLine());
+      Console.Write("Digite o sexo [F][M]: ");
+      ch = char.Parse(Console.ReadLine());
+      Console.Write("Digite um número double: ");
+      n2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+      Console.Write("Digite o nome, sexo, idade e altura: ");
+      string[] vet = Console.ReadLine().Split(' ');
+      nome = vet[0];
+      sexo = char.Parse(vet[1]);
+      idade = int.Parse(vet[2]);
+      altura = double.Parse(vet[3], CultureInfo.InvariantCulture);
+
+      Console.Clear();
+
+      Console.Write("Você digitou");
+      Console.WriteLine("Número inteiro: " + n1);
+      Console.WriteLine("Sexo: " + ch);
+      Console.WriteLine("Número double: " + n2.ToString("F2", CultureInfo.InvariantCulture) + "\n");
+      Console.WriteLine("Nome: " + nome);
+      Console.WriteLine("Sexo: " + sexo);
+      Console.WriteLine("Idade: " + idade);
+      Console.WriteLine("Altura: " + altura.ToString(CultureInfo.InvariantCulture));
+
+      Console.ReadLine();
+    }
+  }
+}
+```
+
+Exercício de fixação:
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      string nomeCompleto;
+      int qtdeDeQuartos;
+      double precoProduto;
+      string ultimoNome;
+      int idade;
+      double altura;
+      
+
+      Console.Clear();
+      Console.Write("Entre com seu nome completo: ");
+      nomeCompleto = Console.ReadLine();
+      Console.Write("Quantos quartos tem na sua casa? ");
+      qtdeDeQuartos = int.Parse(Console.ReadLine());
+
+      Console.Write("Entre com o preço de um produto: ");
+      precoProduto = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+      Console.Write("Entre seu último nome, idade e altura (mesma linha): ");
+      string[] vet = Console.ReadLine().Split(' ');
+      ultimoNome = vet[0];
+      idade = int.Parse(vet[1]);
+      altura = double.Parse(vet[2], CultureInfo.InvariantCulture);
+
+      Console.Clear();
+
+      Console.WriteLine("Você digitou");
+      Console.WriteLine("Nome completo: " + nomeCompleto);
+      Console.WriteLine("Quantidade de quartos: " + qtdeDeQuartos);
+      Console.WriteLine("Preço produto R$" + precoProduto.ToString("F2", CultureInfo.InvariantCulture) + "\n");
+      Console.WriteLine("Último nome: " + ultimoNome);
+      Console.WriteLine("Idade: " + idade);
+      Console.WriteLine("Altura: " + altura.ToString(CultureInfo.InvariantCulture));
+
+      Console.ReadLine();
+    }
+  }
+}
+```
+
+## 19 - Funções matemáticas em C#
+
+Variável A recebe a raiz quadrada de x:
+
+```c#
+A = Math.Sqrt(x);
+```
+
+Variável A recebe o resultado de x elevado a y:
+
+```c#
+A = Math.Pow(x, y);
+```
+
+Variável A recebe o valor absoluto de x:
+
+```c#
+A = Math.Abs(x);
+```
+
+Exemplo:
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      double x = 3.0;
+      double y = 4.0;
+      double z = -5.0;
+      double A, B, C;
+
+      Console.Clear();
+
+      A = Math.Sqrt(x);
+      B = Math.Sqrt(y);
+      C = Math.Sqrt(25.0);
+      Console.WriteLine("Raiz quadrada de " + x + " = " + A);
+      Console.WriteLine("Raiz quadrada de " + y + " = " + B);
+      Console.WriteLine("Raiz quadrada de 25 = " + C);
+
+      A = Math.Pow(x, y);
+      B = Math.Pow(x, 2.0);
+      C = Math.Pow(5.0, 2.0);
+      Console.WriteLine(x + " elevado a " + y + " = " + A);
+      Console.WriteLine(x + " elevado ao quadrado  = " + B);
+      Console.WriteLine("5 elevado ao quadrado = " + C);
+
+      A = Math.Abs(y);
+      B = Math.Abs(z);
+      Console.WriteLine("Valor absoluto de " + y + " = " + A);
+      Console.WriteLine("Valor absoluto de " + z + " = " + B);
+
+      Console.ReadLine();
+    }
+  }
+}
+```
+
+Saída no terminal:
+
+``` shell
+Raiz quadrada de 3 = 1,7320508075688772
+Raiz quadrada de 4 = 2
+Raiz quadrada de 25 = 5
+3 elevado a 4 = 81
+3 elevado ao quadrado  = 9
+5 elevado ao quadrado = 25
+Valor absoluto de 4 = 4
+Valor absoluto de -5 = 5
+```
+
+## 20 - Exercício resolvido 01
+
+PAREI
