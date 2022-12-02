@@ -478,4 +478,75 @@ Valor absoluto de -5 = 5
 
 ## 20 - Exercício resolvido 01
 
+Fazer um programa para ler as medidas da largura e comprimento de um terreno retangular com uma casa decimal, bem como o valor do metro quadrado do terreno com duas casas decimais. em seguida, o programa deve mostrar o valor da ãrea do terreno, bem como o valor do preço do terreno, ambos com duas casas decimais, conforme o exemplo.
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      double largura, comprimento, valorMetroQuadrado, area, preco;
+
+      //entrada de dados
+      Console.Clear();
+      Console.WriteLine("------------------------------");
+      Console.WriteLine("            TERRENO");
+      Console.WriteLine("------------------------------");
+      Console.Write("Digite a largura do terreno: ");
+      largura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+      Console.Write("Digite o comprimento do terreno: ");
+      comprimento = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+      Console.Write("Digite o valor do metro quadrado: ");
+      valorMetroQuadrado = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+      //processamento de dados
+      area = largura * comprimento;
+      preco = valorMetroQuadrado * area;
+
+      //saída de dados
+      Console.Clear();
+      Console.WriteLine("------------------------------");
+      Console.WriteLine("            TERRENO");
+      Console.WriteLine("------------------------------");
+      Console.Write("AREA = " + area.ToString("F2", CultureInfo.InvariantCulture) + "\n");
+      Console.Write("PRECO = " + preco.ToString("F2", CultureInfo.InvariantCulture) + "\n");
+      Console.WriteLine("------------------------------");
+
+      Console.ReadLine();
+    }
+  }
+}
+```
+
+## 21 - Como utilizar o Debug no Visual Studio
+
+## 22 - Nosso primeiro exercício do URI Online Judge
+
+```c#
+using System;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      int A, B, X;
+
+      A = int.Parse(Console.ReadLine());
+      B = int.Parse(Console.ReadLine());
+
+      X = A + B;
+
+      Console.WriteLine("X = " + X);
+
+      Console.ReadLine();
+    }
+  }
+}
+```
+
+## 23 - Exercícios propostos PARTE 1
+
 PAREI
