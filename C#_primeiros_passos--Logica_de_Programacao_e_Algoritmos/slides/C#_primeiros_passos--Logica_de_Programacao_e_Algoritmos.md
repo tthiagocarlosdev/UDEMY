@@ -101,6 +101,26 @@
   - Mestrado e doutorado em Engenharia de Software
   - Professor universitário desde 2001
 
+## Aula 12 - Primeiro programa C# no VSC
+
+No terminal, navegue até a pasta onde vai armazenar os seus projetos.
+
+Em seguida crie a pasta do projeto com o comando abaixo:
+
+```shell
+mkdir PrimeiroProjeto
+```
+
+Acesse a pasta e crie o projeto com o comando abaixo:
+
+```shell
+dotnet new console
+```
+
+Pronto, o seu projeto está criado!
+
+
+
 ## Aula 15 - saída de dados
 
 ``` c#
@@ -525,6 +545,8 @@ namespace ConsoleApplication2 {
 
 ## 22 - Nosso primeiro exercício do URI Online Judge
 
+Exercício 1001
+
 ```c#
 using System;
 
@@ -549,4 +571,210 @@ namespace ConsoleApplication2 {
 
 ## 23 - Exercícios propostos PARTE 1
 
-PAREI
+[__Links__](https://github.com/acenelio/curso-logica-de-programacao-csharp) dos códigos dos exercícios.
+
+Exercício 1002
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      double raio, A, n = 3.14159;
+
+      raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+      A = (Math.Pow(raio, 2.0) * n);
+
+      Console.WriteLine("A=" + A.ToString("F4", CultureInfo.InvariantCulture));
+
+      Console.ReadLine();
+    }
+  }
+}
+```
+
+Exercício 1003
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      int A, B, SOMA;
+
+      A = int.Parse(Console.ReadLine());
+      B = int.Parse(Console.ReadLine());
+
+      SOMA = A + B;
+
+      Console.WriteLine("SOMA = " + SOMA);
+
+      Console.ReadLine();
+    }
+  }
+}
+```
+
+Exercício 1004
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      int A, B, PROD;
+
+      A = int.Parse(Console.ReadLine());
+      B = int.Parse(Console.ReadLine());
+
+      PROD = A * B;
+
+      Console.WriteLine("PROD = " + PROD);
+
+      Console.ReadLine();
+    }
+  }
+}
+```
+
+Exercício 1005
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      double A, B, media;
+
+      A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+      B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+      media = (((A * 3.5) + (B * 7.5)) / 11);
+
+      Console.WriteLine("MEDIA = " + media.ToString("F5", CultureInfo.InvariantCulture));
+
+      Console.ReadLine();
+    }
+  }
+}
+```
+
+Exercício 1006
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      double A, B, C, media;
+
+      A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+      B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+      C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+      media = (((A * 2) + (B * 3) + (C * 5)) / 10);
+
+      Console.WriteLine("MEDIA = " + media.ToString("F1", CultureInfo.InvariantCulture));
+
+      Console.ReadLine();
+    }
+  }
+}
+```
+
+Exercício 1007
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      double A, B, C, D, diferenca;
+
+      Console.Clear();
+
+      A = int.Parse(Console.ReadLine());
+      B = int.Parse(Console.ReadLine());
+      C = int.Parse(Console.ReadLine());
+      D = int.Parse(Console.ReadLine());
+
+      diferenca = (A * B - C * D);
+
+      Console.WriteLine("DIFERENCA = " + diferenca);
+
+      Console.ReadLine();
+    }
+  }
+}
+```
+
+Exercício 1008
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      int numeroDoFuncionario, horasTrabalhadas;
+      double valorDaHoraDeTrabalho, salario;
+
+      Console.Clear();
+
+      numeroDoFuncionario = int.Parse(Console.ReadLine());
+      horasTrabalhadas = int.Parse(Console.ReadLine());
+      valorDaHoraDeTrabalho = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+      salario = horasTrabalhadas * valorDaHoraDeTrabalho;
+
+      Console.WriteLine("NUMBER = " + numeroDoFuncionario);
+      Console.WriteLine("SALARY = U$ " + salario.ToString("F2", CultureInfo.InvariantCulture));
+      
+
+      Console.ReadLine();
+    }
+  }
+}
+```
+
+Exercício 1010
+
+```c#
+```
+
+Exercício 1014
+
+```c#
+```
+
+Exercício 1016
+
+```c#
+```
+
+Exercício 1017
+
+```c#
+```
+
