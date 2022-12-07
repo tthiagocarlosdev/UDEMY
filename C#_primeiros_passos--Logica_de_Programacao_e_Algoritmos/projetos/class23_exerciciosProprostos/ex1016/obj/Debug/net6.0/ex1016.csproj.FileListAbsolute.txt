@@ -1,0 +1,15 @@
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class23_exerciciosProprostos/ex1016/bin/Debug/net6.0/ex1016
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class23_exerciciosProprostos/ex1016/bin/Debug/net6.0/ex1016.deps.json
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class23_exerciciosProprostos/ex1016/bin/Debug/net6.0/ex1016.runtimeconfig.json
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class23_exerciciosProprostos/ex1016/bin/Debug/net6.0/ex1016.dll
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class23_exerciciosProprostos/ex1016/bin/Debug/net6.0/ex1016.pdb
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class23_exerciciosProprostos/ex1016/obj/Debug/net6.0/ex1016.csproj.AssemblyReference.cache
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class23_exerciciosProprostos/ex1016/obj/Debug/net6.0/ex1016.GeneratedMSBuildEditorConfig.editorconfig
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class23_exerciciosProprostos/ex1016/obj/Debug/net6.0/ex1016.AssemblyInfoInputs.cache
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class23_exerciciosProprostos/ex1016/obj/Debug/net6.0/ex1016.AssemblyInfo.cs
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class23_exerciciosProprostos/ex1016/obj/Debug/net6.0/ex1016.csproj.CoreCompileInputs.cache
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class23_exerciciosProprostos/ex1016/obj/Debug/net6.0/ex1016.dll
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class23_exerciciosProprostos/ex1016/obj/Debug/net6.0/refint/ex1016.dll
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class23_exerciciosProprostos/ex1016/obj/Debug/net6.0/ex1016.pdb
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class23_exerciciosProprostos/ex1016/obj/Debug/net6.0/ex1016.genruntimeconfig.cache
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class23_exerciciosProprostos/ex1016/obj/Debug/net6.0/ref/ex1016.dll

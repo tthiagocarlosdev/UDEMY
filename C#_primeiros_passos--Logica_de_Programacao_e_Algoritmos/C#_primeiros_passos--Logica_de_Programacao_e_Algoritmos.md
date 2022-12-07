@@ -799,7 +799,7 @@ namespace ConsoleApplication2 {
 }
 ```
 
-Exercício 1014 __PAREI__
+Exercício 1014
 
 ```c#
 using System;
@@ -832,10 +832,63 @@ namespace ConsoleApplication2 {
 Exercício 1016
 
 ```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      Console.Clear();
+      Console.WriteLine("Exercício 1016");
+      Console.WriteLine("km");
+
+      int distancia, tempo;
+
+      distancia = int.Parse(Console.ReadLine());
+
+      tempo = distancia * 2;
+
+      Console.WriteLine(tempo + " minutos");
+
+      Console.ReadLine();
+    }
+  }
+};
 ```
 
 Exercício 1017
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      Console.Clear();
+      Console.WriteLine("Exercício 1017");
+      Console.WriteLine("Tempo/Velocidade");
+
+      int tempo, velocidadeMedia, distancia;
+      double litros;
+
+      tempo = int.Parse(Console.ReadLine());
+      velocidadeMedia = int.Parse(Console.ReadLine());
+
+      distancia = velocidadeMedia * tempo;
+
+      litros = (double) distancia / 12;
+
+      Console.WriteLine(litros.ToString("F3", CultureInfo.InvariantCulture));
+
+      
+      Console.ReadLine();
+    }
+  }
+};
 ```
+
+## 24 - PAREI
+
