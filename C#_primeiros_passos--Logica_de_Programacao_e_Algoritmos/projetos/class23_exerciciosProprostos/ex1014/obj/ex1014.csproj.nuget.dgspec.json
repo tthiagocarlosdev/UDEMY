@@ -1,0 +1,61 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class23_exerciciosProprostos/ex1014/ex1014.csproj": {}
+  },
+  "projects": {
+    "/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class23_exerciciosProprostos/ex1014/ex1014.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class23_exerciciosProprostos/ex1014/ex1014.csproj",
+        "projectName": "ex1014",
+        "projectPath": "/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class23_exerciciosProprostos/ex1014/ex1014.csproj",
+        "packagesPath": "/home/thiagocarlos/.nuget/packages/",
+        "outputPath": "/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class23_exerciciosProprostos/ex1014/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/thiagocarlos/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.403/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
