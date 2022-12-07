@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "class16_processamentoDeDados/1.0.0": {
+        "runtime": {
+          "class16_processamentoDeDados.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "class16_processamentoDeDados/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

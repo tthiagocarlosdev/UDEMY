@@ -1,0 +1,15 @@
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class17_entradaDeDados/bin/Debug/net6.0/class17_entradaDeDados
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class17_entradaDeDados/bin/Debug/net6.0/class17_entradaDeDados.deps.json
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class17_entradaDeDados/bin/Debug/net6.0/class17_entradaDeDados.runtimeconfig.json
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class17_entradaDeDados/bin/Debug/net6.0/class17_entradaDeDados.dll
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class17_entradaDeDados/bin/Debug/net6.0/class17_entradaDeDados.pdb
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class17_entradaDeDados/obj/Debug/net6.0/class17_entradaDeDados.csproj.AssemblyReference.cache
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class17_entradaDeDados/obj/Debug/net6.0/class17_entradaDeDados.GeneratedMSBuildEditorConfig.editorconfig
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class17_entradaDeDados/obj/Debug/net6.0/class17_entradaDeDados.AssemblyInfoInputs.cache
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class17_entradaDeDados/obj/Debug/net6.0/class17_entradaDeDados.AssemblyInfo.cs
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class17_entradaDeDados/obj/Debug/net6.0/class17_entradaDeDados.csproj.CoreCompileInputs.cache
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class17_entradaDeDados/obj/Debug/net6.0/class17_entradaDeDados.dll
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class17_entradaDeDados/obj/Debug/net6.0/refint/class17_entradaDeDados.dll
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class17_entradaDeDados/obj/Debug/net6.0/class17_entradaDeDados.pdb
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class17_entradaDeDados/obj/Debug/net6.0/class17_entradaDeDados.genruntimeconfig.cache
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class17_entradaDeDados/obj/Debug/net6.0/ref/class17_entradaDeDados.dll

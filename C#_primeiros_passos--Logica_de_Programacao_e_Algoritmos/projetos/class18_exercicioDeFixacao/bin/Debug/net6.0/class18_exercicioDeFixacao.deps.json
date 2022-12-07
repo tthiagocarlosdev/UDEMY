@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "class18_exercicioDeFixacao/1.0.0": {
+        "runtime": {
+          "class18_exercicioDeFixacao.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "class18_exercicioDeFixacao/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,15 @@
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class15_saidaDeDados/bin/Debug/net6.0/class15_saidaDeDados
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class15_saidaDeDados/bin/Debug/net6.0/class15_saidaDeDados.deps.json
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class15_saidaDeDados/bin/Debug/net6.0/class15_saidaDeDados.runtimeconfig.json
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class15_saidaDeDados/bin/Debug/net6.0/class15_saidaDeDados.dll
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class15_saidaDeDados/bin/Debug/net6.0/class15_saidaDeDados.pdb
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class15_saidaDeDados/obj/Debug/net6.0/class15_saidaDeDados.csproj.AssemblyReference.cache
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class15_saidaDeDados/obj/Debug/net6.0/class15_saidaDeDados.GeneratedMSBuildEditorConfig.editorconfig
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class15_saidaDeDados/obj/Debug/net6.0/class15_saidaDeDados.AssemblyInfoInputs.cache
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class15_saidaDeDados/obj/Debug/net6.0/class15_saidaDeDados.AssemblyInfo.cs
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class15_saidaDeDados/obj/Debug/net6.0/class15_saidaDeDados.csproj.CoreCompileInputs.cache
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class15_saidaDeDados/obj/Debug/net6.0/class15_saidaDeDados.dll
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class15_saidaDeDados/obj/Debug/net6.0/refint/class15_saidaDeDados.dll
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class15_saidaDeDados/obj/Debug/net6.0/class15_saidaDeDados.pdb
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class15_saidaDeDados/obj/Debug/net6.0/class15_saidaDeDados.genruntimeconfig.cache
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class15_saidaDeDados/obj/Debug/net6.0/ref/class15_saidaDeDados.dll

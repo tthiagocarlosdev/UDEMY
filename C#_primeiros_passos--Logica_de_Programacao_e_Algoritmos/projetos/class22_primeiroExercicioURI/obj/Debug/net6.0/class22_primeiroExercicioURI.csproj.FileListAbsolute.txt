@@ -1,0 +1,15 @@
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class22_primeiroExercicioURI/bin/Debug/net6.0/class22_primeiroExercicioURI
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class22_primeiroExercicioURI/bin/Debug/net6.0/class22_primeiroExercicioURI.deps.json
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class22_primeiroExercicioURI/bin/Debug/net6.0/class22_primeiroExercicioURI.runtimeconfig.json
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class22_primeiroExercicioURI/bin/Debug/net6.0/class22_primeiroExercicioURI.dll
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class22_primeiroExercicioURI/bin/Debug/net6.0/class22_primeiroExercicioURI.pdb
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class22_primeiroExercicioURI/obj/Debug/net6.0/class22_primeiroExercicioURI.csproj.AssemblyReference.cache
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class22_primeiroExercicioURI/obj/Debug/net6.0/class22_primeiroExercicioURI.GeneratedMSBuildEditorConfig.editorconfig
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class22_primeiroExercicioURI/obj/Debug/net6.0/class22_primeiroExercicioURI.AssemblyInfoInputs.cache
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class22_primeiroExercicioURI/obj/Debug/net6.0/class22_primeiroExercicioURI.AssemblyInfo.cs
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class22_primeiroExercicioURI/obj/Debug/net6.0/class22_primeiroExercicioURI.csproj.CoreCompileInputs.cache
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class22_primeiroExercicioURI/obj/Debug/net6.0/class22_primeiroExercicioURI.dll
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class22_primeiroExercicioURI/obj/Debug/net6.0/refint/class22_primeiroExercicioURI.dll
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class22_primeiroExercicioURI/obj/Debug/net6.0/class22_primeiroExercicioURI.pdb
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class22_primeiroExercicioURI/obj/Debug/net6.0/class22_primeiroExercicioURI.genruntimeconfig.cache
+/home/thiagocarlos/Downloads/CURSOS/PROGRAMAÇÃO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class22_primeiroExercicioURI/obj/Debug/net6.0/ref/class22_primeiroExercicioURI.dll
