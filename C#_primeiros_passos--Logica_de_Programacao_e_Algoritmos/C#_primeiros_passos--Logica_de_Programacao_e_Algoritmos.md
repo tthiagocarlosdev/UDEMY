@@ -932,7 +932,164 @@ namespace ConsoleApplication2 {
 
 ## 25 - Exercício resolvido 03
 
+Faazer um programa para ler o nome (apenas uma palavra) e idade de duas pessoas. Ao final mostrar uma mensagem com os nomes e a idade média entre essas pessoas, com uma casa decimal.
 
+```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      Console.Clear();
+      Console.WriteLine("------------------------------");
+      Console.WriteLine("          IdadeMédia");
+      Console.WriteLine("------------------------------");
 
+      string nomeA, nomeB;
+      int idadeA, idadeB;
+      double idadeMedia;
+      string[] vet;
+
+      Console.Write("Digite o nome e idade: ");
+      vet = Console.ReadLine().Split(' ');
+      nomeA = vet[0];
+      idadeA = int.Parse(vet[1]);
+      
+      Console.Write("Digite o nome e idade: ");
+      vet = Console.ReadLine().Split(' ');
+      nomeB = vet[0];
+      idadeB = int.Parse(vet[1]);
+
+      idadeMedia = (double) (idadeA + idadeB) / 2.0;
+
+      Console.WriteLine("------------------------------");
+      Console.WriteLine("A idade média de " + nomeA + " e " + nomeB + " é de " + idadeMedia.ToString("F1", CultureInfo.InvariantCulture) + " anos");
+      Console.WriteLine("------------------------------");
+      
+      Console.ReadLine();
+    }
+  }
+};
+```
+
+## 26. Exercícios propostos - PARTE 2
+
+- ### Exercício 1009 - string
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      Console.Clear();
+      Console.WriteLine("Exercício 1009");
+      Console.WriteLine("Salário com bônus");
+      Console.WriteLine("NOME/SALARIO/VENDAS");
+
+      string nomeVendedor;
+      double salarioFixo, totalDeVendas, comissao, totalAReceber;
+
+      nomeVendedor = Console.ReadLine();
+      salarioFixo = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+      totalDeVendas = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+      comissao = totalDeVendas * 0.15;
+      totalAReceber = salarioFixo + comissao;
+
+      Console.WriteLine("TOTAL = R$ " + totalAReceber.ToString("F2", CultureInfo.InvariantCulture));
+      
+      Console.ReadLine();
+    }
+  }
+};
+```
+
+- ### Exercício 1011 - casting
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      Console.Clear();
+      Console.WriteLine("Exercício 1011");
+      Console.WriteLine("Esfera");
+      Console.WriteLine("RAIO");
+
+      double raio, volume;
+      const double Pi = 3.14159;
+
+      raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+      volume = (4.0/3) * Pi * Math.Pow(raio, 3);
+
+      Console.WriteLine("VOLUME = " + volume.ToString("F3", CultureInfo.InvariantCulture));
+      
+      Console.ReadLine();
+    }
+  }
+};
+```
+
+- ### Exercício 1012 - geometria
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      Console.Clear();
+      Console.WriteLine("Exercício 1012");
+      Console.WriteLine("Área");
+      Console.WriteLine("A/B/C");
+
+      double A, B, C;
+      const double Pi = 3.14159;
+      double areaTrianguloRetangulo, areaCirculo, areaTrapezio, areaQuadrado, areaRetangulo;
+      string[] vet;
+
+      vet = Console.ReadLine().Split(' ');
+      A = double.Parse(vet[0], CultureInfo.InvariantCulture);
+      B = double.Parse(vet[1], CultureInfo.InvariantCulture);
+      C = double.Parse(vet[2], CultureInfo.InvariantCulture);
+
+      areaTrianguloRetangulo = (A * C) / 2;
+      areaCirculo = Pi * Math.Pow(C, 2);
+      areaTrapezio = ((A + B) * C) / 2;
+      areaQuadrado = Math.Pow(B, 2);
+      areaRetangulo = A * B;
+
+      Console.WriteLine("TRIANGULO: " + areaTrianguloRetangulo.ToString("F3", CultureInfo.InvariantCulture));
+      Console.WriteLine("CIRCULO: " + areaCirculo.ToString("F3", CultureInfo.InvariantCulture));
+      Console.WriteLine("TRAPEZIO: " + areaTrapezio.ToString("F3", CultureInfo.InvariantCulture));
+      Console.WriteLine("QUADRADO: " + areaQuadrado.ToString("F3", CultureInfo.InvariantCulture));
+      Console.WriteLine("RETANGULO: " + areaRetangulo.ToString("F3", CultureInfo.InvariantCulture));
+      
+      Console.ReadLine();
+    }
+  }
+};
+```
+
+- ### Exercício 1013 - abs
+
+```c#
+
+```
+
+- ### Exercício 1015 - sqrt, pow
+
+```c#
+```
 
