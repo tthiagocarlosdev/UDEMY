@@ -115,10 +115,6 @@ rm packages-microsoft-prod.deb
 sudo apt-get update &&   sudo apt-get install -y dotnet-sdk-6.0
 ```
 
-
-
-
-
 ## Aula 12 - Primeiro programa C# no VSC
 
 No terminal, navegue até a pasta onde vai armazenar os seus projetos.
@@ -444,7 +440,7 @@ namespace ConsoleApplication2 {
 }
 ```
 
-## 19 - Funções matemáticas em C#
+## Aula 19 - Funções matemáticas em C#
 
 Variável A recebe a raiz quadrada de x:
 
@@ -519,7 +515,7 @@ Valor absoluto de 4 = 4
 Valor absoluto de -5 = 5
 ```
 
-## 20 - Exercício resolvido 01
+## Aula 20 - Exercício resolvido 01
 
 Fazer um programa para ler as medidas da largura e comprimento de um terreno retangular com uma casa decimal, bem como o valor do metro quadrado do terreno com duas casas decimais. em seguida, o programa deve mostrar o valor da ãrea do terreno, bem como o valor do preço do terreno, ambos com duas casas decimais, conforme o exemplo.
 
@@ -564,9 +560,9 @@ namespace ConsoleApplication2 {
 }
 ```
 
-## 21 - Como utilizar o Debug no Visual Studio
+## Aula 21 - Como utilizar o Debug no Visual Studio
 
-## 22 - Nosso primeiro exercício do URI Online Judge
+## Aula 22 - Nosso primeiro exercício do URI Online Judge
 
 Exercício 1001
 
@@ -592,7 +588,7 @@ namespace ConsoleApplication2 {
 }
 ```
 
-## 23 - Exercícios propostos PARTE 1
+## Aula 23 - Exercícios propostos PARTE 1
 
 [__Links__](https://github.com/acenelio/curso-logica-de-programacao-csharp) dos códigos dos exercícios.
 
@@ -908,7 +904,7 @@ namespace ConsoleApplication2 {
 };
 ```
 
-## 24 - Exercício resolvido 02
+## Aula 24 - Exercício resolvido 02
 
 Fazer um programa para ler as medidas da base e altura de um retângulo. em seguida, mostrar o valor da área, perímetro e diagonal deste retângulo, com quatro casa decimais.
 
@@ -948,7 +944,7 @@ namespace ConsoleApplication2 {
 };
 ```
 
-## 25 - Exercício resolvido 03
+## Aula 25 - Exercício resolvido 03
 
 Faazer um programa para ler o nome (apenas uma palavra) e idade de duas pessoas. Ao final mostrar uma mensagem com os nomes e a idade média entre essas pessoas, com uma casa decimal.
 
@@ -992,7 +988,7 @@ namespace ConsoleApplication2 {
 };
 ```
 
-## 26. Exercícios propostos - PARTE 2
+## Aula 26 - Exercícios propostos - PARTE 2
 
 - ### Exercício 1009 - string
 
@@ -1103,11 +1099,72 @@ namespace ConsoleApplication2 {
 - ### Exercício 1013 - abs
 
 ```c#
+using System;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      Console.Clear();
+      Console.WriteLine("Exercício 1013");
+      Console.WriteLine("O Maior");
+      Console.WriteLine("A/B/C");
+
+      int A, B, C, maiorAB, maiorABC;
+      string[] vet;
+
+      vet = Console.ReadLine().Split(' ');
+      A = int.Parse(vet[0]);
+      B = int.Parse(vet[1]);
+      C = int.Parse(vet[2]);
+    
+      maiorAB = ((A + B + Math.Abs(A - B)) / 2);
+      maiorABC = ((C + maiorAB + Math.Abs(C - maiorAB)) / 2);
+      
+      Console.WriteLine(maiorABC + " eh o maior");
+      
+      Console.ReadLine();
+    }
+  }
+};
 ```
 
 - ### Exercício 1015 - sqrt, pow
 
 ```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+      Console.Clear();
+      Console.WriteLine("Exercício 1015");
+      Console.WriteLine("Distância");
+      Console.WriteLine("x1/y1/x2/y2");
+
+      double x1, y1, x2, y2, distancia;
+      string[] p1;
+      string[] p2;
+
+      p1 = Console.ReadLine().Split(' ');
+      p2 = Console.ReadLine().Split(' ');
+
+      x1 = double.Parse(p1[0], CultureInfo.InvariantCulture);
+      y1 = double.Parse(p1[1], CultureInfo.InvariantCulture);
+      x2 = double.Parse(p2[0], CultureInfo.InvariantCulture);
+      y2 = double.Parse(p2[1], CultureInfo.InvariantCulture);
+
+      distancia = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2));
+
+      Console.WriteLine(distancia.ToString("F4", CultureInfo.InvariantCulture));
+
+      Console.ReadLine();
+    }
+  }
+};
 ```
+
+## Aula 27 - PAREI
 
