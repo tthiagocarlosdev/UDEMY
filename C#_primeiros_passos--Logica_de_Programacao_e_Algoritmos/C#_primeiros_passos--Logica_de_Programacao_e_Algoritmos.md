@@ -101,6 +101,24 @@
   - Mestrado e doutorado em Engenharia de Software
   - Professor universitário desde 2001
 
+## Instalar .NET 6.0
+
+```shell
+wget https://packages.microsoft.com/config/debian/11/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+wget https://packages.microsoft.com/config/debian/11/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+rm packages-microsoft-prod.deb
+```
+
+```shell
+sudo apt-get update &&   sudo apt-get install -y dotnet-sdk-6.0
+```
+
+
+
+
+
 ## Aula 12 - Primeiro programa C# no VSC
 
 No terminal, navegue até a pasta onde vai armazenar os seus projetos.
