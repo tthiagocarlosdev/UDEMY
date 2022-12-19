@@ -1166,5 +1166,10 @@ namespace ConsoleApplication2 {
 };
 ```
 
-## Aula 27 - PAREI
+## Aula 27 - Exercício resolvido 04
+
+- ### Exercício 1019
+
+```c#
+```
 

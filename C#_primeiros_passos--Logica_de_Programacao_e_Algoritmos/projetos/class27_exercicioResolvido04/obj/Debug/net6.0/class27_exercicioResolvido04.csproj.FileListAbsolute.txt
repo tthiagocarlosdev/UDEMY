@@ -1,0 +1,15 @@
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class27_exercicioResolvido04/bin/Debug/net6.0/class27_exercicioResolvido04
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class27_exercicioResolvido04/bin/Debug/net6.0/class27_exercicioResolvido04.deps.json
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class27_exercicioResolvido04/bin/Debug/net6.0/class27_exercicioResolvido04.runtimeconfig.json
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class27_exercicioResolvido04/bin/Debug/net6.0/class27_exercicioResolvido04.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class27_exercicioResolvido04/bin/Debug/net6.0/class27_exercicioResolvido04.pdb
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class27_exercicioResolvido04/obj/Debug/net6.0/class27_exercicioResolvido04.csproj.AssemblyReference.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class27_exercicioResolvido04/obj/Debug/net6.0/class27_exercicioResolvido04.GeneratedMSBuildEditorConfig.editorconfig
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class27_exercicioResolvido04/obj/Debug/net6.0/class27_exercicioResolvido04.AssemblyInfoInputs.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class27_exercicioResolvido04/obj/Debug/net6.0/class27_exercicioResolvido04.AssemblyInfo.cs
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class27_exercicioResolvido04/obj/Debug/net6.0/class27_exercicioResolvido04.csproj.CoreCompileInputs.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class27_exercicioResolvido04/obj/Debug/net6.0/class27_exercicioResolvido04.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class27_exercicioResolvido04/obj/Debug/net6.0/refint/class27_exercicioResolvido04.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class27_exercicioResolvido04/obj/Debug/net6.0/class27_exercicioResolvido04.pdb
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class27_exercicioResolvido04/obj/Debug/net6.0/class27_exercicioResolvido04.genruntimeconfig.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class27_exercicioResolvido04/obj/Debug/net6.0/ref/class27_exercicioResolvido04.dll
