@@ -10,21 +10,17 @@ namespace ConsoleApplication2 {
         Console.WriteLine("Conversão de Tempo");
         Console.WriteLine("Segundos");
 
-        int tempoEmsegundos, horasInt, minutosInt, segundos;
-        double horas, minutos;
+        int tempoEmSegundos, horas, minutos, segundos, resto;
 
-        tempoEmsegundos = int.Parse(Console.ReadLine());
+        tempoEmSegundos = int.Parse(Console.ReadLine());
 
-        // horas = (double) tempoEmsegundos / 3600;
-        horasInt = tempoEmsegundos / 3600;
-        minutos = ((tempoEmsegundos / 3600) / 60);
-        // minutosInt = ((horas - horasInt) * 60);
+        horas = tempoEmSegundos / 3600;
+        resto = tempoEmSegundos % 3600;
+        minutos = resto / 60;
+        segundos = resto % 60;
 
-        Console.WriteLine(tempoEmsegundos % 3600);
-        // Console.WriteLine(horas);
-        Console.WriteLine(horasInt);
-        Console.WriteLine(minutos);
-        // Console.WriteLine(minutosInt);
+        Console.WriteLine(horas + ":" + minutos + ":" + segundos);
+        
 
       Console.ReadLine();
     }
