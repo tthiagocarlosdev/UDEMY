@@ -1,0 +1,15 @@
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class28_exerciciosProprostos/ex1020/bin/Debug/net6.0/ex1020
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class28_exerciciosProprostos/ex1020/bin/Debug/net6.0/ex1020.deps.json
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class28_exerciciosProprostos/ex1020/bin/Debug/net6.0/ex1020.runtimeconfig.json
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class28_exerciciosProprostos/ex1020/bin/Debug/net6.0/ex1020.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class28_exerciciosProprostos/ex1020/bin/Debug/net6.0/ex1020.pdb
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class28_exerciciosProprostos/ex1020/obj/Debug/net6.0/ex1020.csproj.AssemblyReference.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class28_exerciciosProprostos/ex1020/obj/Debug/net6.0/ex1020.GeneratedMSBuildEditorConfig.editorconfig
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class28_exerciciosProprostos/ex1020/obj/Debug/net6.0/ex1020.AssemblyInfoInputs.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class28_exerciciosProprostos/ex1020/obj/Debug/net6.0/ex1020.AssemblyInfo.cs
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class28_exerciciosProprostos/ex1020/obj/Debug/net6.0/ex1020.csproj.CoreCompileInputs.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class28_exerciciosProprostos/ex1020/obj/Debug/net6.0/ex1020.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class28_exerciciosProprostos/ex1020/obj/Debug/net6.0/refint/ex1020.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class28_exerciciosProprostos/ex1020/obj/Debug/net6.0/ex1020.pdb
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class28_exerciciosProprostos/ex1020/obj/Debug/net6.0/ex1020.genruntimeconfig.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class28_exerciciosProprostos/ex1020/obj/Debug/net6.0/ref/ex1020.dll
