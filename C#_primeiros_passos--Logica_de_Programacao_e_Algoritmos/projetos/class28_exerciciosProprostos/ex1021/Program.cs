@@ -10,90 +10,89 @@ namespace ConsoleApplication2 {
         Console.WriteLine("Notas e Moedas");
         Console.WriteLine("Valor em real");
 
-        double numero, valor, resto;
-        double notas;
-        // cedulaCem, cedulaCinquenta, cedulaVinte, cedulaDez, cedulaCinco, cedulaDois, cedulaUm;
-        // int restoDeCem, restoDeCinquenta, restoDeVinte, restoDeDez, restoDeCinco, restoDeDois, restoDeUm;
+        double numero;
+        int quociente, dividendo, divisor,resto;
 
         numero = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-        Console.WriteLine(numero);
+        dividendo = (int)(numero * 100.0 + 0.5);
+
         Console.WriteLine("NOTAS:");
 
-        valor = 100.00;
-        notas = (numero / 100) / valor;
-        Console.WriteLine(notas + " nota(s) de R$ "+ valor.ToString("F2", CultureInfo.InvariantCulture));
-        resto = numero % valor;
-        // Console.WriteLine(resto);
-        /*
-        valor = 5000;
-        notas = (int) resto / valor;
-        Console.WriteLine(notas + " nota(s) de R$ "+ (valor / 100).ToString("F2", CultureInfo.InvariantCulture));
-        resto = (int) resto % valor;
-        // Console.WriteLine(resto);
+        
+        divisor = 100;
+        quociente = (dividendo / (divisor * 100));
+        resto = dividendo % (divisor * 100);
+        Console.WriteLine(quociente + " nota(s) de R$ "+ divisor + ".00");
 
-        valor = 2000;
-        notas = (int) resto / valor;
-        Console.WriteLine(notas + " nota(s) de R$ "+ (valor / 100).ToString("F2", CultureInfo.InvariantCulture));
-        resto = (int) resto % valor;
-        // Console.WriteLine(resto);
+        divisor = 50;
+        dividendo = resto;
+        quociente = (dividendo / (divisor * 100));
+        resto = dividendo % (divisor * 100);
+        Console.WriteLine(quociente + " nota(s) de R$ "+ divisor + ".00");
 
-        valor = 1000;
-        notas = (int) resto / valor;
-        Console.WriteLine(notas + " nota(s) de R$ "+ (valor / 100).ToString("F2", CultureInfo.InvariantCulture));
-        resto = (int) resto % valor;
-        // Console.WriteLine(resto);
+        divisor = 20;
+        dividendo = resto;
+        quociente = (dividendo / (divisor * 100));
+        resto = dividendo % (divisor * 100);
+        Console.WriteLine(quociente + " nota(s) de R$ "+ divisor + ".00");
 
-        valor = 500;
-        notas = (int) resto / valor;
-        Console.WriteLine(notas + " nota(s) de R$ "+ (valor / 100).ToString("F2", CultureInfo.InvariantCulture));
-        resto = (int) resto % valor;
-        // Console.WriteLine(resto);
+        divisor = 10;
+        dividendo = resto;
+        quociente = (dividendo / (divisor * 100));
+        resto = dividendo % (divisor * 100);
+        Console.WriteLine(quociente + " nota(s) de R$ "+ divisor + ".00");
 
-        valor = 200;
-        notas = (int) resto / valor;
-        Console.WriteLine(notas + " nota(s) de R$ "+ (valor / 100).ToString("F2", CultureInfo.InvariantCulture));
-        resto = (int) resto % valor;
-        // Console.WriteLine(resto);
+        divisor = 5;
+        dividendo = resto;
+        quociente = (dividendo / (divisor * 100));
+        resto = dividendo % (divisor * 100);
+        Console.WriteLine(quociente + " nota(s) de R$ "+ divisor + ".00");
+
+        divisor = 2;
+        dividendo = resto;
+        quociente = (dividendo / (divisor * 100));
+        resto = dividendo % (divisor * 100);
+        Console.WriteLine(quociente + " nota(s) de R$ "+ divisor + ".00");
 
         Console.WriteLine("MOEDAS:");
 
-        valor = 100;
-        notas = (int) resto / valor;
-        Console.WriteLine(notas + " moeda(s) de R$ "+ (valor / 100).ToString("F2", CultureInfo.InvariantCulture));
-        resto = (int) resto % valor;
-        // Console.WriteLine(resto);
+        divisor = 100;
+        dividendo = resto;
+        quociente = dividendo / divisor;
+        resto = dividendo % divisor;
+        Console.WriteLine(quociente + " moeda(s) de R$ 1.00");
 
-        valor = 50;
-        notas = (int) resto / valor;
-        Console.WriteLine(notas + " moeda(s) de R$ "+ (valor / 100).ToString("F2", CultureInfo.InvariantCulture));
-        resto = (int) resto % valor;
-        // Console.WriteLine(resto);
+        divisor = 50;
+        dividendo = resto;
+        quociente = dividendo / divisor;
+        resto = dividendo % divisor;
+        Console.WriteLine(quociente + " moeda(s) de R$ 0.50");
 
-        valor = 25;
-        notas = (int) resto / valor;
-        Console.WriteLine(notas + " moeda(s) de R$ "+ (valor / 100).ToString("F2", CultureInfo.InvariantCulture));
-        resto = (int) resto % valor;
-        // Console.WriteLine(resto);
+        divisor = 25;
+        dividendo = resto;
+        quociente = dividendo / divisor;
+        resto = dividendo % divisor;
+        Console.WriteLine(quociente + " moeda(s) de R$ 0.25");
 
-        valor = 10;
-        notas = (int) resto / valor;
-        Console.WriteLine(notas + " moeda(s) de R$ "+ (valor / 100).ToString("F2", CultureInfo.InvariantCulture));
-        resto = (int) resto % valor;
-        // Console.WriteLine(resto);
+        divisor = 10;
+        dividendo = resto;
+        quociente = dividendo / divisor;
+        resto = dividendo % divisor;
+        Console.WriteLine(quociente + " moeda(s) de R$ 0.10");
 
-        valor = 5;
-        notas = (int) resto / valor;
-        Console.WriteLine(notas + " moeda(s) de R$ "+ (valor / 100).ToString("F2", CultureInfo.InvariantCulture));
-        resto = (int) resto % valor;
-        // Console.WriteLine(resto);
+        divisor = 5;
+        dividendo = resto;
+        quociente = dividendo / divisor;
+        resto = dividendo % divisor;
+        Console.WriteLine(quociente + " moeda(s) de R$ 0.05");
 
-        valor = 1;
-        notas = (int) resto / valor;
-        Console.WriteLine(notas + " nota(s) de R$ "+ (valor / 100).ToString("F2", CultureInfo.InvariantCulture));
-        resto = (int) resto % valor;
-        // Console.WriteLine(resto);
-  */      
+        divisor = 1;
+        dividendo = resto;
+        quociente = dividendo / divisor;
+        resto = dividendo % divisor;
+        Console.WriteLine(quociente + " moeda(s) de R$ 0.01");
+
       Console.ReadLine();
     }
   }

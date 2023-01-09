@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "/home/thiagonote/.nuget/packages/": {}
+    "/home/thiago/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class28_exerciciosProprostos/ex1021/ex1021.csproj",
+      "projectUniqueName": "/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class28_exerciciosProprostos/ex1021/ex1021.csproj",
       "projectName": "ex1021",
-      "projectPath": "/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class28_exerciciosProprostos/ex1021/ex1021.csproj",
-      "packagesPath": "/home/thiagonote/.nuget/packages/",
-      "outputPath": "/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class28_exerciciosProprostos/ex1021/obj/",
+      "projectPath": "/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class28_exerciciosProprostos/ex1021/ex1021.csproj",
+      "packagesPath": "/home/thiago/.nuget/packages/",
+      "outputPath": "/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class28_exerciciosProprostos/ex1021/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/thiagonote/.nuget/NuGet/NuGet.Config"
+        "/home/thiago/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
