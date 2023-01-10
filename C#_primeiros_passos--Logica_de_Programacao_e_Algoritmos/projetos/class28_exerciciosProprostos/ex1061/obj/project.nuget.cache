@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bOLCu6wkho7F8XC2cBkxPkK5yrI2zVjjCd6D/MczFTYGMxuSxUEMyigId9eDb22Ib7W41edcIGXEY9l9ucqC+w==",
+  "dgSpecHash": "EEtOmo/i9r2cSDYkr2pCSH4yx/EPJS1CxKf9vSO+x278yiJYwVYENKd153OLYsDEPw0fcdlgB3PVjroaj5bQyg==",
   "success": true,
-  "projectFilePath": "/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class28_exerciciosProprostos/ex1021/ex1021.csproj",
+  "projectFilePath": "/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class28_exerciciosProprostos/ex1061/ex1061.csproj",
   "expectedPackageFiles": [
     "/home/thiago/.nuget/packages/microsoft.netcore.app.ref/6.0.12/microsoft.netcore.app.ref.6.0.12.nupkg.sha512",
     "/home/thiago/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.12/microsoft.aspnetcore.app.ref.6.0.12.nupkg.sha512",
