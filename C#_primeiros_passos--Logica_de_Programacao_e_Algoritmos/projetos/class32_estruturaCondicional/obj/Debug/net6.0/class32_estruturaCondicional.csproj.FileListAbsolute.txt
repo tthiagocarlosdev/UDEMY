@@ -1,0 +1,15 @@
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class32_estruturaCondicional/bin/Debug/net6.0/class32_estruturaCondicional
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class32_estruturaCondicional/bin/Debug/net6.0/class32_estruturaCondicional.deps.json
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class32_estruturaCondicional/bin/Debug/net6.0/class32_estruturaCondicional.runtimeconfig.json
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class32_estruturaCondicional/bin/Debug/net6.0/class32_estruturaCondicional.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class32_estruturaCondicional/bin/Debug/net6.0/class32_estruturaCondicional.pdb
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class32_estruturaCondicional/obj/Debug/net6.0/class32_estruturaCondicional.csproj.AssemblyReference.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class32_estruturaCondicional/obj/Debug/net6.0/class32_estruturaCondicional.GeneratedMSBuildEditorConfig.editorconfig
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class32_estruturaCondicional/obj/Debug/net6.0/class32_estruturaCondicional.AssemblyInfoInputs.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class32_estruturaCondicional/obj/Debug/net6.0/class32_estruturaCondicional.AssemblyInfo.cs
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class32_estruturaCondicional/obj/Debug/net6.0/class32_estruturaCondicional.csproj.CoreCompileInputs.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class32_estruturaCondicional/obj/Debug/net6.0/class32_estruturaCondicional.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class32_estruturaCondicional/obj/Debug/net6.0/refint/class32_estruturaCondicional.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class32_estruturaCondicional/obj/Debug/net6.0/class32_estruturaCondicional.pdb
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class32_estruturaCondicional/obj/Debug/net6.0/class32_estruturaCondicional.genruntimeconfig.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class32_estruturaCondicional/obj/Debug/net6.0/ref/class32_estruturaCondicional.dll

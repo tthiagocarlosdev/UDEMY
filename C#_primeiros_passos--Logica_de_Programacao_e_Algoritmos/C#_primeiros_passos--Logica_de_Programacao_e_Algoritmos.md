@@ -1295,11 +1295,457 @@ namespace ConsoleApplication2 {
 - ### Exercício 1021
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Exercício 1021");
+        Console.WriteLine("Notas e Moedas");
+        Console.WriteLine("Valor em real");
+
+        double numero;
+        int quociente, dividendo, divisor,resto;
+
+        numero = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+        dividendo = (int)(numero * 100.0 + 0.5);
+
+        Console.WriteLine("NOTAS:");
+
+        
+        divisor = 100;
+        quociente = (dividendo / (divisor * 100));
+        resto = dividendo % (divisor * 100);
+        Console.WriteLine(quociente + " nota(s) de R$ "+ divisor + ".00");
+
+        divisor = 50;
+        dividendo = resto;
+        quociente = (dividendo / (divisor * 100));
+        resto = dividendo % (divisor * 100);
+        Console.WriteLine(quociente + " nota(s) de R$ "+ divisor + ".00");
+
+        divisor = 20;
+        dividendo = resto;
+        quociente = (dividendo / (divisor * 100));
+        resto = dividendo % (divisor * 100);
+        Console.WriteLine(quociente + " nota(s) de R$ "+ divisor + ".00");
+
+        divisor = 10;
+        dividendo = resto;
+        quociente = (dividendo / (divisor * 100));
+        resto = dividendo % (divisor * 100);
+        Console.WriteLine(quociente + " nota(s) de R$ "+ divisor + ".00");
+
+        divisor = 5;
+        dividendo = resto;
+        quociente = (dividendo / (divisor * 100));
+        resto = dividendo % (divisor * 100);
+        Console.WriteLine(quociente + " nota(s) de R$ "+ divisor + ".00");
+
+        divisor = 2;
+        dividendo = resto;
+        quociente = (dividendo / (divisor * 100));
+        resto = dividendo % (divisor * 100);
+        Console.WriteLine(quociente + " nota(s) de R$ "+ divisor + ".00");
+
+        Console.WriteLine("MOEDAS:");
+
+        divisor = 100;
+        dividendo = resto;
+        quociente = dividendo / divisor;
+        resto = dividendo % divisor;
+        Console.WriteLine(quociente + " moeda(s) de R$ 1.00");
+
+        divisor = 50;
+        dividendo = resto;
+        quociente = dividendo / divisor;
+        resto = dividendo % divisor;
+        Console.WriteLine(quociente + " moeda(s) de R$ 0.50");
+
+        divisor = 25;
+        dividendo = resto;
+        quociente = dividendo / divisor;
+        resto = dividendo % divisor;
+        Console.WriteLine(quociente + " moeda(s) de R$ 0.25");
+
+        divisor = 10;
+        dividendo = resto;
+        quociente = dividendo / divisor;
+        resto = dividendo % divisor;
+        Console.WriteLine(quociente + " moeda(s) de R$ 0.10");
+
+        divisor = 5;
+        dividendo = resto;
+        quociente = dividendo / divisor;
+        resto = dividendo % divisor;
+        Console.WriteLine(quociente + " moeda(s) de R$ 0.05");
+
+        divisor = 1;
+        dividendo = resto;
+        quociente = dividendo / divisor;
+        resto = dividendo % divisor;
+        Console.WriteLine(quociente + " moeda(s) de R$ 0.01");
+
+      Console.ReadLine();
+    }
+  }
+};
 ```
 
 - ### Exercício 1061
 
 ```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Exercício 1061");
+        Console.WriteLine("Tempo de um Evento");
+        Console.WriteLine("Dia e Hora Inicial");
+
+        int diaInicial, horaInicial, minutoInicial, segundoInicial;
+        int diaFinal, horaFinal, minutoFinal, segundoFinal;
+        int tempoInicial, tempoFinal, duracaoEmSegundos;
+        int dias, horas, minutos, segundos, resto;
+
+        string[] v = Console.ReadLine().Split(' ');
+        diaInicial = int.Parse(v[1]);
+
+        string[] y = Console.ReadLine().Split(':');
+        horaInicial = int.Parse(y[0]);
+        minutoInicial = int.Parse(y[1]);
+        segundoInicial = int.Parse(y[2]);
+        
+        string[] x = Console.ReadLine().Split(' ');
+        diaFinal = int.Parse(x[1]);
+
+        string[] z = Console.ReadLine().Split(':');
+        horaFinal = int.Parse(z[0]);
+        minutoFinal = int.Parse(z[1]);
+        segundoFinal = int.Parse(z[2]);
+
+        tempoInicial = (diaInicial * 86400) + (horaInicial * 3600) + (minutoInicial * 60) + segundoInicial;
+        tempoFinal = (diaFinal * 86400) + (horaFinal * 3600) + (minutoFinal * 60) + segundoFinal;
+
+        duracaoEmSegundos = tempoFinal - tempoInicial;
+
+        dias = duracaoEmSegundos / 86400;
+        resto = duracaoEmSegundos % 86400;
+        horas = resto / 3600;
+        resto = resto % 3600;
+        minutos = resto / 60;
+        segundos = resto % 60;
+
+        // Console.WriteLine(duracaoEmSegundos);
+        Console.WriteLine(dias + " dia(s)");
+        Console.WriteLine(horas + " hora(s)");
+        Console.WriteLine(minutos + " minuto(s)");
+        Console.WriteLine(segundos + " segundo(s)");
+
+      Console.ReadLine();
+    }
+  }
+};
 ```
+
+## Aula 29 - Slides utilizados no capítulo
+
+## Aula 30 - Expressões comparativas
+
+Expressões comparativas comparam uma coisa com outra. Quando você avalia uma expressão comparativa, o resultado é um valor verdade(verdadeiro/falso). C, C++, Java, C#:
+
+| Operador |  Significado   |
+| :------: | :------------: |
+|    >     |     maior      |
+|    <     |     menor      |
+|    >=    | maior ou igual |
+|    <=    | menor ou igual |
+|    ==    |     igual      |
+|    !=    |   diferente    |
+
+## Aula 31 - Expressões lógicas
+
+São expressões que quando avaliada resultam em um valor veradade.  C, C++, Java, C#:
+
+| Operador | Significado |
+| :------: | :---------: |
+|    &&    |      E      |
+|   \|\|   |     OU      |
+|    !     |     NÃO     |
+
+- ### E -> Todas as condições devem ser verdadeiras.  Exemplo:
+
+Suponha x igual a 5
+
+x <= 20 && x == 10  Resultado: F
+
+x > 0 && x != 3  Resultado: V
+
+x <= 20 && x == 10 && x != 3  Resultado: F
+
+- Tabela verdade do operador E
+
+|  A   |  B   | A && B |
+| :--: | :--: | :----: |
+|  F   |  F   |   F    |
+|  F   |  V   |   F    |
+|  V   |  F   |   F    |
+|  V   |  V   |   V    |
+
+- ### OU -> Pelo menos uma condição deve ser verdadeira. Exemplo: 
+
+Suponha x igual a 5
+
+x == 10 || x <= 20  Resultado: V
+
+x > 0 || x != 3  Resultado: V
+
+x <= 0  || x != 3 || x != 5  Resultado: V
+
+- Tabela verdade do operador OU
+
+|  A   |  B   | A \|\| B |
+| :--: | :--: | :------: |
+|  F   |  F   |    F     |
+|  F   |  V   |    V     |
+|  V   |  F   |    V     |
+|  V   |  V   |    V     |
+
+- ### NÃO -> O operador "NÃO" inverte a condiçao. Exemplo: 
+
+Suponha x igual a 5
+
+! ( x == 10 )  Resultado: V
+
+! ( x >= 2 )  Resultado: F
+
+! ( x <= 20  && x == 10 )  Resultado: V
+
+|  A   |  !A  |
+| :--: | :--: |
+|  F   |  V   |
+|  V   |  F   |
+
+## Aula 32 - Estrutura condicional
+
+É uma __estrutura de controle__ que permite definir que um certo __bloco de comandos__ somente será executado dependendo de uma __condição__.
+
+- ### Sintaxe da estrutura condicional
+
+  - ### Simples
+
+    ```c#
+    if ( condição ) {
+        comando 1
+        comando 2
+    }
+    ```
+
+    Regra:
+
+    ​	Condição verdadeira - executa o bloco de comandos.
+
+    ​	Condição Falsa - pula o bloco de comandos.
+
+    Exemplo: 
+
+    ```c#
+    int x = 5;
+            
+    Console.WriteLine("Bom dia");
+    
+    if ( x < 5 ) {
+        Console.WriteLine("Boa tarde");
+    }
+    
+    Console.WriteLine("Boa noite");
+    ```
+
+    
+
+    
+
+  - ### Composta
+
+    ```c#
+    if ( condição ) {
+        comando 1
+        comando 2
+    } else {
+        comando 3
+        comando 4
+    }
+    ```
+
+    Condição verdadeira - executa somente o bloco do __if__.
+
+    Condição Falsa - executa somente o bloco do __else__.
+
+    Exemplo: 
+
+    ```c#
+    int horas;
+    
+    Console.WriteLine("Quantas horas? ");
+    horas = int.Parse(Console.ReadLine());
+    
+    if ( horas < 12 ){
+        Console.WriteLine("Bom dia!");
+    }
+    else {
+        Console.WriteLine("Boa tarde!");
+    }
+    ```
+
+  E se eu tiver mais de duas possibilidades ?
+
+   - ### Encademamento de estruturas condicionais:
+
+     ```c#
+     if ( condição ) {
+         comando 1
+         comando 2
+     }
+     else {
+         if ( condição 2 ) {
+             comando 3
+             comando 4
+         }
+         else {
+             comando 5
+             comando 6
+         }
+     }
+     ```
+
+     Exemplo: 
+
+     ```c#
+     int hora;
+     
+             Console.WriteLine("Quantas horas? ");
+             hora = int.Parse(Console.ReadLine());
+     
+             if ( hora < 12 ){
+                 Console.WriteLine("Bom dia!");
+             }
+             else {
+                 if ( hora < 18 ) {
+                     Console.WriteLine("Boa tarde!");
+                 }
+                 else {
+                     Console.WriteLine("Boa noite!");
+                 }
+             }
+     ```
+
+     Uma forma mais simples de escrever as estruturas condicionais encadeadas
+
+     ```c#
+     if ( condição ) {
+         comando 1
+         comando 2
+     }
+     else if ( condição 2 ) {
+         comando 3
+         comando 4
+     }
+     else if ( condição 3 ) {
+         comando 5
+         comando 6
+     }
+     else {
+         comando 7
+         comando 8
+     }
+     ```
+
+## Aula 33 -  Exercício resolvido 01
+
+Fazer um programa para ler as duas notas que um aluno obteve no primeiro e segundo semestres de uma disciplina anual. em seguida, mostrar a nota final que o aluno obteve no ano juntamente com um texto explicativo. Caso a nota final do aluno seja inferior a 60,00, mostrar a mensagem "REPROVADO", conforme  exemplos. Todos os valores devem ter uma casa decimal.
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+
+        Console.WriteLine("Exercício resolvido");
+
+        double nota1, nota2, notaFinal;
+        
+        Console.WriteLine("Digite a 1ª nota");
+        nota1 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        Console.WriteLine("Digite a 2ª nota");
+        nota2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+        notaFinal = nota1 + nota2;
+
+        Console.WriteLine("NOTA FINAL = " + notaFinal.ToString("F1", CultureInfo.InvariantCulture));
+
+        if ( notaFinal < 60.0 ) {
+            Console.WriteLine("REPROVADO");
+        }
+        
+      Console.ReadLine();
+    }
+  }
+};
+```
+
+## Aula 34 - Exercício resolvido 02
+
+- beecrowd 1036
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Exercício 1061");
+        Console.WriteLine("Tempo de um Evento");
+        Console.WriteLine("Dia e Hora Inicial");
+
+        double A, B, C, delta, R1, R2;
+
+        string[] v = Console.ReadLine().Split(' ');
+        A = double.Parse(v[0], CultureInfo.InvariantCulture);
+        B = double.Parse(v[1], CultureInfo.InvariantCulture);
+        C = double.Parse(v[2], CultureInfo.InvariantCulture);
+
+        delta = Math.Pow(B, 2.0) - (4.0 * A * C);
+        
+        if ( A == 0.0 || delta < 0.0 ) {
+            Console.WriteLine("Impossivel calcular");
+        } else {
+            R1 = ( -B + Math.Sqrt(delta)) / (2.0 * A);
+            R2 = ( -B - Math.Sqrt(delta)) / (2.0 * A);
+
+            Console.WriteLine("R1 = " + R1.ToString("F5", CultureInfo.InvariantCulture));
+            Console.WriteLine("R2 = " + R2.ToString("F5", CultureInfo.InvariantCulture));
+        }
+
+      Console.ReadLine();
+    }
+  }
+};
+```
+
+## Aula 35 - Exercício resolvido 03
 
