@@ -1749,3 +1749,45 @@ namespace ConsoleApplication2 {
 
 ## Aula 35 - Exercício resolvido 03
 
+Fazer um programa para ler três números inteiros. Em seguida, mostrar qual o menor dentre os três números lidos. em caso de empate, mostrar apenas uma vez.
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Exercício resolvido 03");
+        Console.WriteLine("Menor número");
+        Console.WriteLine("Três inteiros");
+
+        int A, B, C, menor;
+
+        string[] v = Console.ReadLine().Split(' ');
+        A = int.Parse(v[0]);
+        B = int.Parse(v[1]);
+        C = int.Parse(v[2]);
+
+        menor = A;
+
+        if ( B < menor ) {
+            menor = B;
+        } else if ( C < menor ) {
+            menor = C;
+        };
+
+        Console.WriteLine("MENOR = " + menor);
+        
+      Console.ReadLine();
+    }
+  }
+};
+```
+
+## Aula 36 -  Sintaxe opcional: operadores de atribuição cumulativa
+
+Uma operadora de relefonia cobra R$50.00 por um planobásico que dá direito a 100 minutos de telefone. Cada minuto que exceder a franquia de 100 minutos custa R$2.00. Fazer um programa para ler a quantidade de minutos que uma pessoa consumiu, daí mostrar o valor a ser pago.
+

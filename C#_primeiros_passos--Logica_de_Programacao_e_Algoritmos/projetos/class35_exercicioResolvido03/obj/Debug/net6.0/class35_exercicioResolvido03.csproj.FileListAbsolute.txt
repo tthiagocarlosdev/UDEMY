@@ -1,0 +1,15 @@
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class35_exercicioResolvido03/bin/Debug/net6.0/class35_exercicioResolvido03
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class35_exercicioResolvido03/bin/Debug/net6.0/class35_exercicioResolvido03.deps.json
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class35_exercicioResolvido03/bin/Debug/net6.0/class35_exercicioResolvido03.runtimeconfig.json
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class35_exercicioResolvido03/bin/Debug/net6.0/class35_exercicioResolvido03.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class35_exercicioResolvido03/bin/Debug/net6.0/class35_exercicioResolvido03.pdb
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class35_exercicioResolvido03/obj/Debug/net6.0/class35_exercicioResolvido03.csproj.AssemblyReference.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class35_exercicioResolvido03/obj/Debug/net6.0/class35_exercicioResolvido03.GeneratedMSBuildEditorConfig.editorconfig
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class35_exercicioResolvido03/obj/Debug/net6.0/class35_exercicioResolvido03.AssemblyInfoInputs.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class35_exercicioResolvido03/obj/Debug/net6.0/class35_exercicioResolvido03.AssemblyInfo.cs
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class35_exercicioResolvido03/obj/Debug/net6.0/class35_exercicioResolvido03.csproj.CoreCompileInputs.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class35_exercicioResolvido03/obj/Debug/net6.0/class35_exercicioResolvido03.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class35_exercicioResolvido03/obj/Debug/net6.0/refint/class35_exercicioResolvido03.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class35_exercicioResolvido03/obj/Debug/net6.0/class35_exercicioResolvido03.pdb
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class35_exercicioResolvido03/obj/Debug/net6.0/class35_exercicioResolvido03.genruntimeconfig.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class35_exercicioResolvido03/obj/Debug/net6.0/ref/class35_exercicioResolvido03.dll
