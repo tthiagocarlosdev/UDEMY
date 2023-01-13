@@ -1791,3 +1791,278 @@ namespace ConsoleApplication2 {
 
 Uma operadora de relefonia cobra R$50.00 por um planobásico que dá direito a 100 minutos de telefone. Cada minuto que exceder a franquia de 100 minutos custa R$2.00. Fazer um programa para ler a quantidade de minutos que uma pessoa consumiu, daí mostrar o valor a ser pago.
 
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Operadores de atribuição cumulativa");
+        Console.WriteLine("Número inteiro");
+
+        int minutos;
+        double valorFinal = 50.0;
+        
+        minutos = int.Parse(Console.ReadLine());
+
+        if ( minutos  > 100 ) {
+            valorFinal += ((minutos - 100) * 2);
+        };
+
+        Console.WriteLine("Valor a pargar: " + valorFinal.ToString("F2", CultureInfo.InvariantCulture));
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+Operadores de atribuição cumulativa
+
+| a += b  | a = a + b |
+| :-----: | :-------: |
+| a -= b  | a = a - b |
+| a *= b  | a = a * b |
+| a  /= b | a = a / b |
+| a %= b  | a = a % b |
+
+## Aula 37 - Sintaxe opcional: estrutura switch-case
+
+- Quando se tem três ou mais opções e fluxo a serem tratadoas com base no valor de uma variável, ao invés de várias estruturas if-else encadeadas, alguns preferem utilizar a estrutura __switch-case__.
+
+Problema exemplo:
+
+Fazer um programa para ler um valor inteiro de 1 a 7 representando um dia da semana (sendo 1 = domingo, 2 = segunda, e assim por diante). Escrever na tela o dia da semana correspondente, conforme exemplos.
+
+| Entrada |             Saída             |
+| :-----: | :---------------------------: |
+|    1    |    Dia da semana: domingo     |
+|    4    |     Dia da semana: quarta     |
+|    9    | Dia da semana: valor inválido |
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Estrutura switch-case");
+        Console.WriteLine("Número inteiro");
+
+        string diaDaSemana = "";
+        
+        int numero = int.Parse(Console.ReadLine());
+
+        switch (numero)
+        {
+            case 1: 
+                diaDaSemana = "domingo";
+            break;
+            case 2:
+                diaDaSemana = "segunda";
+            break;
+            case 3:
+                diaDaSemana = "terça";
+            break;
+            case 4:
+                diaDaSemana = "quarta";
+            break;
+            case 5:
+                diaDaSemana = "quinta";
+            break;
+            case 6:
+                diaDaSemana = "sexta";
+            break; 
+            case 7:
+                diaDaSemana = "sabado";
+            break;
+            default:
+                diaDaSemana = "valor inválido";
+            break;
+        };
+
+        Console.WriteLine("Dia da semana: " + diaDaSemana);
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+### Sintaxe do switch-case
+
+```c#
+switch ( expressão ) {
+    case valor1:
+        comando1
+        comando2
+        break;
+    case valor2:
+        comando3
+        comando4
+    	break;
+    default:
+        comando5
+        comando6
+        break;
+}
+```
+
+## Aula 38 - Exercícios propostos
+
+- Exercício 1035
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Exercício 1061");
+        Console.WriteLine("Teste de Seleção 1");
+        Console.WriteLine("Números inteiros");
+
+        int A, B, C, D;
+        string[] valores = Console.ReadLine().Split(' ');
+        A = int.Parse(valores[0]);
+        B = int.Parse(valores[1]);
+        C = int.Parse(valores[2]);
+        D = int.Parse(valores[3]);        
+
+        if (B>C && D>A && (C+D) > (A+B) && C > 0 && D > 0 && (A%2==0)) {
+            Console.WriteLine( "Valores aceitos" );
+        } else {
+            Console.WriteLine( "Valores nao aceitos" );
+        };
+
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+- Exercício 1038
+
+```c#
+
+```
+
+- Exercício 1044
+
+```c#
+
+```
+
+- Exercício 1046
+
+```c#
+
+```
+
+- Exercício 1048
+
+```c#
+
+```
+
+- Exercício 1037
+
+```c#
+
+```
+
+- Exercício 1040 (use float)
+
+```c#
+
+```
+
+- Exercício 1041
+
+```c#
+
+```
+
+- Exercício 1045
+
+```c#
+
+```
+
+- Exercício 1047
+
+```c#
+
+```
+
+- Exercício 1049
+
+```c#
+
+```
+
+- Exercício 1051
+
+```c#
+
+```
+
+- Exercício 1042
+
+```c#
+
+```
+
+- Exercício 1043
+
+```c#
+
+```
+
+- Exercício 1050
+
+```c#
+```
+
+- Exercício 1052
+
+```c#
+
+```
+
+- Exercício 1060
+
+```c#
+
+```
+
+- Exercício 1064
+
+```c#
+
+```
+
+- Exercício 1065
+
+```c#
+
+```
+
+- Exercício 1066
+
+```c#
+
+```
+
+- Exercício 1070
+
+```c#
+```
+
