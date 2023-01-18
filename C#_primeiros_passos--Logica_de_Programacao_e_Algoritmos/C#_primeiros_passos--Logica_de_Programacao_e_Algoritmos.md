@@ -2080,13 +2080,93 @@ namespace ConsoleApplication2 {
 - Exercício 1048
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Exercício 1048");
+        Console.WriteLine("Aumento de Salário");
+        Console.WriteLine("Salário/double");
+
+        double salario, novoSalario = 0.0, reajusteGanho = 0.0;
+        int percentual = 0;
+
+        salario = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+        if(salario > 2000.0){
+            novoSalario = (double)(salario + (salario * 0.04));
+            reajusteGanho = (double)(salario * 0.04);
+            percentual = 4;
+        } else if(salario > 1200.0){
+            novoSalario = (double)(salario + (salario * 0.07));
+            reajusteGanho = (double)(salario * 0.07);
+            percentual = 7;
+        } else if(salario  > 800.0){
+            novoSalario = (double)(salario + (salario * 0.10));
+            reajusteGanho = (double)(salario * 0.10);
+            percentual = 10;
+        } else if(salario > 400.0){
+            novoSalario = (double)(salario + (salario * 0.12));
+            reajusteGanho = (double)(salario * 0.12);
+            percentual = 12;
+        } else {
+            novoSalario = (double)(salario + (salario * 0.15));
+            reajusteGanho = (double)(salario * 0.15);
+            percentual = 15;
+        }
+
+        Console.WriteLine("Novo salario: " + novoSalario.ToString("F2", CultureInfo.InstalledUICulture));
+        Console.WriteLine("Reajuste ganho: " + reajusteGanho.ToString("F2", CultureInfo.InstalledUICulture));
+        Console.WriteLine("Em percentual: " + percentual + " %");
+
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
 - Exercício 1037
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Exercício 1037");
+        Console.WriteLine("Intervalo");
+        Console.WriteLine("Valor/double");
+
+        double valor = 0.0;
+        string intervalo = "";
+
+        valor = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+        if(valor >= 0 && valor <= 25.0){
+            intervalo = "Intervalo [0,25]";
+        } else if(valor > 25.0 && valor <= 50.0){
+            intervalo = "Intervalo (25,50]";
+        } else if(valor > 50.0 && valor <= 75.0){
+            intervalo = "Intervalo (50,75]";
+        } else if(valor > 75.0 && valor <= 100.0){
+            intervalo = "Intervalo (75,100]";
+        } else {
+            intervalo = "Fora de intervalo";
+        }
+
+        Console.WriteLine(intervalo);
+        
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
 - Exercício 1040 (use float)
