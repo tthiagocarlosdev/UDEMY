@@ -1,0 +1,15 @@
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/1035/bin/Debug/net6.0/1035
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/1035/bin/Debug/net6.0/1035.deps.json
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/1035/bin/Debug/net6.0/1035.runtimeconfig.json
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/1035/bin/Debug/net6.0/1035.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/1035/bin/Debug/net6.0/1035.pdb
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/1035/obj/Debug/net6.0/1035.csproj.AssemblyReference.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/1035/obj/Debug/net6.0/1035.GeneratedMSBuildEditorConfig.editorconfig
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/1035/obj/Debug/net6.0/1035.AssemblyInfoInputs.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/1035/obj/Debug/net6.0/1035.AssemblyInfo.cs
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/1035/obj/Debug/net6.0/1035.csproj.CoreCompileInputs.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/1035/obj/Debug/net6.0/1035.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/1035/obj/Debug/net6.0/refint/1035.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/1035/obj/Debug/net6.0/1035.pdb
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/1035/obj/Debug/net6.0/1035.genruntimeconfig.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/1035/obj/Debug/net6.0/ref/1035.dll

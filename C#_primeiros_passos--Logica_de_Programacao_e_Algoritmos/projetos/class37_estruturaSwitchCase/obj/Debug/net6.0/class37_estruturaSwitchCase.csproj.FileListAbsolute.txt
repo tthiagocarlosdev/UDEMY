@@ -1,0 +1,15 @@
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class37_estruturaSwitchCase/bin/Debug/net6.0/class37_estruturaSwitchCase
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class37_estruturaSwitchCase/bin/Debug/net6.0/class37_estruturaSwitchCase.deps.json
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class37_estruturaSwitchCase/bin/Debug/net6.0/class37_estruturaSwitchCase.runtimeconfig.json
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class37_estruturaSwitchCase/bin/Debug/net6.0/class37_estruturaSwitchCase.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class37_estruturaSwitchCase/bin/Debug/net6.0/class37_estruturaSwitchCase.pdb
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class37_estruturaSwitchCase/obj/Debug/net6.0/class37_estruturaSwitchCase.csproj.AssemblyReference.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class37_estruturaSwitchCase/obj/Debug/net6.0/class37_estruturaSwitchCase.GeneratedMSBuildEditorConfig.editorconfig
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class37_estruturaSwitchCase/obj/Debug/net6.0/class37_estruturaSwitchCase.AssemblyInfoInputs.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class37_estruturaSwitchCase/obj/Debug/net6.0/class37_estruturaSwitchCase.AssemblyInfo.cs
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class37_estruturaSwitchCase/obj/Debug/net6.0/class37_estruturaSwitchCase.csproj.CoreCompileInputs.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class37_estruturaSwitchCase/obj/Debug/net6.0/class37_estruturaSwitchCase.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class37_estruturaSwitchCase/obj/Debug/net6.0/refint/class37_estruturaSwitchCase.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class37_estruturaSwitchCase/obj/Debug/net6.0/class37_estruturaSwitchCase.pdb
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class37_estruturaSwitchCase/obj/Debug/net6.0/class37_estruturaSwitchCase.genruntimeconfig.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class37_estruturaSwitchCase/obj/Debug/net6.0/ref/class37_estruturaSwitchCase.dll

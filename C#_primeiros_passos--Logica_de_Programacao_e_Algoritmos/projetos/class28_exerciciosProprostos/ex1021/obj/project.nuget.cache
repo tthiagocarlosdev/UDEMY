@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bOLCu6wkho7F8XC2cBkxPkK5yrI2zVjjCd6D/MczFTYGMxuSxUEMyigId9eDb22Ib7W41edcIGXEY9l9ucqC+w==",
+  "dgSpecHash": "3TBvwQtkuJ8nE3wlLJW6jasTJpXsvlmngXTg1pPCYoEq3zyOdtTs6YVOkQILXXYc2zvbZ7e9QSu29HAN8jjpOQ==",
   "success": true,
-  "projectFilePath": "/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class28_exerciciosProprostos/ex1021/ex1021.csproj",
-  "expectedPackageFiles": [
-    "/home/thiago/.nuget/packages/microsoft.netcore.app.ref/6.0.12/microsoft.netcore.app.ref.6.0.12.nupkg.sha512",
-    "/home/thiago/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.12/microsoft.aspnetcore.app.ref.6.0.12.nupkg.sha512",
-    "/home/thiago/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.12/microsoft.netcore.app.host.linux-x64.6.0.12.nupkg.sha512"
-  ],
+  "projectFilePath": "/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class28_exerciciosProprostos/ex1021/ex1021.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

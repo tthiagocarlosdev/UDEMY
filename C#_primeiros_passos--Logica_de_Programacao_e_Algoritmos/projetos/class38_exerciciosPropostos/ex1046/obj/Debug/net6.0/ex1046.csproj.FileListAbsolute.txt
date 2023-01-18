@@ -1,0 +1,15 @@
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/ex1046/bin/Debug/net6.0/ex1046
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/ex1046/bin/Debug/net6.0/ex1046.deps.json
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/ex1046/bin/Debug/net6.0/ex1046.runtimeconfig.json
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/ex1046/bin/Debug/net6.0/ex1046.dll
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/ex1046/bin/Debug/net6.0/ex1046.pdb
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/ex1046/obj/Debug/net6.0/ex1046.csproj.AssemblyReference.cache
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/ex1046/obj/Debug/net6.0/ex1046.GeneratedMSBuildEditorConfig.editorconfig
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/ex1046/obj/Debug/net6.0/ex1046.AssemblyInfoInputs.cache
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/ex1046/obj/Debug/net6.0/ex1046.AssemblyInfo.cs
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/ex1046/obj/Debug/net6.0/ex1046.csproj.CoreCompileInputs.cache
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/ex1046/obj/Debug/net6.0/ex1046.dll
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/ex1046/obj/Debug/net6.0/refint/ex1046.dll
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/ex1046/obj/Debug/net6.0/ex1046.pdb
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/ex1046/obj/Debug/net6.0/ex1046.genruntimeconfig.cache
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class38_exerciciosPropostos/ex1046/obj/Debug/net6.0/ref/ex1046.dll

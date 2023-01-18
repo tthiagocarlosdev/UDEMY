@@ -1473,3 +1473,707 @@ Expressões comparativas comparam uma coisa com outra. Quando você avalia uma e
 
 ## Aula 31 - Expressões lógicas
 
+São expressões que quando avaliada resultam em um valor veradade.  C, C++, Java, C#:
+
+| Operador | Significado |
+| :------: | :---------: |
+|    &&    |      E      |
+|   \|\|   |     OU      |
+|    !     |     NÃO     |
+
+- ### E -> Todas as condições devem ser verdadeiras.  Exemplo:
+
+Suponha x igual a 5
+
+x <= 20 && x == 10  Resultado: F
+
+x > 0 && x != 3  Resultado: V
+
+x <= 20 && x == 10 && x != 3  Resultado: F
+
+- Tabela verdade do operador E
+
+|  A   |  B   | A && B |
+| :--: | :--: | :----: |
+|  F   |  F   |   F    |
+|  F   |  V   |   F    |
+|  V   |  F   |   F    |
+|  V   |  V   |   V    |
+
+- ### OU -> Pelo menos uma condição deve ser verdadeira. Exemplo: 
+
+Suponha x igual a 5
+
+x == 10 || x <= 20  Resultado: V
+
+x > 0 || x != 3  Resultado: V
+
+x <= 0  || x != 3 || x != 5  Resultado: V
+
+- Tabela verdade do operador OU
+
+|  A   |  B   | A \|\| B |
+| :--: | :--: | :------: |
+|  F   |  F   |    F     |
+|  F   |  V   |    V     |
+|  V   |  F   |    V     |
+|  V   |  V   |    V     |
+
+- ### NÃO -> O operador "NÃO" inverte a condiçao. Exemplo: 
+
+Suponha x igual a 5
+
+! ( x == 10 )  Resultado: V
+
+! ( x >= 2 )  Resultado: F
+
+! ( x <= 20  && x == 10 )  Resultado: V
+
+|  A   |  !A  |
+| :--: | :--: |
+|  F   |  V   |
+|  V   |  F   |
+
+## Aula 32 - Estrutura condicional
+
+É uma __estrutura de controle__ que permite definir que um certo __bloco de comandos__ somente será executado dependendo de uma __condição__.
+
+- ### Sintaxe da estrutura condicional
+
+  - ### Simples
+
+    ```c#
+    if ( condição ) {
+        comando 1
+        comando 2
+    }
+    ```
+
+    Regra:
+
+    ​	Condição verdadeira - executa o bloco de comandos.
+
+    ​	Condição Falsa - pula o bloco de comandos.
+
+    Exemplo: 
+
+    ```c#
+    int x = 5;
+            
+    Console.WriteLine("Bom dia");
+    
+    if ( x < 5 ) {
+        Console.WriteLine("Boa tarde");
+    }
+    
+    Console.WriteLine("Boa noite");
+    ```
+
+    
+
+    
+
+  - ### Composta
+
+    ```c#
+    if ( condição ) {
+        comando 1
+        comando 2
+    } else {
+        comando 3
+        comando 4
+    }
+    ```
+
+    Condição verdadeira - executa somente o bloco do __if__.
+
+    Condição Falsa - executa somente o bloco do __else__.
+
+    Exemplo: 
+
+    ```c#
+    int horas;
+    
+    Console.WriteLine("Quantas horas? ");
+    horas = int.Parse(Console.ReadLine());
+    
+    if ( horas < 12 ){
+        Console.WriteLine("Bom dia!");
+    }
+    else {
+        Console.WriteLine("Boa tarde!");
+    }
+    ```
+
+  E se eu tiver mais de duas possibilidades ?
+
+   - ### Encademamento de estruturas condicionais:
+
+     ```c#
+     if ( condição ) {
+         comando 1
+         comando 2
+     }
+     else {
+         if ( condição 2 ) {
+             comando 3
+             comando 4
+         }
+         else {
+             comando 5
+             comando 6
+         }
+     }
+     ```
+
+     Exemplo: 
+
+     ```c#
+     int hora;
+     
+             Console.WriteLine("Quantas horas? ");
+             hora = int.Parse(Console.ReadLine());
+     
+             if ( hora < 12 ){
+                 Console.WriteLine("Bom dia!");
+             }
+             else {
+                 if ( hora < 18 ) {
+                     Console.WriteLine("Boa tarde!");
+                 }
+                 else {
+                     Console.WriteLine("Boa noite!");
+                 }
+             }
+     ```
+
+     Uma forma mais simples de escrever as estruturas condicionais encadeadas
+
+     ```c#
+     if ( condição ) {
+         comando 1
+         comando 2
+     }
+     else if ( condição 2 ) {
+         comando 3
+         comando 4
+     }
+     else if ( condição 3 ) {
+         comando 5
+         comando 6
+     }
+     else {
+         comando 7
+         comando 8
+     }
+     ```
+
+## Aula 33 -  Exercício resolvido 01
+
+Fazer um programa para ler as duas notas que um aluno obteve no primeiro e segundo semestres de uma disciplina anual. em seguida, mostrar a nota final que o aluno obteve no ano juntamente com um texto explicativo. Caso a nota final do aluno seja inferior a 60,00, mostrar a mensagem "REPROVADO", conforme  exemplos. Todos os valores devem ter uma casa decimal.
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+
+        Console.WriteLine("Exercício resolvido");
+
+        double nota1, nota2, notaFinal;
+        
+        Console.WriteLine("Digite a 1ª nota");
+        nota1 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        Console.WriteLine("Digite a 2ª nota");
+        nota2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+        notaFinal = nota1 + nota2;
+
+        Console.WriteLine("NOTA FINAL = " + notaFinal.ToString("F1", CultureInfo.InvariantCulture));
+
+        if ( notaFinal < 60.0 ) {
+            Console.WriteLine("REPROVADO");
+        }
+        
+      Console.ReadLine();
+    }
+  }
+};
+```
+
+## Aula 34 - Exercício resolvido 02
+
+- beecrowd 1036
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Exercício 1061");
+        Console.WriteLine("Tempo de um Evento");
+        Console.WriteLine("Dia e Hora Inicial");
+
+        double A, B, C, delta, R1, R2;
+
+        string[] v = Console.ReadLine().Split(' ');
+        A = double.Parse(v[0], CultureInfo.InvariantCulture);
+        B = double.Parse(v[1], CultureInfo.InvariantCulture);
+        C = double.Parse(v[2], CultureInfo.InvariantCulture);
+
+        delta = Math.Pow(B, 2.0) - (4.0 * A * C);
+        
+        if ( A == 0.0 || delta < 0.0 ) {
+            Console.WriteLine("Impossivel calcular");
+        } else {
+            R1 = ( -B + Math.Sqrt(delta)) / (2.0 * A);
+            R2 = ( -B - Math.Sqrt(delta)) / (2.0 * A);
+
+            Console.WriteLine("R1 = " + R1.ToString("F5", CultureInfo.InvariantCulture));
+            Console.WriteLine("R2 = " + R2.ToString("F5", CultureInfo.InvariantCulture));
+        }
+
+      Console.ReadLine();
+    }
+  }
+};
+```
+
+## Aula 35 - Exercício resolvido 03
+
+Fazer um programa para ler três números inteiros. Em seguida, mostrar qual o menor dentre os três números lidos. em caso de empate, mostrar apenas uma vez.
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Exercício resolvido 03");
+        Console.WriteLine("Menor número");
+        Console.WriteLine("Três inteiros");
+
+        int A, B, C, menor;
+
+        string[] v = Console.ReadLine().Split(' ');
+        A = int.Parse(v[0]);
+        B = int.Parse(v[1]);
+        C = int.Parse(v[2]);
+
+        menor = A;
+
+        if ( B < menor ) {
+            menor = B;
+        } else if ( C < menor ) {
+            menor = C;
+        };
+
+        Console.WriteLine("MENOR = " + menor);
+        
+      Console.ReadLine();
+    }
+  }
+};
+```
+
+## Aula 36 -  Sintaxe opcional: operadores de atribuição cumulativa
+
+Uma operadora de relefonia cobra R$50.00 por um planobásico que dá direito a 100 minutos de telefone. Cada minuto que exceder a franquia de 100 minutos custa R$2.00. Fazer um programa para ler a quantidade de minutos que uma pessoa consumiu, daí mostrar o valor a ser pago.
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Operadores de atribuição cumulativa");
+        Console.WriteLine("Número inteiro");
+
+        int minutos;
+        double valorFinal = 50.0;
+        
+        minutos = int.Parse(Console.ReadLine());
+
+        if ( minutos  > 100 ) {
+            valorFinal += ((minutos - 100) * 2);
+        };
+
+        Console.WriteLine("Valor a pargar: " + valorFinal.ToString("F2", CultureInfo.InvariantCulture));
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+Operadores de atribuição cumulativa
+
+| a += b  | a = a + b |
+| :-----: | :-------: |
+| a -= b  | a = a - b |
+| a *= b  | a = a * b |
+| a  /= b | a = a / b |
+| a %= b  | a = a % b |
+
+## Aula 37 - Sintaxe opcional: estrutura switch-case
+
+- Quando se tem três ou mais opções e fluxo a serem tratadoas com base no valor de uma variável, ao invés de várias estruturas if-else encadeadas, alguns preferem utilizar a estrutura __switch-case__.
+
+Problema exemplo:
+
+Fazer um programa para ler um valor inteiro de 1 a 7 representando um dia da semana (sendo 1 = domingo, 2 = segunda, e assim por diante). Escrever na tela o dia da semana correspondente, conforme exemplos.
+
+| Entrada |             Saída             |
+| :-----: | :---------------------------: |
+|    1    |    Dia da semana: domingo     |
+|    4    |     Dia da semana: quarta     |
+|    9    | Dia da semana: valor inválido |
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Estrutura switch-case");
+        Console.WriteLine("Número inteiro");
+
+        string diaDaSemana = "";
+        
+        int numero = int.Parse(Console.ReadLine());
+
+        switch (numero)
+        {
+            case 1: 
+                diaDaSemana = "domingo";
+            break;
+            case 2:
+                diaDaSemana = "segunda";
+            break;
+            case 3:
+                diaDaSemana = "terça";
+            break;
+            case 4:
+                diaDaSemana = "quarta";
+            break;
+            case 5:
+                diaDaSemana = "quinta";
+            break;
+            case 6:
+                diaDaSemana = "sexta";
+            break; 
+            case 7:
+                diaDaSemana = "sabado";
+            break;
+            default:
+                diaDaSemana = "valor inválido";
+            break;
+        };
+
+        Console.WriteLine("Dia da semana: " + diaDaSemana);
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+### Sintaxe do switch-case
+
+```c#
+switch ( expressão ) {
+    case valor1:
+        comando1
+        comando2
+        break;
+    case valor2:
+        comando3
+        comando4
+    	break;
+    default:
+        comando5
+        comando6
+        break;
+}
+```
+
+## Aula 38 - Exercícios propostos
+
+- Exercício 1035
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Exercício 1061");
+        Console.WriteLine("Teste de Seleção 1");
+        Console.WriteLine("Números inteiros");
+
+        int A, B, C, D;
+        string[] valores = Console.ReadLine().Split(' ');
+        A = int.Parse(valores[0]);
+        B = int.Parse(valores[1]);
+        C = int.Parse(valores[2]);
+        D = int.Parse(valores[3]);        
+
+        if (B>C && D>A && (C+D) > (A+B) && C > 0 && D > 0 && (A%2==0)) {
+            Console.WriteLine( "Valores aceitos" );
+        } else {
+            Console.WriteLine( "Valores nao aceitos" );
+        };
+
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+- Exercício 1038
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Exercício 1038");
+        Console.WriteLine("Lanche");
+        Console.WriteLine("Código/Quantidade");
+
+        int codigoProduto, quantidadeProduto;
+        double valorTotal = 0.0;
+
+        string[] valores = Console.ReadLine().Split(' ');
+        codigoProduto = int.Parse(valores[0]);
+        quantidadeProduto = int.Parse(valores[1]);
+            
+        
+        switch (codigoProduto)
+        {
+            case 1:
+                valorTotal = (double)(quantidadeProduto * 4.00);
+            break;
+            case 2:
+                valorTotal = (double)(quantidadeProduto * 4.50);
+            break;
+            case 3:
+                valorTotal = (double)(quantidadeProduto * 5.00);
+            break;
+            case 4:
+                valorTotal = (double)(quantidadeProduto * 2.00);
+            break;
+            case 5:
+                valorTotal = (double)(quantidadeProduto * 1.50);
+            break;
+            // default:
+            //     Console.WriteLine("Código inválido!");
+            // break;
+        }
+
+        Console.WriteLine("Total: R$ " + valorTotal.ToString("F2", CultureInfo.InstalledUICulture));
+        
+
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+- Exercício 1044
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Exercício 1044");
+        Console.WriteLine("Múltiplos");
+        Console.WriteLine("A/B inteiro");
+
+        int A, B, resto, menor, maior;
+
+        string[] valores = Console.ReadLine().Split(' ');
+        A = int.Parse(valores[0]);
+        B = int.Parse(valores[1]);
+        menor = A;
+        maior = B;
+
+        if(menor > B){
+            menor = B;
+            maior = A;
+        }
+            
+        if(maior % menor == 0){ 
+            Console.WriteLine("Sao Multiplos");
+        } else {
+            Console.WriteLine("Nao sao Multiplos");
+        }
+
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+- Exercício 1046
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Exercício 1046");
+        Console.WriteLine("Tempo de Jogo");
+        Console.WriteLine("A/B inteiro");
+
+        int horaInicial, horaFinal, tempoDeJogo;
+
+        string[] valores = Console.ReadLine().Split(' ');
+        horaInicial = int.Parse(valores[0]);
+        horaFinal = int.Parse(valores[1]);
+        
+        if(horaInicial >= horaFinal){
+            tempoDeJogo = (24 - horaInicial) + horaFinal;
+        } else {
+            tempoDeJogo = horaFinal - horaInicial;
+        }
+            
+        Console.WriteLine("O JOGO DUROU " + tempoDeJogo + " HORA(S)");
+
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+- Exercício 1048
+
+```c#
+
+```
+
+- Exercício 1037
+
+```c#
+
+```
+
+- Exercício 1040 (use float)
+
+```c#
+
+```
+
+- Exercício 1041
+
+```c#
+
+```
+
+- Exercício 1045
+
+```c#
+
+```
+
+- Exercício 1047
+
+```c#
+
+```
+
+- Exercício 1049
+
+```c#
+
+```
+
+- Exercício 1051
+
+```c#
+
+```
+
+- Exercício 1042
+
+```c#
+
+```
+
+- Exercício 1043
+
+```c#
+
+```
+
+- Exercício 1050
+
+```c#
+```
+
+- Exercício 1052
+
+```c#
+
+```
+
+- Exercício 1060
+
+```c#
+
+```
+
+- Exercício 1064
+
+```c#
+
+```
+
+- Exercício 1065
+
+```c#
+
+```
+
+- Exercício 1066
+
+```c#
+
+```
+
+- Exercício 1070
+
+```c#
+```
+
