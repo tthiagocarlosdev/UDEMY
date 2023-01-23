@@ -2458,24 +2458,181 @@ namespace ConsoleApplication2 {
 - Exercício 1051
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Exercício 1051");
+        Console.WriteLine("Imposto de Renda");
+        Console.WriteLine("1 Valor/double");
+        Console.WriteLine("------------------------");
+
+        double valorDoImposto = 0.0;
+        double receita = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+        if(receita <= 2000.0){
+            Console.WriteLine("Isento");
+        } else if(receita <= 3000.0){
+            double valorIncidente = receita  - 2000.0;
+            valorDoImposto = valorIncidente * 0.08;
+            Console.WriteLine("R$ " + valorDoImposto.ToString("F2", CultureInfo.InvariantCulture));
+        } else if(receita <= 4500.0){
+            double valorIncidente = receita - 3000.0;
+            valorDoImposto = (valorIncidente * 0.18) + 80;
+            Console.WriteLine("R$ " + valorDoImposto.ToString("F2", CultureInfo.InvariantCulture));
+        } else if(receita > 4500.0){
+            double valorIncidente = receita - 4500.0;
+            valorDoImposto = (valorIncidente * 0.28) + 80 + 270;
+            Console.WriteLine("R$ " + valorDoImposto.ToString("F2", CultureInfo.InvariantCulture));
+        }
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
 - Exercício 1042
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Exercício 1042");
+        Console.WriteLine("Sort Simples");
+        Console.WriteLine("3 Valores/int");
+        Console.WriteLine("------------------------");
+
+        int A, B, C, troca;
+        string[] v = Console.ReadLine().Split();
+        A = int.Parse(v[0]);
+        B = int.Parse(v[1]);
+        C = int.Parse(v[2]);
+
+        if(B < A){
+            troca = A;
+            A = B;
+            B = troca;
+        }
+        if(C < A){
+            troca = A;
+            A = C;
+            C = troca;
+        }
+        if(C < B){
+            troca = B;
+            B = C;
+            C = troca;
+        }
+        
+        Console.WriteLine(A);
+        Console.WriteLine(B);
+        Console.WriteLine(C);
+        Console.WriteLine();
+        Console.WriteLine(v[0]);
+        Console.WriteLine(v[1]);
+        Console.WriteLine(v[2]);
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
 - Exercício 1043
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Exercício 1043");
+        Console.WriteLine("Triângulo");
+        Console.WriteLine("3 Valores/double");
+        Console.WriteLine("------------------------");
+
+        double A, B, C, areaTrapezio, perimetroTriangulo;
+        string[] v = Console.ReadLine().Split(' ');
+        A = double.Parse(v[0], CultureInfo.InvariantCulture);
+        B = double.Parse(v[1], CultureInfo.InvariantCulture);
+        C = double.Parse(v[2], CultureInfo.InvariantCulture);
+
+        if(A + B > C && A + C > B && C + B > A){
+            perimetroTriangulo = A + B + C;
+            Console.WriteLine("Perimetro = " + perimetroTriangulo.ToString("F1", CultureInfo.InvariantCulture));
+        } else {
+            areaTrapezio = (((A + B) * C) / 2);
+            Console.WriteLine("Area = " + areaTrapezio.ToString("F1", CultureInfo.InvariantCulture));
+        }
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
 - Exercício 1050
 
 ```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Exercício 1050");
+        Console.WriteLine("DDD");
+        Console.WriteLine("1 Valor/int");
+        Console.WriteLine("------------------------");
+
+        int DDD = int.Parse(Console.ReadLine());
+        string destino = "";
+
+        if(DDD == 61){
+            destino = "Brasilia";
+        } else if(DDD == 71){
+            destino = "Salvador";
+        } else if(DDD == 11){
+            destino = "Sao Paulo";
+        } else if(DDD == 21){
+            destino = "Rio de Janeiro";
+        } else if(DDD == 32){
+            destino = "Juiz de Fora";
+        } else if(DDD == 19){
+            destino = "Campinas";
+        } else if(DDD == 27){
+            destino = "Vitoria";
+        } else if(DDD == 31){
+            destino = "Belo Horizonte";
+        } else {
+            destino = "DDD nao cadastrado";
+        }
+
+        Console.WriteLine(destino);
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
 - Exercício 1052
