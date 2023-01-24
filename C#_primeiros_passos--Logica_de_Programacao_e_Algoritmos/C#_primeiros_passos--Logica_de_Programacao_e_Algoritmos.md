@@ -2638,35 +2638,375 @@ namespace ConsoleApplication2 {
 - Exercício 1052
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Exercício 1052");
+        Console.WriteLine("Mês");
+        Console.WriteLine("1 valor/int");
+        Console.WriteLine("------------------------");
+
+        int numero = int.Parse(Console.ReadLine());
+        string mes = "";
+
+        switch (numero){
+            case 1:
+                mes = "January";
+                break;
+            case 2:
+                mes = "February";
+                break;
+            case 3:
+                mes = "March";
+            break;
+            case 4:
+                mes = "April";
+                break;
+            case 5:
+                mes = "May";
+                break;
+            case 6:
+                mes = "June";
+                break;
+            case 7:
+                mes = "July";
+                break;
+            case 8:
+                mes = "August";
+                break;
+            case 9:
+                mes = "September";
+                break;
+            case 10:
+                mes = "October";
+                break;
+            case 11:
+                mes = "November";
+                break;
+            case 12:
+                mes = "December";
+                break;
+        }
+
+        Console.WriteLine(mes);
+        
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
 - Exercício 1060
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Exercício 1060");
+        Console.WriteLine("Números Positivos");
+        Console.WriteLine("6 valores/int");
+        Console.WriteLine("------------------------");
+
+        int valoresPositivos = 0;
+        double A, B, C, D, E, F;
+
+        A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        D = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        E = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        F = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+        if(A > 0){
+            valoresPositivos++;
+        }
+        if(B > 0){
+            valoresPositivos++;
+        }
+        if(C > 0){
+            valoresPositivos++;
+        }
+        if(D > 0){
+            valoresPositivos++;
+        }
+        if(E > 0){
+            valoresPositivos++;
+        }
+        if(F > 0){
+            valoresPositivos++;
+        }
+
+        Console.WriteLine(valoresPositivos + " valores positivos");
+        
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
 - Exercício 1064
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Exercício 1064");
+        Console.WriteLine("Positivos e Média");
+        Console.WriteLine("6 valores/int");
+        Console.WriteLine("------------------------");
+
+        int valoresPositivos = 0;
+        double A, B, C, D, E, F, somaDosValoresPositivos = 0, mediaDosValoresPositivos = 0;
+
+        A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        D = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        E = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        F = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+        if(A > 0){
+            valoresPositivos++;
+            somaDosValoresPositivos += A;
+        }
+        if(B > 0){
+            valoresPositivos++;
+            somaDosValoresPositivos += B;
+        }
+        if(C > 0){
+            valoresPositivos++;
+            somaDosValoresPositivos += C;
+        }
+        if(D > 0){
+            valoresPositivos++;
+            somaDosValoresPositivos += D;
+        }
+        if(E > 0){
+            valoresPositivos++;
+            somaDosValoresPositivos += E;
+        }
+        if(F > 0){
+            valoresPositivos++;
+            somaDosValoresPositivos += F;
+        }
+
+        mediaDosValoresPositivos = somaDosValoresPositivos / valoresPositivos;
+
+        Console.WriteLine(valoresPositivos + " valores positivos");
+        Console.WriteLine(mediaDosValoresPositivos.ToString("F1", CultureInfo.InvariantCulture));
+        
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
 - Exercício 1065
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Exercício 1065");
+        Console.WriteLine("Pares entre Cinco Números");
+        Console.WriteLine("5 valores/int");
+        Console.WriteLine("------------------------");
+
+        int A, B, C, D, E, valoresPares = 0;
+
+        A = int.Parse(Console.ReadLine());
+        B = int.Parse(Console.ReadLine());
+        C = int.Parse(Console.ReadLine());
+        D = int.Parse(Console.ReadLine());
+        E = int.Parse(Console.ReadLine());
+
+        if(A % 2 == 0){
+            valoresPares++;
+        }
+        if(B % 2 == 0){
+            valoresPares++;
+        }
+        if(C % 2 == 0){
+            valoresPares++;
+        }
+        if(D % 2 == 0){
+            valoresPares++;
+        }
+        if(E % 2 == 0){
+            valoresPares++;
+        }
+
+        Console.WriteLine(valoresPares + " valores pares");
+        
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
 - Exercício 1066
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Exercício 1066");
+        Console.WriteLine("Pares, Ímpares, Positivos e Negativos");
+        Console.WriteLine("5 valores/int");
+        Console.WriteLine("------------------------");
+
+        int A, B, C, D, E, valoresPares = 0, valoresImpares = 0, valoresPositivos = 0, valoresNegativos = 0;
+
+        A = int.Parse(Console.ReadLine());
+        B = int.Parse(Console.ReadLine());
+        C = int.Parse(Console.ReadLine());
+        D = int.Parse(Console.ReadLine());
+        E = int.Parse(Console.ReadLine());
+
+        //determina valores pares
+        if(A % 2 == 0){
+            valoresPares++;
+        }
+        if(B % 2 == 0){
+            valoresPares++;
+        }
+        if(C % 2 == 0){
+            valoresPares++;
+        }
+        if(D % 2 == 0){
+            valoresPares++;
+        }
+        if(E % 2 == 0){
+            valoresPares++;
+        }
+
+        //determina valolores impares
+        if(A % 2 != 0){
+            valoresImpares++;
+        }
+        if(B % 2 != 0){
+            valoresImpares++;
+        }
+        if(C % 2 != 0){
+            valoresImpares++;
+        }
+        if(D % 2 != 0){
+            valoresImpares++;
+        }
+        if(E % 2 != 0){
+            valoresImpares++;
+        }
+
+        //determina valores positivos
+        if(A > 0){
+            valoresPositivos++;
+        }
+        if(B > 0){
+            valoresPositivos++;
+        }
+        if(C > 0){
+            valoresPositivos++;
+        }
+        if(D > 0){
+            valoresPositivos++;
+        }
+        if(E > 0){
+            valoresPositivos++;
+        }
+
+        //determina valores negativos
+        if(A < 0){
+            valoresNegativos++;
+        }
+        if(B < 0){
+            valoresNegativos++;
+        }
+        if(C < 0){
+            valoresNegativos++;
+        }
+        if(D < 0){
+            valoresNegativos++;
+        }
+        if(E < 0){
+            valoresNegativos++;
+        }
+
+        Console.WriteLine(valoresPares + " valor(es) par(es)");
+        Console.WriteLine(valoresImpares + " valor(es) impar(es)");
+        Console.WriteLine(valoresPositivos + " valor(es) positivo(s)");
+        Console.WriteLine(valoresNegativos + " valor(es) negativo(s)");
+        
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
 - Exercício 1070
 
 ```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Exercício 1070");
+        Console.WriteLine("Seis Números Ímpares");
+        Console.WriteLine("1 valor/int");
+        Console.WriteLine("------------------------");
+
+        int valor = int.Parse(Console.ReadLine());
+
+        if (valor % 2 == 0) {
+            valor++;
+        }
+
+        Console.WriteLine(valor);
+        Console.WriteLine(valor += 2);
+        Console.WriteLine(valor += 2);
+        Console.WriteLine(valor += 2);
+        Console.WriteLine(valor += 2);
+        Console.WriteLine(valor += 2);
+                
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
+
+## Aula 39
 
