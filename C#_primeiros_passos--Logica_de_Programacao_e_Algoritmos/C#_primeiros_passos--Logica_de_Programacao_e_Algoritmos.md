@@ -3008,5 +3008,304 @@ namespace ConsoleApplication2 {
 };
 ```
 
-## Aula 39
+## Aula 39 - Slides utilizados no capítulo
+
+## Aula 40 - Estrutura repetitiva enquanto
+
+É uma estrutura de controle que repete um bloco de comandos enquanto uma condição for verdadeira.
+
+### Quando usar:
+
+Quando não se sabe previamente a quantidade de repetições que será realizada.
+
+Fazer um programa que lê números inteiros até que um zero seja lido. Ao final mostra a soma dos números lidos.
+
+|         Entrada         | saída |
+| :---------------------: | :---: |
+| 5<br />2<br />4<br /> 0 |  11   |
+
+### Sintaxe / regra
+
+```c#
+while ( condição ) {
+	comando 1
+	comando 2
+}
+```
+
+### Regra:
+Verdadeira: executa e volta
+Falsa: pula fora
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("class40_estruturaRepetitivaEnquanto");
+        Console.WriteLine("Estrutura repetitiva enquanto");
+        Console.WriteLine("5 valores/int");
+        Console.WriteLine("------------------------");
+
+        int numero = 1, somaValores = 0;
+
+        while(numero != 0){
+            numero = int.Parse(Console.ReadLine());
+            somaValores += numero;
+        }
+
+        Console.WriteLine(somaValores);
+                
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+}; 
+```
+
+## Aula 41 - Teste de mesa com estrutura enquanto
+
+## Aula 42 - Exercícios propostos PARTE 1 - testes de mesa com estrutura enquanto
+
+**EXERCÍCIOS PROPOSTOS - PARTE 1**
+
+**TESTES DE MESA COM ESTRUTURA ENQUANTO**
+
+Caros estudantes, conforme exemplo visto no vídeo anterior, favor resolver os testes de mesa do arquivo PDF anexo a este artigo. 
+
+Para realizar esta tarefa, sugerimos uma das seguintes alternativas:
+
+- Imprimir o PDF, escrevendo na folha impressa
+- Copiar os desenhos no seu caderno, escrevendo no caderno
+- Usar um editor de PDF ou de imagem e escrever no computador
+
+## Aula 43 - Exercício resolvido 01
+
+- ex1113
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1113");
+        Console.WriteLine("Crescente e Decrescente");
+        Console.WriteLine("2 valores/int");
+        Console.WriteLine("------------------------");
+
+        int x = 0, y = 1;
+        
+        while(x != y){
+
+            string[] v = Console.ReadLine().Split(' ');
+            x = int.Parse(v[0]);
+            y = int.Parse(v[1]);
+
+            if(x > y){
+                Console.WriteLine("Decrescente");
+            } else if (x < y){
+                Console.WriteLine("Crescente");
+            }
+        }
+                
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+## Aula 44 - Exercício resolvido 02
+
+Faça um progrma para ler um número indeterminado de dados, contendo cada um, a idade de um indivíduo. O último dado, que não entrará nos cálculos, contém um valor de idade negativa. Calcular e imprimir a idade média deste grupo de indivíduos. se for entrado um valor negativo na primeira vez, mostrar a mensagem "impossivel calcular".
+
+| Entrada                    | Saída               |
+| -------------------------- | ------------------- |
+| 31<br />27<br />46<br />-5 | 34.67               |
+| -10                        | impossivel calcular |
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("class44_exercicioResolvido02");
+        // Console.WriteLine("Crescente e Decrescente");
+        Console.WriteLine("Valores/int");
+        Console.WriteLine("------------------------");
+
+        double idade, somaIdades = 0.0, contador = 0.0, mediaIdades = 0.0;
+
+        idade = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+        if(idade < 0.0){
+            Console.WriteLine("impossivel calcular");
+        } else {
+            while (idade > 0.0) {
+                somaIdades += idade;
+                contador++;
+                idade = double.Parse(Console.ReadLine());
+            }
+
+            mediaIdades = somaIdades / contador;
+
+            Console.WriteLine(mediaIdades.ToString("F2", CultureInfo.InvariantCulture));
+        }
+                
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+## Aula 45 -  Exercícios propostos PARTE 2 - problemas com estrutura enquanto
+
+[__Soluções__](https://github.com/acenelio/curso-logica-de-programacao-csharp)
+
+- ex1114
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1114");
+        Console.WriteLine("Senha Fixa");
+        Console.WriteLine("Valores/int");
+        Console.WriteLine("------------------------");
+
+        int senha = int.Parse(Console.ReadLine());
+
+        while(senha != 2002){
+            Console.WriteLine("Senha Invalida");
+            senha = int.Parse(Console.ReadLine());
+        }
+
+        Console.WriteLine("Acesso Permitido");
+                
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+- ex1115
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1115");
+        Console.WriteLine("Quadrante");
+        Console.WriteLine("Valores/int");
+        Console.WriteLine("------------------------");
+
+        int x = 1, y = 1;
+
+        while(x != 0 && y != 0){
+            string[] v = Console.ReadLine().Split(' ');
+            x = int.Parse(v[0]);
+            y = int.Parse(v[1]);
+
+            if(x > 0 && y > 0){
+                Console.WriteLine("primeiro");
+            } else if(x < 0 && y > 0){
+                Console.WriteLine("segundo");
+            } else if(x < 0 && y < 0){
+                Console.WriteLine("terceiro");
+            } else if(x > 0 && y < 0){
+                Console.WriteLine("quarto");
+            }
+        }
+                
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+- ex1117
+
+```c#
+
+```
+
+- ex1134
+
+```c#
+
+```
+
+- ex1154
+
+```c#
+
+```
+
+- ex1159
+
+```c#
+
+```
+
+- ex1118
+
+```c#
+
+```
+
+- ex1131
+
+```c#
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -1,0 +1,15 @@
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class45_exerciciosPropostos/ex1114/bin/Debug/net6.0/ex1114
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class45_exerciciosPropostos/ex1114/bin/Debug/net6.0/ex1114.deps.json
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class45_exerciciosPropostos/ex1114/bin/Debug/net6.0/ex1114.runtimeconfig.json
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class45_exerciciosPropostos/ex1114/bin/Debug/net6.0/ex1114.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class45_exerciciosPropostos/ex1114/bin/Debug/net6.0/ex1114.pdb
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class45_exerciciosPropostos/ex1114/obj/Debug/net6.0/ex1114.csproj.AssemblyReference.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class45_exerciciosPropostos/ex1114/obj/Debug/net6.0/ex1114.GeneratedMSBuildEditorConfig.editorconfig
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class45_exerciciosPropostos/ex1114/obj/Debug/net6.0/ex1114.AssemblyInfoInputs.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class45_exerciciosPropostos/ex1114/obj/Debug/net6.0/ex1114.AssemblyInfo.cs
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class45_exerciciosPropostos/ex1114/obj/Debug/net6.0/ex1114.csproj.CoreCompileInputs.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class45_exerciciosPropostos/ex1114/obj/Debug/net6.0/ex1114.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class45_exerciciosPropostos/ex1114/obj/Debug/net6.0/refint/ex1114.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class45_exerciciosPropostos/ex1114/obj/Debug/net6.0/ex1114.pdb
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class45_exerciciosPropostos/ex1114/obj/Debug/net6.0/ex1114.genruntimeconfig.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class45_exerciciosPropostos/ex1114/obj/Debug/net6.0/ref/ex1114.dll
