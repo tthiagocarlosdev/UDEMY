@@ -3251,19 +3251,129 @@ namespace ConsoleApplication2 {
 - ex1117
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1117");
+        Console.WriteLine("Validação de Nota");
+        Console.WriteLine("2 Valores/double");
+        Console.WriteLine("------------------------");
+
+        double notaA, notaB, media;
+
+        notaA = double.Parse(Console.ReadLine());
+
+        while(notaA < 0.0 || notaA > 10.0) {
+            Console.WriteLine("nota invalida");
+            notaA = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        }
+
+        notaB = double.Parse(Console.ReadLine());
+
+        while(notaB < 0.0 || notaB > 10.0) {
+            Console.WriteLine("nota invalida");
+            notaB = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        }
+
+        media = ((notaA + notaB) / 2);
+
+        Console.WriteLine("media = " + media.ToString("F2", CultureInfo.InvariantCulture));
+                
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
 - ex1134
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1134");
+        Console.WriteLine("Tipo de Combustível");
+        Console.WriteLine("1 Valor/int");
+        Console.WriteLine("------------------------");
+
+        int alcool = 0, gasolina = 0, diesel = 0, combustivel = 0;
+
+        while (combustivel != 4) {
+
+            combustivel = int.Parse(Console.ReadLine());
+
+            while ( combustivel < 1 || combustivel > 4) {
+                combustivel = int.Parse(Console.ReadLine());
+            }
+
+            if ( combustivel == 1 ) {
+                alcool++;
+            } else if( combustivel == 2) {
+                gasolina++;
+            } else if ( combustivel == 3) {
+                diesel++;
+            }
+        }
+
+        Console.WriteLine("MUITO OBRIGADO");
+        Console.WriteLine("Alcool: " + alcool);
+        Console.WriteLine("Gasolina: " + gasolina);
+        Console.WriteLine("Diesel: " + diesel);
+                
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
 - ex1154
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1154");
+        Console.WriteLine("Idades");
+        Console.WriteLine("Valores/int");
+        Console.WriteLine("------------------------");
+
+        int idade = 1, somaIdades = 0;
+        double idadeMedia, contador = 0.0;
+
+        while (idade > 0) {
+            idade = int.Parse(Console.ReadLine());
+            if(idade > 0){
+                somaIdades += idade;
+                contador++;
+            }
+        }
+
+        idadeMedia = (double) (somaIdades / contador);
+
+        Console.WriteLine(idadeMedia.ToString("F2", CultureInfo.InvariantCulture));
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
 - ex1159
