@@ -3379,18 +3379,169 @@ namespace ConsoleApplication2 {
 - ex1159
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1159");
+        Console.WriteLine("Soma de Pares Consecutivos");
+        Console.WriteLine("Valores/int");
+        Console.WriteLine("------------------------");
+
+        int x, somaPares = 0;
+
+        x = int.Parse(Console.ReadLine());
+
+        while ( x != 0 ) {
+
+            if ( x % 2 == 0 ) {
+                int contador = 5;
+                while(contador > 0){
+                    somaPares += x;
+                    x += 2;
+                    contador--;
+                }
+                Console.WriteLine(somaPares);
+                somaPares = 0;
+            } else if ( x % 2 != 0 ) {
+                x += 1;
+                int contador = 5;
+                while(contador > 0){
+                    somaPares += x;
+                    x += 2;
+                    contador--;
+                }
+                Console.WriteLine(somaPares);
+                somaPares = 0;
+            }
+
+            x = int.Parse(Console.ReadLine());
+            
+        }
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
 - ex1118
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1118");
+        Console.WriteLine("Várias Notas Com Validação");
+        Console.WriteLine("2 notas/reais");
+        Console.WriteLine("------------------------");
+
+        double notaA, notaB, media;
+        int X = 1;
+
+        while(X != 2){
+            notaA = double.Parse(Console.ReadLine());
+
+            while(notaA < 0.0 || notaA > 10.0){
+                Console.WriteLine("nota invalida");
+                notaA = double.Parse(Console.ReadLine());
+            }
+
+            notaB = double.Parse(Console.ReadLine());
+
+            while(notaB < 0.0 || notaB > 10.0){
+                Console.WriteLine("nota invalida");
+                notaB = double.Parse(Console.ReadLine());
+            }
+
+            media = (notaA + notaB) / 2.0;
+
+            Console.WriteLine("media = " + media.ToString("F2", CultureInfo.InvariantCulture));
+
+            Console.WriteLine("novo calculo (1-sim 2-nao)");
+            X = int.Parse(Console.ReadLine());
+
+            while( X != 1 && X != 2){
+                Console.WriteLine("novo calculo (1-sim 2-nao)");
+                X = int.Parse(Console.ReadLine());
+            } 
+
+        }
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
 - ex1131
 
 ```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1131");
+        Console.WriteLine("Grenais");
+        Console.WriteLine("gols/int");
+        Console.WriteLine("------------------------");
+
+        int golsInter, golsGremio, grenais = 0, vitoriasInter = 0, vitoriasGremio = 0, empate = 0, x = 1;
+        string vencedor = "";
+
+        while(x != 2){
+            string[] v = Console.ReadLine().Split(' ');
+            golsInter = int.Parse(v[0]);
+            golsGremio = int.Parse(v[1]);
+
+            grenais++;
+
+            if(golsInter == golsGremio){
+                empate++;
+            } else if(golsInter > golsGremio){
+                vitoriasInter++;
+            } else {
+                vitoriasGremio++;
+            }
+
+            Console.WriteLine("Novo grenal (1-sim 2-nao)");
+            x = int.Parse(Console.ReadLine());
+        }
+
+        if(vitoriasInter > vitoriasGremio){
+            vencedor = "Inter venceu mais";
+        } else if(vitoriasGremio > vitoriasInter){
+            vencedor = "Gremio venceu mais";
+        } else {
+            vencedor = "Nao houve vencedor";
+        }
+
+        Console.WriteLine(grenais + " grenais");
+        Console.WriteLine("Inter:" + vitoriasInter);
+        Console.WriteLine("Gremio:" + vitoriasGremio);
+        Console.WriteLine("Empates:" + empate);
+        Console.WriteLine(vencedor);
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
 

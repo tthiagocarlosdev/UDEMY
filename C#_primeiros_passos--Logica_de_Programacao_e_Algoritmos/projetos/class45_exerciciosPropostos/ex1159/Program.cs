@@ -26,7 +26,7 @@ namespace ConsoleApplication2 {
                 }
                 Console.WriteLine(somaPares);
                 somaPares = 0;
-            } else if ( x % 2 == 1 ) {
+            } else if ( x % 2 != 0 ) {
                 x += 1;
                 int contador = 5;
                 while(contador > 0){
