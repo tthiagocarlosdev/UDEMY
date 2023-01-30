@@ -3544,15 +3544,145 @@ namespace ConsoleApplication2 {
 };
 ```
 
+## Aula 46 - Estrutura repetitiva para
+
+É uma estrutura de controle que repete um bloco de comandos para um certo intervalo de valores.
+
+### Quando usar:
+
+Quando se sabe previamente a quantidade de repetições, ou o intervalo de valores.
+
+Por exemplo: Fazer um programa que lê um valor inteiro N e depois N números inteiros. Ao final, mostra a soma dos N números lidos
+
+| Entrada                | Saída |
+| ---------------------- | ----- |
+| 3<br />5<br />2<br />4 | 11    |
+
+### Sintaxe:
+
+```c#
+for ( início ; condição ; incremento) {
+	comando 1
+	comando 2
+}
+```
+
+- __início__: Executa somente na primeira vez
+- __condição__: 
+  - V - executa e volta
+  - F - pula fora
+- __incremento__: Executa toda vez depois de voltar
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("class46_estruturaRepetitivaPara");
+        Console.WriteLine("------------------------");
+
+        int soma = 0;
+        int N = int.Parse(Console.ReadLine());
+
+        for(int contador = 0; contador < N; contador++){
+            int x = int.Parse(Console.ReadLine());
+            soma += x;
+        }
+
+        Console.WriteLine(soma);
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+### Importante
+
+Perceba que a estrutura "para" é ótima para se fazer uma repetição baseada em uma CONTAGEM:
+
+```c#
+for (int i=0; i<5; i++) {
+	Console.WriteLine("Valor de i: " + i);
+}
+```
+
+Resultado na tela:
+
+```shell
+Valor de i: 0
+Valor de i: 1
+Valor de i: 2
+Valor de i: 3
+Valor de i: 4
+```
+
+### Contagem regressiva
+
+```c#
+for (int i=4; i>=0; i--) {
+	Console.WriteLine("Valor de i: " + i);
+}
+```
+
+Resultado na tela:
+
+```shell
+Valor de i: 4
+Valor de i: 3
+Valor de i: 2
+Valor de i: 1
+Valor de i: 0
+```
 
 
 
+## Aula 47 - Teste de mesa com estrutura para
 
+## Aula 48 - Exercícios propostos PARTE 3 - testes de mesa com estrutura para
 
+## Aula 49 - Exercício resolvido 03
 
+- ex1078
 
+```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1078");
+        Console.WriteLine("Tabuada");
+        Console.WriteLine("1 valor/int");
+        Console.WriteLine("------------------------");
 
+        int n = int.Parse(Console.ReadLine());
+
+        for(int i = 1; i <= 10; i++){
+            Console.WriteLine(i + " x " + n + " = " + i * n);
+        }
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+## Aula 50 - Exercício resolvido 04
+
+- ex1071
+
+```c#
+```
 
 
 
