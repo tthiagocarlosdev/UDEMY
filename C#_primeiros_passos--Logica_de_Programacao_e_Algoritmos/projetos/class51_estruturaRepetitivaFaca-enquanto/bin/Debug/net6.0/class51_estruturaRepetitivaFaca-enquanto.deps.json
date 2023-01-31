@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "class51_estruturaRepetitivaFaca-enquanto/1.0.0": {
+        "runtime": {
+          "class51_estruturaRepetitivaFaca-enquanto.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "class51_estruturaRepetitivaFaca-enquanto/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -3682,15 +3682,295 @@ namespace ConsoleApplication2 {
 - ex1071
 
 ```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1071");
+        Console.WriteLine("Soma de Impares Consecutivos I");
+        Console.WriteLine("2 valores/int");
+        Console.WriteLine("------------------------");
+
+        int x, y, somaImpares = 0;
+
+        x = int.Parse(Console.ReadLine());
+        y = int.Parse(Console.ReadLine());
+
+        if(x < y){
+            for(int i = x; i < y; i++){
+                if(i % 2 != 0){
+                    somaImpares += i;
+                }
+            }
+        } else if(x > y){
+            for(int i = x - 1; i > y; i--){
+                if(i % 2 != 0){
+                    somaImpares += i;
+                }
+            }
+        }
+
+        Console.WriteLine(somaImpares);
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
+Resolução do professor: 
 
+```c#
+		int x, y, min, max, soma;
 
+        x = int.Parse(Console.ReadLine());
+        y = int.Parse(Console.ReadLine());
 
+        if(x < y){
+            min = x;
+            max = y;
+        } else {
+            min = y;
+            max = x;
+        }
 
+        soma = 0;
+        for(int i = min + 1; i < max; i++){
+            if(i % 2 != 0){
+                soma = soma + i;
+            }
+        }
+        Console.WriteLine(soma);
+```
 
+## Aula 51 - Estrutura repetitiva faça-enquanto
 
+Menos utilizada, mas em alguns casos se encaixa melhor ao problema.
 
+O bloco de comandos executa pelo menos uma vez, pois a condição é verificada no final.
+
+### Sintaxe / regra
+
+```c#
+do {
+	comando 1
+	comando 2
+} while ( condição );
+```
+
+Regra:
+V -  volta
+F -  pula fora
+
+- ### Problema exemplo:
+  Fazer um programa para ler uma temperatura em Celsius e mostrar o equivalente em Fahrenheit. Perguntar se o usuário deseja repetir (s/n). Caso o usuário digite "s", repetir o programa.
+
+​		Fórmula: F = (9C / 5) + 32
+
+​		Exemplo:
+
+```tex
+Digite a temperatura em Celsius: 30.0
+Equivalente em Fahrenheit: 86.0
+Deseja repetir (s/n)? s
+Digite a temperatura em Celsius: 21.0
+Equivalente em Fahrenheit: 69.8
+Deseja repetir (s/n)? s
+Digite a temperatura em Celsius: -10.5
+Equivalente em Fahrenheit: 13.1
+Deseja repetir (s/n)? n
+```
+## Aula 52 - Exercícios propostos PARTE 4 - problemas com estrutura para
+
+**PROBLEMAS DO URI ONLINE JUDGE COM ESTRUTURA PARA**
+
+Caros estudantes, com base no que aprendemos sobre estrutura para, favor fazer **pelo menos oito** dos exercícios do URI Online Judge a seguir:
+
+- ex1067
+
+```c#
+
+```
+
+- 1071
+
+```c#
+
+```
+
+- 1072
+
+```c#
+
+```
+
+- 1073
+
+```c#
+
+```
+
+- 1074
+
+```c#
+
+```
+
+- 1075
+
+```c#
+
+```
+
+- 1079
+
+```c#
+
+```
+
+- 1080
+
+```c#
+
+```
+
+- 1094
+
+```c#
+
+```
+
+- 1096
+
+```c#
+
+```
+
+- 1097
+
+```c#
+
+```
+
+- 1116
+
+```c#
+
+```
+
+- 1132
+
+```c#
+
+```
+
+- 1133
+
+```c#
+
+```
+
+- 1142
+
+```c#
+
+```
+
+- 1143
+
+```c#
+
+```
+
+- 1144
+
+```c#
+
+```
+
+- 1151
+
+```c#
+
+```
+
+- 1153
+
+```c#
+
+```
+
+- 1155
+
+```c#
+
+```
+
+- 1156
+
+```c#
+
+```
+
+- 1157
+
+```c#
+
+```
+
+Os exercícios a seguir possuem uma dificuldade um pouco maior. Fica então como desafio para você tentar resolver **pelo menos quatro** deles:
+
+- 1099
+
+```c#
+
+```
+
+- 1101
+
+```c#
+
+```
+
+- 1145
+
+```c#
+
+```
+
+- 1149
+
+```c#
+
+```
+
+- 1150
+
+```c#
+
+```
+
+- 1158
+
+```c#
+
+```
+
+- 1160
+
+```c#
+
+```
+
+- 1165
+
+```c#
+```
 
 
 
