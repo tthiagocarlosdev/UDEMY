@@ -3959,34 +3959,203 @@ int n = int.Parse(Console.ReadLine());
         }
 ```
 
-- 1075
+- ex1075
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1075");
+        Console.WriteLine("Resto 2");
+        Console.WriteLine("1 valor/int");
+        Console.WriteLine("------------------------");
+
+        int n = int.Parse(Console.ReadLine());
+
+        for (int i = 1; i <= 10000; i++) {
+          if(i % n == 2){
+            Console.WriteLine(i);
+          }
+        }
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
-- 1079
+- ex1079
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1079");
+        Console.WriteLine("Médias Ponderadas");
+        Console.WriteLine("1 valor/int 3 valores/double");
+        Console.WriteLine("------------------------");
+
+        double v1, v2, v3, media;
+
+        int n = int.Parse(Console.ReadLine());
+
+        for (int i = 0; i < n; i++) {
+            string[] v = Console.ReadLine().Split();
+            v1 = double.Parse(v[0], CultureInfo.InvariantCulture);
+            v2 = double.Parse(v[1], CultureInfo.InvariantCulture);
+            v3 = double.Parse(v[2], CultureInfo.InvariantCulture);
+
+            media = (((v1 * 2) + (v2 * 3) + (v3 * 5)) / 10);
+
+            Console.WriteLine(media.ToString("F1", CultureInfo.InvariantCulture));
+        }
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
-- 1080
+- ex1080
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1080");
+        Console.WriteLine("Maior e Posição");
+        Console.WriteLine("100 valores/int");
+        Console.WriteLine("------------------------");
+
+        int n = 0, maior = 0, posicao = 0;
+
+        for (int i = 0; i < 100; i++) {
+            n = int.Parse(Console.ReadLine());
+            if ( n > maior) {
+                maior = n;
+                posicao = i + 1;
+            }
+        }
+
+        Console.WriteLine(maior);
+        Console.WriteLine(posicao);
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
-- 1094
+- ex1094
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1094");
+        Console.WriteLine("Experiências");
+        Console.WriteLine("n valores/int e char");
+        Console.WriteLine("------------------------");
+
+        int totalCobaias = 0, totalDeCoelhos = 0, totalDeRatos = 0, totalDeSapos = 0;
+        double percentualDeCoelhos = 0.0, percentualDeRatos = 0.0, percentualDeSapos = 0.0;
+
+        int n = int.Parse(Console.ReadLine());
+
+        for ( int i = 0; i < n; i++ ) {
+            int v1;
+            char v2;
+            string[] v = Console.ReadLine().Split(' ');
+            v1 = int.Parse(v[0]);
+            v2 = char.Parse(v[1]);
+
+            totalCobaias += v1;
+
+            if (v2 == 'C') {
+                totalDeCoelhos += v1;
+            } else if (v2 == 'R') {
+                totalDeRatos += v1;
+            } else {
+                totalDeSapos += v1;
+            }
+        }
+
+        percentualDeCoelhos = (totalDeCoelhos * 100.0) / totalCobaias;
+        percentualDeRatos = (totalDeRatos * 100.0) / totalCobaias;
+        percentualDeSapos = (totalDeSapos * 100.0) / totalCobaias;
+
+        Console.WriteLine("Total: " + totalCobaias + " cobaias");
+        Console.WriteLine("Total de coelhos: " + totalDeCoelhos);
+        Console.WriteLine("Total de ratos: " + totalDeRatos);
+        Console.WriteLine("Total de sapos: " + totalDeSapos);
+        Console.WriteLine("Percentual de coelhos: " + percentualDeCoelhos.ToString("F2", CultureInfo.InvariantCulture) + " %");
+        Console.WriteLine("Percentual de ratos: " + percentualDeRatos.ToString("F2", CultureInfo.InvariantCulture) + " %");
+        Console.WriteLine("Percentual de sapos: " + percentualDeSapos.ToString("F2", CultureInfo.InvariantCulture) + " %");
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
-- 1096
+- ex1096
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1096");
+        Console.WriteLine("Sequencia IJ 2");
+        // Console.WriteLine("");
+        Console.WriteLine("------------------------");
+
+        int i = 1;
+
+        while (i <= 9) {
+
+            int j = 7;
+            while (j >= 5) {
+                Console.WriteLine("I="+i+" J="+j);
+                j--;
+            }
+            
+            i+=2;
+        }
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
 - 1097

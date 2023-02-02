@@ -1,0 +1,15 @@
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1094/bin/Debug/net6.0/ex1094
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1094/bin/Debug/net6.0/ex1094.deps.json
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1094/bin/Debug/net6.0/ex1094.runtimeconfig.json
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1094/bin/Debug/net6.0/ex1094.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1094/bin/Debug/net6.0/ex1094.pdb
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1094/obj/Debug/net6.0/ex1094.csproj.AssemblyReference.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1094/obj/Debug/net6.0/ex1094.GeneratedMSBuildEditorConfig.editorconfig
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1094/obj/Debug/net6.0/ex1094.AssemblyInfoInputs.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1094/obj/Debug/net6.0/ex1094.AssemblyInfo.cs
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1094/obj/Debug/net6.0/ex1094.csproj.CoreCompileInputs.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1094/obj/Debug/net6.0/ex1094.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1094/obj/Debug/net6.0/refint/ex1094.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1094/obj/Debug/net6.0/ex1094.pdb
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1094/obj/Debug/net6.0/ex1094.genruntimeconfig.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1094/obj/Debug/net6.0/ref/ex1094.dll
