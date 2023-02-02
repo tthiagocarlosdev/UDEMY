@@ -3785,6 +3785,42 @@ Digite a temperatura em Celsius: -10.5
 Equivalente em Fahrenheit: 13.1
 Deseja repetir (s/n)? n
 ```
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Aula 51 - Estrutura repetitiva faça-enquanto");
+        // Console.WriteLine("Soma de Impares Consecutivos I");
+        // Console.WriteLine("2 valores/int");
+        Console.WriteLine("------------------------");
+
+        double temperaturaCelsius, temperaturaFahrenheit;
+        char repetir;
+
+        do {
+            Console.Write("Digite a temperatura em Celsius: ");
+            temperaturaCelsius = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            temperaturaFahrenheit = ((9.0 * temperaturaCelsius) / 5.0) + 32.0;
+
+            Console.WriteLine("Equivalente em Fahrenheit: " + temperaturaFahrenheit.ToString("F1", CultureInfo.InvariantCulture));
+
+            Console.Write("Deseja repetir (s/n)? ");
+            repetir = char.Parse(Console.ReadLine());
+        } while (repetir == 's');
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
+
 ## Aula 52 - Exercícios propostos PARTE 4 - problemas com estrutura para
 
 **PROBLEMAS DO URI ONLINE JUDGE COM ESTRUTURA PARA**
@@ -3794,31 +3830,133 @@ Caros estudantes, com base no que aprendemos sobre estrutura para, favor fazer *
 - ex1067
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1067");
+        Console.WriteLine("Números Ímpares");
+        Console.WriteLine("1 valor/int");
+        Console.WriteLine("------------------------");
+
+        int x = int.Parse(Console.ReadLine());
+
+        for (int i = 1; i <= x; i++) {
+          if(i % 2 != 0){
+            Console.WriteLine(i);
+          }
+        }
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
-- 1071
+- ex1071
 
-```c#
-
+```tex
+Exercício resolvido na aula 50
 ```
 
-- 1072
+- ex1072
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1072");
+        Console.WriteLine("Intervalo 2");
+        Console.WriteLine("1 valor/int e N valores/int");
+        Console.WriteLine("------------------------");
+
+        int dentro = 0, fora = 0;
+
+        int n = int.Parse(Console.ReadLine());
+
+        for (int i = 0; i < n; i++) {
+            int x = int.Parse(Console.ReadLine());
+            if( x >= 10 && x <= 20 ){
+                dentro++;
+            } else {
+                fora++;
+            }
+        }
+
+        Console.WriteLine(dentro + " in");
+        Console.WriteLine(fora + " out");
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
-- 1073
+- ex1073
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1073");
+        Console.WriteLine("Quadrado de Pares");
+        Console.WriteLine("1 valor/int");
+        Console.WriteLine("------------------------");
+
+        int n = int.Parse(Console.ReadLine());
+
+        for ( int i = 1; i <= n; i++ ) {
+            if ( i % 2 == 0) {
+                Console.WriteLine(i + "^2 = " + Math.Pow(i, 2));
+            }
+        }
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
-- 1074
+- ex1074
 
 ```c#
+int n = int.Parse(Console.ReadLine());
 
+        for ( int i = 0; i < n; i++ ) {
+
+            int x = int.Parse(Console.ReadLine());
+
+            if ( x == 0) {
+                Console.WriteLine("NULL");
+            } else if ( x % 2 == 0 ) {
+                Console.Write("EVEN ");
+            } else {
+                Console.Write("ODD ");
+            }
+
+            if ( x > 0 ) {
+                Console.WriteLine("POSITIVE");
+            } else if ( x < 0 ) {
+                Console.WriteLine("NEGATIVE");
+            }
+        }
 ```
 
 - 1075
