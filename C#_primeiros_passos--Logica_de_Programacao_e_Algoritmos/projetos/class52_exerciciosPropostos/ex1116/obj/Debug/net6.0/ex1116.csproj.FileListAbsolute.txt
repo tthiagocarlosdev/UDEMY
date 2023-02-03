@@ -1,0 +1,15 @@
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1116/bin/Debug/net6.0/ex1116
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1116/bin/Debug/net6.0/ex1116.deps.json
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1116/bin/Debug/net6.0/ex1116.runtimeconfig.json
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1116/bin/Debug/net6.0/ex1116.dll
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1116/bin/Debug/net6.0/ex1116.pdb
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1116/obj/Debug/net6.0/ex1116.csproj.AssemblyReference.cache
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1116/obj/Debug/net6.0/ex1116.GeneratedMSBuildEditorConfig.editorconfig
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1116/obj/Debug/net6.0/ex1116.AssemblyInfoInputs.cache
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1116/obj/Debug/net6.0/ex1116.AssemblyInfo.cs
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1116/obj/Debug/net6.0/ex1116.csproj.CoreCompileInputs.cache
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1116/obj/Debug/net6.0/ex1116.dll
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1116/obj/Debug/net6.0/refint/ex1116.dll
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1116/obj/Debug/net6.0/ex1116.pdb
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1116/obj/Debug/net6.0/ex1116.genruntimeconfig.cache
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class52_exerciciosPropostos/ex1116/obj/Debug/net6.0/ref/ex1116.dll
