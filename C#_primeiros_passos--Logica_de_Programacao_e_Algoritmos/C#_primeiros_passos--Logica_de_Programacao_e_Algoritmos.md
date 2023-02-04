@@ -4158,52 +4158,328 @@ namespace ConsoleApplication2 {
 };
 ```
 
-- 1097
+- ex1097
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1096");
+        Console.WriteLine("Sequencia IJ 3");
+        // Console.WriteLine("");
+        Console.WriteLine("------------------------");
+
+        int contador = 7;
+        for (int i = 1; i <= 9; i +=2) {
+            for (int j = contador; j >= (contador - 2); j--) {
+                Console.WriteLine("I="+ i + " J="+ j);
+            }
+            contador += 2;
+        }
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
-- 1116
+- ex1116
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1116");
+        Console.WriteLine("Dividindo X por Y");
+        Console.WriteLine("1 valor/int n valores/int");
+        Console.WriteLine("------------------------");
+
+        int x, y;
+        double resultado = 0.0;
+
+        int n = int.Parse(Console.ReadLine());
+
+        while (n > 0) {
+            
+            string[] v = Console.ReadLine().Split(' ');
+            x = int.Parse(v[0]);
+            y = int.Parse(v[1]);
+
+            if (y == 0) {
+                Console.WriteLine("divisao impossivel");
+            } else {
+                resultado = (double) x / y;
+                Console.WriteLine(resultado.ToString("F1", CultureInfo.InvariantCulture));
+            }
+
+            n--;
+        }
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
-- 1132
+- ex1132
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1132");
+        Console.WriteLine("Múltiplos de 13");
+        Console.WriteLine("2 valores/int");
+        Console.WriteLine("------------------------");
+
+        int x, y, soma = 0;
+
+        x = int.Parse(Console.ReadLine());
+        y = int.Parse(Console.ReadLine());
+
+        if(x < y){
+            for(int i = x; i <= y; i++) {
+                if(i % 13 != 0){
+                    soma += i;
+                }
+            }
+        } else {
+            for(int i = y; i <= x; i++) {
+                if(i % 13 != 0){
+                    soma += i;
+                }
+            }
+        }
+        
+        Console.WriteLine(soma);
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
-- 1133
+- ex1133
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1133");
+        Console.WriteLine("Resto da Divisão");
+        Console.WriteLine("2 valores/int");
+        Console.WriteLine("------------------------");
+
+        int x, y;
+
+        x = int.Parse(Console.ReadLine());
+        y = int.Parse(Console.ReadLine());
+
+        if(x < y){
+            for(int i = x+1; i < y; i++) {
+                if(i % 5 == 2 || i % 5 == 3) {
+                    Console.WriteLine(i);
+                }
+            }
+        } else {
+            for(int i = y+1; i < x; i++) {
+                if(i % 5 == 2 || i % 5 == 3){
+                    Console.WriteLine(i);
+                }
+            }
+        }
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
-- 1142
+- ex1142
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1142");
+        Console.WriteLine("PUM");
+        Console.WriteLine("1 valor/int");
+        Console.WriteLine("------------------------");
+
+        int n = int.Parse(Console.ReadLine());
+        int c = 1;
+
+        for (int i = 0; i < n; i++) {
+            for(int j = 0; j < 3; j++) {
+                Console.Write(c + " ");
+                c++;
+            };
+            Console.WriteLine("PUM");
+            c++;
+        };
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
-- 1143
+- ex1143
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1143");
+        Console.WriteLine("Quadrado e ao Cubo");
+        Console.WriteLine("1 valor/int");
+        Console.WriteLine("------------------------");
+
+        int n = int.Parse(Console.ReadLine());
+        int c = 1, potencia = 2;
+
+        for (int i = 0; i < n; i++) {
+            for(int j = 0; j < 3; j++) {
+                Console.Write(Math.Pow(c, potencia));
+                if(j < 2){
+                    Console.Write(" ");
+                }
+                potencia++;
+            };
+            Console.WriteLine();
+            potencia = 1;
+            c++;
+        };
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
-- 1144
+- ex1144
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1144");
+        Console.WriteLine("Sequência Lógica");
+        Console.WriteLine("1 valor/int");
+        Console.WriteLine("------------------------");
+
+        int n = int.Parse(Console.ReadLine());
+        int c = 1, potencia = 2;
+
+        for (int i = 0; i < n; i++) {
+            for(int j = 0; j < 3; j++) {
+                if(j < 2){
+                    Console.Write(Math.Pow(c, potencia) + " ");
+                } else {
+                    Console.WriteLine(Math.Pow(c, potencia));
+                }
+                potencia++;
+            };
+            potencia = 1;
+            
+            for(int j = 0; j < 3; j++) {
+                if(j != 0){
+                    Console.Write(" " + (Math.Pow(c, potencia) + 1));
+                } else {
+                    Console.Write(Math.Pow(c, potencia));
+                }
+                potencia++;
+            };
+            Console.WriteLine();
+            potencia = 1;
+
+            c++;
+        };
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
-- 1151
+- ex1151
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1151");
+        Console.WriteLine("Sequência Lógica");
+        Console.WriteLine("1 valor/int");
+        Console.WriteLine("------------------------");
+
+        int n = int.Parse(Console.ReadLine());
+        int a = 0, b = 1, troca = 0;
+        string fibonacci = "";
+
+        fibonacci = a + " " + b;
+
+        for(int i = 0; i < n -2; i++) {
+            troca = a + b;
+            fibonacci += " " + troca;
+            a = b;
+            b = troca;
+        }
+
+        Console.WriteLine(fibonacci);
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
 - 1153
