@@ -4482,28 +4482,130 @@ namespace ConsoleApplication2 {
 };
 ```
 
-- 1153
+- ex1153
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1153");
+        Console.WriteLine("Fatorial Simples");
+        Console.WriteLine("1 valor/int");
+        Console.WriteLine("------------------------");
+
+        int n = int.Parse(Console.ReadLine());
+        int fatorial = 1;
+
+        for(int i = 1; i <= n; i++) {
+            fatorial *= i;
+        }
+
+        Console.WriteLine(fatorial);
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
-- 1155
+- ex1155
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1155");
+        Console.WriteLine("Sequência S");
+        // Console.WriteLine("1 valor/int");
+        Console.WriteLine("------------------------");
+
+        double s = 0;
+
+        for ( double i = 1.0; i <= 100.0; i++ ) {
+            s += 1 / i;
+        };
+
+        Console.WriteLine(s.ToString("F2", CultureInfo.InvariantCulture));
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
-- 1156
+- ex1156
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1156");
+        Console.WriteLine("Sequência S II");
+        // Console.WriteLine("1 valor/int");
+        Console.WriteLine("------------------------");
+
+        double n = 1.0, s = 1.0;
+
+        for ( double i = 3.0; i <= 39.0; i += 2.0 ) {
+            s += i / Math.Pow(2.0, n);
+            n++;
+        };
+
+        Console.WriteLine(s.ToString("F2", CultureInfo.CurrentCulture));
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
-- 1157
+- ex1157
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1157");
+        Console.WriteLine("Divisores I");
+        Console.WriteLine("1 valor/int");
+        Console.WriteLine("------------------------");
+
+        int n = int.Parse(Console.ReadLine());
+        
+        for ( int i = 1; i <= n; i++ ) {
+            if ( n % i == 0 ) {
+                Console.WriteLine(i);
+            };
+        };
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
 Os exercícios a seguir possuem uma dificuldade um pouco maior. Fica então como desafio para você tentar resolver **pelo menos quatro** deles:
