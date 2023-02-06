@@ -4610,28 +4610,182 @@ namespace ConsoleApplication2 {
 
 Os exercícios a seguir possuem uma dificuldade um pouco maior. Fica então como desafio para você tentar resolver **pelo menos quatro** deles:
 
-- 1099
+- ex1099
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1099");
+        Console.WriteLine("Soma de Ímpares Consecutivos II");
+        Console.WriteLine("1 valor/int n valores/int");
+        Console.WriteLine("------------------------");
+
+        int n = int.Parse(Console.ReadLine());
+        int x, y, maior, menor, somaImpares = 0;
+        
+        for ( int i = 0; i < n; i++ ) {
+
+            string[] v = Console.ReadLine().Split(' ');
+            x = int.Parse(v[0]);
+            y = int.Parse(v[1]);
+            
+            if ( x < y) {
+                maior = y;
+                menor = x;
+            } else {
+                maior = x;
+                menor = y;
+            };
+
+            for ( int j = menor + 1; j < maior; j++ ) {
+                if ( j % 2 != 0) {
+                    somaImpares += j;
+                };
+
+            };
+
+            Console.WriteLine(somaImpares);
+            somaImpares = 0;    
+        };
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
-- 1101
+- ex1101
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1101");
+        Console.WriteLine("Sequência de Números e Soma");
+        Console.WriteLine("2 valores/int");
+        Console.WriteLine("------------------------");
+
+        int m = 1, n = 1, soma = 0;
+
+        do {
+            
+            string[] v = Console.ReadLine().Split(' ');
+            if ( int.Parse(v[0]) > int.Parse(v[1]) ) {
+                m = int.Parse(v[1]);
+                n = int.Parse(v[0]);
+            } else {
+                m = int.Parse(v[0]);
+                n = int.Parse(v[1]);
+            };
+
+            if ( m > 0 && n > 0 ) {
+
+                for ( int i = m; i <= n; i++ ) {
+                    Console.Write(i + " ");
+                    soma += i;
+                };
+
+                Console.WriteLine("Sum=" + soma);
+                soma = 0;
+            };
+
+        } while ( m > 0 && n > 0 );
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
-- 1145
+- ex1145
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1145");
+        Console.WriteLine("Sequência Lógica 2");
+        Console.WriteLine("2 valores/int");
+        Console.WriteLine("------------------------");
+
+        int x, y, contador = 1;
+        string[] v = Console.ReadLine().Split(' ');
+        x = int.Parse(v[0]);
+        y = int.Parse(v[1]);
+
+        while ( contador <= y ) {
+            for (int i = 1; i <= x; i++) {
+                if ( i < x ) {
+                    Console.Write(contador + " ");
+                } else {
+                    Console.WriteLine(contador);
+                };
+                contador++;
+            };
+        };
+        
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
-- 1149
+- ex1149
 
 ```c#
+using System;
+using System.Globalization;
 
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("ex1149");
+        Console.WriteLine("Somando Inteiros Consecutivos");
+        Console.WriteLine("2 valores/int");
+        Console.WriteLine("------------------------");
+
+        int a, n, j = 1, soma = 0;
+
+        string[] v = Console.ReadLine().Split(' ');
+        a = int.Parse(v[0]);
+        n = int.Parse(v[j]);
+        while (n <= 0) {
+            j++;
+            n = int.Parse(v[j]);
+        }
+
+        for ( int i = 0; i < n; i++ ) {
+            soma += a + i;
+        };
+
+        Console.WriteLine(soma);
+        
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
 ```
 
 - 1150
