@@ -19,11 +19,20 @@ namespace ConsoleApplication2 {
             int pb = int.Parse(v[1]);
             double g1 = double.Parse(v[2], CultureInfo.InvariantCulture);
             double g2 = double.Parse(v[3], CultureInfo.InvariantCulture);
+            
+            int anos = 0;
 
-            Console.WriteLine(pa);
-            Console.WriteLine(pb);
-            Console.WriteLine(g1.ToString("F1", CultureInfo.InvariantCulture));
-            Console.WriteLine(g2.ToString("F1", CultureInfo.InvariantCulture));
+            while ( pa <= pb && anos <= 100 ) {
+              pa += (int)((pa * g1) / 100.0);
+              pb += (int)((pb * g2) / 100.0);
+              anos++;
+            };
+
+            if ( anos <= 100 ) {
+              Console.WriteLine( anos + " anos.");  
+            } else {
+              Console.WriteLine("Mais de 1 seculo.");
+            };
         };
 
         Console.WriteLine("------------------------");
