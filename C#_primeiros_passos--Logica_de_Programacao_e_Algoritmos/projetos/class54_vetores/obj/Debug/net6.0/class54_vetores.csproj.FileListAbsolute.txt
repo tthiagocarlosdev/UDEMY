@@ -1,0 +1,15 @@
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class54_vetores/bin/Debug/net6.0/class54_vetores
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class54_vetores/bin/Debug/net6.0/class54_vetores.deps.json
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class54_vetores/bin/Debug/net6.0/class54_vetores.runtimeconfig.json
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class54_vetores/bin/Debug/net6.0/class54_vetores.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class54_vetores/bin/Debug/net6.0/class54_vetores.pdb
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class54_vetores/obj/Debug/net6.0/class54_vetores.csproj.AssemblyReference.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class54_vetores/obj/Debug/net6.0/class54_vetores.GeneratedMSBuildEditorConfig.editorconfig
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class54_vetores/obj/Debug/net6.0/class54_vetores.AssemblyInfoInputs.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class54_vetores/obj/Debug/net6.0/class54_vetores.AssemblyInfo.cs
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class54_vetores/obj/Debug/net6.0/class54_vetores.csproj.CoreCompileInputs.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class54_vetores/obj/Debug/net6.0/class54_vetores.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class54_vetores/obj/Debug/net6.0/refint/class54_vetores.dll
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class54_vetores/obj/Debug/net6.0/class54_vetores.pdb
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class54_vetores/obj/Debug/net6.0/class54_vetores.genruntimeconfig.cache
+/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class54_vetores/obj/Debug/net6.0/ref/class54_vetores.dll

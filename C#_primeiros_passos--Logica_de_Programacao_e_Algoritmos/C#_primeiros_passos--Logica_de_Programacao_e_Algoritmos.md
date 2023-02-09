@@ -4959,6 +4959,229 @@ namespace ConsoleApplication2 {
 
 ## Aula 53 - Slides utilizados no capítulo
 
+## Aula 54 - Vetores
+
+Um vetor corresponde a uma coleção de dados de tamanho fixo, indexada, unidimensional e homogênea
+
+- Indexada: os elementos são acessados por meio de índices
+- Unidimensional: uma dimensão
+- Homogênea: todos dados são do mesmo tipo
+
+| índice |    A    |
+| :----: | :-----: |
+|   0    |  Maria  |
+|   1    |  João   |
+|   2    | Carlos  |
+|   3    |   Ana   |
+|   4    | Joaquim |
+
+Vetores são também chamados de arranjos unidimensionais
+Em C# a primeira posição e um vetor é a posição 0
+Um arranjo deve ser alocado previamente, antes de ser utilizado. Uma vez alocado, sua quantidade de elementos é fixa.
+
+- ### Como criar um vetor:
+
+Declaração - Primeiro você declara o tipo do vetor; Segundo abre e fecha [ ] para indicar que vai ser um vetor; Por último você colocar o nome do vetor;
+
+```c#
+int[] A;
+double[] B;
+string[] C;
+```
+
+Instanciação - Criação da quantidade de espaço na memória que o vetor irá ocupar.
+
+```c#
+A = new int[10];
+B = new double[5];
+C = new string[8];
+```
+
+- ### Como acessar os elementos de um vetor?
+
+```c#
+a[3] = 10;
+```
+
+No exemplo acima o vetor na posição 3 recebe 10 como valor.
+
+```c#
+for (int i = 0; i < 5; i++) {
+    B[i] = i + 10
+}
+```
+
+No exemplo acima, o vetor B na posição do i irá receber o valor de i mais 10.
+
+```c#
+C[1] = "Maria"
+```
+
+No exemplo acima, o vetor C  na posição 1 recebe "Maria" como valor.
+
+### Problema exemplo:
+
+Fazer um programa para ler um número inteiro positivo N, depois ler N números quaisquer e armazená-los em um vetor. Em seguida, mostrar na tela todos elementos do vetor.
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Aula 54 - Vetores");
+        Console.WriteLine("Problema exemplo");
+        Console.WriteLine("1 valor/int n valores/int");
+        Console.WriteLine("------------------------");
+
+        int n = 0;
+        double[] vet;
+
+        n = int.Parse(Console.ReadLine());
+        vet = new double[n];
+
+        for (int i = 0; i < n; i++) {
+            vet[i] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        };
+
+        for (int i = 0; i < n; i++) {
+            Console.WriteLine(vet[i].ToString("F1", CultureInfo.InvariantCulture));
+        };
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+## Aula 55 - Teste de mesa com vetores
+
+## Aula 56 -  Exercícios propostos PARTE 1 - teste de mesa com vetores
+
+## Aula 57 - Exercício resolvido 01
+
+Faça um programa que leia N números inteiros e armazene-os em um vetor. Em seguida, mostrar na tela os números lidos.
+
+Exemplo:
+
+| Entrada         | Saída |
+| --------------- | ----- |
+| 6               | -2    |
+| 9 -2 9 10 -3 -7 | -3    |
+|                 | -7    |
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Aula 57 - Vetores");
+        Console.WriteLine("Exercício resolvido 01");
+        Console.WriteLine("1 valor/int n valores/int");
+        Console.WriteLine("------------------------");
+
+        int n = 0;
+        int[] vet;
+
+        n = int.Parse(Console.ReadLine());
+        vet = new int[n];
+
+        string[] s = Console.ReadLine().Split(' ');
+
+        for (int i = 0; i < n; i++) {
+            vet[i] = int.Parse(s[i]);
+        };
+
+        for (int i = 0; i < n; i++) {
+            if ( vet[i] < 0) {
+                Console.WriteLine(vet[i]);
+            };
+        };
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+## Aula 58 - Exercício resolvido 02
+
+Faça um programa que leia N números reais e armazene-os em um vetor. Em seguida: 
+
+- Imprimir todos os elementos do vetor;
+- Mostrar na tela a soma e a média dos elementos do vetor.
+
+| Entrada           | Saída             |
+| ----------------- | ----------------- |
+| 4                 | 8.0 4.0 10.0 14.0 |
+| 8.0 4.0 10.0 14.0 | 36.00             |
+|                   | 9.00              |
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Aula 58 - Vetores");
+        Console.WriteLine("Exercício resolvido 02");
+        Console.WriteLine("1 valor/int n valores/int");
+        Console.WriteLine("------------------------");
+
+        int n = 0;
+        double soma = 0.0, media = 0.0;
+        double[] vet;
+
+        n = int.Parse(Console.ReadLine());
+        vet = new double[n];
+
+        string[] s = Console.ReadLine().Split(' ');
+
+        for (int i = 0; i < n; i++) {
+            vet[i] = double.Parse(s[i], CultureInfo.InvariantCulture);
+            soma += vet[i];
+        };
+
+        media = (double)(soma / n);
+
+        for (int i = 0; i < n; i++) {
+            if (i < n - 1) {
+                Console.Write(vet[i].ToString("F1", CultureInfo.InvariantCulture) + " ");
+            } else {
+                Console.WriteLine(vet[i].ToString("F1", CultureInfo.InvariantCulture));
+            };
+        };
+
+        Console.WriteLine(soma.ToString("F2", CultureInfo.InvariantCulture));
+        Console.WriteLine(media.ToString("F2", CultureInfo.InvariantCulture));
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+## Aula 59 - Exercício resolvido 03
+
+
+
+
+
+
+
 
 
 
