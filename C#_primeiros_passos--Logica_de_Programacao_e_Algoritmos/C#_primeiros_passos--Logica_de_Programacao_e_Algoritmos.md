@@ -5176,7 +5176,128 @@ namespace ConsoleApplication2 {
 
 ## Aula 59 - Exercício resolvido 03
 
+Fazer um programa para ler um número N, depois nome (apenas uma palavra), idade e altura de N pessoas, conforme exemplo. Depois, mostrar na tela a altura média das pessoas, e mostrar também a porcentagem de pessoas com menos de 16 anos.
 
+Exemplo:
+
+| Entrada                                                      | Saída                                                       |
+| ------------------------------------------------------------ | ----------------------------------------------------------- |
+| 5<br />Joao 15 1.82<br />Maria 16 1.60<br />Teresa 14 1.58<br />Carlos 21 1.65<br />Paulo 17 1.78 | Altura média: 1.69<br />Pessoas com menos de 16 anos: 40.0% |
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Aula 59 - Vetores");
+        Console.WriteLine("Exercício resolvido 03");
+        // Console.WriteLine("1 valor/int n valores/int");
+        Console.WriteLine("------------------------");
+
+        int n = 0, QuantidadeDePessoasComMenos16Anos = 0;
+        double somaDasAlturas = 0.0, alturaMedia = 0.0;
+        double percentualDePessoasComMenos16Anos = 0.0;
+        string[] nomes;
+        int[] idades;
+        double[] alturas;
+        
+        n = int.Parse(Console.ReadLine());
+        nomes = new string[n];
+        idades = new int[n];
+        alturas = new double[n];
+
+        //entrada de dados
+        for (int i = 0; i < n; i++) {
+            string[] s = Console.ReadLine().Split(' ');
+            nomes[i] = s[0];
+            idades[i] = int.Parse(s[1]);
+            alturas[i] = double.Parse(s[2], CultureInfo.InvariantCulture);
+        };
+
+        //soma das alturas
+        for ( int i = 0; i < n; i++) {
+            somaDasAlturas += alturas[i];
+        };
+
+        // altura média
+        alturaMedia = somaDasAlturas / n;
+
+        // pessoas com menos de 16 anos
+        for ( int i = 0; i < n; i++) {
+            if ( idades[i] < 16) {
+                QuantidadeDePessoasComMenos16Anos++;
+            };
+        };
+
+        //percentual de pessoas com menos de 16 anos
+        percentualDePessoasComMenos16Anos = ((QuantidadeDePessoasComMenos16Anos * 100.0) / n);
+
+        Console.WriteLine("Altura média: " + alturaMedia.ToString("F2", CultureInfo.InvariantCulture));
+        Console.WriteLine("Pessoas com menos de 16 anos: " + percentualDePessoasComMenos16Anos.ToString("F1", CultureInfo.InvariantCulture) + "%");
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+## Aula 60 - Sintaxe opcional: foreach
+
+### Problema exemplo:
+
+Fazer um programa para ler um valor N e depois o nome de N pessoas. Em seguida, mostrar os nomes lidos.
+
+| Entrada                            | Saída                                         |
+| ---------------------------------- | --------------------------------------------- |
+| 3<br />Maria<br />Joaquim<br />Ana | Nomes lidos:<br />Maria<br />Joaquim<br />Ana |
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Aula 60 - Sintaxe opcional: foreach");
+        Console.WriteLine("Problema exemplo");
+        // Console.WriteLine("1 valor/int n valores/int");
+        Console.WriteLine("------------------------");
+
+        int n = int.Parse(Console.ReadLine());
+        string[] nomes = new string[n];
+
+        //entrada de dados
+        for (int i = 0; i < n; i++) {
+            nomes[i] = Console.ReadLine();
+        };
+
+        // saída de dados
+        Console.WriteLine("Nomes lidos:");
+        foreach (string elemento in nomes) {
+            Console.WriteLine(elemento);
+        };
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+## Aula 61 - Exercícios propostos PARTE 2 - problemas com vetores
+
+**EXERCÍCIOS PROPOSTOS - PARTE 2**
+
+Caros estudantes, conforme o que aprendemos neste capítulo sobre vetores, favor fazer os exercícios do arquivo PDF anexo. 
+
+exercicios02-propostos-vetores.pdf
 
 
 

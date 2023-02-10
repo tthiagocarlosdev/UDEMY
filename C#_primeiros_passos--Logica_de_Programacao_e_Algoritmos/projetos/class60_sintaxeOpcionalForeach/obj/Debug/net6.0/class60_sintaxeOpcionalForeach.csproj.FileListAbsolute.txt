@@ -1,0 +1,15 @@
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class60_sintaxeOpcionalForeach/bin/Debug/net6.0/class60_sintaxeOpcionalForeach
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class60_sintaxeOpcionalForeach/bin/Debug/net6.0/class60_sintaxeOpcionalForeach.deps.json
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class60_sintaxeOpcionalForeach/bin/Debug/net6.0/class60_sintaxeOpcionalForeach.runtimeconfig.json
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class60_sintaxeOpcionalForeach/bin/Debug/net6.0/class60_sintaxeOpcionalForeach.dll
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class60_sintaxeOpcionalForeach/bin/Debug/net6.0/class60_sintaxeOpcionalForeach.pdb
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class60_sintaxeOpcionalForeach/obj/Debug/net6.0/class60_sintaxeOpcionalForeach.csproj.AssemblyReference.cache
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class60_sintaxeOpcionalForeach/obj/Debug/net6.0/class60_sintaxeOpcionalForeach.GeneratedMSBuildEditorConfig.editorconfig
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class60_sintaxeOpcionalForeach/obj/Debug/net6.0/class60_sintaxeOpcionalForeach.AssemblyInfoInputs.cache
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class60_sintaxeOpcionalForeach/obj/Debug/net6.0/class60_sintaxeOpcionalForeach.AssemblyInfo.cs
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class60_sintaxeOpcionalForeach/obj/Debug/net6.0/class60_sintaxeOpcionalForeach.csproj.CoreCompileInputs.cache
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class60_sintaxeOpcionalForeach/obj/Debug/net6.0/class60_sintaxeOpcionalForeach.dll
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class60_sintaxeOpcionalForeach/obj/Debug/net6.0/refint/class60_sintaxeOpcionalForeach.dll
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class60_sintaxeOpcionalForeach/obj/Debug/net6.0/class60_sintaxeOpcionalForeach.pdb
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class60_sintaxeOpcionalForeach/obj/Debug/net6.0/class60_sintaxeOpcionalForeach.genruntimeconfig.cache
+/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class60_sintaxeOpcionalForeach/obj/Debug/net6.0/ref/class60_sintaxeOpcionalForeach.dll
