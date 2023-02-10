@@ -5297,7 +5297,410 @@ namespace ConsoleApplication2 {
 
 Caros estudantes, conforme o que aprendemos neste capítulo sobre vetores, favor fazer os exercícios do arquivo PDF anexo. 
 
-exercicios02-propostos-vetores.pdf
+### Seção: Vetores
+### Exercícios propostos
+
+- ### ex01
+
+Faça um programa que leia N números reais e armazene-os em um vetor. Em seguida, mostrar na tela o maior número do vetor (supor não haver empates). Mostrar também a posição do maior elemento. Exemplo: 
+
+| Entrada                                     | Saída       |
+| ------------------------------------------- | ----------- |
+| 6<br />8.0   4.0   10.0   14.0   13.0   7.0 | 14.0<br />3 |
+
+- ### Resolução:
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Aula 61 - exercícios Propostos");
+        Console.WriteLine("ex01");
+        Console.WriteLine("1 valor/int n valores/double");
+        Console.WriteLine("------------------------");
+
+        // declaração de variáveis
+        int n = int.Parse(Console.ReadLine());
+        double[] numeros = new double[n];
+        double maiorNumero = 0;
+        int indiceDoMaiorNumero = 0;
+
+        //entrada de dados
+        string[] v = Console.ReadLine().Split(' ');
+        for (int i = 0; i < n; i++) {
+            numeros[i] = double.Parse(v[i], CultureInfo.InvariantCulture);
+        };
+
+        //processamento de dados
+        for( int i = 0; i < n; i++){
+            if ( numeros[i] > maiorNumero) {
+                maiorNumero = numeros[i];
+                indiceDoMaiorNumero = i;
+            };
+        };
+
+        // saída de dados
+        Console.WriteLine(maiorNumero.ToString("F1", CultureInfo.InvariantCulture));
+        Console.WriteLine(indiceDoMaiorNumero);
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+- ### ex02
+
+Faça um programa que leia N números inteiros e armazene-os em um vetor. Em seguida, mostre na tela:
+- todos os números pares;
+- a quantidade de números pares.  Exemplo: 
+
+| Entrada                         | Saída                  |
+| ------------------------------- | ---------------------- |
+| 6<br/>8   2   11   14   13   20 | 8   2   14   20<br />4 |
+
+- ### Resolução
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Aula 61 - exercícios Propostos");
+        Console.WriteLine("ex02");
+        Console.WriteLine("1 valor/int n valores/int");
+        Console.WriteLine("------------------------");
+
+        // declaração de variáveis
+        int n = int.Parse(Console.ReadLine());
+        int[] numeros = new int[n];
+        int totalDeNumerosPares = 0;
+
+        //entrada de dados
+        string[] v = Console.ReadLine().Split(' ');
+        for (int i = 0; i < n; i++) {
+            numeros[i] = int.Parse(v[i]);
+        };
+
+        //processamento e saída de dados
+        for( int i = 0; i < n; i++){
+            if ( numeros[i] % 2 == 0 ) {
+                if (i < n - 1) {
+                    Console.Write(numeros[i] + " ");
+                } else {
+                    Console.WriteLine(numeros[i]);
+                };
+                totalDeNumerosPares++;
+            };
+        };
+
+        Console.WriteLine(totalDeNumerosPares);
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+- ### ex03
+
+Faça um programa para ler dois vetores A e B, contendo N elementos cada. Em seguida, gere um terceiro vetor C onde
+cada elemento de C é a soma dos elementos correspondentes de A e B. Imprima o vetor C gerado. Exemplo: 
+
+| Entrada                                                      | Saída                       |
+| ------------------------------------------------------------ | --------------------------- |
+| 6 <br />8   2   11   14   13   20<br />5   10   3   1   10   7 | 13   12   14   15   23   27 |
+
+- ### Resolução
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Aula 61 - exercícios Propostos");
+        Console.WriteLine("ex03");
+        Console.WriteLine("1 valor/int n valores/int");
+        Console.WriteLine("------------------------");
+
+        // declaração de variáveis
+        int n = int.Parse(Console.ReadLine());
+        int[] vetorA = new int[n];
+        int[] vetorB = new int[n];
+        int[] vetorC = new int[n];
+
+        //entrada de dados
+        string[] vA = Console.ReadLine().Split(' ');
+        for (int i = 0; i < n; i++) {
+            vetorA[i] = int.Parse(vA[i]);
+        };
+        string[] vB = Console.ReadLine().Split(' ');
+        for (int i = 0; i < n; i++) {
+            vetorB[i] = int.Parse(vB[i]);
+        };
+
+        //processamento e saída de dados
+        for ( int i = 0; i < n; i++){
+            vetorC[i] = vetorA[i] + vetorB[i];
+        };
+
+        for ( int i = 0; i < n; i++){
+            if (i < n - 1) {
+                Console.Write(vetorC[i] + " ");
+            } else {
+                Console.WriteLine(vetorC[i]);
+            };
+        };
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+- ### ex04
+
+Fazer um programa para ler um vetor de N números reais. Em seguida, mostrar na tela a média aritmética de todos
+elementos. Depois mostrar todos os elementos do vetor que estejam abaixo da média. Exemplo: 
+
+| Entrada                         | Saída                     |
+| ------------------------------- | ------------------------- |
+| 4<br />10.0   15.5   13.2   9.8 | 12.125<br />10.0<br />9.8 |
+
+- ### Resolução
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Aula 61 - exercícios Propostos");
+        Console.WriteLine("ex04");
+        Console.WriteLine("1 valor/int n valores/double");
+        Console.WriteLine("------------------------");
+
+        // declaração de variáveis
+        int n = int.Parse(Console.ReadLine());
+        double[] numeros = new double[n];
+        double somaDosValores = 0.0, mediaAritmetica = 0.0;
+
+        //entrada de dados
+        string[] v = Console.ReadLine().Split(' ');
+        for (int i = 0; i < n; i++) {
+            numeros[i] = double.Parse(v[i], CultureInfo.InvariantCulture);
+        };
+
+        //processamento de dados
+        for ( int i = 0; i < n; i++){
+            somaDosValores += numeros[i];
+        };
+
+        mediaAritmetica = somaDosValores / n;
+
+        // saída dos dados
+        Console.WriteLine(mediaAritmetica.ToString("F3", CultureInfo.InvariantCulture));
+        for ( int i = 0; i < n; i++){
+            if (numeros[i] < mediaAritmetica) {
+                Console.WriteLine(numeros[i].ToString("F1", CultureInfo.InvariantCulture));
+            };
+        };
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+- ### ex05
+
+Fazer um programa para ler um vetor de N números inteiros. Em seguida, mostrar na tela a média aritmética somente
+dos números pares lidos. Exemplo: 
+
+| Entrada                          | Saída |
+| -------------------------------- | ----- |
+| 6<br />8   2   11   14   13   20 | 11.0  |
+
+- ### Resolução
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Aula 61 - exercícios Propostos");
+        Console.WriteLine("ex05");
+        Console.WriteLine("1 valor/int n valores/int");
+        Console.WriteLine("------------------------");
+
+        // declaração de variáveis
+        int n = int.Parse(Console.ReadLine());
+        int[] numeros = new int[n];
+        int somaDosValoresPares = 0, quantidadeDosValoresPares = 0;
+        double mediaAritmeticaDosPares = 0.0;
+
+        //entrada de dados
+        string[] v = Console.ReadLine().Split(' ');
+        for (int i = 0; i < n; i++) {
+            numeros[i] = int.Parse(v[i]);
+        };
+
+        //processamento de dados
+        for ( int i = 0; i < n; i++){
+            if ( numeros[i] % 2 == 0) {
+                somaDosValoresPares += numeros[i];
+                quantidadeDosValoresPares++;
+            };
+        };
+
+        mediaAritmeticaDosPares = (double)somaDosValoresPares / quantidadeDosValoresPares;
+
+        // saída dos dados
+        Console.WriteLine(mediaAritmeticaDosPares.ToString("F1", CultureInfo.InvariantCulture));
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+- ### ex06
+
+Fazer um programa para ler um conjunto de nomes de pessoas e suas respectivas idades. Depois, mostrar na tela o nome da pessoa mais velha. Exemplo: 
+
+| Entrada                                                      | Saída                     |
+| ------------------------------------------------------------ | ------------------------- |
+| 5<br />Joao 16<br/>Maria 21<br/>Teresa 15<br/>Carlos 23<br/>Paulo 17 | Pessoa mais velha: Carlos |
+
+- ### Resolução
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Aula 61 - exercícios Propostos");
+        Console.WriteLine("ex06");
+        Console.WriteLine("1 valor/int n valores/int");
+        Console.WriteLine("------------------------");
+
+        // declaração de variáveis
+        int n = int.Parse(Console.ReadLine()), maiorIdade = 0;
+        string[] nomes = new string[n];
+        int[] idades = new int[n];
+        string pessoaMaisVelha = "";
+        
+        //entrada de dados
+        
+        for (int i = 0; i < n; i++) {
+            string[] v = Console.ReadLine().Split(' ');
+            nomes[i] = v[0];
+            idades[i] = int.Parse(v[1]);
+        };
+
+        //processamento de dados
+        for ( int i = 0; i < n; i++){
+            if ( idades[i] > maiorIdade) {
+                maiorIdade = idades[i];
+                pessoaMaisVelha = nomes[i];
+            };
+        };
+
+        // saída dos dados
+        Console.WriteLine("Pessoa mais velha: " + pessoaMaisVelha);
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+- ### ex07
+
+Fazer um programa para ler um conjunto de N nomes de alunos, bem como as notas que eles tiraram no 1º e 2º semestres.
+Cada uma dessas informações deve ser armazenada em um vetor. Depois, imprimir os nomes dos alunos aprovados, considerando aprovados aqueles cuja média das notas seja maior ou igual a seis. Exemplo: 
+
+| Entrada                                                      | Saída                                           |
+| ------------------------------------------------------------ | ----------------------------------------------- |
+| 4<br/>Joao    7.0    8.5<br/>Maria    9.2    6.5<br/>Carlos    5.0    6.0<br/>Teresa    5.5    6.5 | Alunos aprovados:<br/>Joao<br/>Maria<br/>Teresa |
+
+- ### Resolução
+
+```c#
+
+```
+
+- ### ex08
+
+Tem-se um conjunto de dados contendo a altura e o sexo (M, F) de N pessoas. Fazer um programa que calcule e escreva:
+
+- a maior e a menor altura do grupo;
+- a média de altura das mulheres;
+- o número de homens. Exemplo: 
+
+| Entrada                                                  | Saída                                                        |
+| -------------------------------------------------------- | ------------------------------------------------------------ |
+| 5<br/>1.70 F<br/>1.83 M<br/>1.54 M<br/>1.61 F<br/>1.75 F | Menor altura = 1.54<br/>Maior altura = 1.83<br/>Media das alturas das mulheres = 1.69<br/>Numero de homens = 2 |
+
+- ### Resolução
+
+```c#
+```
+
+- ### ex09
+
+Um comerciante deseja fazer o levantamento do lucro das mercadorias que ele comercializa. Para isto, mandou digitar
+um conjunto de N mercadorias, cada uma contendo nome, preço de compra e preço de venda das mesmas. Fazer um
+programa que leia tais dados e determine e escreva quantas mercadorias proporcionaram:
+
+- lucro< 10%
+- 10% ≤ lucro ≤ 20%
+- lucro> 20%
+
+Determine e escreva também o valor total de compra e de venda de todas as mercadorias, assim como o lucro total. Exemplo: 
+
+| Entrada                                                      | Saída                                                        |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 4<br/>Feijao   10.00   11.00<br/>Arroz   12.00   12.80<br/>Oleo   5.00   5.70<br/>Sal   3.00   4.00 | Lucro   abaixo de 10%: 1<br/>Lucro   entre 10% e 20%: 2<br/>Lucro   acima de 20%: 1<br/>Valor   total de compra: 30.00<br/>Valor   total de venda: 33.50<br/>Lucro   total: 3.50 |
+
+- ### Resolução
+
+```c#
+```
+
+
+
+
 
 
 
