@@ -5901,11 +5901,90 @@ namespace ConsoleApplication2 {
 };
 ```
 
+## Aula 62 - Slides utilizados no capítulo
 
+## Aula 63 - Matrizes
 
+Uma matriz corresponde a uma coleção de dados de tamanho fixo, indexada, bidimensional e homogênea
 
+- Indexada: os elementos são acessados por meio de índices 2
+- bidimensional: duas dimensões 
+- Homogênea: todos dados são do mesmo tipo
 
+Matrizes são também chamadas de arranjos bidimensionais
+Em C# a primeira posição e uma matriz é a posição 0, 0 (linha 0, coluna 0)
+Um arranjo deve ser alocado previamente, antes de ser utilizado. Uma vez alocado, sua quantidade de elementos é fixa
 
+### Como criar uma matriz?
+
+- Declaração
+
+```c#
+double[,] A;
+```
+
+- Instanciação
+
+```c#
+A = new double[3, 4];
+```
+
+### Como acessar os elementos de uma matriz?
+
+```c#
+A[1, 2] = 10;
+```
+
+### Problema exemplo
+Fazer um programa para ler dois números inteiros positivos M e N, depois ler uma matriz de M linhas e N colunas contendo números inteiros. Em seguida, mostrar na tela a matriz lida conforme exemplo.
+
+| Entrada                   | Saída             |
+| ------------------------- | ----------------- |
+| 2 3<br/>6 3 10<br/>8 12 5 | 6 3 10<br/>8 12 5 |
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Aula 63 - Matrizes");
+        Console.WriteLine("Problema exemplo");
+        Console.WriteLine("------------------------");
+
+        // declaração de variáveis
+        string[] v = Console.ReadLine().Split(" ");
+        int m = int.Parse(v[0]);
+        int n = int.Parse(v[1]);
+        int[,] A = new int[m, n];
+        
+        //entrada de dados
+        for (int i = 0; i < m; i++) {
+            string[] x = Console.ReadLine().Split(" ");
+            for (int j = 0; j < n; j++) {
+                A[i, j] = int.Parse(x[j]);
+            };
+        };
+
+        //processamento e saída de dados
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                Console.Write(A[i, j] + " ");
+            };
+            Console.WriteLine();
+        };
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+## Aula 64 - Teste de mesa com matrizes
 
 
 
