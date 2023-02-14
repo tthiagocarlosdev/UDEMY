@@ -5986,7 +5986,9 @@ namespace ConsoleApplication2 {
 
 ## Aula 64 - Teste de mesa com matrizes
 
+## Aula 65 -  Exercícios propostos PARTE 1 - testes de mesa com matrizes
 
+## Aula 66 - Exercício resolvido 01
 
 
 
