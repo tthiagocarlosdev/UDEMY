@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "tNj/25oIDclOfA+6y+m0xC8MTZ3dDqGxkbGFRI1ucWgT5zWue6KRYwwOr8ljTodkx7eqwIsRVPs4Ch/i2gaixw==",
+  "success": true,
+  "projectFilePath": "/home/thiago/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class61_exerciciosPropostos/ex09/ex09.csproj",
+  "expectedPackageFiles": [
+    "/home/thiago/.nuget/packages/microsoft.netcore.app.ref/6.0.13/microsoft.netcore.app.ref.6.0.13.nupkg.sha512",
+    "/home/thiago/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.13/microsoft.aspnetcore.app.ref.6.0.13.nupkg.sha512",
+    "/home/thiago/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.13/microsoft.netcore.app.host.linux-x64.6.0.13.nupkg.sha512"
+  ],
+  "logs": []
+}
