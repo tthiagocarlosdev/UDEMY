@@ -5990,7 +5990,67 @@ namespace ConsoleApplication2 {
 
 ## Aula 66 - Exercício resolvido 01
 
+Fazer um programa para ler um número inteiro N e uma matriz quadrada de ordem N contendo números inteiros. Em seguida, mostrar a diagonal principal e a quantidade de valores negativos da matriz.
 
+| Entrada                                                      | saída                                                        |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 3   <br />5   -3   10   <br />15   8   2   <br />7   9    -4 | DIAGONAL PRINCIPAL:<br />5   8   -4   <br />QUANTIDADE DE NEGATIVOS  =  2 |
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Aula 66 - Exercício resolvido 01");
+        Console.WriteLine("------------------------");
+
+        // declaração de variáveis e entrada de dados
+        int n = int.Parse(Console.ReadLine());
+        int[,] A = new int[n, n];
+        int numerosNegativos = 0;
+        
+        for (int i = 0; i < n; i++) {
+            string[] x = Console.ReadLine().Split(" ");
+            for (int j = 0; j < n; j++) {
+                A[i, j] = int.Parse(x[j]);
+            };
+        };
+
+        //processamento e saída de dados
+        //diagonal principal
+        Console.WriteLine("DIAGONAL PRINCIPAL: ");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i == j) {
+                    Console.Write(A[i, j] + " ");
+                } else {
+                    Console.Write(" " + " ");
+                };
+            };
+            Console.WriteLine();
+        };
+
+        //quantidade de número negativos
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if ( A[i,j] < 0) {
+                    numerosNegativos++;
+                };
+            };
+        };
+
+        Console.WriteLine("QUIANTIDADE DE NEGATIVOS = " + numerosNegativos);
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
 
 
 
