@@ -6052,9 +6052,579 @@ namespace ConsoleApplication2 {
 };
 ```
 
+## Aula 67 - Exercício resolvido 02
+
+Fazer um programa para ler dois números inteiros M e N. Em seguida, ler uma matriz de M linhas e N colunas contendo números inteiros. Gerar um vetor de modo que cada elemento do vetor seja a soma dos elementos da linha correspondete da matriz. Mostrar o vetor gerado.
+
+| Entrada                                    | Saída         |
+| ------------------------------------------ | ------------- |
+| 2   3   <br />7   8   10   <br />2   3   5 | 25   <br />10 |
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Aula 67 - Exercício resolvido 02");
+        Console.WriteLine("------------------------");
+
+        // declaração de variáveis e entrada de dados
+        string[] linhaColunas = Console.ReadLine().Split(' ');
+        int m = int.Parse(linhaColunas[0]);
+        int n = int.Parse(linhaColunas[1]);
+        int[,] A = new int[n, n];
+        int[] vetor = new int[m];
+        
+        for (int linhas = 0; linhas < m; linhas++) {
+            string[] x = Console.ReadLine().Split(" ");
+            for (int colunas = 0; colunas < n; colunas++) {
+                A[linhas, colunas] = int.Parse(x[colunas]);
+            };
+        };
+
+        //processamento de dados
+        for (int linhas = 0; linhas < m; linhas++) {
+            int soma = 0;
+            for (int colunas = 0; colunas < n; colunas++) {
+                soma += A[linhas, colunas];
+            };
+            vetor[linhas] = soma;
+        };
+
+        // saída de dados - mostrar vetor
+        for (int i = 0; i < m; i++) {
+            Console.WriteLine(vetor[i]);
+        };
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+## Aula 68 - Exercícios propostos PARTE 2 - problemas com matrizes
+
+Seção: Matrizes
+Exercícios propostos
+
+- ### ex01 
+
+Ler dois números M e N, e depois ler uma matriz MxN de números inteiros, conforme exemplo. Em seguida, mostrar na tela somente os números negativos da matriz.
+
+Entrada:
+A entrada contém os números M e N na mesma linha, depois os dados da matriz.
+
+Saída:
+A saída contém uma mensagem e depois os números negativos da matriz, conforme exemplo.
+
+| Entrada                                       | Saída                                              |
+| --------------------------------------------- | -------------------------------------------------- |
+| 2   3   <br/>12   -8   5   <br/>-13   10   -6 | VALORES NEGATIVOS:   <br/>-8    <br/>-13   <br/>-6 |
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Aula 68 - Exercícios Propostos");
+        Console.WriteLine("ex01");
+        Console.WriteLine("------------------------");
+
+        // declaração de variáveis e entrada de dados
+        string[] linhaColunas = Console.ReadLine().Split(' ');
+        int mLinhas = int.Parse(linhaColunas[0]);
+        int nColunas = int.Parse(linhaColunas[1]);
+        int[,] matriz = new int[nColunas, nColunas];
+        
+        for (int linhas = 0; linhas < mLinhas; linhas++) {
+            string[] valor = Console.ReadLine().Split(" ");
+            for (int colunas = 0; colunas < nColunas; colunas++) {
+                matriz[linhas, colunas] = int.Parse(valor[colunas]);
+            };
+        };
+
+        //processamento e saída de dados
+        Console.WriteLine("VALORES NEGATIVOS:");
+        for (int linhas = 0; linhas < mLinhas; linhas++) {
+            for (int colunas = 0; colunas < nColunas; colunas++) {
+                if ( matriz[linhas, colunas] < 0 ) {
+                    Console.WriteLine(matriz[linhas, colunas]);
+                };
+            };
+        };
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
 
 
 
+- ### ex02
+
+Ler um número N e depois uma matriz quadrada NxN com números inteiros. Depois, mostrar na tela a soma dos elementos de cada linha da matriz.
+
+Entrada:
+A entrada contém o número N, depois os dados da matriz.
+
+Saída:
+A saída contém os números representando a soma dos elementos de cada linha da matriz.
+
+| Entrada                                                | Saída                  |
+| ------------------------------------------------------ | ---------------------- |
+| 3   <br/>5   2   4   <br/>10   3   6   <br/>9   8   12 | 11   <br/>19   <br/>29 |
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Aula 68 - Exercícios Propostos");
+        Console.WriteLine("ex02");
+        Console.WriteLine("------------------------");
+
+        // declaração de variáveis e entrada de dados
+        int ordemDaMatriz = int.Parse(Console.ReadLine());
+        int[,] matriz = new int[ordemDaMatriz, ordemDaMatriz];
+        
+        for (int linhas = 0; linhas < ordemDaMatriz; linhas++) {
+            string[] valor = Console.ReadLine().Split(" ");
+            for (int colunas = 0; colunas < ordemDaMatriz; colunas++) {
+                matriz[linhas, colunas] = int.Parse(valor[colunas]);
+            };
+        };
+
+        //processamento e saída de dados
+        for (int linhas = 0; linhas < ordemDaMatriz; linhas++) {
+            int soma = 0;
+            for (int colunas = 0; colunas < ordemDaMatriz; colunas++) {
+                soma += matriz[linhas, colunas];
+            };
+            Console.WriteLine(soma);
+        };
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
 
 
 
+- ### ex03
+
+Ler um inteiro N e uma matriz quadrada de ordem N. Mostrar qual o maior elemento de cada linha. Suponha não haver
+empates.
+
+Entrada:
+A entrada contém o número N, depois os dados da matriz.
+
+Saída:
+A saída contém os números representando o maior elemento de cada linha da matriz.
+
+| Entrada                                                      | Saída                          |
+| ------------------------------------------------------------ | ------------------------------ |
+| 4   <br/>10   5   12   3   <br/>4   7   0   6   <br/>3   3   8   1   <br/>15   13   4   7 | 12   <br/>7   <br/>8   <br/>15 |
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Aula 68 - Exercícios Propostos");
+        Console.WriteLine("ex03");
+        Console.WriteLine("------------------------");
+
+        // declaração de variáveis e entrada de dados
+        int ordemDaMatriz = int.Parse(Console.ReadLine());
+        int[,] matriz = new int[ordemDaMatriz, ordemDaMatriz];
+        
+        for (int linhas = 0; linhas < ordemDaMatriz; linhas++) {
+            string[] valor = Console.ReadLine().Split(" ");
+            for (int colunas = 0; colunas < ordemDaMatriz; colunas++) {
+                matriz[linhas, colunas] = int.Parse(valor[colunas]);
+            };
+        };
+
+        //processamento e saída de dados
+        for (int linhas = 0; linhas < ordemDaMatriz; linhas++) {
+            int maiorElemento = 0;
+            for (int colunas = 0; colunas < ordemDaMatriz; colunas++) {
+                if ( matriz[linhas, colunas] > maiorElemento) {
+                    maiorElemento = matriz[linhas, colunas];
+                };
+            };
+            Console.WriteLine(maiorElemento);
+        };
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+
+
+- ### ex04
+
+Ler um inteiro N e uma matriz quadrada de ordem N. Mostrar a soma dos elementos acima da diagonal principal.
+
+### Entrada:
+A entrada contém o valor N, depois os dados da matriz.
+
+### Saída:
+A saída contém a soma dos elementos da diagonal principal.
+
+### Exemplo:
+
+| Entrada                                                | Saída |
+| ------------------------------------------------------ | ----- |
+| 3   <br/>10   3   2   <br/>5   15   7   <br/>8   6   4 | 12    |
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Aula 68 - Exercícios Propostos");
+        Console.WriteLine("ex04");
+        Console.WriteLine("------------------------");
+
+        // declaração de variáveis e entrada de dados
+        int ordemDaMatriz = int.Parse(Console.ReadLine());
+        int[,] matriz = new int[ordemDaMatriz, ordemDaMatriz];
+        int somaTrianguloSuperiorDireito = 0;
+        
+        for (int linhas = 0; linhas < ordemDaMatriz; linhas++) {
+            string[] valor = Console.ReadLine().Split(" ");
+            for (int colunas = 0; colunas < ordemDaMatriz; colunas++) {
+                matriz[linhas, colunas] = int.Parse(valor[colunas]);
+            };
+        };
+
+        //processamento e saída de dados
+        for (int linhas = 0; linhas < ordemDaMatriz; linhas++) {
+            for (int colunas = 0; colunas < ordemDaMatriz; colunas++) {
+                if ( colunas > linhas) {
+                    somaTrianguloSuperiorDireito += matriz[linhas, colunas];
+                };
+            };
+        };
+
+        Console.WriteLine(somaTrianguloSuperiorDireito);
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+
+
+- ### ex05
+
+Fazer um programa para ler duas matrizes de números inteiros A e B, contendo de M linhas e N colunas cada. Depois,
+gerar uma terceira matriz C onde cada elemento desta é a soma dos elementos correspondentes das matrizes originais.
+Imprimir na tela a matriz gerada.
+
+### Entrada:
+A entrada contém os valores de M e N, depois os valores da primeira matriz A, depois os valores da segunda matriz B, conforme exemplo.
+
+### Saída:
+A saída contém os valores da matriz gerada C, conforme exemplo.
+
+### Exemplo:
+
+| Entrada                                                      | Saída                       |
+| ------------------------------------------------------------ | --------------------------- |
+| 2   3   <br/>3   5   2   <br/>4   5   1<br/>2   4   5   <br/>1   8   8 | 5   9   7   <br/>5   13   9 |
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Aula 68 - Exercícios Propostos");
+        Console.WriteLine("ex05");
+        Console.WriteLine("------------------------");
+
+        // declaração de variáveis e entrada de dados
+        string[] linhasColunas = Console.ReadLine().Split(' ');
+        int Nlinhas = int.Parse(linhasColunas[0]);
+        int Ncolunas = int.Parse(linhasColunas[1]);
+        int[,] matrizA = new int[Nlinhas, Ncolunas];
+        int[,] matrizB = new int[Nlinhas, Ncolunas];
+        int[,] matrizC = new int[Nlinhas, Ncolunas];
+        
+        for (int linhas = 0; linhas < Nlinhas; linhas++) {
+            string[] valor = Console.ReadLine().Split(" ");
+            for (int colunas = 0; colunas < Ncolunas; colunas++) {
+                matrizA[linhas, colunas] = int.Parse(valor[colunas]);
+            };
+        };
+
+        for (int linhas = 0; linhas < Nlinhas; linhas++) {
+            string[] valor = Console.ReadLine().Split(" ");
+            for (int colunas = 0; colunas < Ncolunas; colunas++) {
+                matrizB[linhas, colunas] = int.Parse(valor[colunas]);
+            };
+        };
+
+        //processamento e saída de dados
+        for (int linhas = 0; linhas < Nlinhas; linhas++) {
+            for (int colunas = 0; colunas < Ncolunas; colunas++) {
+                matrizC[linhas, colunas] = matrizA[linhas, colunas] + matrizB[linhas, colunas];
+            };
+        };
+
+        for (int linhas = 0; linhas < Nlinhas; linhas++) {
+            for (int colunas = 0; colunas < Ncolunas; colunas++) {
+                Console.Write(matrizC[linhas, colunas] + " ");
+            };
+            Console.WriteLine();
+        };
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+
+
+- ### ex06
+
+Ler uma matriz quadrada de ordem N, contendo números reais. Em seguida, fazer as seguintes ações:
+a) calcular e imprimir a soma de todos os elementos positivos da matriz.
+b) fazer a leitura do índice de uma linha da matriz e, daí, imprimir todos os elementos desta linha.
+c) fazer a leitura do índice de uma coluna da matriz e, daí, imprimir todos os elementos desta coluna.
+d) imprimir os elementos da diagonal principal da matriz.
+e) alterar a matriz elevando ao quadrado todos os números negativos da mesma. Em seguida imprimir a matriz alterada.
+
+### Entrada:
+A entrada contém o número inteiro N, seguido dos valores da matriz com uma casa decimal cada, seguido do índice de uma linha, seguido do índice de uma coluna, conforma exemplo.
+
+### Saída:
+A saída contém os valores de saída de cada ação, com uma casa decimal, na ordem em que foram apresentadas no
+enunciado, conforme exemplo.
+
+### Exemplo:
+
+| Entrada                                                      | Saída                                                        |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 3   <br/>7.0   -8.0   10.0   <br/>-2.0   3.0   5.0   <br/>11.0   -15.0   4.0   <br/>1   <br/>2 | SOMA DOS POSITIVOS: 40.0   <br/>LINHA ESCOLHIDA: -2.0   3.0   5.0   <br/>COLUNA ESCOLHIDA: 10.0   5.0   4.0   <br/>DIAGONAL PRINCIPAL: 7.0   3.0   4.0   <br/>MATRIZ ALTERADA:   <br/>7.0   64.0   10.0   <br/>4.0   3.0   5.0   <br/>11.0   225.0   4.0 |
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Aula 68 - Exercícios Propostos");
+        Console.WriteLine("ex06");
+        Console.WriteLine("------------------------");
+
+        // declaração de variáveis e entrada de dados
+        int NlinhasColunas = int.Parse(Console.ReadLine());
+        double[,] matriz = new double[NlinhasColunas, NlinhasColunas];
+        double[,] matrizExponencial = new double[NlinhasColunas, NlinhasColunas];
+        double[] elementosDaLinhaEscolhida = new double[NlinhasColunas];
+        double[] elementosDaColunaEscolhida = new double[NlinhasColunas];
+        
+        for (int linhas = 0; linhas < NlinhasColunas; linhas++) {
+            string[] valor = Console.ReadLine().Split(" ");
+            for (int colunas = 0; colunas < NlinhasColunas; colunas++) {
+                matriz[linhas, colunas] = double.Parse(valor[colunas], CultureInfo.InvariantCulture);
+            };
+        };
+
+        int linhaEscolhida = int.Parse(Console.ReadLine());
+        int colunaEscolhida = int.Parse(Console.ReadLine());
+        double somaDosPositivos = 0.0;
+
+        //processamento e saída de dados
+        //cálculo da soma dos positivos
+        for (int linhas = 0; linhas < NlinhasColunas; linhas++) {
+            for (int colunas = 0; colunas < NlinhasColunas; colunas++) {
+                if ( matriz[linhas, colunas] > 0.0 ) {
+                    somaDosPositivos += matriz[linhas, colunas];
+                };
+            };
+        };
+
+        //mostrar elementos da linha escolhida
+        for (int colunas = 0; colunas < NlinhasColunas; colunas++) {
+            elementosDaLinhaEscolhida[colunas] = matriz[linhaEscolhida, colunas];
+        };
+
+        //elementos da coluna escolhida
+        for (int linhas = 0; linhas < NlinhasColunas; linhas++) {
+            elementosDaColunaEscolhida[linhas] = matriz[linhas, colunaEscolhida];
+        };
+
+        //calculo da matriz alterada
+        for (int linhas = 0; linhas < NlinhasColunas; linhas++) {
+            for (int colunas = 0; colunas < NlinhasColunas; colunas++) {
+                if ( matriz[linhas, colunas] < 0.0 ) {
+                    matrizExponencial[linhas, colunas] = Math.Pow(matriz[linhas, colunas], 2);
+                } else {
+                    matrizExponencial[linhas, colunas] = matriz[linhas, colunas];
+                };
+                
+            };
+        };
+        
+        Console.WriteLine("SOMA DOS POSITIVOS: " + somaDosPositivos.ToString("F1", CultureInfo.InvariantCulture));
+        Console.Write("LINHA ESCOLHIDA: ");
+        for (int indice = 0; indice < NlinhasColunas; indice++) {
+            Console.Write( elementosDaLinhaEscolhida[indice].ToString("F1", CultureInfo.InvariantCulture) + " ");
+        };
+        Console.WriteLine();
+
+        //mostrar elementos da coluna escolhida
+        Console.Write("COLUNA ESCOLHIDA: ");
+        for (int indice = 0; indice < NlinhasColunas; indice++) {
+            Console.Write( elementosDaColunaEscolhida[indice].ToString("F1", CultureInfo.InvariantCulture) + " ");
+        };
+        Console.WriteLine();
+
+        //mostrar diagonal principal
+        Console.Write("DIAGONAL PRINCIPAL: ");
+        for (int linhas = 0; linhas < NlinhasColunas; linhas++) {
+            for (int colunas = 0; colunas < NlinhasColunas; colunas++) {
+                if ( linhas == colunas ) {
+                    Console.Write( matriz[linhas, colunas].ToString( "F1", CultureInfo.InvariantCulture ) + " " );
+                };
+            };
+        };
+        Console.WriteLine();
+
+        //matriz alterada
+        Console.WriteLine("MATRIZ ALTERADA: ");
+        for (int linhas = 0; linhas < NlinhasColunas; linhas++) {
+            for (int colunas = 0; colunas < NlinhasColunas; colunas++) {
+                Console.Write(matrizExponencial[linhas, colunas].ToString( "F1", CultureInfo.InvariantCulture ) + " " );
+            };
+            Console.WriteLine();
+        };
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
+
+
+
+- ### ex07
+
+O sargento Silva organiza seu pelotão em M filas numeradas a partir de 1, sendo cada fila com a mesma quantidade de soldados. Por exemplo, a figura abaixo mostra a organização do pelotão em 3 filas com 8 soldados em cada uma.
+
+Um dos exercícios que o sargento Silva realiza com o pelotão é o exercício "girar fila", que consiste em dizer o número de uma fila, de modo que os soldados desta fila devem se mover para a direita, e o último soldado da direita vai para a posição mais à esquerda. Você deve fazer um programa para ler a formação do pelotão e executar o exercício "girar fila".
+
+### Entrada:
+A entrada consiste em um inteiro M representando o número de filas, um inteiro N representado a quantidade de soldados por fila, as M filas de soldados (cada soldado é representado por um número inteiro), e o número inteiro para o exercício "girar fila".
+
+### Saída:
+A saída contém a formação do pelotão após a execução do exercício "girar fila".
+
+### Exemplo:
+
+| Entrada                                                      | Saída                                                        |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 3   <br/>5   <br/>1034   2271   9013   9281   1138   <br/>2837   1827   1074   9271   7201   <br/>1822   1977   1821   2278   1821   <br/>2 | 1034   2271   9013   9281   1138   <br/>7201   2837   1827   1074   9271   <br/>1822   1977   1821   2278   1821 |
+
+```c#
+using System;
+using System.Globalization;
+
+namespace ConsoleApplication2 {
+  class Program {
+    static void Main(string[] args) {
+      
+        Console.Clear();
+        Console.WriteLine("Aula 68 - Exercícios Propostos");
+        Console.WriteLine("ex07");
+        Console.WriteLine("------------------------");
+
+        // declaração de variáveis e entrada de dados
+        int Nlinhas = int.Parse(Console.ReadLine());
+        int Ncolunas = int.Parse(Console.ReadLine());
+        int[,] matriz = new int[Nlinhas, Ncolunas];
+        int[,] matrizGirarFila = new int[Nlinhas, Ncolunas];
+        
+        for (int linhas = 0; linhas < Nlinhas; linhas++) {
+            string[] valor = Console.ReadLine().Split(" ");
+            for (int colunas = 0; colunas < Ncolunas; colunas++) {
+                matriz[linhas, colunas] = int.Parse(valor[colunas]);
+            };
+        };
+
+        int fila = int.Parse(Console.ReadLine());
+
+        //processamento e saída de dados
+        //calculo da matriz girar fila
+        for (int linhas = 0; linhas < Nlinhas; linhas++) {
+            for (int colunas = 0; colunas < Ncolunas; colunas++) {
+                if ( linhas == fila - 1 ) {
+                    if ( colunas != 0 ) {
+                        matrizGirarFila[linhas, colunas ] = matriz[linhas, colunas - 1];
+                    } else {
+                        matrizGirarFila[linhas, colunas] = matriz[linhas, Ncolunas - 1];
+                    };
+                } else {
+                    matrizGirarFila[linhas, colunas] = matriz[linhas, colunas];
+                };
+                
+            };
+        };
+        
+        //mostrar matriz girar fila
+        for (int linhas = 0; linhas < Nlinhas; linhas++) {
+            for (int colunas = 0; colunas < Ncolunas; colunas++) {
+                Console.Write(matrizGirarFila[linhas, colunas] + " " );
+            };
+            Console.WriteLine();
+        };
+
+        Console.WriteLine("------------------------");
+        Console.ReadLine();
+    }
+  }
+};
+```
