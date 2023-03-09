@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "2WI5yIdhOOjV6tlquQubk4E5uMNCVIzFGhkeueXtS3kKfi2JrbQmJ+QjDIfk6WV6disEAdcpRBG8jZaubMfoPA==",
+  "success": true,
+  "projectFilePath": "/home/thiagonote/Downloads/PROGRAMACAO/UDEMY/C#_primeiros_passos--Logica_de_Programacao_e_Algoritmos/projetos/class63_matrizes/class63_matrizes.csproj",
+  "expectedPackageFiles": [
+    "/home/thiagonote/.nuget/packages/microsoft.netcore.app.ref/6.0.13/microsoft.netcore.app.ref.6.0.13.nupkg.sha512",
+    "/home/thiagonote/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.13/microsoft.aspnetcore.app.ref.6.0.13.nupkg.sha512",
+    "/home/thiagonote/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.13/microsoft.netcore.app.host.linux-x64.6.0.13.nupkg.sha512"
+  ],
+  "logs": []
+}
