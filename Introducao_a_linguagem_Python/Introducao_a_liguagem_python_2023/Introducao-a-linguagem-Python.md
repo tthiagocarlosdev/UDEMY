@@ -366,6 +366,364 @@ False
 |    >=    | Maior igual |
 |    <=    | Menor igual |
 
+```python
+# Operadores relacionais
+x = 2
+y = 3
+print(x == y)
+
+x = 3
+y = 3
+print(x == y)
+
+x = 2
+y = 3
+print(x < y)
+
+x = 2
+y = 3
+print(x > y)
+
+x = 2
+y = 3
+soma = x + y
+print(soma == x)
+print(soma == y)
+print(soma >= y)
+```
+
+```shell
+False
+True
+True
+False
+False
+False
+True
+```
+
+
+
+## Aula 11 - Operadores relacionais
+
+### Operadores lógicos
+
+| Operador |                 Operação                 |
+| :------: | :--------------------------------------: |
+|   AND    |     Duas condições sejam verdadeiras     |
+|    OR    | Pelos menos uma condição seja verdadeira |
+|   NOT    |             Inverte o valor              |
+
+Comandos condicionais
+
+```python
+# class11_operadores_relacionais
+x = 3
+y = 3
+z = 3
+soma = x + y
+print(x == y and x == z)
+
+x = 3
+y = 3
+z = 4
+soma = x + y
+print(x == y and x == z)
+
+x = 3
+y = 3
+z = 4
+soma = x + y
+print(x == y or x == z)
+
+x = 3
+y = 3
+z = 4
+soma = x + y
+print(x == y or x == z and z == y)
+```
+
+```shell
+True
+False
+True
+True
+```
+
+
+
+## Aula 12 - Estruturas condicionais
+
+### Comando condicional *if*
+
+- Realiza testes condicionais
+- Executa um bloco __SE__ uma determinada condição for atendida
+- Avalia se a condição é verdadeira ou não
+
+### Sintaxe
+
+```tex
+if condição:
+	execute_esta_linha
+```
+
+### Bloco
+
+- Trecho de código que depende de outro trecho
+- Observe que a linha 7 não é executada
+
+```python
+# class12_estruturas_condicionais
+x = 1
+y = 10000000000
+
+if x > y:
+	print("x é maior que y")
+
+if y > x:
+	print("y é maior que x")
+```
+
+```shell
+y é maior que x
+```
+
+### Indentação
+
+- Python blocos são definidos pelo espaçamento da linha
+- Pode ser feito com espaços ou tabulações
+- Tecla TAB
+
+
+
+## Aula 13 - Estruturas condicionais (comando else)
+
+### Comando *else*
+
+- É executado caso a condição do comando *if* não seja atendida
+
+```python
+# aula_13__estruturas_condicionais_comando_else
+x = 1
+y = 2
+
+if x > y:
+	print("x maior que y")
+else:
+	print("x não é maior que y")
+```
+
+```shell
+x não é maior que y
+```
+
+
+
+## Aula 14 - Estruturas condicionais (comando elif)
+
+### Comando *else*
+
+- É executado caso a condição do comando *if* não seja atendida
+
+### Sintaxe
+
+```tex
+if condição:
+	execute_esta_linha
+else:
+	caso_if_falhe_execute_esta_linha
+```
+
+### Comando *elif*
+
+- Caso haja necessidade de mais condições entre if e o else
+
+### Sintaxe
+
+```tex
+if condição:
+	execute_esta_linha
+elif condição:
+	execute_esta_linha
+else:
+	execute_esta_linha
+```
+
+```python
+# aula_14__estruturas_condicionais_comando_elif
+x = 1
+y = 2
+
+if x == y:
+	print("numeros iguais")
+elif y > x:
+	print("y maior que x")
+else:
+	print("numeros diferentes")
+```
+
+```shell
+y maior que x
+```
+
+
+
+## Aula 15 - Estruturas de repetição (comando while)
+
+### Laços de repetição
+
+- Estruturas de repetição
+- Iteradores 
+  - iterar == repetir
+- Repetem um trecho do código
+  - enquanto uma condição avaliada for verdadeira
+  - durante uma pré-determinada condição
+- *while* (enquanto)
+
+```python
+# aula_15__estruturas_de_repeticao_comando_while
+x = 1
+
+while x < 10:
+	print(x)
+	x += 1
+```
+
+```sh
+1
+2
+3
+4
+5
+6
+7
+8
+9
+```
+
+
+
+## Aula 16 - Estruturas de repetição (comando for)
+
+### Laços de repetição
+
+- *for* (para)
+
+```python
+# aula_16__estruturas_de_repeticao_comando_for
+lista1 = [1,2,3,4,5]
+lista2 = ["ola", "mundo", "!"]
+lista3 = [0, "ola", "biscoito", "bolacha", 9.99, True]
+
+for i in lista1:
+	print(i)
+print("--------------")
+for i in lista2:
+	print(i)
+print("--------------")
+for i in lista3:
+	print(i)
+```
+
+```shell
+1
+2
+3
+4
+5
+--------------
+ola
+mundo
+!
+--------------
+0
+ola
+biscoito
+bolacha
+9.99
+True
+```
+
+
+
+## Aula 17 - Estruturas de repetição (comandos for e range)
+
+```python
+# aula_17__estruturas_de_repeticao_comandos_for_e_range
+for i in range(10):
+	print(i)
+print("--------------")
+for i in range(10, 20):
+	print(i)
+print("--------------")
+for i in range(10, 20, 2):
+	print(i)
+```
+
+```shell
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+--------------
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+--------------
+10
+12
+14
+16
+18
+```
+
+
+
+## Aula 18 - Objetos
+
+> #### Em Python, tudo é objeto!
+
+Convencionou-se dizer que em Python tudo é um objeto. De fato, Python é uma linguagem orientada a objetos.
+
+Objetos são instâncias de classes. Por exemplo, quando você cria uma variável com uma *string*, você está criando um objeto do tipo *string*.
+
+Objetos possuem **atributos** (características) e **métodos** (ações que podem ser aplicadas).
+
+Observe como verificar atributos e métodos a um objeto:
+
+- #### objeto.atributo
+
+- #### objeto.método( )
+
+
+
+## Aula 19 - Strings parte 1
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
