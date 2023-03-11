@@ -712,9 +712,173 @@ Observe como verificar atributos e métodos a um objeto:
 
 ## Aula 19 - Strings parte 1
 
+- *Strings* é um tipo de dados em que se armazena coleções de caracteres (texto)
+- São declaradas entre aspas
 
+```python
+var1 = 1
+var2 = "1"
+```
 
+- Nesse exemplo var1 é um numeral, enquanto var2 é uma *string*
 
+### Concatenação de *strings*
+
+```python
+# aula_19__strings_parte_1
+a = "Diego"
+b = "Mariano"
+
+concatenar = a + " " + b
+print(concatenar)
+```
+
+```shell
+Diego Mariano
+```
+
+### Verificando o tamanho de uma *string*
+
+```python
+# aula_19__strings_parte_1
+a = "Diego"
+b = "Mariano"
+
+concatenar = a + " " + b
+print(concatenar)
+
+# tamanho de uma string
+print("--------------")
+tamanho = len(concatenar)
+print(tamanho)
+```
+
+```shell
+Diego Mariano
+--------------
+13
+```
+
+### Navegando pelo índice
+
+- A contagem inicia do zero
+
+```python
+# aula_19__strings_parte_1
+a = "Diego"
+b = "Mariano"
+
+concatenar = a + " " + b
+print(concatenar)
+
+# tamanho de uma string
+print("--------------")
+tamanho = len(concatenar)
+print(tamanho)
+
+# navegando pelo índice
+print("--------------")
+print(a[0])
+print(a[1])
+print(a[2])
+print(a[3])
+print(a[4])
+```
+
+```shell
+Diego Mariano
+--------------
+13
+--------------
+D
+i
+e
+g
+o
+```
+
+### Imprimindo parte de uma *string*
+
+```python
+# aula_19__strings_parte_1
+a = "Diego"
+b = "Mariano"
+
+concatenar = a + " " + b
+print(concatenar)
+
+# tamanho de uma string
+print("--------------")
+tamanho = len(concatenar)
+print(tamanho)
+
+# navegando pelo índice
+print("--------------")
+print(a[0])
+print(a[1])
+print(a[2])
+print(a[3])
+print(a[4])
+
+# imprimindo uma parte da string
+print("--------------")
+print(concatenar[0:])
+print(concatenar[1:])
+print(concatenar[2:9])
+print(concatenar[0:4])
+```
+
+```shell
+Diego Mariano
+--------------
+13
+--------------
+D
+i
+e
+g
+o
+--------------
+Diego Mariano
+iego Mariano
+ego Mar
+Dieg
+```
+
+## Aula 20 - Strings parte 2
+
+- Em Python, *strings* são objetos
+- Pode-se aplicar métodos a *strings*
+
+```pseudocode
+string = string.metodo()
+```
+
+### Alterando a caixa: minúsculo/maiúsculo
+
+```python
+# aula_20__strings_parte_2
+a = "Diego"
+b = "Mariano"
+
+# Alterando a caixa: minúsculo
+concatenar = a + " " + b
+print(concatenar)
+print(concatenar.lower())
+print(concatenar.upper())
+print(concatenar)
+```
+
+```shell
+Diego Mariano
+diego mariano
+DIEGO MARIANO
+Diego Mariano
+```
+
+### Removendo espaços no começo e no fim das *string*
+
+3:23
 
 
 
