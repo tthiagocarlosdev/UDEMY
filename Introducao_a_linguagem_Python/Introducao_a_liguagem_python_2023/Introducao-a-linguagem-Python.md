@@ -878,7 +878,91 @@ Diego Mariano
 
 ### Removendo espaços no começo e no fim das *string*
 
-3:23
+```python
+# aula_20_strings_parte_2
+a = "Diego"
+b = "Mariano"
+
+concatenar = a + " " + b + "\n"
+
+print(concatenar)
+
+# Alterando a caixa: minúsculo/maiúsculo
+print(concatenar.lower())
+print(concatenar.upper())
+print(concatenar)
+
+# Removendo espaços
+print(concatenar.strip())
+```
+
+```shell
+Diego Mariano
+
+diego mariano
+
+DIEGO MARIANO
+
+Diego Mariano
+
+Diego Mariano
+[Finished in 21ms]
+```
+
+### Convertendo uma string em uma lista
+
+```python
+# Convertendo uma string em uma lista
+print("--------------")
+minha_string = "O rato roeu a roupa do rei de Roma"
+print(minha_string)
+minha_lista = minha_string.split(" ")
+print(minha_lista)
+minha_lista_r = minha_string.split("r")
+print(minha_lista_r)
+```
+
+```shell
+O rato roeu a roupa do rei de Roma
+['O', 'rato', 'roeu', 'a', 'roupa', 'do', 'rei', 'de', 'Roma']
+['O ', 'ato ', 'oeu a ', 'oupa do ', 'ei de Roma']
+```
+
+### Buscando *substrings*
+
+Quando não encontra a string retorna o valor -1
+
+```python
+busca = minha_string.find("rei")
+print(busca)
+print(minha_string[busca:])
+```
+
+```shell
+23
+rei de Roma
+```
+
+### Substituir partes de uma *string*
+
+```python
+print("--------------")
+print(minha_string.replace("o rei", "a rainha"))
+```
+
+```shell
+O rato roeu a roupa da rainha de Roma
+```
+
+
+
+## Aula 21 - Funções
+
+
+
+
+
+
 
 
 
