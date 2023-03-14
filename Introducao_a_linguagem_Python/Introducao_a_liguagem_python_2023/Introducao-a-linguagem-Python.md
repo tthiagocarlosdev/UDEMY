@@ -958,6 +958,140 @@ O rato roeu a roupa da rainha de Roma
 
 ## Aula 21 - Funções
 
+- Blocos de códigos
+- Executados apenas quando chamadas
+- Em Python sao definidas pela palavra reservada *def*
+- Definição
+
+```pseudocode
+def NOME(PARÂMETRO):
+	COMANDOS
+```
+
+- Chamada
+
+```pseudocode
+NOME(ARGUMENTOS)
+```
+
+```python
+# aula_21__funcoes
+def soma(x, y):
+	return x + y
+
+def multiplicacao(x, y):
+	return x * y
+
+
+s = soma(2, 3)
+m = multiplicacao(3, 4)
+
+print(s)
+print(m)
+print(soma(s, m))
+```
+
+```shell
+5
+12
+17
+```
+
+## Aula 22 - Arquivos
+
+### Manipulando arquivos
+
+### Abrindo arquivos
+
+- Função *open*
+
+```pseudocode
+variavel = open(nome, modo)
+```
+
+| Modo | função                                                       |
+| :--: | :----------------------------------------------------------- |
+|  r   | somente leitura                                              |
+|  w   | escrita (caso o arquivo já exista, ele será apagado e um novo arquivo vazio será criado) |
+|  a   | leitura e escrita (adiciona o novo conteúdo ao fim do arquivo) |
+|  r+  | leitura e escrita                                            |
+|  w+  | escrita (o modo w+, assim como o w, também apaga o conteúdo anterior do arquivo) |
+|  a+  | leitura e escrita (abre o arquivo para atualização)          |
+
+- read( )
+  - Lê arquivo inteiro
+- readline( )
+  - Lê uma linha
+- realines( )
+  - Lê arquivo e o armazena em uma lista
+
+```python
+# Aula 22 - Arquivos
+arquivo = open("meu_arquivo.txt")
+linhas = arquivo.readlines()
+texto_completo = arquivo.read()
+
+print(arquivo)
+print("--------------")
+print(linhas)
+print("--------------")
+for linha in linhas:
+	print(linha)
+print("--------------")
+print(texto_completo)
+print("--------------")
+```
+
+```shell
+<_io.TextIOWrapper name='meu_arquivo.txt' mode='r' encoding='UTF-8'>
+--------------
+['Meu arquivo!\n', 'Olá Mundo!']
+--------------
+Meu arquivo!
+
+Olá Mundo!
+--------------
+
+--------------
+```
+
+```python
+w = open("arquivo2.txt", "w")
+w.write("Esse eh o meu arquivo")
+w.close()
+```
+
+```tex
+Esse eh o meu arquivo
+```
+
+```python
+z = open("meu_arquivo.txt", "w")
+z.write("Esse é o meu arquivo")
+z.close()
+```
+
+```tex
+Esse é o meu arquivo
+```
+
+```python
+n = open("meu_arquivo.txt", "a")
+n.write("Esse é o meu arquivo\n")
+n.close()
+```
+
+```tex
+Esse é o meu arquivoEsse é o meu arquivo
+Esse é o meu arquivo
+Esse é o meu arquivo
+Esse é o meu arquivo
+Esse é o meu arquivo
+Esse é o meu arquivo
+Esse é o meu arquivo
+Esse é o meu arquivo
+```
+
 
 
 
