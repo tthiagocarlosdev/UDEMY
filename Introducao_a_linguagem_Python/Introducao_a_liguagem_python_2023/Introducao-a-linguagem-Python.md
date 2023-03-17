@@ -1094,6 +1094,120 @@ Esse é o meu arquivo
 
 
 
+## Aula 23 -  Listas parte 1
+
+- Representam conjuntos de dados
+- Pode ser:
+  - Numérica: [ 1, 2, 3, 4, 5 ]
+  - *String*: [ "bola", "sapato", "chuva" ]
+
+### Declarando uma lista
+
+```python
+# aula_23___listas_parte_1
+minha_lista = ["abacaxi", "melancia", "abacate"]
+minha_lista_2 = [ 1, 2, 3, 4, 5]
+minha_lista_3 = [ "abacaxi", 2, 9.89, True]
+
+print(minha_lista)
+print("--------------")
+print(minha_lista_2)
+print("--------------")
+print(minha_lista_3)
+print("--------------")
+print(minha_lista[2])
+print(minha_lista[0])
+print(minha_lista[1])
+print("--------------")
+for item in minha_lista:
+	print(item)
+```
+
+```shell
+['abacaxi', 'melancia', 'abacate']
+--------------
+[1, 2, 3, 4, 5]
+--------------
+['abacaxi', 2, 9.89, True]
+--------------
+abacate
+abacaxi
+melancia
+--------------
+abacaxi
+melancia
+abacate
+```
+
+### Verificando tamanho de uma lista
+
+```python
+tamanho = len(minha_lista)
+
+print(tamanho)
+```
+
+```shell
+3
+```
+
+### Adicionando elementos
+
+```python
+# Adicionando elementos
+minha_lista.append("limao")
+print(minha_lista)
+```
+
+```shell
+['abacaxi', 'melancia', 'abacate', 'limao']
+```
+
+### Verificando se um elemento pertence a lista
+
+```python
+# Verificando se um elemento pertence a lista
+if "limao" in minha_lista:
+	print("limao está na lista")
+```
+
+```shell
+limao está na lista
+```
+
+### Removendo elementos
+
+```python
+# Removendo elementos
+
+del minha_lista[2:]
+print(minha_lista)
+```
+
+```shell
+['abacaxi', 'melancia']
+```
+
+### Apagando a lista inteira
+
+```python
+# Apagando a lista inteira
+del minha_lista[:]
+print(minha_lista)
+```
+
+```shell
+[]
+```
+
+
+
+## Aula 24 - Listas parte 2
+
+
+
+
+
 
 
 
