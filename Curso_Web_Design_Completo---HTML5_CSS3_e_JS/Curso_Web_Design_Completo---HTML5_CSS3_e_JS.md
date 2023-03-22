@@ -59,10 +59,152 @@ Níveis de títulos:
 <h6> meu título </h6>
 ```
 
+Ênfase em textos:
+
 ```html
 <i> itálico </i>
 <b> negrito </b>
 <em> itálico semântico </em>
 <strong> negrito semântico </strong>
 ```
+
+Listas não ordenadas
+
+```html
+<ul>
+    <li> ... </li>
+    <li> ... </li>
+    <li> ... </li>
+</ul>
+```
+
+Lista ordenada
+
+```html
+<ol>
+    <li> ... </li>
+    <li> ... </li>
+    <li> ... </li>
+</ol>
+```
+
+Links
+
+```html
+<p> Texto com <a>link</a> aqui </p>
+```
+
+```html
+<p> saiba mais sobre <a>HTML5</a> visitando nosso blogo e seja feliz </p>
+```
+
+Atributo
+
+```html
+<tag atributo="valor"> texto aqui </tag>
+```
+
+```html
+<p> saiba mais sobre <a href="http://www....com.br" >HTML5</a> visitando nosso blogo e seja feliz </p>
+```
+
+```html
+<p> saiba mais sobre <a href="http://www....com.br" target="_blank" >HTML5</a> visitando nosso blogo e seja feliz </p>
+```
+
+Tipos de Links
+
+```html
+<a href="http://www....com.br" ></a>
+<a href="outraPagina.html" ></a>
+<a href="#secao" ></a>
+<a href="mailto:alguem@server.com" ></a>
+```
+
+Quebras de linha
+
+```html
+<br>
+<hr>
+```
+
+### 9. Principais tags - mão na massa
+
+```html
+<h1> Título head 1 </h1>
+<h2> Título head 2 </h2>
+<h3> Título head 3 </h3>
+<h4> Título head 4 </h4>
+<h5> Título head 5 </h5>
+<h6> Título head 6 </h6>
+
+<p>meu paragrafo com link para o <a href="./01_teste.html" target="_blank">primeiro exercicio </a> e uma <a href="http://www.google.com.br" target="_blank">pagina externa</a> </p>
+
+<hr>
+
+<ul>
+    <li>item de lista</li>
+    <li>item com <b>negrito</b> </li>
+    <li> item com <a href="./02_tags.html">link</a> </li>
+</ul>
+
+<ol>
+    <li>primeiro item</li>
+    <li>segundo item</li>
+</ol>
+
+<p>O <strong>html5</strong> é uma linguagem de marcação para criar páginas na web. Você <b>deve</b> semrpe utiliar a extensão .html</p>
+
+<p>O <em>html5</em> é uma linguagem de marcação para criar páginas na web. Você <i>deve</i> semrpe utiliar a extensão .html</p>
+```
+
+### 10. Correção do exercício
+
+```html
+<h1> Currículo Vitae </h1>
+<hr>
+<p><b> Nome: </b> Thiago Carlos Limeira da Silva </p>
+<p><b> Objetivo: </b> Webdesigner </p>
+<hr>
+<h2> Qualificações Profissionais </h2>
+<ul>
+    <li> Conhecimento básico de windows </li>
+    <li> Curso de Datilografia </li>
+</ul>
+<a href="./01_teste.html"> ver primeiro arquivo criado </a>
+```
+
+### 11. Estrutura base - teoria
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
