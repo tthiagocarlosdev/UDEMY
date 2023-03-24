@@ -251,21 +251,471 @@ Quebras de linha
 
 ### 14. As Folhas de estilo em cascata
 
+CSS - cascating style sheets
+
+- #### Sintaxe
+
+```css
+seletor { propriedade: valor; }
+h1{
+    color: red;
+    font-size: 16px;
+}
+```
+
+- #### Como incluir
+
+  - Inline
+
+  ```html
+  <p style="..." > ... </p>
+  ```
+
+  - Interno
+
+  ```html
+  <style> ... </style>
+  ```
+
+  - Externo
+
+  ```html
+  <link href=".css" rel="stylesheet" >
+  ```
+
+- #### Seletores de elemento
+
+HTML
+
+```html
+<p> ... </p>
+```
+
+CSS
+
+```css
+p { ... }
+```
+
+- #### Seletores de classes
+
+HTML
+
+```html
+<p class="minha_classe"> ... </p>
+```
+
+CSS
+
+```css
+.minha_classe { ... }
+```
+
+- #### Seletores de id
+
+HTML
+
+```html
+<p id="meu_id"> ... </p>
+```
+
+CSS
+
+```css
+#meu_id { ... }
+```
+
+Obs.: O id é único, deve aparecer apenas uma vez na página, ao contrário da class.
+
+- #### fonts
+
+  - font-family
+  - font-size
+  - font-style
+  - font-variant
+
+- #### text
+
+  - text-align
+  - text-decoration
+  - text-ident
+  - text-transform
+
+- #### RGB
+
+  - Red light
+  - Blue light
+  - Green light
+  - color
+  - background-color
+
+### 15. Primeiras regras de CSS
+
+```html
+<!doctype html>
+<!-- doctype informa ao agnte de usuario a versão do html que deve ser renderizada -->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+        
+        <style>
+            body{
+                background-color: #ccc;
+            }
+
+            h1{
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 48px;
+                font-style: normal;
+                font-variant: small-caps;
+                color:#00ff00;
+            }
+
+            h2{
+                text-transform: uppercase;
+                font-family: 'Courier New', Courier, monospace;
+                color: #0000ff;
+                background-color: coral;
+            }
+
+            p{
+                font-variant: normal;
+                text-align: justify;
+                text-decoration: underline;
+                text-indent: 50px;
+                text-transform: none;;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>estrutura basica</h1>
+        <h2>subtitulo da pagina</h2>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate placeat consequatur tempora delectus, natus ipsum earum quam vero qui animi.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint, culpa, voluptatibus cum fugiat mollitia id facere nostrum dolorem recusandae sapiente eum voluptates quae, officiis natus odio laudantium. Dolore, aliquam officia?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ullam provident iure cum quisquam. Quos minus officia totam nemo odit perspiciatis. Quasi rem minus accusantium ducimus blanditiis sapiente, quibusdam adipisci placeat quod obcaecati numquam nulla et sunt cumque nemo id.</p>
+    </body>
+</html>
+```
+
+### 16.  Adicionando classes
+
+```html
+<!doctype html>
+<!-- doctype informa ao agnte de usuario a versão do html que deve ser renderizada -->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+        
+        <style>
+            body{
+                background-color: #ccc;
+            }
+
+            h1{
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 48px;
+                font-style: normal;
+                font-variant: small-caps;
+                color:#00ff00;
+            }
+
+            h2{
+                text-transform: uppercase;
+                font-family: 'Courier New', Courier, monospace;
+                color: #0000ff;
+                background-color: coral;
+            }
+
+            p{
+                font-variant: normal;
+                text-align: justify;
+                text-decoration: underline;
+                text-indent: 50px;
+                text-transform: none;;
+            }
+
+            #destaque{
+                color: red;
+                background-color: yellow;
+            }
+
+            .destaque{
+                color:#0000ff;
+                background-color:#00ff00;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>estrutura basica</h1>
+        <h2>subtitulo da pagina</h2>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate placeat consequatur tempora delectus, natus ipsum earum quam vero qui animi.</p>
+        <p class="destaque">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint, culpa, voluptatibus cum fugiat mollitia id facere nostrum dolorem recusandae sapiente eum voluptates quae, officiis natus odio laudantium. Dolore, aliquam officia?</p>
+        <p id="destaque">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ullam provident iure cum quisquam. Quos minus officia totam nemo odit perspiciatis. Quasi rem minus accusantium ducimus blanditiis sapiente, quibusdam adipisci placeat quod obcaecati numquam nulla et sunt cumque nemo id.</p>
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ea eveniet ipsa sit necessitatibus fugiat officiis quisquam laborum? Quis, iure architecto? Iusto, eos laudantium? Mollitia, vero in asperiores odit atque officia. Doloremque quasi cupiditate voluptates adipisci iure explicabo tenetur tempora cum quibusdam omnis minima, aliquid facere sit vel dolorem. Aspernatur!</p>
+    </body>
+</html>
+```
+
+### 17.  Background ou background-color?
+
+### 18. Box Model
+
+- #### Modelo de caixa
+
+```html
+<!doctype html>
+<!-- doctype informa ao agnte de usuario a versão do html que deve ser renderizada -->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+        
+        <style>
+            body{
+                background-color: #ccc;
+            }
+
+            h1{
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 48px;
+                font-style: normal;
+                font-variant: small-caps;
+                color:#00ff00;
+                background-color: yellow;
+                margin-top: 50px;
+                margin-left: 0;
+                margin-bottom: 50px;
+                padding-left: 25px;
+                padding-top: 50px;
+                padding-bottom: 50px;
+                padding-right: 25px;
+                width: 180px;
+                height: 160px;
+            }
+
+            h2{
+                text-transform: uppercase;
+                font-family: 'Courier New', Courier, monospace;
+                color: #0000ff;
+                border-bottom-color: red;
+                border-bottom-style: dotted;
+                border-bottom-width: 5px;
+                padding: 25px;
+            }
+
+            p{
+                font-variant: normal;
+                text-align: justify;
+                text-decoration: underline;
+                text-indent: 50px;
+                text-transform: none;
+                margin-bottom: 30px;
+            }
+
+            #destaque{
+                color: red;
+                background-color: yellow;
+            }
+
+            .destaque{
+                color:#0000ff;
+                background-color:#00ff00;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>estrutura basica</h1>
+        <h2>subtitulo da pagina</h2>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate placeat consequatur tempora delectus, natus ipsum earum quam vero qui animi.</p>
+        <p class="destaque">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint, culpa, voluptatibus cum fugiat mollitia id facere nostrum dolorem recusandae sapiente eum voluptates quae, officiis natus odio laudantium. Dolore, aliquam officia?</p>
+        <p id="destaque">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ullam provident iure cum quisquam. Quos minus officia totam nemo odit perspiciatis. Quasi rem minus accusantium ducimus blanditiis sapiente, quibusdam adipisci placeat quod obcaecati numquam nulla et sunt cumque nemo id.</p>
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ea eveniet ipsa sit necessitatibus fugiat officiis quisquam laborum? Quis, iure architecto? Iusto, eos laudantium? Mollitia, vero in asperiores odit atque officia. Doloremque quasi cupiditate voluptates adipisci iure explicabo tenetur tempora cum quibusdam omnis minima, aliquid facere sit vel dolorem. Aspernatur!</p>
+    </body>
+</html>
+```
+
+### 19. Box-model - parte 2
+
+```css
+p{
+    margin-top: 50px;
+    margin-right: 40px
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+p{ maring: 50px 40px 30px 20px; }
+```
+
+```css
+p{
+    padding-top: 50px;
+    padding-right: 40px
+    padding-bottom: 30px;
+    padding-left: 20px;
+}
+
+p{ padding: 50px 40px 30px 20px; }
+```
+
+- #### Abreviando margin/padding
+
+A primeira forma equivale a segunda forma:
+
+```css
+p{ margin: 50px 40px 30px; }
+```
+
+```css
+p{ margin: 50px 40px 30px 40px; }
+```
+
+A primeira forma equivale a segunda forma:
+
+```css
+p{ margin: 50px 40px; }
+```
+
+```css
+p{ margin: 50px 40px 50px 40px; }
+```
+
+A primeira forma equivale a segunda forma:
+
+```css
+p{ margin: 50px; }
+```
+
+```css
+p{ margin: 50px 50px 50px 50px; }
+```
+
+- #### border
+
+```css
+h1{
+    border-style: dotted;
+    border-width: 5px;
+    border-color: red;
+}
+```
+
+```css
+h1{ border: dotted 5px red; }
+```
+
+```css
+h1{
+    border-top-style: solid;
+    border-right-width: 5px;
+    border-bottom-color: red;
+    border-left-color: #FF00FF;
+}
+```
+
+```css
+h1{ border-top: solid 10px blue; }
+```
+
+### 20. Pseudo-classes e list-style
+
+- #### Pseudo-classes
+
+```css
+a:link{ ... }
+a:visited{ ... }
+a:hover{ ... }
+a:active{ ... }
+```
+
+- #### list-style
+
+```css
+list-style-type
+list-style-position
+list-style-image
+```
+
+### 21. Praticando
+
+```html
+<!doctype html>
+<!-- doctype informa ao agnte de usuario a versão do html que deve ser renderizada -->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+        <style>
+            body {
+                font-family: sans-serif;
+                color: green;
+            }
+            a{
+                color: green;
+            }
+            a:hover{
+                background-color: rgba(238, 255, 0, 0.634);
+            }
+            a:link{
+                color: green;
+            }
+            a:active{
+                color:orange;
+            }
+
+            ul li{
+                list-style-type:circle;
+            }
+            ol li{
+                list-style-type: lower-latin;
+                list-style-position: inside;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="./01_teste.html">veja o arquivo 01 teste.html </a> | 
+        <a href="./02_tags.html"> veja o segundo arquivo</a>
+        <ul>
+            <li> item 1</li>
+            <li> item 2</li>
+            <li> item 3</li>
+        </ul>
+
+        <ol>
+            <li> item 1</li>
+            <li> item 2</li>
+            <li> item 3</li>
+        </ol>
+
+        <p>paragrafo 1</p>
+    </body>
+</html>
+```
+
+### 22. Exercício. Centralizar na tela
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+### 23.Exercício. HTML
 
 
 
