@@ -171,12 +171,85 @@ Quebras de linha
     <li> Conhecimento básico de windows </li>
     <li> Curso de Datilografia </li>
 </ul>
-<a href="./01_teste.html"> ver primeiro arquivo criado </a>
+<p><a href="./01_teste.html"> ver primeiro arquivo criado </a></p>
 ```
 
 ### 11. Estrutura base - teoria
 
+- #### Estrutura semântica básica
 
+```html
+<html lang="pt-br">
+    <head>
+        <title> título da página </title>
+        <meta tags>
+        <link para arquivos externos >
+    </head>
+    <body>
+        <!-- conteúdo da página -->
+        <h1> título da página</h1>
+        <p> texto </p>
+        <ul>
+            <li> item de lista </li>
+        </ul>
+    </body>
+</html>
+```
+
+- #### Doctype - Maneira de informar para o browser que tipo de documento estou escrevendo
+
+```html
+<!doctype html>
+```
+
+- #### charset - indica o tipo de codificação de caractere
+
+```html
+<meta charset="utf-8">
+```
+
+- #### Imagens, arquivos externos e links
+
+```html
+<a>
+    href
+    title
+<link>
+    href
+    rel
+<img>
+    src
+    alt
+<script>
+    src
+```
+
+
+
+### 12. Estrutura base - mão na massa
+
+```html
+<!doctype html>
+<!-- doctype informa ao agnte de usuario a versão do html que deve ser renderizada -->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+    </head>
+    <body>
+        <h1>estrutura basica</h1>
+    </body>
+</html>
+```
+
+### 13. Para que servem as Metatags?
+
+## Seção 2: Introdução ao CSS
+
+### 14. As Folhas de estilo em cascata
 
 
 
