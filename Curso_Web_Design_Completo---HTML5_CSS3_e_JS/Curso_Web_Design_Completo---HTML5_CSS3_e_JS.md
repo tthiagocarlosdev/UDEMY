@@ -713,9 +713,241 @@ list-style-image
 
 ### 22. Exercício. Centralizar na tela
 
+```html
+<!doctype html>
+<!-- doctype informa ao agnte de usuario a versão do html que deve ser renderizada -->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
 
+        <style>
+            body{
+                width: 80%;
+                margin: auto;
+            }
+            h1{
+                background-color: chocolate;
+                text-align: center;
+            }
+            h2{
+                background-color: orangered;
+                border-bottom: 2px solid black;
+            }
+            a{
+                list-style-type: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lorem, ipsum dolor.</h1>
+        <p>Lorem ipsum dolor sit.</p>
+        
+        <h2>Lorem</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+        
+        <h2>Lorem, ipsum.</h2>
+        
+        <p><a href="http://uol.com.br"><strong>UOL</strong></a> <b> - 03/2018 até 11/2019 - 18 meses</b></p>
+        <p><strong>Lorem, ipsum - 2 meses </strong></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis dolorum eos ratione placeat?</p>
+        
+        <p><a href="http://terra.com.br"><strong>TERRA</strong></a><b> - 1 ano</b></p>
+        <p><strong>Lorem, ipsum dolor - 1 ano</strong></p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum est quod sequi maiores temporibus ipsam, inventore tenetur provident, officia tempora doloremque vero id! Facilis, labore! Natus hic aspernatur ab iure.</p>
+        
+        <p><a href="http://g1.com.br"> <strong>G1</strong></a><b> - 6 meses</b></p>
+        <p><strong>Lorem, ipsum dolor - 6 meses</strong></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis fuga ducimus sapiente deleniti nulla beatae explicabo ipsa sed repellat repellendus!</p>
+        
+        <h2>Lorem</h2>
+        <h3>Lorem ipsum dolor sit amet.</h3>
+        <p>12/2019 a 07/2022</p>
+        <p>Lorem, ipsum dolor.</p>
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae!</h3>
+        <p>08/2022 a 03/2023</p>
+        <p>Lorem, ipsum dolor.</p>
+        
+        <h2>Lorem / Ipsum</h2>
+        <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, eos.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, mollitia.</li>
+        </ul>
+        <h3>HTML5</h3>
+        <p>lorem - 40h - 2018</p>
+        <h3>Javascript</h3>
+        <p>lorem - 40h - 2018</p>
+        <h3>CSS3</h3>
+        <p>lorem - 40h - 2018</p>
+        <h3>Idiomas</h3>
+        <p>Inglês: básico</p>
+    </body>
+</html>
+```
 
 ### 23.Exercício. HTML
+
+```html
+<!doctype html>
+<!-- doctype informa ao agnte de usuario a versão do html que deve ser renderizada -->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+    </head>
+    <body>
+        <h1>Lorem, ipsum dolor.</h1>
+        <p>Lorem ipsum dolor sit.</p>
+        
+        <h2>Lorem</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+        
+        <h2>Lorem, ipsum.</h2>
+        
+        <h3><a href="http://uol.com.br">UOL</a> - 03/2018 até 11/2019 - 18 meses</h3>
+        <h4>Lorem, ipsum - 2 meses</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis dolorum eos ratione placeat?</p>
+        
+        <h3><a href="http://terra.com.br">TERRA</a> - 1 ano</h3>
+        <p><strong>Lorem, ipsum dolor - 1 ano</strong></p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum est quod sequi maiores temporibus ipsam, inventore tenetur provident, officia tempora doloremque vero id! Facilis, labore! Natus hic aspernatur ab iure.</p>
+        
+        <h3><a href="http://g1.com.br"> G1</a> - 6 meses</h3>
+        <h4>Lorem, ipsum dolor - 6 meses</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis fuga ducimus sapiente deleniti nulla beatae explicabo ipsa sed repellat repellendus!</p>
+        
+        <h2>Lorem</h2>
+        <h3>Lorem ipsum dolor sit amet.</h3>
+        <p>12/2019 a 07/2022</p>
+        <p>Lorem, ipsum dolor.</p>
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae!</h3>
+        <p>08/2022 a 03/2023</p>
+        <p>Lorem, ipsum dolor.</p>
+        
+        <h2>Lorem / Ipsum</h2>
+        <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, eos.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, mollitia.</li>
+        </ul>
+        <h3>HTML5</h3>
+        <p>lorem - 40h - 2018</p>
+        <h3>Javascript</h3>
+        <p>lorem - 40h - 2018</p>
+        <h3>CSS3</h3>
+        <p>lorem - 40h - 2018</p>
+        <h3>Idiomas</h3>
+        <p>Inglês: básico</p>
+    </body>
+</html>
+```
+
+### 24. Exercício. CSS
+
+```html
+<!doctype html>
+<!-- doctype informa ao agnte de usuario a versão do html que deve ser renderizada -->
+<html lang="pt-br">
+    <head>
+        <title> 07_curriculum </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            body{
+                width: 80%;
+                margin: auto;
+                font-family: Verdana, Helvetica, sans-serif;
+                color: #444;
+            }
+
+            h1{
+                background-color: chocolate;
+                text-align: center;
+                font-size: 46px;
+                padding: 4px 0;
+            }
+
+            h2{
+                background-color: orangered;
+                border-bottom: 3px solid #444;
+                font-size: 36px;
+                padding: 8px;
+            }
+
+            ul{
+                padding-left: 0;
+            }
+
+            li{
+                list-style-position: inside;
+            }
+
+            a{
+                text-decoration: none;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Lorem, ipsum dolor.</h1>
+        <p>Lorem ipsum dolor sit.</p>
+        
+        <h2>Lorem</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+        
+        <h2>Lorem, ipsum.</h2>
+        
+        <h3><a href="http://uol.com.br" target="_blank">UOL</a> - 03/2018 até 11/2019 - 18 meses</h3>
+        <h4>Lorem, ipsum - 2 meses</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis dolorum eos ratione placeat?</p>
+        
+        <h3><a href="http://terra.com.br" target="_blank">TERRA</a> - 1 ano</h3>
+        <p><strong>Lorem, ipsum dolor - 1 ano</strong></p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum est quod sequi maiores temporibus ipsam, inventore tenetur provident, officia tempora doloremque vero id! Facilis, labore! Natus hic aspernatur ab iure.</p>
+        
+        <h3><a href="http://g1.com.br" target="_blank"> G1</a> - 6 meses</h3>
+        <h4>Lorem, ipsum dolor - 6 meses</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis fuga ducimus sapiente deleniti nulla beatae explicabo ipsa sed repellat repellendus!</p>
+        
+        <h2>Lorem</h2>
+        <h3>Lorem ipsum dolor sit amet.</h3>
+        <p>12/2019 a 07/2022</p>
+        <p>Lorem, ipsum dolor.</p>
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae!</h3>
+        <p>08/2022 a 03/2023</p>
+        <p>Lorem, ipsum dolor.</p>
+        
+        <h2>Lorem / Ipsum</h2>
+        <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, eos.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, mollitia.</li>
+        </ul>
+        <h3>HTML5</h3>
+        <p>lorem - 40h - 2018</p>
+        <h3>Javascript</h3>
+        <p>lorem - 40h - 2018</p>
+        <h3>CSS3</h3>
+        <p>lorem - 40h - 2018</p>
+        <h3>Idiomas</h3>
+        <p>Inglês: básico</p>
+    </body>
+</html>
+```
+
+## Seção 3: Mais sobre o Visual - Parte 1
+
+### 25. Trabalhando com imagens
 
 
 
