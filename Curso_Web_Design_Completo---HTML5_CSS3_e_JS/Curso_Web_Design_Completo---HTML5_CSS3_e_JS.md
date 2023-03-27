@@ -949,6 +949,147 @@ list-style-image
 
 ### 25. Trabalhando com imagens
 
+- #### Duas formas para inserirmos imagens
+
+  - HTML
+
+  ```html
+  <img src="..." alt="...">
+  ```
+
+  - CSS
+
+  ```css
+  background-image: url(...);
+  ```
+
+- #### Tipos de imagens
+
+.jpg / .jpeg
+
+.png
+
+.gif
+
+.svg
+
+.webp
+
+### 26. Trabalhando com imagens - mão na massa
+
+```html
+<!doctype html>
+<!-- doctype informa ao agnte de usuario a versão do html que deve ser renderizada -->
+<html lang="pt-br">
+    <head>
+        <title> 08_imagens </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+        <style>
+            body{
+                font-size: 22px;
+                font-family: sans-serif;
+                width: 700px;
+                margin: auto;
+                background-image: url(../images/bg.jpg);
+                background-attachment: fixed;
+                background-size: cover;
+                background-repeat: repeat;
+                background-position: right bottom;
+            }
+
+            p{
+                line-height: 1.5;
+            }
+
+            .img_html{
+                float:left;
+            }
+            .img_css{
+                float: right;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <h1>Incluir imagens</h1>
+        <p><a href="https://www.lipsum.com/"> gerador de texto lorem ipsum</a></p>
+
+        <img src="../images/html5.png" class="img_html" alt="logotipo HTML 5">
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed temporibus dignissimos omnis quod delectus dolorem labore similique ut quidem amet quam esse nemo, molestiae adipisci, commodi dolorum! Laudantium laborum et quibusdam provident. Dolor itaque sunt reprehenderit dolore voluptatibus laboriosam sint vitae, ut voluptate nam aliquam eius! Dolores eius, ipsam nisi maiores non, corrupti earum expedita pariatur ipsum ipsa ut. Vel sit possimus animi sapiente cum optio unde maiores, aperiam asperiores ab totam consectetur iusto perferendis repellendus assumenda impedit ducimus, laborum voluptatibus modi eos necessitatibus quam eius corrupti! Inventore cum eos non. Et sunt porro velit magnam doloremque obcaecati quaerat ea.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui incidunt velit, vel distinctio consequatur non accusantium fugiat numquam facere adipisci labore corrupti tenetur ex pariatur magnam obcaecati quia modi recusandae rerum blanditiis eius odio praesentium repellendus? Esse officiis eligendi voluptas sequi in vel quisquam nostrum debitis quam. Odio nisi odit esse placeat sit, vitae voluptate. Repellendus tempora aut fuga, doloribus et aliquam dolore alias iste dolorum laborum. Ducimus, ratione. Velit perspiciatis, eum reprehenderit expedita, optio sint recusandae illo quidem tempore molestiae laborum rem aliquid quae nesciunt consectetur? Aspernatur maxime iure, doloribus consectetur sed beatae ut voluptates, aliquam soluta repellat saepe sapiente nihil animi temporibus reiciendis laudantium atque! Dolorem dignissimos rerum, debitis quae autem iusto, impedit velit fugiat sequi dolores facere unde eos corporis qui at tenetur nostrum? Ipsum vel delectus quae itaque repellat porro dolorem adipisci vitae cupiditate consequuntur! Ab quia ullam labore. Repudiandae quas optio iusto delectus! Quibusdam, non.
+        </p>
+        <img src="../images/css3.png" class="img_css" alt="logotipo CSS">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure quod minus culpa temporibus accusantium obcaecati exercitationem ipsam, vero repellendus? Excepturi dicta, debitis impedit, nisi eveniet commodi doloremque sed id a porro consequuntur quasi modi. Minima optio eos exercitationem consectetur mollitia cum, debitis, et itaque voluptatem animi est. Voluptas itaque nam, ut recusandae nulla, doloribus voluptatibus sit provident cumque repudiandae excepturi, sint expedita deleniti distinctio voluptates ullam amet exercitationem quod reprehenderit officiis praesentium. Eius beatae odio voluptatum cupiditate sunt deserunt necessitatibus qui, libero in vel harum quo dolor nulla facilis consequatur tenetur deleniti, porro labore error tempore quod quos. Quam, dolor expedita! Itaque optio ex quibusdam id hic voluptates. Eaque quisquam quae illo nemo atque enim fugit odio provident vel ex.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, eum nam. Eius quibusdam aliquam voluptate impedit ipsa saepe eos eligendi voluptatem pariatur animi quia earum, repudiandae ipsum et veritatis perferendis soluta minima iusto quaerat quod minus ex beatae ab dolorum! Aut qui, esse rerum debitis nulla, perferendis voluptatibus fuga sed dignissimos dicta, sint corrupti magni inventore non quibusdam mollitia illum ab voluptas dolor. Aliquam excepturi repellendus quasi rerum, exercitationem ex praesentium illum ad quos iste temporibus, libero veniam! Vitae, quam repellendus! Aperiam, nihil! Eveniet amet qui minima accusamus! Vero debitis earum vel dolore repellat vitae recusandae tempore aliquid delectus excepturi. Ipsam eaque totam quam. Itaque quisquam earum nihil voluptate amet doloribus quaerat eveniet veniam, reprehenderit dolorem suscipit, iure aspernatur, nostrum inventore accusamus minus aliquam sapiente fugit iusto ea voluptates repudiandae.
+        </p>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quaerat voluptates similique eveniet quidem cum et non enim. Vitae voluptatibus quod asperiores possimus dolorem iure ullam sed nemo qui aperiam porro accusamus, praesentium consequatur, temporibus dolor fugit, ex recusandae natus quos? Eaque suscipit obcaecati sapiente eligendi eveniet cupiditate optio natus ea aliquid animi quae possimus quibusdam, deleniti quod non nisi molestiae quam dolorum? Natus veniam quam voluptatem nostrum nulla quas iure, quia ab dignissimos nemo aut illo quaerat blanditiis esse? Temporibus consectetur non autem. Earum illo nihil enim facere doloremque, reprehenderit animi magni, doloribus eius, provident accusamus ratione nulla labore alias cumque commodi. Modi dicta ut ullam nam maxime ipsam!
+        </p>
+
+    </body>
+</html>
+```
+
+
+
+### 27. Estruturando layouts com semântica
+
+- #### Wireframe
+
+```html
+<div id="...">
+    <div id="..."> </div>
+    <div id="..."> </div>
+    <div id="..."> </div>
+    <div id="..."> </div>
+</div>
+```
+
+- #### Adicionando Semântica
+
+```html
+<div id="...">
+	<header> </header>
+    <nav> </nav>
+    <main> </main>
+    <footer> </footer>
+</div>
+```
+
+- #### Outras Tags Semânticas
+
+```html
+<section> </section>
+<article> </article>
+<aside> </aside>
+```
+
+- #### Tags Não Semânticas
+
+```html
+<div> </div>
+<span> </span>
+```
+
+
+
+### 28. Projeto 1 - HTML
+
+
+
+
+
 
 
 
