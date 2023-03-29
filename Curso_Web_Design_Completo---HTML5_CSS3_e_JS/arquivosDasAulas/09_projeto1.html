@@ -8,55 +8,207 @@
         <meta name="description" content="lista de documentos">
         <meta name="keywords" content="html5, tecnologia">
         <style>
+
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
             body{
-                width: 100%;
-                margin: auto;
-                background-color: grey;
+                display: flex;
+                flex-direction: column;
+                background-color: rgba(128, 128, 128, 0.55);
                 font-family: Arial, Helvetica, sans-serif;
             }
 
-            header{
+            header {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
                 background-color: cadetblue;
-                height: 500px;
+                height: 400px;
+                background-image: url(../images/ProjetoCSS_inicio/imagens/bg-3.jpg);
+                background-size:cover;
+                background-repeat:inherit;
+                background-position:center;
             }
 
-            h1{
-                background-color: rgba(0, 0, 0, 0.435);
+            header h1{
                 color: whitesmoke;
                 width: 50%;
-                margin: auto;
                 text-transform: uppercase;
                 text-align: center;
                 font-size: 46px;
+                text-shadow: 2px 2px 2px black;
+                margin-top: 140px;
+            }
+
+            header ul{
+                display: flex;
+                justify-content: flex-end;
+                width: 95%;
+                margin-top: 24px;
+            }
+
+            header li{
+                list-style-type: none;
+                padding: 0 8px;
+            }
+
+            header a{
+                color:white;
+                font-size: 12px;
+                text-decoration: none;
+                border: 1px solid white;
+                padding: 12px;
+                text-transform: uppercase;
+                background-color: rgba(0, 0, 0, 0.27);
+            }
+
+            header a:hover{
+                background-color: rgba(0, 0, 0, 0.511);
+                border: 2px solid white;
+                font-weight: 600;
+            }
+
+            header p{
+                margin-top: 30px;
+                background-color: rgba(0, 0, 0, 0.501);
+                border-bottom: 2px solid white;
+                padding: 8px 16px;
+                color: white;
+            }
+
+            section{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .main_cards{
+                background-color: white;
+                display: flex;
+                justify-content: space-around;
+                width: 95%;
+                height: 100px;
+                margin-top: 24px;
+            }
+
+            .main_cards ul{
+                display: flex;
+                align-items:center;
+                justify-content: center;
+                width: 100%;
+            }
+
+            .main_cards li{
+                display: flex;
+                align-items: flex-end;
+                list-style-type: none;
+                background-color: blueviolet;
+                height: 100%;
+                width: 100%;
+                border: 1px solid black;
+                margin: 16px;
+            }
+
+            .main_cards a{
+                color:white;
+                font-size: 12px;
+                text-decoration: none;
+                padding: 8px 12px;
+                text-transform: uppercase;
+                background-color: rgba(0, 0, 0, 0.576);
+                width: 100%;
+            }
+
+            #card_01{
+                background-image: url(../images/ProjetoCSS_inicio/imagens/card_01.png);
+            }
+
+            #card_02{
+                background-image: url(../images/ProjetoCSS_inicio/imagens/card_02.jpg);
+            }
+
+            #card_03{
+                background-image: url(../images/ProjetoCSS_inicio/imagens/card_03.jpg);
+            }
+
+            #card_01,
+            #card_02,
+            #card_03{
+                background-size:cover;
+                background-repeat:inherit;
+                background-position:center;
             }
 
 
-            a{
-                text-decoration: none;
+            .main_content{
+                background-color: white;
+                width: 95%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 24px;
+            }
+
+            .main_content h2{
+                display: flex;
+                align-items: center;
+                width: 95%;
+                height: 32px;
+                border-bottom: 2px solid grey;
+                background-color: #0000001c;
+                padding: 8px;
+                margin-top: 16px;
+                margin-bottom: 16px;
+            }
+
+            .main_content p{
+                width: 95%;
+                height: 32px;
+            }
+
+            footer{
+                width: 100%;
+                height: 60px;
+                margin-top: 24px;
+                background-color: grey;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            footer p{
+                color: white;
+                text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.411);
             }
 
         </style>
     </head>
     <body>
         <header>
-            <h1>curso web fundamentos</h1>
             <ul>
                 <li><a href="">início</a></li>
                 <li><a href="">quem sou eu</a></li>
                 <li><a href="">contato</a></li>
             </ul>
+            <h1>curso web fundamentos</h1>
             <p>Aprenda HTML, CSS e Javascript</p>
         </header>
 
         <section>
-            <main>
+            <main class="main_cards">
                 <ul>
-                    <li><a href="">seletores</a></li>
-                    <li><a href="">posicionamento</a></li>
-                    <li><a href="">fontes e ícones</a></li>
+                    <li id="card_01"><a href="">seletores</a></li>
+                    <li id="card_02"><a href="">posicionamento</a></li>
+                    <li id="card_03"><a href="">fontes e ícones</a></li>
                 </ul>
             </main>
-            <main>
+            <main class="main_content">
                 <h2>título</h2>
                 <p>Primeiro parárgrafo de exemplo</p>
                 <p>Segundo parárgrafo de exemplo</p>
