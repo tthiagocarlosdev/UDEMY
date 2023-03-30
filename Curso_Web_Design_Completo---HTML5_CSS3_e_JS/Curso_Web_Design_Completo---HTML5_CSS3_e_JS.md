@@ -1086,7 +1086,281 @@ list-style-image
 
 ### 28. Projeto 1 - HTML
 
+```html
+<!doctype html>
+<!-- doctype informa ao agnte de usuario a versão do html que deve ser renderizada -->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+    </head>
+    <body>
+        <div id="principal">
 
+            <header>
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="#">Quem sou eu</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+
+                <div>
+                    <h1>Curso Web Fundamentos</h1>
+                    <p>Aprenda HTML, CSS e Javascript</p>
+                </div>
+
+            </header>
+
+            <main>
+
+                <section>
+
+                    <div class="card">
+                        <img src="" alt="">
+                        <p>Seletores</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="" alt="">
+                        <p>Posicionamento</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="" alt="">
+                        <p>Fontes e Ícones</p>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <article>
+
+                        <header>
+                            <h2>Título do Article</h2>
+                        </header>
+
+                        <p>
+                            Paragrafo 1
+                        </p>
+                        <p>
+                            Paragrafo 2
+                        </p>
+
+                    </article>
+                </section>
+            </main>
+
+            <footer>
+
+                <p>Copyright &copy; 2023</p>
+            </footer>
+            
+        </div>
+    </body>
+</html>
+```
+
+
+
+### 29. Projeto 1 - CSS
+
+```html
+<!doctype html>
+<!-- doctype informa ao agnte de usuario a versão do html que deve ser renderizada -->
+<html lang="pt-br">
+    <head>
+        <title> index </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+        <link rel="stylesheet" href="./css/estilo.css">
+    </head>
+    <body>
+        <div id="principal">
+
+            <header class="hero">
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="#">Quem sou eu</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+
+                <div class="hero_content">
+                    <h1>Curso Web Fundamentos</h1>
+                    <p>Aprenda HTML, CSS e Javascript</p>
+                </div>
+
+            </header>
+
+            <main class="main">
+
+                <section class="content_section">
+
+                    <div class="card">
+                        <img src="./imagens/card_01.png" alt="">
+                        <p>Seletores</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="./imagens/card_02.jpg" alt="">
+                        <p>Posicionamento</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="./imagens/card_03.jpg" alt="">
+                        <p>Fontes e Ícones</p>
+                    </div>
+
+                </section>
+
+                <section class="content_section">
+
+                    <article>
+
+                        <header>
+                            <h2>Título do Article</h2>
+                        </header>
+
+                        <p>
+                            Paragrafo 1
+                        </p>
+                        <p>
+                            Paragrafo 2
+                        </p>
+
+                    </article>
+                </section>
+            </main>
+
+            <footer>
+
+                <p>Copyright &copy; 2023</p>
+            </footer>
+
+        </div>
+    </body>
+</html>
+```
+
+```css
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ccc;
+    margin: 0;
+}
+
+.hero{
+    background-image: url(/images/ProjetoCSS_inicio/imagens/bg-3.jpg);
+    height: 500px;
+    background-position: right center;
+    background-size: cover;
+}
+
+.hero_content{
+    text-align: center;
+    color:white;
+    margin-top: 150px;
+}
+
+.hero_content h1{
+    text-transform: uppercase;
+    font-size: 46px;
+    text-shadow: 3px 3px 2px #333;
+}
+
+.main{
+    width: 80%;
+    margin: auto;
+}
+
+.content_section{
+    background-color: white;
+    padding: 15px;
+    margin-top: 15px;
+}
+```
+
+
+
+### 30. Como resolver Imagem do .hero cortada em telas grandes
+
+
+
+### 31. footer - como centralizar na vertical
+
+```css
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ccc;
+    margin: 0;
+}
+
+.hero{
+    background-image: url(/images/ProjetoCSS_inicio/imagens/bg-3.jpg);
+    height: 500px;
+    background-position: right center;
+    background-size: cover;
+}
+
+.hero_content{
+    text-align: center;
+    color:white;
+    margin-top: 150px;
+}
+
+.hero_content h1{
+    text-transform: uppercase;
+    font-size: 46px;
+    text-shadow: 3px 3px 2px #333;
+}
+
+.main{
+    width: 80%;
+    margin: auto;
+}
+
+.content_section{
+    background-color: white;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.content_section h2{
+    background-color: #ccc;
+    padding: 12px;
+    border-bottom: 3px solid gray;
+}
+
+.content_section article p{
+    margin-block-start: 0.83em;
+}
+
+.footer{
+    margin-top: 15px;
+    height: 80px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+    background-color: #6b6c68;
+    line-height: 80px;
+}
+```
+
+
+
+### 32. Propriedade display, inline, block e inline-block
 
 
 

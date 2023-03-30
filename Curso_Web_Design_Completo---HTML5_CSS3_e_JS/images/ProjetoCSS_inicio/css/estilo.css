@@ -1,0 +1,56 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ccc;
+    margin: 0;
+}
+
+.hero{
+    background-image: url(/images/ProjetoCSS_inicio/imagens/bg-3.jpg);
+    height: 500px;
+    background-position: right center;
+    background-size: cover;
+}
+
+.hero_content{
+    text-align: center;
+    color:white;
+    margin-top: 150px;
+}
+
+.hero_content h1{
+    text-transform: uppercase;
+    font-size: 46px;
+    text-shadow: 3px 3px 2px #333;
+}
+
+.main{
+    width: 80%;
+    margin: auto;
+}
+
+.content_section{
+    background-color: white;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.content_section h2{
+    background-color: #ccc;
+    padding: 12px;
+    border-bottom: 3px solid gray;
+}
+
+.content_section article p{
+    margin-block-start: 0.83em;
+}
+
+.footer{
+    margin-top: 15px;
+    height: 80px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+    background-color: #6b6c68;
+    line-height: 80px;
+}
