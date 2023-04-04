@@ -1613,6 +1613,169 @@ body{
 
 ### 34. Box-sizing
 
+```html
+<!doctype html>
+<!-- doctype informa ao agnte de usuario a versão do html que deve ser renderizada -->
+<html lang="pt-br">
+    <head>
+        <title> 10_boxSizing </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+        <style>
+            div{
+                background-color: orange;
+                width: 150px;
+                height: 100px;
+                margin: 10px;
+            }
+
+            #div1{
+                padding: 25px;
+            }
+
+            #div2{
+                padding: 25px;
+                box-sizing: border-box;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>estrutura basica</h1>
+        <div id="div1">teste</div>
+        <div id="div2">teste</div>
+        <div id="div3">teste</div>
+    </body>
+</html>
+```
+
+
+
+![box_sizing](/home/thiagonote/Imagens/box_sizing.png)
+
+
+
+### 35. Float
+
+![float_fluxo_normal](/home/thiagonote/Imagens/float_fluxo_normal.png)
+
+
+
+![float_left](/home/thiagonote/Imagens/float_left.png)
+
+
+
+![float_right](/home/thiagonote/Imagens/float_right.png)
+
+- #### Propriedade Clear - Limpar algum elemento que tenha float antes dele:
+
+![clear_left](/home/thiagonote/Imagens/clear_left.png)
+
+![clear_right](/home/thiagonote/Imagens/clear_right.png)
+
+![clear_both](/home/thiagonote/Imagens/clear_both.png)
+
+
+
+### 36. Float e clear - mão na massa
+
+![float1](/home/thiagonote/Imagens/float1.png)
+
+```html
+<!doctype html>
+<!-- doctype informa ao agnte de usuario a versão do html que deve ser renderizada -->
+<html lang="pt-br">
+    <head>
+        <title> 11_float </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="lista de documentos">
+        <meta name="keywords" content="html5, tecnologia">
+        <style>
+            #container{
+                width: 80%;
+                padding: 15px;
+                background-color: #ccc;
+                overflow: auto;
+            }
+
+            #container div{
+                width: 150px;
+                height: 50px;
+                border: 2px solid red;
+                margin: 5px;
+            }
+
+            #div1{
+                float: left;
+            }
+
+            #div2{
+                float: left;
+            }
+
+            #div3{
+                background-color: yellow;
+                float: left;
+            }
+
+            header{
+                background-color: #ccc;
+                height: 50px;
+            }
+
+            nav{
+                width: 25%;
+                height: 50px;
+                background-color: orange;
+                float: left;
+            }
+
+            main{
+                width: 70%;
+                height: 100px;
+                background-color: yellow;
+                float: right;
+            }
+
+            footer{
+                height: 50px;
+                background-color: lightskyblue;
+                clear: both;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>float</h1>
+        <div id="container">
+            <div id="div1">div1</div>
+            <div id="div2">div2</div>
+            <div id="div3">div3</div>
+        </div>
+
+        <hr>
+
+        <header>header</header>
+        <nav>nav</nav>
+        <main>main</main>
+        <footer>footer</footer>
+    </body>
+</html>
+```
+
+
+
+### 37. Projeto 1 - cards horizontais
+
+
+
+
+
+
+
 
 
 
