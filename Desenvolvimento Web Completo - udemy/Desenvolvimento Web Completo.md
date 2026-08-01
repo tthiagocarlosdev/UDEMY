@@ -1894,3 +1894,362 @@ _____
 
 ### 27. Tabelas: Elementos de Tabela
 
+Revisão de Tabelas, elementos e atributos.
+
+#### Código completo - tabela2.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        table, td, th{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabelas</h1>
+    <table>
+        <tr>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Preço</th>
+        </tr>
+        <tr>
+            <td>Notebook</td>
+            <td>1</td>
+            <td>R$2.000,00</td>
+        </tr>
+        <tr>
+            <td>Tablet</td>
+            <td>2</td>
+            <td>R$1.000,00</td>
+        </tr>
+        <tr>
+            <td rowspan="2" >Desconto</td>
+            <td colspan="2" > Cupom 1 - R$20,00</td>
+        </tr>
+        <tr>
+            <td colspan="2" > Cupom 2 - R$25,00</td>
+        </tr>
+
+    </table>
+</body>
+</html>
+```
+
+
+
+#### Links da aula
+
+[Tabelas W3School](https://www.w3schools.com/tags/tag_table.asp)
+
+[Tabelas Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/table)
+
+
+
+-----
+
+-----
+
+
+
+### 28. Tabelas: Estrutura Semântica
+
+Revisão de Tabelas, elementos e atributos.
+
+#### Código completo - mais-tabelas2.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais tabelas 2</title>
+</head>
+<body>
+    <h1>Mais Tabelas 2</h1>
+    <table border="1" >
+        <caption>Listagem de produtos</caption>
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr>
+            <td>Notebook</td>
+            <td>1</td>
+            <td>R$2.000,00</td>
+        </tr>
+        <tr>
+            <td>Tablet</td>
+            <td>2</td>
+            <td>R$1.000,00</td>
+        </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td colspan="2">R$3.000,00</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
+```
+
+
+
+-----
+
+-----
+
+
+
+### 29. Finalizando #projeto1 UNES
+
+#### Arquivo completo - quem-somos.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unes - Quem Somos</title>
+</head>
+<body background="../img/fundo2.png" >
+    
+    <table border="0" width="900" align="center">
+        <tr>
+            <td height="89"> <img src="../img/logo.png" alt="Logo Unes"></td>
+            <td align="right">
+                <a href="../index.html"> Home </a> |
+                <a href="./quem-somos.html"> Quem Somos </a> |
+                <a href="./contato.html"> Contato </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <h2>Quem Somos</h2>
+                <p>
+                    Lorem <strong>ipsum, dolor</strong> sit <em>amet</em> consectetur adipisicing elit. Architecto delectus odio, suscipit voluptas minima, harum dignissimos ipsa aspernatur labore accusantium tempore omnis. Itaque minus odio omnis nulla reiciendis exercitationem dolores. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto delectus odio, suscipit voluptas minima, harum dignissimos ipsa aspernatur labore accusantium tempore omnis. Itaque minus odio omnis nulla reiciendis exercitationem dolores.
+                </p>
+
+                <h2>5 motivos para estudar</h2>
+
+                <ol>
+                    <li>Material sempre atualizado</li>
+                    <li>Tablets em sala de aula</li>
+                    <li>Professores renomados</li>
+                    <li>Universidade bem avaliada</li>
+                    <li>Ótima localização</li>
+                </ol>
+
+                <hr>
+
+                <h2>Objetivos</h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, maiores sit quos minus corporis, iusto, inventore porro minima voluptatum quibusdam placeat fuga assumenda soluta! A numquam obcaecati voluptatem molestiae ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore tempora commodi eligendi dolor. Consequatur nam dolorum illum recusandae, modi pariatur autem voluptas eveniet corporis debitis sunt cum, sit quas harum!
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <h4>Todos os direitos reservados</h4>
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
+```
+
+#### Arquivo completo - contato.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unes - Contato</title>
+</head>
+<body background="../img/fundo2.png" >
+    
+    <table border="0" width="900" align="center">
+        <tr>
+            <td height="89"> <img src="../img/logo.png" alt="Logo Unes"></td>
+            <td align="right">
+                <a href="../index.html"> Home </a> |
+                <a href="./quem-somos.html"> Quem Somos </a> |
+                <a href="./contato.html"> Contato </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <h2>Entre em contato</h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto delectus odio, suscipit voluptas minima, harum dignissimos ipsa aspernatur labore accusantium tempore omnis. Itaque minus odio omnis nulla reiciendis exercitationem dolores.
+                </p>
+
+                <hr>
+
+                <form action="">
+                    Seu e-mail: <br>
+                    <input type="text" name="email"><br>
+
+                    Assunto: <br>
+                    <input type="text" name="email"><br>
+
+                    Descrição: <br>
+                    <textarea name="" id=""></textarea><br>
+
+                    <input type="submit" value="Enviar">
+                </form>
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <h4>Todos os direitos reservados</h4>
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
+```
+
+
+
+-----
+
+-----
+
+
+
+### 30.Página inicial do #projeto1 UNES
+
+Projeto Unes Universidade
+
+#### Arquivo completo - index.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unes - Página principal</title>
+</head>
+<body background="img/fundo.png">
+    
+
+    <table border="0" width="900" align="center">
+        <tr>
+            <td height="89"> <img src="./img/logo.png" alt="Logo Unes"></td>
+            <td align="right">
+                <a href="./index.html"> Home </a> |
+                <a href="./conteudo/quem-somos.html"> Quem Somos </a> |
+                <a href="./conteudo/contato.html"> Contato </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <img src="./img/capa.png" alt="Imagem da Capa">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <h2>Sobre a Universidade</h2>
+                <p>
+                    Lorem <strong>ipsum, dolor</strong> sit <em>amet</em> consectetur adipisicing elit. Architecto delectus odio, suscipit voluptas minima, harum dignissimos ipsa aspernatur labore accusantium tempore omnis. Itaque minus odio omnis nulla reiciendis exercitationem dolores. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto delectus odio, suscipit voluptas minima, harum dignissimos ipsa aspernatur labore accusantium tempore omnis. Itaque minus odio omnis nulla reiciendis exercitationem dolores.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, maiores sit quos minus corporis, iusto, inventore porro minima voluptatum quibusdam placeat fuga assumenda soluta! A numquam obcaecati voluptatem molestiae ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore tempora commodi eligendi dolor. Consequatur nam dolorum illum recusandae, modi pariatur autem voluptas eveniet corporis debitis sunt cum, sit quas harum!
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h4>Todos os direitos reservados</h4>
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
+```
+
+
+
+-----
+
+-----
+
+
+
+### 31. aulas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----
+
