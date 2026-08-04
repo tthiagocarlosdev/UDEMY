@@ -2209,7 +2209,384 @@ Projeto Unes Universidade
 
 
 
-### 31. aulas
+### 31. Formulários: Introdução
+
+
+#### O que é um formulário?
+
+Um **formulário** é um elemento do HTML utilizado para **coletar informações fornecidas pelo usuário**. Essas informações podem ser enviadas para um servidor, onde serão processadas, armazenadas ou utilizadas por uma aplicação.
+
+Os formulários são fundamentais para a interação entre o usuário e um site, permitindo o envio de dados como cadastro, login, pesquisas, comentários, pagamentos, buscas, entre outros.
+
+------
+
+#### Para que serve um formulário?
+
+Os formulários têm como principal objetivo **permitir a entrada de dados** pelo usuário.
+
+Alguns exemplos de uso são:
+
+- Cadastro de usuários;
+- Login em sistemas;
+- Formulários de contato;
+- Pesquisas e questionários;
+- Compras em lojas virtuais;
+- Agendamento de serviços;
+- Envio de arquivos;
+- Busca de informações.
+
+Sem formulários, uma página HTML seria apenas informativa, sem permitir interação por meio do envio de dados.
+
+------
+
+#### Tipos de elementos de formulário (inputs)
+
+Um formulário pode conter diversos elementos responsáveis por coletar diferentes tipos de informação.
+
+Os principais são:
+
+- **Campo de texto:** utilizado para inserir textos curtos, como nome ou cidade.
+- **Campo de senha:** oculta os caracteres digitados pelo usuário.
+- **Campo de e-mail:** recebe endereços de e-mail e pode realizar validações automáticas.
+- **Campo numérico:** aceita apenas valores numéricos.
+- **Campo de data:** permite selecionar uma data.
+- **Campo de telefone:** destinado à digitação de números telefônicos.
+- **Campo de pesquisa:** utilizado para buscas dentro de um site.
+- **Botões de opção (Radio Button):** permitem selecionar apenas uma opção entre várias.
+- **Caixas de seleção (Checkbox):** permitem selecionar uma ou mais opções.
+- **Lista suspensa (Select):** apresenta uma lista de opções para escolha.
+- **Área de texto (Textarea):** utilizada para textos longos, como mensagens ou comentários.
+- **Botões (Button):** executam ações, como enviar ou limpar o formulário.
+- **Campo para envio de arquivos:** permite anexar documentos, imagens e outros arquivos.
+
+Cada tipo de elemento é adequado para uma finalidade específica, proporcionando uma melhor experiência ao usuário e facilitando a validação das informações.
+
+------
+
+#### Como funciona um formulário?
+
+O funcionamento de um formulário pode ser dividido em quatro etapas principais:
+
+1. O usuário preenche os campos disponíveis na página.
+2. Ao clicar no botão de envio, o navegador reúne todos os dados informados.
+3. Essas informações são enviadas para um endereço configurado no formulário.
+4. O servidor recebe os dados, realiza o processamento e retorna uma resposta ao navegador.
+
+Essa resposta pode ser, por exemplo:
+
+- confirmar um cadastro;
+- autenticar um usuário;
+- armazenar informações em um banco de dados;
+- enviar um e-mail;
+- apresentar uma mensagem de erro;
+- exibir uma nova página.
+
+------
+
+#### Como os dados são recebidos pelo servidor?
+
+Quando o usuário envia um formulário, o navegador cria uma **requisição HTTP** contendo todas as informações preenchidas.
+
+Cada campo enviado possui dois componentes:
+
+- **Nome do campo (name):** identifica qual informação está sendo enviada.
+- **Valor (value):** corresponde ao dado informado pelo usuário.
+
+O servidor recebe esses pares de dados (nome e valor), interpreta cada informação e decide o que fazer com ela.
+
+Por exemplo, em um formulário de login, o servidor pode receber informações como:
+
+- usuário → joao123
+- senha → ********
+
+Após receber esses dados, a aplicação pode:
+
+- verificar se o usuário existe;
+- validar a senha;
+- consultar um banco de dados;
+- criar uma sessão de autenticação;
+- devolver uma resposta ao navegador.
+
+Todo esse processamento ocorre no **back-end** da aplicação, utilizando linguagens como PHP, Java, Python, C#, Node.js, Ruby, entre outras.
+
+------
+
+#### Fluxo simplificado do funcionamento de um formulário
+
+O processo de envio de um formulário pode ser resumido da seguinte forma:
+
+1. O usuário preenche o formulário.
+2. O navegador coleta todas as informações.
+3. Os dados são enviados ao servidor por meio de uma requisição HTTP.
+4. O servidor processa as informações.
+5. O servidor retorna uma resposta ao navegador.
+6. O navegador exibe o resultado ao usuário.
+
+------
+
+#### Resumo dos principais conceitos
+
+| Conceito                     | Definição                                                    |
+| ---------------------------- | ------------------------------------------------------------ |
+| **Formulário**               | Elemento utilizado para coletar informações do usuário e enviá-las para um servidor. |
+| **Entrada de dados (Input)** | Elementos que permitem ao usuário informar dados, como texto, senha, e-mail, números, datas e arquivos. |
+| **Botões de seleção**        | Permitem escolher uma ou mais opções (radio e checkbox).     |
+| **Lista suspensa**           | Exibe uma lista de opções para seleção.                      |
+| **Área de texto**            | Campo destinado à digitação de textos longos.                |
+| **Envio do formulário**      | Processo em que o navegador reúne todos os dados preenchidos e os envia ao servidor. |
+| **Servidor**                 | Responsável por receber, processar, validar, armazenar ou utilizar os dados enviados pelo formulário. |
+| **Requisição HTTP**          | Comunicação realizada pelo navegador para enviar os dados do formulário ao servidor. |
+| **Nome e valor dos campos**  | Cada informação enviada é composta pelo nome do campo e pelo valor digitado pelo usuário. |
+
+
+
+-----
+
+-----
+
+
+
+### 32 Formulários: Entendendo na prática
+
+
+
+Os formulários permitem que o usuário **insira informações em uma página web** para que esses dados sejam enviados e processados por um servidor. Eles são amplamente utilizados em páginas de login, cadastros, pesquisas, formulários de contato, compras on-line e diversas outras aplicações.
+
+Um formulário é composto por diferentes elementos, cada um com uma função específica na coleta e envio dos dados.
+
+------
+
+#### Tag `<form>`
+
+O elemento `<form>` representa um **formulário HTML**. Todos os campos utilizados para coletar informações do usuário devem estar dentro dessa tag.
+
+Além de agrupar os elementos do formulário, ela define **para onde os dados serão enviados** e **como serão enviados**.
+
+------
+
+#### Atributo `action`
+
+O atributo `action` especifica **o endereço da página ou do servidor que receberá os dados do formulário** após o envio.
+
+No código apresentado, o valor é:
+
+- `processa.html`
+
+Isso significa que, ao enviar o formulário, o navegador encaminhará as informações para esse arquivo.
+
+------
+
+#### Atributo `method`
+
+O atributo `method` define **o método HTTP utilizado para enviar os dados ao servidor**.
+
+Os métodos mais comuns são:
+
+- **GET:** envia os dados na própria URL da página. É indicado para pesquisas e informações que não sejam sensíveis.
+- **POST:** envia os dados no corpo da requisição, sendo mais apropriado para logins, cadastros e envio de informações confidenciais.
+
+No exemplo, foi utilizado o método **GET**.
+
+------
+
+#### Tag `<input>`
+
+O elemento `<input>` é o principal componente de um formulário.
+
+Ele é utilizado para criar campos onde o usuário poderá inserir informações.
+
+Seu comportamento depende do valor definido no atributo `type`.
+
+------
+
+#### Atributo `type`
+
+O atributo `type` determina **o tipo de campo** que será exibido ao usuário.
+
+No código apresentado são utilizados três tipos.
+
+##### `type="text"`
+
+Cria um campo de texto simples.
+
+É utilizado para informações como:
+
+- nome;
+- e-mail;
+- cidade;
+- profissão;
+- entre outras.
+
+------
+
+##### `type="password"`
+
+Cria um campo para senhas.
+
+Os caracteres digitados são ocultados por símbolos (como ● ou •), aumentando a privacidade durante a digitação.
+
+------
+
+##### `type="submit"`
+
+Cria um botão responsável por **enviar o formulário**.
+
+Ao ser clicado, o navegador coleta todos os dados preenchidos e os envia para o endereço definido no atributo `action`.
+
+------
+
+#### Atributo `name`
+
+O atributo `name` identifica cada campo do formulário.
+
+É através dele que o servidor consegue reconhecer cada informação enviada.
+
+Por exemplo:
+
+- `email`
+- `senha`
+- `comentario`
+
+Quando o formulário é enviado, cada valor digitado será associado ao respectivo nome do campo.
+
+------
+
+#### Tag `<textarea>`
+
+O elemento `<textarea>` é utilizado para criar um **campo de texto de múltiplas linhas**.
+
+É indicado para informações longas, como:
+
+- comentários;
+- mensagens;
+- observações;
+- descrições.
+
+Diferentemente do `<input>`, o `<textarea>` permite que o usuário escreva várias linhas de texto.
+
+------
+
+#### Atributo `placeholder`
+
+O atributo `placeholder` exibe um **texto de orientação** dentro do campo antes que o usuário comece a digitar.
+
+Esse texto desaparece automaticamente quando o campo recebe conteúdo.
+
+Seu objetivo é indicar ao usuário qual informação deve ser preenchida.
+
+------
+
+#### Tag `<button>`
+
+O elemento `<button>` cria um botão personalizável.
+
+Diferentemente do `<input type="submit">`, ele pode conter não apenas texto, mas também:
+
+- imagens;
+- ícones;
+- outros elementos HTML.
+
+No exemplo, o botão possui uma imagem e o texto **Entrar**.
+
+------
+
+#### Atributo `type="submit"` no botão
+
+Quando o botão possui o atributo `type="submit"`, sua função é **enviar o formulário**.
+
+Ao ser clicado, todos os dados preenchidos são enviados para o endereço definido pelo atributo `action`.
+
+------
+
+#### Tag `<img>` dentro do botão
+
+Uma imagem pode ser inserida dentro do botão para tornar sua aparência mais intuitiva ou atrativa.
+
+No exemplo, a imagem funciona apenas como um ícone ilustrativo ao lado do texto **Entrar**.
+
+------
+
+#### Diferença entre `<button>` e `<input type="submit">`
+
+Ambos podem enviar um formulário, porém possuem características diferentes.
+
+##### `<button>`
+
+- Permite inserir texto, imagens e outros elementos HTML.
+- Possui maior flexibilidade para personalização.
+
+##### `<input type="submit">`
+
+- Cria um botão simples.
+- O texto exibido é definido pelo atributo `value`.
+- Não permite adicionar imagens ou outros elementos HTML em seu interior.
+
+------
+
+#### Resumo das principais tags e atributos
+
+| Elemento ou atributo | Função                                                       |
+| -------------------- | ------------------------------------------------------------ |
+| `<form>`             | Define um formulário HTML.                                   |
+| `action`             | Indica o destino para onde os dados serão enviados.          |
+| `method`             | Define o método HTTP utilizado no envio dos dados (`GET` ou `POST`). |
+| `<input>`            | Cria um campo de entrada de dados.                           |
+| `type="text"`        | Campo para entrada de texto simples.                         |
+| `type="password"`    | Campo para digitação de senhas, ocultando os caracteres.     |
+| `type="submit"`      | Cria um botão para enviar o formulário.                      |
+| `name`               | Identifica cada campo enviado ao servidor.                   |
+| `<textarea>`         | Cria uma área de texto com múltiplas linhas.                 |
+| `placeholder`        | Exibe um texto de orientação antes da digitação.             |
+| `<button>`           | Cria um botão personalizável que pode conter texto, imagens e outros elementos HTML. |
+| `<img>`              | Exibe uma imagem, podendo ser utilizada como ícone dentro de um botão. |
+
+------
+
+#### Código completo - arquivo formularios.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+
+    <h1>Formulários</h1>
+
+    <form action="processa.html" method="get">
+
+        Email: <br>
+        <input type="text" name="email"> <br>
+
+        Senha: <br>
+        <input type="password" name="senha"> <br>
+
+        Comentário: <br>
+        <textarea
+            name="comentario"
+            placeholder="Digite um comentário">
+        </textarea> <br>
+
+        <button type="submit">
+            <img
+                src="./imagens/p6.png"
+                alt="Button"
+                width="15">
+            Entrar
+        </button>
+
+        <input
+            type="submit"
+            value="Entrar">
+
+    </form>
+
+</body>
+</html>
+```
 
 
 
@@ -2217,9 +2594,13 @@ Projeto Unes Universidade
 
 
 
+-----
+
+-----
 
 
 
+### 33 Formulários: Descobrindo Mais Elementos
 
 
 
