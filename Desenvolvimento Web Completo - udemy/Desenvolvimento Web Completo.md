@@ -2346,7 +2346,7 @@ O processo de envio de um formulário pode ser resumido da seguinte forma:
 
 
 
-### 32 Formulários: Entendendo na prática
+### 32. Formulários: Entendendo na prática
 
 
 
@@ -2590,7 +2590,291 @@ Ambos podem enviar um formulário, porém possuem características diferentes.
 
 
 
+-----
 
+-----
+
+
+
+### 33. Formulários: Descobrindo Mais Elementos
+
+Além dos campos básicos de um formulário, o HTML oferece diversos elementos que melhoram a **organização**, **acessibilidade** e **experiência do usuário** durante o preenchimento das informações.
+
+Neste exemplo são apresentados novos elementos bastante utilizados na construção de formulários.
+
+------
+
+#### Tag `<label>`
+
+O elemento `<label>` representa um **rótulo** para um campo do formulário.
+
+Sua principal função é informar ao usuário qual informação deve ser preenchida em determinado campo.
+
+Além disso, quando o `<label>` está associado corretamente a um campo, basta clicar no texto do rótulo para que o cursor seja direcionado automaticamente ao elemento correspondente.
+
+Isso melhora a acessibilidade e facilita a utilização do formulário.
+
+------
+
+#### Atributo `for`
+
+O atributo `for` é utilizado na tag `<label>` para indicar **qual elemento do formulário está sendo identificado**.
+
+O valor do atributo `for` deve ser exatamente igual ao valor do atributo `id` do campo correspondente.
+
+Essa associação permite que o navegador relacione corretamente o rótulo ao campo.
+
+------
+
+#### Atributo `id`
+
+O atributo `id` fornece um **identificador único** para um elemento HTML.
+
+Nos formulários, ele é utilizado principalmente para conectar um `<label>` ao seu respectivo campo de entrada.
+
+Cada `id` deve ser único dentro da página.
+
+------
+
+#### `type="email"`
+
+O tipo `email` cria um campo destinado à digitação de endereços de e-mail.
+
+Os navegadores modernos realizam uma validação básica do formato informado, verificando se o texto possui uma estrutura semelhante a um endereço de e-mail.
+
+Em dispositivos móveis, também pode exibir um teclado adaptado para facilitar a digitação.
+
+------
+
+#### `type="radio"`
+
+O tipo `radio` cria um **botão de opção**.
+
+Ele é utilizado quando o usuário deve escolher **apenas uma alternativa** entre várias opções.
+
+Todos os botões que pertencem ao mesmo grupo devem possuir o mesmo atributo `name`.
+
+Dessa forma, ao selecionar uma opção, as demais são automaticamente desmarcadas.
+
+É muito utilizado para informações como:
+
+- gênero;
+- estado civil;
+- forma de pagamento;
+- tipo de entrega.
+
+------
+
+#### Atributo `value`
+
+O atributo `value` define o **valor que será enviado ao servidor** quando um campo for selecionado ou preenchido.
+
+No caso dos botões de opção e caixas de seleção, o usuário visualiza apenas o texto do `<label>`, mas o servidor recebe o valor definido em `value`.
+
+------
+
+#### `type="checkbox"`
+
+O tipo `checkbox` cria uma **caixa de seleção**.
+
+Diferentemente do botão de opção (`radio`), ele permite que o usuário selecione **uma, várias ou nenhuma opção**.
+
+É indicado para situações em que múltiplas escolhas são permitidas, como:
+
+- estilos musicais;
+- idiomas;
+- interesses;
+- preferências.
+
+------
+
+#### Tag `<select>`
+
+O elemento `<select>` cria uma **lista suspensa** (combo box).
+
+Ela é utilizada quando existe um conjunto de opções pré-definidas e o usuário deve escolher uma delas.
+
+Esse elemento ajuda a economizar espaço na página e evita erros de digitação.
+
+------
+
+#### Tag `<option>`
+
+O elemento `<option>` representa cada uma das opções existentes dentro de um `<select>`.
+
+Cada opção possui um texto exibido ao usuário e pode possuir um valor diferente que será enviado ao servidor.
+
+------
+
+#### `type="file"`
+
+O tipo `file` cria um campo para **envio de arquivos**.
+
+Por meio dele, o usuário pode selecionar documentos, imagens, vídeos, planilhas e outros arquivos armazenados em seu computador ou dispositivo.
+
+Esse tipo de campo é amplamente utilizado em:
+
+- envio de currículos;
+- upload de fotos;
+- anexos de documentos;
+- sistemas de cadastro.
+
+------
+
+#### Tag `<fieldset>`
+
+O elemento `<fieldset>` é utilizado para **agrupar campos relacionados** dentro de um formulário.
+
+Seu objetivo é organizar visualmente as informações, tornando o formulário mais fácil de compreender e preencher.
+
+Normalmente, o navegador desenha uma borda ao redor do grupo de campos.
+
+------
+
+#### Tag `<legend>`
+
+O elemento `<legend>` define o **título de um grupo de campos** criado por um `<fieldset>`.
+
+Esse título descreve o conjunto de informações presentes naquele grupo.
+
+Por exemplo:
+
+- Dados pessoais;
+- Endereço;
+- Informações profissionais;
+- Dados adicionais.
+
+O uso de `<legend>` melhora tanto a organização visual quanto a acessibilidade do formulário.
+
+------
+
+#### Resumo das principais tags e atributos
+
+| Elemento ou atributo | Função                                                       |
+| -------------------- | ------------------------------------------------------------ |
+| `<label>`            | Define um rótulo para um campo do formulário.                |
+| `for`                | Associa um `<label>` ao elemento cujo `id` possui o mesmo valor. |
+| `id`                 | Identifica de forma única um elemento HTML.                  |
+| `type="email"`       | Campo destinado à digitação de endereços de e-mail.          |
+| `type="radio"`       | Permite selecionar apenas uma opção entre várias.            |
+| `type="checkbox"`    | Permite selecionar uma ou mais opções.                       |
+| `value`              | Define o valor enviado ao servidor quando o campo é selecionado ou preenchido. |
+| `<select>`           | Cria uma lista suspensa de opções.                           |
+| `<option>`           | Define cada opção existente dentro de uma lista suspensa.    |
+| `type="file"`        | Permite selecionar e enviar arquivos para o servidor.        |
+| `<fieldset>`         | Agrupa campos relacionados dentro de um formulário.          |
+| `<legend>`           | Define o título ou legenda de um grupo de campos criado por um `<fieldset>`. |
+
+------
+
+#### Código completo - arquivo mais-formulario.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais formulários</title>
+</head>
+<body>
+
+    <h1>Mais sobre formulários</h1>
+
+    <form action="processa.html" method="GET">
+
+        <h2>Label</h2>
+
+        <label for="name">Nome:</label>
+        <input type="text" name="name" id="name">
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+
+        <br><br>
+
+        Gênero:<br>
+
+        <input type="radio" name="genero" value="feminino" id="feminino">
+        <label for="feminino">Feminino</label>
+
+        <input type="radio" name="genero" value="masculino" id="masculino">
+        <label for="masculino">Masculino</label>
+
+        <br><br>
+
+        Estilo Musical<br>
+
+        <input type="checkbox" name="estilo" value="rock" id="rock">
+        <label for="rock">Rock</label>
+
+        <input type="checkbox" name="estilo" value="pop" id="pop">
+        <label for="pop">Pop</label>
+
+        <input type="checkbox" name="estilo" value="sertanejo" id="sertanejo">
+        <label for="sertanejo">Sertanejo</label>
+
+        <br><br>
+
+        Estado:
+
+        <select name="estado">
+            <option value="">Selecione...</option>
+            <option value="pe">Pernambuco</option>
+            <option value="al">Alagoas</option>
+            <option value="pb">Paraíba</option>
+            <option value="se">Sergipe</option>
+        </select>
+
+        <br><br>
+
+        Upload de arquivo:
+
+        <input type="file" name="arquivo">
+
+        <br><br>
+
+        <input type="submit" value="Cadastrar">
+
+    </form>
+
+    <form>
+
+        <h2>Fieldset & Legend</h2>
+
+        <fieldset>
+
+            <legend>Dados pessoais</legend>
+
+            <label for="name2">Nome:</label>
+            <input type="text" name="name" id="name2">
+
+            <label for="email2">Email</label>
+            <input type="email" name="email" id="email2">
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Dados adicionais</legend>
+
+            Gênero:<br>
+
+            <input type="radio" name="genero" value="feminino" id="feminino2">
+            <label for="feminino2">Feminino</label>
+
+            <input type="radio" name="genero" value="masculino" id="masculino2">
+            <label for="masculino2">Masculino</label>
+
+        </fieldset>
+
+    </form>
+
+</body>
+</html>
+```
+
+> **Observação:** No segundo formulário, foi ajustado o valor dos atributos `id` dos botões de opção (`feminino2` e `masculino2`). Em um mesmo documento HTML, cada `id` deve ser **único**, evitando conflitos e garantindo que os elementos `<label>` funcionem corretamente.
 
 
 
@@ -2600,9 +2884,352 @@ Ambos podem enviar um formulário, porém possuem características diferentes.
 
 
 
-### 33 Formulários: Descobrindo Mais Elementos
+### 34. Formulários: Exercício 1
+
+#### Arquivo completo - trello.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface de login do Trello</title>
+
+    <!--
+      <script src="https://unpkg.com/@codans/trello"></script>
+    -->
+
+    <script src="https://unpkg.com/@codans/trello"></script>
+
+</head>
+<body>
+    <img src="./img/trello.svg" alt="Logo trello" width="200">
+
+    <h1>Fazer login no Trello</h1>
+
+    <form action="" method="GET">
+
+      <input type="email" name="email" id="email" placeholder="Insira o e-mail">
+      <input type="password" name="senha" id="senha" placeholder="Insira a senha">
+      <input type="submit" value="Fazer Login">
+
+      <span>ou</span>
+
+      <button>
+        <img src="./img/google.svg" alt="Imagem do Google" width="20">
+        Continuar com o Google
+      </button>
+
+      <button>
+        <img src="./img/microsoft.svg" alt="Imagem da Microsoft" width="20">
+        Continuar com a Microsoft
+      </button>
+      
+      <button>
+        <img src="./img/apple.svg" alt="Imagem da Apple" width="20">
+        Continuar com a Apple
+      </button>
+      
+      <button>
+        <img src="./img/slack.svg" alt="Imagem do Slack" width="20">
+        Continuar com o Slack
+      </button>
+
+    </form>
+
+    <img src="./img/atlassian.svg" alt="Imagem da Atlassian" width="200">
+    <img src="./img/analytics.svg" alt="Imagem Analytics" width="200">
+    <img src="./img/interactive.svg" alt="Imagem Interactive" width="200">
+  
+</body>
+</html>
+
+```
 
 
+
+-----
+
+-----
+
+
+
+### 35. Formulários: Exercício 2
+
+#### Arquivo completo - exercicio-formulario-2
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de formulários</title>
+</head>
+<body>
+        <h1>Exercício de formulário</h1>
+
+        <form action="../../processa.html" method="GET">
+            <fieldset>
+                <legend>Dados pessoais</legend>
+                
+                <label for="name">Nome</label><br>
+                <input type="text" name="name" id="name"><br>
+                
+                <label for="email">Email</label><br>
+                <input type="text" name="email" id="email"><br>
+
+                <input type="checkbox" name="queroemail" value="ativado" id="queroemail">
+                <label for="queroemail">Quero receber e-mail</label><br><br>
+
+                <label for="senha">Senha</label><br>
+                <input type="password" name="senha" id="senha">
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Informações adicionais</legend>
+
+                <input type="radio" name="status" value="pessoafisica" id="pessoafisica">
+                <label for="pessoafisica">Pessoa Física</label>
+                <input type="radio" name="status" value="pessoajuridica" id="pessoafisica">
+                <label for="pessoajuridica">Pessoa Jurídica</label>
+            </fieldset>
+
+            <br>
+            <input type="submit" value="Cadastrar">
+        </form>
+        
+</body>
+</html>
+```
+
+
+
+-----
+
+-----
+
+
+
+### 36. HTML: Caracteres especiais
+
+
+
+## HTML Entities (Caracteres especiais)
+
+Os **HTML Entities** (entidades HTML) são códigos especiais utilizados para representar **caracteres que possuem significado próprio no HTML** ou caracteres que não estão facilmente disponíveis no teclado, como símbolos matemáticos, moedas, emojis e caracteres especiais.
+
+Uma entidade HTML sempre começa com o caractere **`&`** (e comercial) e termina com **`;`** (ponto e vírgula).
+
+Exemplo:
+
+- `&amp;lt;`
+- `&amp;copy;`
+- `&amp;#128512;`
+
+Ao interpretar o código, o navegador substitui essas entidades pelo caractere correspondente.
+
+---
+
+#### Por que utilizar HTML Entities?
+
+Alguns caracteres possuem uma função especial na linguagem HTML.
+
+Por exemplo, os símbolos `<` e `>` são utilizados para criar tags. Se forem digitados diretamente no código, o navegador tentará interpretá-los como elementos HTML.
+
+Para exibir esses caracteres como texto comum, é necessário utilizar suas entidades HTML.
+
+Além disso, as entidades permitem exibir símbolos que não existem no teclado ou que podem apresentar problemas de compatibilidade entre diferentes sistemas.
+
+---
+
+#### Caracteres reservados
+
+Os caracteres reservados são aqueles que possuem um significado especial dentro do HTML.
+
+Para exibi-los como texto, utilizam-se suas respectivas entidades.
+
+Exemplos:
+
+| Entidade   | Resultado | Descrição             |
+| ---------- | --------- | --------------------- |
+| &amp;lt;   | `<`       | Símbolo de menor que. |
+| &amp;gt;   | `>`       | Símbolo de maior que. |
+| &amp;amp;  | `&`       | E comercial.          |
+| &amp;quot; | `"`       | Aspas duplas.         |
+| &amp;apos; | `'`       | Aspas simples.        |
+
+---
+
+#### Símbolos especiais
+
+As entidades HTML também permitem representar diversos símbolos utilizados em textos e documentos.
+
+Alguns exemplos são:
+
+| Entidade    | Resultado | Significado        |
+| ----------- | --------- | ------------------ |
+| &amp;copy;  | ©         | Direitos autorais. |
+| &amp;reg;   | ®         | Marca registrada.  |
+| &amp;trade; | ™         | Marca comercial.   |
+| &amp;euro;  | €         | Euro.              |
+| &amp;pound; | £         | Libra esterlina.   |
+| &amp;yen;   | ¥         | Iene japonês.      |
+| &amp;cent;  | ¢         | Centavo.           |
+
+---
+
+#### Símbolos matemáticos
+
+Também é possível inserir símbolos utilizados em expressões matemáticas.
+
+Exemplos:
+
+| Entidade     | Resultado | Significado    |
+| ------------ | --------- | -------------- |
+| &amp;sum;    | ∑         | Somatório.     |
+| &amp;plusmn; | ±         | Mais ou menos. |
+| &amp;times;  | ×         | Multiplicação. |
+| &amp;divide; | ÷         | Divisão.       |
+| &amp;infin;  | ∞         | Infinito.      |
+| &amp;radic;  | √         | Raiz quadrada. |
+
+---
+
+#### Símbolos diversos
+
+O HTML possui centenas de entidades para diferentes áreas.
+
+Exemplos:
+
+| Entidade    | Resultado | Descrição         |
+| ----------- | --------- | ----------------- |
+| &amp;#9827; | ♣         | Naipe de paus.    |
+| &amp;#9829; | ♥         | Naipe de copas.   |
+| &amp;#9830; | ♦         | Naipe de ouros.   |
+| &amp;#9824; | ♠         | Naipe de espadas. |
+
+Nesse caso, foi utilizada uma **entidade numérica**, identificada pelo prefixo `&#`.
+
+---
+
+#### Emojis
+
+Os emojis também podem ser inseridos em uma página HTML utilizando **entidades numéricas** baseadas no padrão Unicode.
+
+Exemplo:
+
+| Entidade      | Emoji |
+| ------------- | ----- |
+| &amp;#128512; | 😀     |
+| &amp;#128511; | 👿     |
+| &amp;#128525; | 😍     |
+| &amp;#128640; | 🚀     |
+
+Cada emoji possui um código Unicode próprio que pode ser representado por uma entidade HTML.
+
+---
+
+#### Entidades nomeadas e numéricas
+
+Existem duas formas principais de representar uma entidade HTML.
+
+##### Entidades nomeadas
+
+Utilizam um nome descritivo.
+
+Exemplos:
+
+- `&amp;copy;`
+- `&amp;euro;`
+- `&amp;lt;`
+- `&amp;gt;`
+
+São mais fáceis de ler e memorizar.
+
+---
+
+##### Entidades numéricas
+
+Utilizam o código Unicode do caractere.
+
+Exemplos:
+
+- `&amp;#169;` → ©
+- `&amp;#8364;` → €
+- `&amp;#9827;` → ♣
+- `&amp;#128512;` → 😀
+
+São úteis quando não existe uma entidade nomeada ou quando se deseja utilizar diretamente o código Unicode.
+
+---
+
+#### Resumo das principais HTML Entities
+
+| Tipo              | Entidade      | Resultado |
+| ----------------- | ------------- | --------- |
+| Menor que         | &amp;lt;      | `<`       |
+| Maior que         | &amp;gt;      | `>`       |
+| E comercial       | &amp;amp;     | `&`       |
+| Aspas duplas      | &amp;quot;    | `"`       |
+| Direitos autorais | &amp;copy;    | ©         |
+| Euro              | &amp;euro;    | €         |
+| Somatório         | &amp;sum;     | ∑         |
+| Naipe de paus     | &amp;#9827;   | ♣         |
+| Emoji (Unicode)   | &amp;#128512; | 😀         |
+| Emoji (Unicode)   | &amp;#128511; | 👿         |
+
+> **Observação:** Existem milhares de HTML Entities disponíveis. Elas são utilizadas para representar caracteres reservados, símbolos matemáticos, moedas, letras especiais, emojis e diversos outros caracteres Unicode de forma compatível com os navegadores.
+
+
+
+#### Código completo - caracteres-especiais.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caracteres Especiais</title>
+</head>
+<body>
+    <h1>Caracteres Especiais</h1>
+        Tag de abertura de um parágrafo: &lt;p&gt; <br>
+    	&euro; 4.19 <br>
+        &#9827; <br>
+        &#128511; 	&#128512;
+
+        <h2>Exercício</h2>
+        &lt;h1&gt; Damasceno &amp; co - 	&sum; &lt;h1/&gt; <br>
+        &euro; 2.59 <br>
+        &copy; Todos os direitos reservados
+</body>
+</html>
+```
+
+
+
+#### Links da aula
+
+[Character references](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references)
+
+[Character Entities](https://www.w3schools.com/html/html_entities.asp)
+
+
+
+-----
+
+-----
+
+
+
+
+
+### 37. Mídias: Executar vídeos c/ HTML
 
 
 
