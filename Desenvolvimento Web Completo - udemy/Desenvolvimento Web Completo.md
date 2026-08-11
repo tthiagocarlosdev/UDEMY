@@ -3231,6 +3231,975 @@ São úteis quando não existe uma entidade nomeada ou quando se deseja utilizar
 
 ### 37. Mídias: Executar vídeos c/ HTML
 
+ Vídeos e conteúdos incorporados em HTML
+
+As tags `<video>` e `<iframe>` permitem adicionar **conteúdo multimídia e conteúdo externo** a uma página HTML.
+
+A tag `<video>` é utilizada para reproduzir arquivos de vídeo diretamente na página. Já a tag `<iframe>` permite incorporar outro conteúdo ou documento dentro da página atual, como vídeos do YouTube ou outra página HTML.
+
+------
+
+#### Tag `<video>`
+
+A tag `<video>` é utilizada para **incorporar e reproduzir vídeos** diretamente em uma página HTML.
+
+Ela permite controlar características da reprodução por meio de atributos, como tamanho, controles, reprodução automática e repetição.
+
+------
+
+##### Atributo `width`
+
+Define a **largura do vídeo**, normalmente em pixels.
+
+No exemplo:
+
+```text
+width="320"
+```
+
+O vídeo terá 320 pixels de largura.
+
+------
+
+##### Atributo `controls`
+
+Exibe os **controles de reprodução** do vídeo.
+
+Quando presente, o navegador disponibiliza controles como:
+
+- Play/Pause;
+- Volume;
+- Barra de progresso;
+- Tela cheia;
+- Outras opções dependendo do navegador.
+
+É um atributo booleano, portanto sua presença já é suficiente para ativá-lo.
+
+------
+
+##### Atributo `muted`
+
+Inicia o vídeo **sem áudio**.
+
+Também é um atributo booleano.
+
+É especialmente importante quando o vídeo utiliza `autoplay`, pois os navegadores normalmente bloqueiam a reprodução automática de vídeos que iniciam com áudio.
+
+------
+
+##### Atributo `autoplay`
+
+Faz com que o vídeo tente **começar a reprodução automaticamente** assim que estiver disponível.
+
+Como os navegadores possuem políticas contra reprodução automática com áudio, é comum utilizar `autoplay` junto com `muted`.
+
+------
+
+##### Atributo `loop`
+
+Faz com que o vídeo seja **reproduzido novamente automaticamente quando chegar ao final**.
+
+Dessa forma, o vídeo permanece em reprodução contínua.
+
+------
+
+##### Atributo `poster`
+
+Define uma **imagem de capa** que será exibida antes de o vídeo começar a ser reproduzido.
+
+No exemplo:
+
+```text
+poster="imagens/ferrari.jpg"
+```
+
+A imagem `ferrari.jpg` será utilizada como capa do vídeo.
+
+O caminho definido em `poster` pode ser relativo ou absoluto, assim como acontece com o atributo `src` de imagens.
+
+------
+
+#### Tag `<source>`
+
+A tag `<source>` define o **arquivo de vídeo que será utilizado pelo elemento `<video>`**.
+
+Ela é colocada dentro de `<video>`.
+
+O arquivo pode estar:
+
+- Localmente no projeto;
+- Hospedado em outro servidor.
+
+------
+
+##### Atributo `src` do `<source>`
+
+Define o **caminho ou endereço do arquivo de vídeo**.
+
+No primeiro exemplo:
+
+```text
+src="./videos/abelhas.mp4"
+```
+
+O vídeo está armazenado localmente no projeto.
+
+No segundo:
+
+```text
+src="http://site.com.br/video.mp4"
+```
+
+O vídeo está localizado em um servidor externo.
+
+------
+
+##### Atributo `type` do `<source>`
+
+Informa ao navegador o **tipo MIME do arquivo de mídia**.
+
+No exemplo:
+
+```text
+type="video/mp4"
+```
+
+indica que o arquivo é um vídeo no formato MP4.
+
+Esse atributo ajuda o navegador a identificar o formato do conteúdo.
+
+------
+
+#### Tag `<iframe>`
+
+A tag `<iframe>` (**Inline Frame**) permite **incorporar outro conteúdo dentro da página atual**.
+
+Ela cria uma espécie de janela dentro da página, na qual outro documento ou conteúdo pode ser carregado.
+
+No código apresentado, existem dois exemplos:
+
+- Um vídeo do YouTube;
+- Uma página HTML local do próprio projeto.
+
+------
+
+#### Incorporando vídeos do YouTube
+
+Um dos usos mais comuns do `<iframe>` é incorporar vídeos de plataformas como o YouTube.
+
+O endereço utilizado no atributo `src` determina qual conteúdo será carregado dentro do `<iframe>`.
+
+------
+
+##### Atributo `src` do `<iframe>`
+
+Define o **endereço do conteúdo que será incorporado**.
+
+No exemplo do YouTube:
+
+```text
+src="https://www.youtube-nocookie.com/embed/..."
+```
+
+O conteúdo carregado será o vídeo correspondente.
+
+No segundo `<iframe>`:
+
+```text
+src="./desafios/unes-universidade/index.html"
+```
+
+O conteúdo é uma página HTML localizada dentro do próprio projeto.
+
+------
+
+##### Atributo `height`
+
+Define a **altura** do elemento, normalmente em pixels.
+
+Por exemplo:
+
+```text
+height="315"
+```
+
+define uma altura de 315 pixels.
+
+------
+
+##### Atributo `width`
+
+No `<iframe>`, assim como no `<video>`, define a **largura** do elemento.
+
+Por exemplo:
+
+```text
+width="560"
+```
+
+define uma largura de 560 pixels.
+
+------
+
+##### Atributo `title`
+
+O atributo `title` fornece uma **descrição do conteúdo do `<iframe>`**.
+
+É especialmente importante para **acessibilidade**, pois permite que tecnologias assistivas, como leitores de tela, identifiquem o conteúdo incorporado.
+
+No exemplo:
+
+```text
+title="YouTube video player"
+```
+
+informa que aquele `<iframe>` contém um player de vídeo do YouTube.
+
+------
+
+##### Atributo `frameborder`
+
+O atributo `frameborder` era utilizado para definir se o `<iframe>` teria uma borda.
+
+No exemplo:
+
+```text
+frameborder="0"
+```
+
+indica que a borda deve ser removida.
+
+Esse atributo é **obsoleto no HTML5**. Atualmente, recomenda-se utilizar CSS para controlar bordas.
+
+------
+
+##### Atributo `allow`
+
+Define quais **recursos e funcionalidades do navegador** podem ser utilizados pelo conteúdo incorporado.
+
+No exemplo:
+
+```text
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+```
+
+são permitidas funcionalidades como reprodução automática, aceleração, modo picture-in-picture e outros recursos utilizados pelo player.
+
+------
+
+##### Atributo `referrerpolicy`
+
+Define **quais informações de referência (referrer)** o navegador deve enviar ao acessar o conteúdo incorporado.
+
+No exemplo:
+
+```text
+referrerpolicy="strict-origin-when-cross-origin"
+```
+
+é utilizada uma política que limita as informações de referência enviadas quando o conteúdo é carregado de outro domínio.
+
+------
+
+##### Atributo `allowfullscreen`
+
+Permite que o conteúdo incorporado utilize o **modo de tela cheia**.
+
+É utilizado principalmente em `<iframe>` que incorporam vídeos.
+
+É um atributo booleano, portanto sua presença ativa a funcionalidade.
+
+------
+
+#### Resumo das principais tags, atributos e valores
+
+| Elemento/Atributo | Função                                                    | Exemplo de valor                  |
+| ----------------- | --------------------------------------------------------- | --------------------------------- |
+| `<video>`         | Reproduz vídeos na página                                 | —                                 |
+| `<source>`        | Define o arquivo de mídia utilizado pelo `<video>`        | —                                 |
+| `width`           | Define a largura                                          | `320`                             |
+| `height`          | Define a altura                                           | `315`                             |
+| `controls`        | Exibe os controles do vídeo                               | —                                 |
+| `muted`           | Inicia o vídeo sem áudio                                  | —                                 |
+| `autoplay`        | Inicia a reprodução automaticamente                       | —                                 |
+| `loop`            | Repete o vídeo continuamente                              | —                                 |
+| `poster`          | Define a imagem de capa do vídeo                          | `imagens/ferrari.jpg`             |
+| `src`             | Define o endereço do conteúdo                             | `./videos/abelhas.mp4`            |
+| `type`            | Informa o tipo MIME da mídia                              | `video/mp4`                       |
+| `<iframe>`        | Incorpora outro conteúdo ou documento                     | —                                 |
+| `title`           | Descreve o conteúdo do iframe                             | `YouTube video player`            |
+| `frameborder`     | Define a borda do iframe; obsoleto no HTML5               | `0`                               |
+| `allow`           | Define funcionalidades permitidas ao conteúdo incorporado | `autoplay; ...`                   |
+| `referrerpolicy`  | Define a política de envio do referrer                    | `strict-origin-when-cross-origin` |
+| `allowfullscreen` | Permite o modo de tela cheia                              | —                                 |
+
+------
+
+#### Código completo - arquivo video.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos</title>
+</head>
+<body>
+    <h1>Executando vídeos</h1>
+
+    <video width="320" controls muted autoplay loop poster="imagens/ferrari.jpg">
+        <source src="./videos/abelhas.mp4" type="video/mp4">
+    </video>
+
+    <video width="320" controls muted loop poster="imagens/ferrari.jpg">
+        <source src="http://site.com.br/video.mp4" type="video/mp4">
+    </video>
+
+    <iframe width="560" height="315" 
+        src="https://www.youtube-nocookie.com/embed/tPbK3eOJLXQ?si=PWga5a-hglWMFJQB" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+    </iframe>
+    
+    <iframe width="1024" height="400" src="./desafios/unes-universidade/index.html" frameborder="0"></iframe>
+
+</body>
+</html>
+```
+
+
+
+#### Links da aula
+
+[Tag video 3WSchool](https://www.w3schools.com/html/html5_video.asp)
+
+[Pixabay](https://pixabay.com/pt/videos/) videos e fotos
+
+[Video youtube](https://www.youtube.com/watch?v=tPbK3eOJLXQ) usado na aula
+
+
+
+-----
+
+-----
+
+
+
+### 38. VS Code: Emmet
+
+#### Emmet Abbreviation
+
+**Emmet Abbreviation** é um recurso presente em diversos editores de código que permite **escrever estruturas HTML e CSS de forma rápida utilizando abreviações**.
+
+Em vez de escrever manualmente várias tags, podemos utilizar uma sintaxe curta e deixar o Emmet gerar a estrutura automaticamente.
+
+A ideia principal é utilizar operadores para representar a **hierarquia, repetição e agrupamento** dos elementos.
+
+------
+
+#### Operador `>`
+
+O operador `>` indica que o elemento da direita será **filho direto** do elemento da esquerda.
+
+##### Fórmula
+
+```text
+table>tr>td
+```
+
+Significa:
+
+- `table` contém `tr`;
+- `tr` contém `td`.
+
+Resultado:
+
+```html
+<table>
+    <tr>
+        <td></td>
+    </tr>
+</table>
+```
+
+------
+
+#### Operador `*`
+
+O operador `*` indica **repetição**.
+
+O número depois do `*` determina quantas vezes o elemento será criado.
+
+##### Fórmula
+
+```text
+table>tr>td*5
+```
+
+Significa:
+
+- Criar uma `<table>`;
+- dentro dela, criar uma `<tr>`;
+- dentro da `<tr>`, criar **5 elementos `<td>`**.
+
+Resultado:
+
+```html
+<table>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+```
+
+------
+
+#### Operador `+`
+
+O operador `+` indica que os elementos estarão no **mesmo nível hierárquico**, ou seja, serão elementos irmãos.
+
+##### Fórmula
+
+```text
+p>h1+h2
+```
+
+Significa:
+
+- Criar um `<p>`;
+- dentro dele, criar um `<h1>` e um `<h2>`.
+
+Resultado:
+
+```html
+<p>
+    <h1></h1>
+    <h2></h2>
+</p>
+```
+
+**Observação:** embora o Emmet consiga gerar essa estrutura, ela não representa uma estrutura HTML semanticamente adequada, pois elementos de título (`h1`, `h2`) não devem ser filhos de `<p>`.
+
+------
+
+#### Parênteses `()`
+
+Os parênteses são utilizados para **agrupar partes de uma abreviação**.
+
+Eles permitem combinar diferentes estruturas e aplicar operadores a grupos específicos.
+
+##### Fórmula
+
+```text
+(table>tr>td*5)+(h1+h2)
+```
+
+Podemos interpretar em duas partes:
+
+```text
+(table>tr>td*5)
+```
+
+Cria uma tabela com uma linha contendo cinco células.
+
+E:
+
+```text
+(h1+h2)
+```
+
+Cria um `<h1>` e um `<h2>` no mesmo nível.
+
+O `+` entre os dois grupos coloca as duas estruturas lado a lado.
+
+Resultado:
+
+```html
+<table>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+<h1></h1>
+<h2></h2>
+```
+
+------
+
+#### Criando listas com repetição
+
+##### Fórmula
+
+```text
+ul>li*10
+```
+
+Significa:
+
+- Criar uma lista não ordenada `<ul>`;
+- dentro dela, criar **10 elementos `<li>`**.
+
+Resultado:
+
+```html
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+```
+
+------
+
+#### Combinando `>` e `*`
+
+##### Fórmula
+
+```text
+ul>li*10>p*2
+```
+
+Aqui temos uma combinação de operadores.
+
+Primeiro:
+
+```text
+ul
+```
+
+Cria uma lista.
+
+Depois:
+
+```text
+>li*10
+```
+
+Cria **10 `<li>` dentro do `<ul>`**.
+
+Por fim:
+
+```text
+>p*2
+```
+
+Cria **2 `<p>` dentro de cada `<li>`**.
+
+Resultado:
+
+```html
+<ul>
+    <li>
+        <p></p>
+        <p></p>
+    </li>
+    <li>
+        <p></p>
+        <p></p>
+    </li>
+    ...
+</ul>
+```
+
+Portanto, serão criados:
+
+- 1 `<ul>`;
+- 10 `<li>`;
+- 20 `<p>` — dois para cada `<li>`.
+
+------
+
+#### Formulários
+
+O Emmet também é bastante útil para criar rapidamente estruturas de formulários.
+
+##### Fórmula
+
+```text
+form>input*3
+```
+
+Significa:
+
+- Criar um `<form>`;
+- dentro dele, criar 3 elementos `<input>`.
+
+Resultado:
+
+```html
+<form>
+    <input>
+    <input>
+    <input>
+</form>
+```
+
+------
+
+#### Misturando `*` e `+`
+
+##### Fórmula
+
+```text
+form>input*2+h1
+```
+
+Aqui é importante observar a **hierarquia dos operadores**.
+
+A expressão significa:
+
+- Criar um `<form>`;
+- dentro dele, criar dois `<input>`;
+- ainda dentro do `<form>`, criar um `<h1>`.
+
+Resultado:
+
+```html
+<form>
+    <input>
+    <input>
+    <h1></h1>
+</form>
+```
+
+------
+
+#### Agrupando estruturas com parênteses
+
+##### Fórmula
+
+```text
+(form>input*2)+(h1+h2+p)
+```
+
+Temos dois grupos separados.
+
+##### Primeiro grupo
+
+```text
+(form>input*2)
+```
+
+Cria:
+
+```html
+<form>
+    <input>
+    <input>
+</form>
+```
+
+##### Segundo grupo
+
+```text
+(h1+h2+p)
+```
+
+Cria três elementos no mesmo nível:
+
+```html
+<h1></h1>
+<h2></h2>
+<p></p>
+```
+
+Portanto, o resultado completo será:
+
+```html
+<form>
+    <input>
+    <input>
+</form>
+
+<h1></h1>
+<h2></h2>
+<p></p>
+```
+
+------
+
+#### Resumo dos operadores do Emmet
+
+| Operador | Função                 | Exemplo   |
+| -------- | ---------------------- | --------- |
+| `>`      | Cria um elemento filho | `ul>li`   |
+| `+`      | Cria elementos irmãos  | `h1+h2`   |
+| `*`      | Repete um elemento     | `li*5`    |
+| `()`     | Agrupa estruturas      | `(h1+h2)` |
+
+##### Regra prática
+
+Você pode pensar no Emmet desta forma:
+
+- **`>` = dentro de**
+- **`+` = ao lado de**
+- **`\*` = repetir**
+- **`()` = agrupar**
+
+Por exemplo:
+
+```text
+ul>li*5
+```
+
+pode ser lido como:
+
+> **ul → dentro de → li → repetir 5 vezes**
+
+E:
+
+```text
+(h1+h2)+p
+```
+
+pode ser lido como:
+
+> **h1 ao lado de h2, ao lado de p**.
+
+
+
+-----
+
+-----
+
+
+
+### 38. [Projeto] Site Oficial do Discord
+
+#### Arquivo completo desafio Discord - index.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISCORD | Seu lugar par Papear e Ficar de Boa!</title>
+
+    <script src="https://unpkg.com/@codans/discord"></script>
+
+</head>
+<body>
+    
+    <!-- barra de navegação -->
+    <img src="./img/logo.svg" alt="logo discord">
+    <a href="">Baixar</a>
+    <a href="">Nitro</a>
+    <a href="">Segurança</a>
+    <a href="">Suporte</a>
+    <button type="button">
+        <a href="">Entrar</a>
+    </button>
+
+    <!-- destaque -->
+    <h1>Imagine um lugar...</h1>
+    <p>
+        …onde você possa pertencer a um clube escolar, um grupo de gamers, 
+        ou uma comunidade artística mundial. Onde você e alguns amigos 
+        possam passar um tempo juntos. Um lugar que torna fácil conversar 
+        todos os dias e socializar com mais frequência.
+    </p>
+
+    <button type="button">
+        <img src="./img/icone-download.svg" alt="ícone download" width="15" >
+        <a href="">Baixar para Mac</a>
+    </button>
+
+    <button type="button">
+        <a href="">Abra o Discord em seu navegador</a>
+    </button>
+
+     <img src="./img/fundo.png" alt="fundo">
+
+     <!-- Conteúdos -->
+
+    <img src="./img/grupo-estudo.svg" alt="Grupo de estudo">
+    <h2>
+        Crie um espaço controlado por convite onde você se sinta em casa
+    </h2>
+    <p>
+        Os servidores Discord são organizados em canais com tópicos 
+        para vocês colaborarem, compartilharem ou simplesmente falarem 
+        do dia sem entupir um chat geral.
+    </p>
+
+    <img src="./img/canal-voz.svg" alt="Canal de voz">
+    <h2>
+        Aqui é fácil se encontrar
+    </h2>
+    <p>
+        Entre no canal de voz quando estiver à toa. Amigos no mesmo 
+        servidor podem te ver e entrar imediatamente, sem nem ter 
+        que fazer a chamada.
+    </p>
+
+    <img src="./img/membros.svg" alt="Membros">
+    <h2>
+        Para poucos e para muitos
+    </h2>
+    <p>
+        Organize qualquer comunidade com ferramentas de 
+        moderação e acesso personalizado a membros. Dê poderes 
+        especiais aos membros, monte canais privados e muito mais.
+    </p>
+
+    <img src="./img/relaxando.svg" alt="Relaxando">
+    <h2>
+        Tecnologia de conexão confiável
+    </h2>
+    <p>
+        Voz e vídeo de baixa latência, para você conversar como se 
+        estivesse na mesma sala. Dê um joinha por vídeo, veja amigos 
+        transmitirem a jogatina do dia ou junte uma galera pra desenhar 
+        na tela compartilhada.
+    </p>
+
+    <!-- Pronto para começa a jornada -->
+
+    <img src="./img/fundo-estrela.svg" alt="fundo estrela">
+    <h4>Vamos começar a sua jornada?</h4>
+    <button type="button">
+        <img src="./img/icone-download.svg" alt="ícone download" width="15" >
+        <a href="">Baixar para Mac</a>
+    </button>
+
+     <!-- Rodapé -->
+
+    <h4>Imagine um lugar</h4>
+    <select name="idioma" id="idioma">
+        <option value="english">
+            <span>English, USA</span>
+        </option>
+        <option value="portugues" selected>
+            <span>Português do Brasil</span>
+        </option>
+        <option value="espanhol">
+            <span>Español</span>
+        </option>
+    </select>
+    <img src="./img/twitter.svg" alt="twitter">
+    <img src="./img/instagram.svg" alt="instagram">
+    <img src="./img/facebook.svg" alt="facebook">
+    <img src="./img/youtube.svg" alt="youtube">
+
+    <h4>Produto</h4>
+    <ul>
+        <li>
+            <a href="">Baixar</a>
+        </li>
+        <li>
+            <a href="">Nitro</a>
+        </li>
+        <li>
+            <a href="">Status</a>
+        </li>
+    </ul>
+
+    <h4>Empresa</h4>
+    <ul>
+        <li>
+            <a href="">Sobre</a>
+        </li>
+        <li>
+            <a href="">Empregos</a>
+        </li>
+        <li>
+            <a href="">Marca</a>
+        </li>
+        <li>
+            <a href="">Sala de imprensa</a>
+        </li>
+    </ul>
+
+    <h4>Recursos</h4>
+    <ul>
+        <li>
+            <a href="">Faculdade</a>
+        </li>
+        <li>
+            <a href="">Suporte</a>
+        </li>
+        <li>
+            <a href="">Segurança</a>
+        </li>
+        <li>
+            <a href="">Blog</a>
+        </li>
+        <li>
+            <a href="">Comentários</a>
+        </li>
+        <li>
+            <a href="">Desenvolvedores</a>
+        </li>
+        <li>
+            <a href="">StreamKit</a>
+        </li>
+    </ul>
+
+    <h4>Política</h4>
+    <ul>
+        <li>
+            <a href="">Termos</a>
+        </li>
+        <li>
+            <a href="">Privacidade</a>
+        </li>
+        <li>
+            <a href="">Diretrizes</a>
+        </li>
+        <li>
+            <a href="">Reconhecimento</a>
+        </li>
+        <li>
+            <a href="">Licenças</a>
+        </li>
+        <li>
+            <a href="">Moderação</a>
+        </li>
+    </ul>
+
+    <img src="./img/logo.svg" alt="logo">
+    <a href="">Registrar</a>
+</body>
+</html>
+```
+
+
+
+-----
+
+-----
+
+-----
+
+
+
+## Seção 7: Introdução ao CSS
+
+### 40. Por que precisamos de CSS?
+
+ 
+
 
 
 
