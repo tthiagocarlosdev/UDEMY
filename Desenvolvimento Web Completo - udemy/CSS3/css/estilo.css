@@ -1,0 +1,25 @@
+h2 {
+    color: blue;
+}
+
+a {
+    color: darkgreen;
+}
+
+p {
+    color: orange;
+}
+
+li {
+    background-color:deepskyblue ;
+    border: 1px solid blue;
+}
+
+table {
+    background-color: orange;
+    border: 5px solid darkred;
+}
+
+td {
+    border: 3px solid black;
+}
