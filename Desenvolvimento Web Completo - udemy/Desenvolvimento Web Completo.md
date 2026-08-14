@@ -4776,19 +4776,875 @@ td {
 
 ### 43. Div e Span (Teoria)
 
+#### Elementos de bloco e elementos em linha
+
+No HTML, os elementos podem se comportar de maneiras diferentes em relação ao espaço que ocupam na página. Os dois comportamentos principais são:
+
+- **Elementos de bloco (`block`)**
+- **Elementos em linha (`inline`)**
+
+------
+
+##### Elementos de bloco
+
+Os **elementos de bloco** ocupam, por padrão, **toda a largura disponível** do elemento pai e começam uma nova linha.
+
+Isso significa que, quando colocamos dois elementos de bloco consecutivamente, normalmente um ficará abaixo do outro.
+
+Exemplos de elementos que possuem comportamento de bloco:
+
+- `<div>`
+- `<p>`
+- `<h1>` até `<h6>`
+- `<ul>`
+- `<ol>`
+- `<li>`
+
+###### Exemplo
+
+```html
+<div>Primeiro bloco</div>
+<div>Segundo bloco</div>
+```
+
+Visualmente, o resultado será semelhante a:
+
+```text
+Primeiro bloco
+Segundo bloco
+```
+
+Cada `<div>` ocupa sua própria linha.
+
+------
+
+#### Elementos em linha
+
+Os **elementos em linha** ocupam somente o espaço necessário para o seu conteúdo e **não iniciam uma nova linha**.
+
+Quando existem vários elementos *inline* consecutivos, eles podem permanecer na mesma linha, desde que exista espaço disponível.
+
+Exemplos:
+
+- `<span>`
+- `<a>`
+- `<strong>`
+- `<em>`
+
+###### Exemplo
+
+```html
+<span>Primeiro</span>
+<span>Segundo</span>
+<span>Terceiro</span>
+```
+
+O resultado será semelhante a:
+
+```text
+Primeiro Segundo Terceiro
+```
+
+Os elementos permanecem na mesma linha.
+
+------
+
+#### Tag `<div>`
+
+A tag `<div>` é um elemento **genérico de bloco**.
+
+Ela é utilizada principalmente para **agrupar outros elementos** e criar uma estrutura ou seção dentro da página.
+
+Por si só, a `<div>` não possui um significado semântico específico. Sua principal função é servir como um **contêiner**.
+
+###### Para que serve?
+
+A `<div>` pode ser utilizada para:
+
+- Agrupar elementos;
+- Organizar a estrutura da página;
+- Criar áreas ou seções;
+- Aplicar CSS a um conjunto de elementos;
+- Facilitar a manipulação de elementos com JavaScript.
+
+###### Exemplo
+
+```html
+<div>
+    <h2>Produtos</h2>
+    <p>Confira nossos produtos.</p>
+</div>
+```
+
+Nesse exemplo, a `<div>` agrupa o título e o parágrafo.
+
+------
+
+#### Tag `<span>`
+
+A tag `<span>` é um elemento **genérico em linha (inline)**.
+
+Assim como a `<div>`, ela não possui um significado semântico específico. Sua principal finalidade é **agrupar ou identificar uma parte específica de um conteúdo**, normalmente para aplicar CSS ou JavaScript.
+
+###### Para que serve?
+
+A `<span>` pode ser utilizada para:
+
+- Destacar uma parte de um texto;
+- Aplicar CSS a uma palavra ou trecho;
+- Identificar uma parte específica do conteúdo;
+- Facilitar a manipulação com JavaScript.
+
+###### Exemplo
+
+```html
+<p>
+    Este produto está com
+    <span>50% de desconto</span>.
+</p>
+```
+
+Nesse caso, o `<span>` permite aplicar uma formatação específica somente ao trecho **"50% de desconto"**.
+
+------
+
+#### Diferença entre `<div>` e `<span>`
+
+A principal diferença está no comportamento padrão:
+
+| Elemento | Tipo   | Comportamento            |
+| -------- | ------ | ------------------------ |
+| `<div>`  | Bloco  | Ocupa uma nova linha     |
+| `<span>` | Inline | Permanece na mesma linha |
+
+###### Exemplo comparativo
+
+```html
+<div>Conteúdo 1</div>
+<div>Conteúdo 2</div>
+
+<span>Conteúdo 3</span>
+<span>Conteúdo 4</span>
+```
+
+Resultado aproximado:
+
+```text
+Conteúdo 1
+Conteúdo 2
+Conteúdo 3 Conteúdo 4
+```
+
+As `<div>` ficam em linhas separadas, enquanto os `<span>` permanecem na mesma linha.
+
+------
+
+#### Resumo
+
+##### Elementos de bloco
+
+> Normalmente começam em uma nova linha e ocupam toda a largura disponível.
+
+**Exemplo:** `<div>`, `<p>`, `<h1>`, `<ul>`.
+
+##### Elementos em linha
+
+> Normalmente ocupam apenas o espaço necessário para seu conteúdo e permanecem na mesma linha.
+
+**Exemplo:** `<span>`, `<a>`, `<strong>`.
+
+##### `<div>`
+
+> Elemento genérico de **bloco**, utilizado principalmente para **agrupar e organizar elementos**.
+
+##### `<span>`
+
+> Elemento genérico **em linha**, utilizado principalmente para **agrupar ou destacar pequenos trechos de conteúdo**.
+
+
+
+-----
+
+-----
+
+
+
+### 44. Div e Span (Prática) - Parte 1
+
+#### Arquivo completo - div-span.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div e Span</title>
+</head>
+<body>
+    <div style=" border-bottom: 3px solid black;">
+        <img src="./img/logo-f1.png" alt="logo fórmula 1" width="100">
+        <a href="">Recente</a>
+        <a href="">Vídeo</a>
+        <a href="">Agenda de Corridas</a>
+        <a href="">Pilotos</a>
+        <span style="background-color: black; color: white;"> Grupo Liberty Media </span>
+    </div>
+    
+    <div style="background-color: lightgray;">
+        <h1>Grandes pilotos da fórmula 1</h1>
+        <p>
+            Alguns dos <span style="color: purple;"> melhor pilotos </span> da fórmula 1, são vistos juntos na foto abaixo
+        </p>
+        <img src="./img/pilotos.jpeg" alt="pilotos">
+    </div>
+
+    <div style="background-color: black; color: white;">
+        Site oficial fórmula 1
+    </div>
+    
+</body>
+</html>
+```
 
 
 
 
 
+-----
+
+-----
+
+### 45. Div e Span (Prática) - Parte 2
+
+#### Arquivo completo - magalu.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magalu exercício</title>
+    <style>
+
+        a {
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div style="background-color: dodgerblue;">
+        <img src="./img/logo-magalu.png" alt="logo magalu" width="200">
+
+        <a href="">Ofertas do dia</a>
+        <a href="">Celulares</a>
+        <a href="">Eletrodomésticos</a>
+        <a href="">Tv e Video</a>
+        <a href="">Informática</a>
+
+        <span style="background-color: white; color: dodgerblue;"> 
+            compre pelo tel.: 0800 70 70 70
+        </span>
+    </div>
+
+    <div style="background-color: purple;">
+        <img src="./img/banner.png" alt="banner oferta">
+    </div>
+
+    <div>
+        <h1>Novidades que selecionamos</h1>
+        <img src="./img/produto1.jpg" alt="produto1">
+        <img src="./img/produto2.jpg" alt="produto2">
+        <img src="./img/produto3.jpg" alt="produto3">
+        <img src="./img/produto4.jpg" alt="produto4">
+        <img src="./img/produto5.jpg" alt="produto5">
+    </div>
+
+    <div>
+        <h3 style="background-color: dodgerblue; color: white;">
+            <span style="color: darkslateblue;" >Magazine Luiza </span>todos os direitos reservados
+        </h3>
+    </div>
+</body>
+</html>
+```
 
 
 
+-----
+
+-----
 
 
 
+### 46. Fontes e Cores (Teoria)
+
+#### Entendendo as cores
+
+As cores utilizadas em computadores e telas são normalmente formadas pela combinação de três cores básicas de luz:
+
+- **Vermelho (Red)**
+- **Verde (Green)**
+- **Azul (Blue)**
+
+Esse sistema é chamado de **RGB**.
+
+A combinação dessas três cores em diferentes intensidades permite representar milhões de cores diferentes.
+
+##### Vermelho
+
+O **vermelho (Red)** é uma das três cores que formam o sistema RGB.
+
+Quando o vermelho está em sua intensidade máxima e as outras duas cores estão desligadas, temos o vermelho puro.
+
+```css
+color: rgb(255, 0, 0);
+```
+
+##### Verde
+
+O **verde (Green)** é a segunda cor do sistema RGB.
+
+```css
+color: rgb(0, 255, 0);
+```
+
+##### Azul
+
+O **azul (Blue)** é a terceira cor do sistema RGB.
+
+```css
+color: rgb(0, 0, 255);
+```
+
+------
+
+#### Maneiras de representar cores
+
+No CSS, existem diferentes maneiras de definir uma cor. As principais são:
+
+- Nomes de cores;
+- Valores RGB;
+- Códigos hexadecimais;
+- Valores HSL.
+
+------
+
+##### 1. Nomes das cores
+
+O CSS possui diversos **nomes de cores predefinidos** que podem ser utilizados diretamente.
+
+###### Para que servem?
+
+Facilitam a definição de cores quando não precisamos de uma tonalidade muito específica.
+
+###### Exemplos
+
+```css
+color: red;
+color: blue;
+color: green;
+color: yellow;
+color: white;
+color: black;
+```
+
+Por exemplo:
+
+```css
+p {
+    color: blue;
+}
+```
+
+O texto do parágrafo será exibido em azul.
+
+------
+
+##### 2. Valores RGB
+
+**RGB** significa:
+
+- **R** → Red (vermelho)
+- **G** → Green (verde)
+- **B** → Blue (azul)
+
+Cada componente normalmente recebe um valor entre **0 e 255**.
+
+```css
+rgb(vermelho, verde, azul)
+```
+
+###### Exemplos
+
+Vermelho puro:
+
+```css
+color: rgb(255, 0, 0);
+```
+
+Verde puro:
+
+```css
+color: rgb(0, 255, 0);
+```
+
+Azul puro:
+
+```css
+color: rgb(0, 0, 255);
+```
+
+Branco:
+
+```css
+color: rgb(255, 255, 255);
+```
+
+Preto:
+
+```css
+color: rgb(0, 0, 0);
+```
+
+Também podemos combinar as três cores para criar outras tonalidades:
+
+```css
+color: rgb(255, 165, 0);
+```
+
+Nesse exemplo, a combinação produz uma tonalidade de laranja.
+
+------
+
+##### 3. Códigos hexadecimais
+
+A representação **hexadecimal** utiliza seis caracteres precedidos pelo símbolo `#`.
+
+```text
+#RRGGBB
+```
+
+Os dois primeiros caracteres representam o **vermelho**, os dois seguintes o **verde** e os dois últimos o **azul**.
+
+Os valores hexadecimais vão de:
+
+```text
+00 até FF
+```
+
+###### Exemplos
+
+Vermelho:
+
+```css
+color: #FF0000;
+```
+
+Verde:
+
+```css
+color: #00FF00;
+```
+
+Azul:
+
+```css
+color: #0000FF;
+```
+
+Preto:
+
+```css
+color: #000000;
+```
+
+Branco:
+
+```css
+color: #FFFFFF;
+```
+
+Assim como no RGB, podemos combinar diferentes intensidades de vermelho, verde e azul.
+
+Por exemplo:
+
+```css
+color: #FFA500;
+```
+
+representa uma tonalidade de laranja.
+
+------
+
+##### 4. Cores HSL
+
+**HSL** significa:
+
+- **H** → Hue (matiz)
+- **S** → Saturation (saturação)
+- **L** → Lightness (luminosidade)
+
+A estrutura é:
+
+```css
+hsl(matiz, saturação, luminosidade)
+```
+
+###### Matiz — Hue
+
+Representa a **cor propriamente dita**.
+
+É medida em graus, normalmente de `0` a `360`.
+
+Exemplos aproximados:
+
+- `0°` → vermelho
+- `120°` → verde
+- `240°` → azul
+
+###### Saturação — Saturation
+
+Define a **intensidade da cor**.
+
+É representada em porcentagem:
+
+- `0%` → sem saturação, resultando em uma tonalidade de cinza;
+- `100%` → saturação máxima.
+
+###### Luminosidade — Lightness
+
+Define o quanto a cor é **clara ou escura**.
+
+Também é representada em porcentagem:
+
+- `0%` → preto;
+- `50%` → cor normal;
+- `100%` → branco.
+
+###### Exemplos
+
+Vermelho:
+
+```css
+color: hsl(0, 100%, 50%);
+```
+
+Verde:
+
+```css
+color: hsl(120, 100%, 50%);
+```
+
+Azul:
+
+```css
+color: hsl(240, 100%, 50%);
+```
+
+------
+
+#### Resumo das formas de representar cores
+
+| Forma       | Exemplo             | Descrição                                      |
+| ----------- | ------------------- | ---------------------------------------------- |
+| Nome        | `red`               | Utiliza o nome predefinido da cor              |
+| RGB         | `rgb(255, 0, 0)`    | Combina vermelho, verde e azul                 |
+| Hexadecimal | `#FF0000`           | Representa RGB utilizando valores hexadecimais |
+| HSL         | `hsl(0, 100%, 50%)` | Utiliza matiz, saturação e luminosidade        |
+
+------
+
+#### Fontes no CSS
+
+As fontes determinam **a aparência dos textos** apresentados em uma página.
+
+O CSS permite definir qual fonte será utilizada, seu tamanho, estilo, espessura e outras características.
+
+Uma das principais propriedades utilizadas é:
+
+```css
+font-family
+```
+
+Ela define a **família de fontes** utilizada pelo texto.
+
+------
+
+#### Famílias de fontes
+
+As famílias de fontes podem ser agrupadas em diferentes categorias. Entre as principais estão:
+
+- **Serif**
+- **Sans-serif**
+- **Monospace**
+- **Cursive**
+- **Fantasy**
+
+------
+
+##### 1. Serif
+
+As fontes **serif** possuem pequenos detalhes ou prolongamentos nas extremidades das letras, chamados de **serifas**.
+
+São frequentemente utilizadas em textos mais tradicionais e impressos.
+
+###### Para que servem?
+
+Podem ser utilizadas em:
+
+- Livros;
+- Jornais;
+- Documentos;
+- Textos que buscam uma aparência mais tradicional.
+
+###### Exemplos
+
+```css
+font-family: Georgia;
+font-family: "Times New Roman";
+```
+
+Exemplo de família genérica:
+
+```css
+font-family: serif;
+```
+
+------
+
+##### 2. Sans-serif
+
+**Sans-serif** significa, literalmente, **"sem serifas"**.
+
+As letras não possuem os pequenos prolongamentos encontrados nas fontes serif.
+
+São muito utilizadas em sites e interfaces digitais.
+
+###### Para que servem?
+
+São bastante utilizadas em:
+
+- Sites;
+- Aplicativos;
+- Interfaces;
+- Menus;
+- Textos digitais.
+
+###### Exemplos
+
+```css
+font-family: Arial;
+font-family: Verdana;
+```
+
+Família genérica:
+
+```css
+font-family: sans-serif;
+```
+
+------
+
+##### 3. Monospace
+
+Nas fontes **monospace**, cada caractere ocupa a **mesma largura horizontal**.
+
+Por exemplo, o espaço ocupado por `i` e `M` é igual.
+
+###### Para que servem?
+
+São muito utilizadas em:
+
+- Código de programação;
+- Terminais;
+- Editores de código;
+- Exemplos de código.
+
+###### Exemplos
+
+```css
+font-family: "Courier New";
+```
+
+Família genérica:
+
+```css
+font-family: monospace;
+```
+
+------
+
+##### 4. Cursive
+
+As fontes **cursive** procuram imitar a aparência de uma **escrita manual ou caligráfica**.
+
+###### Para que servem?
+
+Podem ser utilizadas para criar uma aparência:
+
+- Informal;
+- Artística;
+- Decorativa;
+- Semelhante à escrita à mão.
+
+###### Exemplo
+
+```css
+font-family: cursive;
+```
+
+O resultado depende da fonte cursiva disponível no sistema ou navegador.
+
+------
+
+##### 5. Fantasy
+
+As fontes **fantasy** possuem características mais **decorativas e estilizadas**.
+
+Elas não são normalmente escolhidas para grandes blocos de texto, mas podem ser utilizadas para criar um visual específico.
+
+###### Para que servem?
+
+Podem ser utilizadas em:
+
+- Títulos;
+- Logotipos;
+- Elementos decorativos;
+- Projetos com estilo temático.
+
+###### Exemplo
+
+```css
+font-family: fantasy;
+```
+
+Assim como `cursive`, o resultado pode variar de acordo com as fontes disponíveis no sistema.
+
+------
+
+#### Resumo das famílias de fontes
+
+| Família        | Característica                              | Exemplo       |
+| -------------- | ------------------------------------------- | ------------- |
+| **Serif**      | Possui serifas nas extremidades das letras  | `Georgia`     |
+| **Sans-serif** | Não possui serifas                          | `Arial`       |
+| **Monospace**  | Todos os caracteres possuem a mesma largura | `Courier New` |
+| **Cursive**    | Imita escrita manual                        | `cursive`     |
+| **Fantasy**    | Possui aparência decorativa e estilizada    | `fantasy`     |
+
+> **Resumo:** as cores definem a aparência cromática dos elementos, enquanto as fontes definem a aparência dos textos. No CSS, podemos combinar diferentes formas de representação de cores e famílias de fontes para controlar a aparência visual de uma página.
 
 
+
+-----
+
+-----
+
+
+
+### 47. Fontes e Cores (Prática)
+
+#### Arquivo completo - fontes-ores.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes e cores</title>
+    <style>
+
+        body {
+            background-color: #2A4D14;
+        }
+
+        h1 {
+            background: #317B22;
+            color: white;
+            padding: 8px;
+
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>Fontes e cores</h1>
+
+    <div style="font-family: Georgia, 'Times New Roman', Times, serif; color: whitesmoke;">
+        <h2>Serif</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos porro quidem magnam aliquid natus iusto, excepturi aliquam, labore laboriosam quibusdam numquam? Consectetur non, laborum nulla error delectus voluptates tempora exercitationem?
+        </p>
+    </div>
+
+    <div style="font-family: Arial, Helvetica, sans-serif; color: rgba(245, 245, 245, 0.662);">
+        <h2>Sans-serif</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos porro quidem magnam aliquid natus iusto, excepturi aliquam, labore laboriosam quibusdam numquam? Consectetur non, laborum nulla error delectus voluptates tempora exercitationem?
+        </p>
+    </div>
+
+    <div style="font-family: 'Courier New', Courier, monospace; color: #7CF0BD;">
+        <h2>Monospace</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos porro quidem magnam aliquid natus iusto, excepturi aliquam, labore laboriosam quibusdam numquam? Consectetur non, laborum nulla error delectus voluptates tempora exercitationem?
+        </p>
+    </div>
+
+    <div style="font-family: cursive; color: hsl(141, 86%, 83%);">
+        <h2>Cursive</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos porro quidem magnam aliquid natus iusto, excepturi aliquam, labore laboriosam quibusdam numquam? Consectetur non, laborum nulla error delectus voluptates tempora exercitationem?
+        </p>
+    </div>
+
+    <div style="font-family: fantasy; color: #67E0A3;">
+        <h2>Fantasy</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos porro quidem magnam aliquid natus iusto, excepturi aliquam, labore laboriosam quibusdam numquam? Consectetur non, laborum nulla error delectus voluptates tempora exercitationem?
+        </p>
+    </div>
+
+</body>
+</html>
+```
+
+
+
+-----
+
+
+
+#### links da aula
+
+[Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/CSS/Guides/Colors/Color_format_converter) - Seletor de cores
+
+[html-color-codes](https://html-color-codes.info/Codigos-de-Cores-HTML/) - Código de cores
+
+[W3School](https://www.w3schools.com/css/css_font.asp) CSS fontes
+
+[W3School](https://www.w3schools.com/cssref/css_websafe_fonts.php) CSS Web Safe Fonts
+
+[Coolors](https://coolors.co/) - Seletor de cores
+
+[Color Hunt ](https://colorhunt.co/) - Seletor de cores
+
+
+
+-----
+
+-----
+
+
+
+### 48. Modelo de caixa
 
 
 
