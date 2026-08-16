@@ -7508,6 +7508,555 @@ img {
 
 ### 52. Classes e IDs (Teoria)
 
+Os **seletores CSS** são utilizados para indicar **quais elementos HTML receberão determinada regra de estilo**.
+
+Uma regra CSS normalmente possui:
+
+```css
+seletor {
+    propriedade: valor;
+}
+```
+
+Por exemplo:
+
+```css
+p {
+    color: blue;
+}
+```
+
+Nesse caso:
+
+- `p` → **seletor**
+- `color` → **propriedade**
+- `blue` → **valor**
+
+O seletor `p` indica que a regra será aplicada aos elementos `<p>`.
+
+------
+
+#### Tipos de seletores
+
+Existem diversos tipos de seletores CSS. Entre os mais importantes estão:
+
+- **Seletor por elemento (tag)**
+- **Seletor por ID**
+- **Seletor por classe**
+- **Seletor universal**
+- **Seletor por atributo**
+- **Seletores combinadores**
+
+Nesta etapa, vamos dar atenção principalmente aos **seletores de ID e de classe**, pois são fundamentais para organizar e estilizar páginas HTML.
+
+------
+
+#### Seletor por elemento (tag)
+
+É o seletor que utiliza diretamente o nome de uma tag HTML.
+
+##### Exemplo
+
+```css
+p {
+    color: blue;
+}
+```
+
+Nesse caso, o seletor `p` seleciona **todos os elementos `<p>`** da página.
+
+##### HTML
+
+```html
+<p>Primeiro parágrafo</p>
+<p>Segundo parágrafo</p>
+<p>Terceiro parágrafo</p>
+```
+
+Todos os parágrafos receberão a cor azul.
+
+##### Quando utilizar?
+
+É útil quando queremos aplicar uma mesma regra a **todos os elementos de determinado tipo**.
+
+------
+
+#### Seletor por ID
+
+O **ID** é um identificador utilizado para identificar um elemento específico dentro do documento HTML.
+
+No HTML, utilizamos o atributo:
+
+```html
+id="nome"
+```
+
+No CSS, utilizamos o símbolo `#` para selecionar esse elemento.
+
+```css
+#nome {
+    color: red;
+}
+```
+
+------
+
+##### O que é um ID?
+
+O `id` funciona como um **identificador único** para um elemento.
+
+Por exemplo:
+
+```html
+<h1 id="titulo">Meu site</h1>
+```
+
+Podemos selecionar esse elemento no CSS utilizando:
+
+```css
+#titulo {
+    color: red;
+}
+```
+
+O `#` indica que estamos trabalhando com um **seletor de ID**.
+
+------
+
+##### Onde utilizar ID?
+
+O ID é apropriado quando precisamos identificar **um elemento específico**.
+
+Por exemplo:
+
+```html
+<p id="introducao">
+    Bem-vindo ao meu site!
+</p>
+```
+
+No CSS:
+
+```css
+#introducao {
+    color: blue;
+}
+```
+
+A regra será aplicada ao elemento que possui o ID `introducao`.
+
+##### Regra importante
+
+Um mesmo `id` deve ser utilizado para identificar **um único elemento** dentro da página.
+
+Por isso, evite fazer:
+
+```html
+<p id="texto">Primeiro</p>
+<p id="texto">Segundo</p>
+```
+
+O ideal é que cada elemento tenha um identificador diferente quando houver necessidade de identificá-los individualmente.
+
+------
+
+#### Seletor por classe
+
+A **classe** é utilizada para **agrupar elementos que possuem uma característica em comum**.
+
+No HTML, utilizamos:
+
+```html
+class="nome"
+```
+
+No CSS, utilizamos o símbolo `.` para selecionar uma classe.
+
+```css
+.nome {
+    color: blue;
+}
+```
+
+------
+
+##### O que é uma classe?
+
+Uma classe permite atribuir uma mesma característica a **vários elementos**.
+
+Por exemplo:
+
+```html
+<p class="destaque">Primeiro texto</p>
+<p class="destaque">Segundo texto</p>
+<p>Terceiro texto</p>
+```
+
+No CSS:
+
+```css
+.destaque {
+    color: red;
+}
+```
+
+Os dois primeiros parágrafos ficarão vermelhos porque possuem a classe `destaque`.
+
+O terceiro parágrafo não será afetado porque não possui essa classe.
+
+------
+
+#### Onde utilizar classes?
+
+As classes são muito utilizadas quando vários elementos precisam compartilhar o mesmo estilo.
+
+Por exemplo, podemos ter vários elementos que representam botões:
+
+```html
+<button class="botao">Salvar</button>
+<button class="botao">Cancelar</button>
+<button class="botao">Excluir</button>
+```
+
+No CSS:
+
+```css
+.botao {
+    padding: 10px;
+    border: 1px solid black;
+}
+```
+
+Todos os elementos que possuem a classe `botao` receberão essas propriedades.
+
+Isso evita repetir o mesmo CSS para cada elemento.
+
+------
+
+#### ID × Classe
+
+Essa é uma diferença fundamental:
+
+| Característica                          | ID                                 | Classe            |
+| --------------------------------------- | ---------------------------------- | ----------------- |
+| Símbolo no CSS                          | `#`                                | `.`               |
+| HTML                                    | `id="nome"`                        | `class="nome"`    |
+| Objetivo                                | Identificar um elemento específico | Agrupar elementos |
+| Pode ser utilizado em vários elementos? | O ideal é não                      | Sim               |
+| Exemplo                                 | `#menu`                            | `.botao`          |
+
+Podemos pensar da seguinte maneira:
+
+> **ID = identidade específica**
+
+> **Classe = grupo ou característica compartilhada**
+
+------
+
+#### Exemplo utilizando ID e classe
+
+### HTML
+
+```html
+<h1 id="titulo">Minha página</h1>
+
+<p class="destaque">Primeiro texto</p>
+<p class="destaque">Segundo texto</p>
+<p>Terceiro texto</p>
+```
+
+###### CSS
+
+```css
+#titulo {
+    color: blue;
+}
+
+.destaque {
+    color: red;
+}
+```
+
+Nesse exemplo:
+
+- `#titulo` seleciona somente o `<h1>` que possui `id="titulo"`.
+- `.destaque` seleciona os dois `<p>` que possuem `class="destaque"`.
+- O terceiro `<p>` não possui a classe e não recebe essa regra.
+
+------
+
+#### Um elemento pode ter mais de uma classe
+
+Um elemento HTML pode possuir **várias classes**.
+
+Por exemplo:
+
+```html
+<p class="texto destaque grande">
+    Meu texto
+</p>
+```
+
+Esse elemento possui três classes:
+
+- `texto`
+- `destaque`
+- `grande`
+
+Podemos criar regras separadas:
+
+```css
+.texto {
+    font-family: Arial;
+}
+
+.destaque {
+    color: red;
+}
+
+.grande {
+    font-size: 25px;
+}
+```
+
+As três regras poderão ser aplicadas ao mesmo elemento.
+
+------
+
+#### Seletor universal
+
+O seletor universal utiliza `*`.
+
+```css
+* {
+    margin: 0;
+}
+```
+
+O `*` seleciona **todos os elementos** da página.
+
+###### Aplicabilidade
+
+Pode ser utilizado para aplicar uma configuração geral aos elementos.
+
+Um exemplo comum é remover as margens e espaçamentos padrão:
+
+```css
+* {
+    margin: 0;
+    padding: 0;
+}
+```
+
+------
+
+#### Seletor por atributo
+
+Também podemos selecionar elementos com base em seus atributos.
+
+Por exemplo:
+
+```css
+input[type="text"] {
+    border: 1px solid blue;
+}
+```
+
+Nesse caso, o seletor seleciona os elementos `<input>` cujo atributo `type` possui o valor `text`.
+
+###### HTML
+
+```html
+<input type="text">
+<input type="email">
+<input type="password">
+```
+
+A regra será aplicada somente ao:
+
+```html
+<input type="text">
+```
+
+------
+
+#### Seletores combinadores
+
+Também podemos criar seletores que relacionam elementos.
+
+Por exemplo:
+
+```css
+div p {
+    color: red;
+}
+```
+
+Esse seletor seleciona os elementos `<p>` que estão dentro de um `<div>`.
+
+###### HTML
+
+```html
+<div>
+    <p>Este parágrafo será vermelho.</p>
+</div>
+
+<p>Este não será vermelho.</p>
+```
+
+O primeiro `<p>` está dentro do `<div>`, portanto será selecionado.
+
+------
+
+#### Resumo dos principais seletores
+
+| Tipo        | Sintaxe              | Função                                       |
+| ----------- | -------------------- | -------------------------------------------- |
+| Elemento    | `p`                  | Seleciona todos os `<p>`                     |
+| ID          | `#titulo`            | Seleciona um elemento pelo ID                |
+| Classe      | `.destaque`          | Seleciona elementos que possuem a classe     |
+| Universal   | `*`                  | Seleciona todos os elementos                 |
+| Atributo    | `input[type="text"]` | Seleciona elementos com determinado atributo |
+| Descendente | `div p`              | Seleciona `<p>` dentro de `<div>`            |
+
+------
+
+#### Quando utilizar ID ou classe?
+
+Uma maneira simples de decidir é perguntar:
+
+##### "Quero identificar um elemento específico?"
+
+Use **ID**:
+
+```html
+<header id="cabecalho">
+#cabecalho {
+    background-color: gray;
+}
+```
+
+##### "Quero aplicar o mesmo estilo a vários elementos?"
+
+Use **classe**:
+
+```html
+<p class="destaque">Texto 1</p>
+<p class="destaque">Texto 2</p>
+.destaque {
+    color: red;
+}
+```
+
+------
+
+#### Resumo final
+
+##### Seletor por elemento
+
+> Seleciona elementos pelo nome da tag.
+
+```css
+p {
+    color: blue;
+}
+```
+
+##### ID
+
+> Identifica um elemento específico.
+
+**HTML:**
+
+```html
+<p id="principal">Texto</p>
+```
+
+**CSS:**
+
+```css
+#principal {
+    color: red;
+}
+```
+
+##### Classe
+
+> Permite agrupar elementos que possuem uma característica ou estilo em comum.
+
+**HTML:**
+
+```html
+<p class="destaque">Texto 1</p>
+<p class="destaque">Texto 2</p>
+```
+
+**CSS:**
+
+```css
+.destaque {
+    color: red;
+}
+```
+
+##### Regra para memorizar
+
+```text
+# → ID → elemento específico
+
+. → CLASS → grupo de elementos
+```
+
+> **ID identifica; classe agrupa.**
+
+
+
+-----
+
+-----
+
+
+
+### 53. Classes e IDs (Prática)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
