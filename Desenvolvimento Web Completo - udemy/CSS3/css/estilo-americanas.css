@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#topo {
+    background-color: red;
+}
+
+#banner {
+    background-color: grey;
+}
+
+.destaque {
+    background-color: orange;
+}

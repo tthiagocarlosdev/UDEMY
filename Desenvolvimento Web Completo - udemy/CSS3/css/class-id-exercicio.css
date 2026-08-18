@@ -1,0 +1,19 @@
+#div-topo {
+    background-color: yellow;
+}
+
+.div-celular {
+    background-color: grey;
+}
+
+.div-flutter {
+    background-color: orange;
+}
+
+#div-rodape {
+    border: 2px solid black;
+}
+
+#div-rodape p {
+    margin: 0;
+}

@@ -8019,35 +8019,1401 @@ p {
 
 ### 53. Classes e IDs (Prática)
 
+#### Arquivo completo - index-americanas.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Americanas - página inicial</title>
+    <link rel="stylesheet" href="./css/estilo-americanas.css">
+</head>
+<body>
+    <div id="topo">
+        <img src="./img/logo-americanas.png" alt="logo Americanas">
+        <a href="index-americanas.html">Inicial</a> |
+        <a href="">Mercado</a> |
+        <a href="celulares-americanas.html">Celulares</a> |
+        <a href="">Brinquedos</a> |
+        <a href="">Eletrodomésticos</a> |
+        <a href="">Notebook</a> |
+        <a href="">TV e home theater</a> |
+        <a href="">Perfumaria</a>
+    </div>
+
+    <div id="banner">
+        <img src="./img/banner.png" alt="banner Americanas">
+    </div>
+
+    <div id="produtos-promocao">
+        <h1>Produto em produtos promoção</h1>
+        
+        <div class="destaque">
+            <img src="./img/p1.png" alt="gopro">
+            <h2>Produto 1</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos perferendis iure sunt est ex odit corrupti voluptas veritatis, atque nesciunt enim et numquam id? Praesentium enim ea quae! Officiis, asperiores.
+            </p>
+        </div>
+
+        <hr>
+
+        <div>
+            <img src="./img/p2.png" alt="gopro">
+            <h2>Produto 2</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos perferendis iure sunt est ex odit corrupti voluptas veritatis, atque nesciunt enim et numquam id? Praesentium enim ea quae! Officiis, asperiores.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
+```
+
+-----
+
+#### Arquivo completo - celulares-americanas.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Americanas - celulares</title>
+    <link rel="stylesheet" href="./css/estilo-americanas.css">
+</head>
+<body>
+    <div id="topo">
+        <img src="./img/logo-americanas.png" alt="logo Americanas">
+        <a href="index-americanas.html">Inicial</a> |
+        <a href="">Mercado</a> |
+        <a href="celulares-americanas.html">Celulares</a> |
+        <a href="">Brinquedos</a> |
+        <a href="">Eletrodomésticos</a> |
+        <a href="">Notebook</a> |
+        <a href="">TV e home theater</a> |
+        <a href="">Perfumaria</a>
+    </div>
+
+    <div id="produtos-promocao">
+        <h1>Celulares</h1>
+
+        <div class="destaque">
+            <img src="./img/celular1.png" alt="gopro">
+            <h2>Celular 1</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos perferendis iure sunt est ex odit corrupti voluptas veritatis, atque nesciunt enim et numquam id? Praesentium enim ea quae! Officiis, asperiores.
+            </p>
+        </div>
+
+        <hr>
+
+        <div class="destaque">
+            <img src="./img/celular2.png" alt="gopro">
+            <h2>Celular 2</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos perferendis iure sunt est ex odit corrupti voluptas veritatis, atque nesciunt enim et numquam id? Praesentium enim ea quae! Officiis, asperiores.
+            </p>
+        </div>
+
+        <hr>
+
+        <div>
+            <img src="./img/celular3.png" alt="gopro">
+            <h2>Celular 3</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos perferendis iure sunt est ex odit corrupti voluptas veritatis, atque nesciunt enim et numquam id? Praesentium enim ea quae! Officiis, asperiores.
+            </p>
+        </div>
+
+        <hr>
+
+        <div >
+            <img src="./img/celular4.png" alt="gopro">
+            <h2>Celular 4</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos perferendis iure sunt est ex odit corrupti voluptas veritatis, atque nesciunt enim et numquam id? Praesentium enim ea quae! Officiis, asperiores.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+```
+
+-----
+
+#### Arquivo completo - estilo-americanas.css
+
+```css
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#topo {
+    background-color: red;
+}
+
+#banner {
+    background-color: grey;
+}
+
+.destaque {
+    background-color: orange;
+}
+
+```
 
 
 
+-----
+
+-----
 
 
 
+### 54. Classes e IDs (Exercício)
+
+#### Arquivo completo - class-id-exercicio.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Classe e Id</title>
+    <link rel="stylesheet" href="./css/class-id-exercicio.css">
+</head>
+<body>
+    <div id="div-topo">
+        <h1>Mobile</h1>
+        <span>10/03/2025</span>
+        <span>por Thiago Carlos</span>
+    </div>
+
+    <div class="div-celular">
+        <h2>Desenvolvimento com Android</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quos sapiente laudantium ipsum explicabo voluptatum, fugiat facilis ut, doloribus, repellendus quisquam molestiae asperiores aliquam. Commodi, hic? Ea accusantium maxime veniam.
+        </p>
+    </div>
+    <div class="div-celular">
+        <h2>Desenvolvimento com IOS</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quos sapiente laudantium ipsum explicabo voluptatum, fugiat facilis ut, doloribus, repellendus quisquam molestiae asperiores aliquam. Commodi, hic? Ea accusantium maxime veniam.
+        </p>
+    </div>
+    <div class="div-celular div-flutter">
+        <h2>Desenvolvimento com Flutter</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quos sapiente laudantium ipsum explicabo voluptatum, fugiat facilis ut, doloribus, repellendus quisquam molestiae asperiores aliquam. Commodi, hic? Ea accusantium maxime veniam.
+        </p>
+    </div>
+
+    <div id="div-rodape">
+        <p>
+            Todos os direitos reservados.
+        </p>
+    </div>
+    
+</body>
+</html>
+```
+
+-----
+
+#### Arquivo completo - class-id-exercicio.css
+
+```css
+#div-topo {
+    background-color: yellow;
+}
+
+.div-celular {
+    background-color: grey;
+}
+
+.div-flutter {
+    background-color: orange;
+}
+
+#div-rodape {
+    border: 2px solid black;
+}
+
+#div-rodape p {
+    margin: 0;
+}
+```
 
 
 
+----
+
+-----
 
 
 
+### 55. Cascatas, Herança
+
+No CSS, **cascata** e **herança** são dois conceitos fundamentais para entender como o navegador decide **quais estilos serão aplicados aos elementos HTML**.
+
+Eles ajudam a explicar situações como:
+
+- Por que uma regra CSS sobrescreve outra;
+- Por que um elemento recebe o estilo definido em outro elemento;
+- Por que algumas propriedades são herdadas e outras não;
+- Como organizar regras CSS de maneira previsível.
+
+------
+
+#### 1. Cascata no CSS
+
+##### O que é a cascata?
+
+A **cascata** é o mecanismo utilizado pelo CSS para determinar **qual regra de estilo deve prevalecer quando existem várias regras aplicáveis ao mesmo elemento**.
+
+É comum que um elemento possa receber estilos de diferentes regras.
+
+Por exemplo:
+
+```css
+p {
+    color: blue;
+}
+
+p {
+    color: red;
+}
+```
+
+As duas regras selecionam o mesmo elemento `<p>`.
+
+Nesse caso, a regra que aparece **por último** possui prioridade quando as demais condições de prioridade são equivalentes.
+
+O resultado será:
+
+```text
+Texto vermelho
+```
+
+------
+
+#### 2. Por que a cascata é necessária?
+
+Imagine uma página com vários arquivos CSS ou várias regras diferentes.
+
+Um mesmo elemento pode ser atingido por várias regras.
+
+Por exemplo:
+
+```css
+p {
+    color: blue;
+}
+
+.destaque {
+    color: red;
+}
+```
+
+E no HTML:
+
+```html
+<p class="destaque">
+    Texto de exemplo
+</p>
+```
+
+O elemento `<p>` recebe duas regras:
+
+- `p` → define `color: blue`;
+- `.destaque` → define `color: red`.
+
+O CSS precisa decidir qual delas terá prioridade.
+
+Nesse caso, o seletor de **classe** possui maior especificidade que o seletor de elemento.
+
+Portanto, o texto ficará vermelho.
+
+------
+
+#### 3. Ordem de prioridade no CSS
+
+A cascata considera diversos fatores para determinar qual regra será aplicada.
+
+De maneira simplificada, podemos pensar em:
+
+1. **Importância**
+2. **Especificidade**
+3. **Ordem de aparecimento**
+
+------
+
+#### 4. Especificidade
+
+A **especificidade** representa o quanto um seletor é específico para determinado elemento.
+
+Por exemplo:
+
+```css
+p {
+    color: blue;
+}
+```
+
+É um seletor de elemento.
+
+Já:
+
+```css
+.destaque {
+    color: red;
+}
+```
+
+é um seletor de classe e é mais específico.
+
+E:
+
+```css
+#principal {
+    color: green;
+}
+```
+
+é um seletor de ID e é ainda mais específico.
+
+Podemos representar de forma simplificada:
+
+```text
+Elemento < Classe < ID
+```
+
+Ou seja:
+
+```text
+p
+↓
+.destaque
+↓
+#principal
+```
+
+Quanto mais específico for o seletor, maior será sua prioridade na cascata.
+
+------
+
+#### 5. Exemplo de especificidade
+
+HTML:
+
+```html
+<p id="principal" class="destaque">
+    Texto de exemplo
+</p>
+```
+
+CSS:
+
+```css
+p {
+    color: blue;
+}
+
+.destaque {
+    color: red;
+}
+
+#principal {
+    color: green;
+}
+```
+
+O elemento possui os três seletores:
+
+- `p`
+- `.destaque`
+- `#principal`
+
+Como o ID possui maior especificidade, o resultado será:
+
+```text
+Texto verde
+```
+
+------
+
+#### 6. Ordem das regras
+
+Quando duas regras possuem a **mesma especificidade**, a ordem em que aparecem pode determinar qual será aplicada.
+
+Exemplo:
+
+```css
+p {
+    color: blue;
+}
+
+p {
+    color: red;
+}
+```
+
+As duas regras possuem o mesmo seletor.
+
+Como a segunda regra aparece depois, ela prevalece.
+
+Resultado:
+
+```text
+Texto vermelho
+```
+
+Podemos resumir:
+
+> Quando as regras possuem a mesma prioridade e especificidade, a regra que aparece por último vence.
+
+------
+
+#### 7. `!important`
+
+O `!important` pode aumentar a prioridade de uma declaração CSS.
+
+Exemplo:
+
+```css
+p {
+    color: blue !important;
+}
+
+p {
+    color: red;
+}
+```
+
+Nesse caso, o `blue` será aplicado porque a declaração possui `!important`.
+
+Apesar de existir, o uso excessivo de `!important` não é recomendado, pois pode dificultar a manutenção e o entendimento do CSS.
+
+------
+
+#### 8. Herança no CSS
+
+##### O que é herança?
+
+A **herança** é o mecanismo pelo qual determinadas propriedades CSS são transmitidas de um elemento **pai para seus elementos filhos**.
+
+Por exemplo:
+
+```html
+<div>
+    <p>Texto do parágrafo.</p>
+</div>
+```
+
+Podemos definir uma propriedade no `<div>`:
+
+```css
+div {
+    color: blue;
+}
+```
+
+O `<p>` poderá receber essa propriedade do elemento pai.
+
+Visualmente:
+
+```text
+div
+│
+└── p
+```
+
+O `<p>` herda a propriedade `color` do `<div>`.
+
+------
+
+#### 9. Elemento pai e elemento filho
+
+Para entender herança, precisamos compreender a relação entre os elementos.
+
+```html
+<div>
+    <p>Texto</p>
+</div>
+```
+
+Nesse exemplo:
+
+- `<div>` → **elemento pai**
+- `<p>` → **elemento filho**
+
+Se houver outro elemento dentro do `<p>`:
+
+```html
+<div>
+    <p>
+        <strong>Texto</strong>
+    </p>
+</div>
+```
+
+Temos:
+
+```text
+div
+└── p
+    └── strong
+```
+
+O `<div>` é pai do `<p>`.
+
+O `<p>` é pai do `<strong>`.
+
+O `<strong>` é filho do `<p>`.
+
+------
+
+#### 10. Exemplo de herança
+
+HTML:
+
+```html
+<div>
+    <p>Primeiro parágrafo.</p>
+    <p>Segundo parágrafo.</p>
+</div>
+```
+
+CSS:
+
+```css
+div {
+    color: blue;
+}
+```
+
+Como `color` é uma propriedade que normalmente pode ser herdada, os parágrafos também receberão a cor azul.
+
+O CSS pode ser entendido como:
+
+```text
+div → azul
+ │
+ ├── p → herda azul
+ │
+ └── p → herda azul
+```
+
+------
+
+#### 11. Nem todas as propriedades são herdadas
+
+É importante entender que **nem todas as propriedades CSS são herdadas automaticamente**.
+
+Por exemplo, propriedades relacionadas ao texto frequentemente são herdadas:
+
+- `color`
+- `font-family`
+- `font-size`
+- `font-style`
+
+Já propriedades relacionadas à caixa normalmente não são herdadas automaticamente:
+
+- `margin`
+- `padding`
+- `border`
+- `width`
+- `height`
+
+Por exemplo:
+
+```css
+div {
+    border: 2px solid red;
+}
+```
+
+Os elementos filhos não receberão automaticamente essa mesma borda.
+
+------
+
+#### 12. Herança pode ser sobrescrita
+
+Um elemento filho pode possuir sua própria regra CSS.
+
+HTML:
+
+```html
+<div>
+    <p>Texto azul</p>
+</div>
+```
+
+CSS:
+
+```css
+div {
+    color: blue;
+}
+
+p {
+    color: red;
+}
+```
+
+O `<p>` receberia inicialmente a cor do pai, mas possui uma regra própria.
+
+Portanto:
+
+```text
+div → blue
+p   → red
+```
+
+A regra específica do `<p>` prevalece sobre a herança.
+
+------
+
+#### 13. Cascata e herança trabalhando juntas
+
+Os dois conceitos podem aparecer simultaneamente.
+
+Considere:
+
+```html
+<div class="container">
+    <p>Texto</p>
+</div>
+```
+
+CSS:
+
+```css
+div {
+    color: blue;
+}
+
+p {
+    color: red;
+}
+```
+
+O `<p>` poderia herdar `color: blue` do `<div>`.
+
+Porém, existe uma regra específica para o próprio `<p>`:
+
+```css
+p {
+    color: red;
+}
+```
+
+Portanto, o `<p>` ficará vermelho.
+
+Podemos representar:
+
+```text
+div
+│
+│ color: blue
+│
+└── p
+      │
+      └── color: red
+```
+
+A regra própria do elemento prevalece sobre o valor herdado.
+
+------
+
+#### 14. `inherit`
+
+O CSS também possui o valor `inherit`.
+
+Ele informa explicitamente que uma propriedade deve utilizar o valor herdado do elemento pai.
+
+Exemplo:
+
+```css
+p {
+    color: inherit;
+}
+```
+
+Nesse caso, o `<p>` utilizará o valor de `color` fornecido pelo elemento pai.
+
+Por exemplo:
+
+```css
+div {
+    color: blue;
+}
+
+p {
+    color: inherit;
+}
+```
+
+O resultado será:
+
+```text
+div → blue
+p   → blue
+```
+
+------
+
+#### 15. Cascata × Herança
+
+Embora estejam relacionados, são conceitos diferentes.
+
+| Conceito    | O que significa?                                             |
+| ----------- | ------------------------------------------------------------ |
+| **Cascata** | Decide qual regra CSS deve prevalecer                        |
+| **Herança** | Permite que determinadas propriedades passem do pai para os filhos |
+
+##### Cascata
+
+Pergunta:
+
+> **"Existem várias regras para este elemento. Qual delas vence?"**
+
+##### Herança
+
+Pergunta:
+
+> **"O elemento não possui uma regra própria. Ele pode receber essa propriedade do elemento pai?"**
+
+------
+
+#### 16. Exemplo completo
+
+HTML:
+
+```html
+<div class="container">
+    <h1>Título</h1>
+    <p>Primeiro parágrafo.</p>
+    <p class="destaque">Segundo parágrafo.</p>
+</div>
+```
+
+CSS:
+
+```css
+.container {
+    color: blue;
+}
+
+p {
+    color: green;
+}
+
+.destaque {
+    color: red;
+}
+```
+
+Vamos analisar:
+
+##### `<div>`
+
+Possui:
+
+```css
+color: blue;
+```
+
+Portanto, seu texto é azul.
+
+##### `<h1>`
+
+Não possui uma regra específica para `color`.
+
+Assim, pode herdar a cor do `<div>`:
+
+```text
+azul
+```
+
+##### Primeiro `<p>`
+
+Possui:
+
+```css
+p {
+    color: green;
+}
+```
+
+Portanto, será verde.
+
+##### Segundo `<p>`
+
+Possui:
+
+```html
+class="destaque"
+```
+
+E existe:
+
+```css
+.destaque {
+    color: red;
+}
+```
+
+A classe possui maior especificidade que o seletor `p`.
+
+Portanto, será vermelho.
+
+------
+
+#### Resumo
+
+##### Cascata
+
+A **cascata** determina qual regra CSS terá prioridade quando existem várias regras que podem ser aplicadas ao mesmo elemento.
+
+Os principais fatores que devemos observar são:
+
+- Importância;
+- Especificidade;
+- Ordem das regras.
+
+De forma simplificada:
+
+```text
+elemento < classe < ID
+```
+
+------
+
+##### Herança
+
+A **herança** permite que determinadas propriedades CSS sejam transmitidas de um elemento pai para seus elementos filhos.
+
+Exemplo:
+
+```text
+pai
+│
+├── filho
+│
+└── filho
+```
+
+Se uma propriedade herdável for definida no pai, os filhos poderão receber esse valor.
+
+------
+
+#### Regra para memorizar
+
+> **Cascata = qual regra vence?**
+
+> **Herança = o que o filho recebe do pai?**
+
+Esses dois conceitos são fundamentais para compreender por que determinado estilo aparece em um elemento e por que uma regra CSS pode ou não sobrescrever outra.
 
 
 
+-----
+
+-----
 
 
 
+### 56. Unidades de medidas CSS - Parte 1
+
+As **unidades de medida** são utilizadas no CSS para definir valores como:
+
+- Tamanho de fontes;
+- Largura e altura de elementos;
+- Espaçamentos;
+- Margens;
+- Tamanhos de imagens;
+- Entre outras propriedades.
+
+Existem dois grandes grupos de unidades:
+
+- **Unidades absolutas** → possuem um tamanho fixo, como `px`;
+- **Unidades relativas** → seu tamanho depende de outro elemento ou da área disponível.
+
+------
+
+#### 1. O que é Pixel (`px`)?
+
+O **pixel** é uma unidade de medida utilizada para definir tamanhos no CSS.
+
+```css
+font-size: 16px;
+```
+
+Nesse exemplo, o tamanho da fonte é definido como `16px`.
+
+O `px` é considerado uma unidade **absoluta no CSS**, pois seu valor não depende diretamente do tamanho da fonte do elemento pai ou da largura do elemento pai.
+
+##### Exemplo
+
+```css
+h1 {
+    font-size: 32px;
+}
+```
+
+O tamanho da fonte do `<h1>` será definido em `32px`.
+
+##### Aplicabilidade
+
+O `px` é bastante utilizado quando queremos ter um controle mais direto sobre determinado tamanho.
+
+Exemplos:
+
+```css
+border: 2px solid black;
+
+padding: 20px;
+
+margin: 10px;
+
+font-size: 16px;
+```
+
+------
+
+#### 2. Unidades relativas
+
+As **unidades relativas** possuem seu valor determinado em relação a outro valor.
+
+Isso significa que o tamanho final pode mudar dependendo do contexto em que a unidade é utilizada.
+
+Entre as unidades relativas estudadas estão:
+
+- `em`
+- `rem`
+- `%`
+- `vw`
+
+Essas unidades são muito importantes para criar páginas mais **flexíveis e responsivas**.
+
+------
+
+#### 3. `em`
+
+A unidade `em` é relativa ao **tamanho da fonte do elemento pai**.
+
+Por exemplo, se o elemento pai possui:
+
+```css
+font-size: 20px;
+```
+
+e o elemento filho possui:
+
+```css
+font-size: 2em;
+```
+
+o tamanho será:
+
+```text
+2 × 20px = 40px
+```
+
+##### Exemplo
+
+```css
+div {
+    font-size: 20px;
+}
+
+p {
+    font-size: 2em;
+}
+```
+
+Nesse caso:
+
+- `<div>` → `20px`;
+- `<p>` → `2em`;
+- `2em` corresponde a `40px`.
+
+##### Aplicabilidade
+
+O `em` pode ser útil quando queremos que o tamanho de um elemento seja proporcional ao tamanho da fonte do seu contexto.
+
+> **`em` → relativo ao tamanho da fonte do elemento pai.**
+
+------
+
+#### 4. `rem`
+
+A unidade `rem` significa **root em**.
+
+Ela é relativa ao tamanho da fonte do **elemento raiz**, que normalmente é o elemento `<html>`.
+
+Por exemplo:
+
+```css
+html {
+    font-size: 16px;
+}
+```
+
+Então:
+
+```css
+h1 {
+    font-size: 2rem;
+}
+```
+
+Teremos:
+
+```text
+2 × 16px = 32px
+```
+
+Portanto:
+
+```text
+1rem = 16px
+2rem = 32px
+3rem = 48px
+```
+
+##### Exemplo
+
+```css
+html {
+    font-size: 16px;
+}
+
+p {
+    font-size: 1.5rem;
+}
+```
+
+O tamanho da fonte do parágrafo será:
+
+```text
+1.5 × 16px = 24px
+```
+
+##### Aplicabilidade
+
+O `rem` é muito utilizado quando queremos manter tamanhos proporcionais a uma referência global da página.
+
+Uma vantagem importante é que o cálculo não depende da quantidade de elementos pai existentes.
+
+> **`rem` → relativo ao tamanho da fonte do elemento raiz (`html`).**
+
+------
+
+#### 5. Diferença entre `em` e `rem`
+
+Essa é uma diferença importante:
+
+| Unidade | Referência                                 |
+| ------- | ------------------------------------------ |
+| `em`    | Tamanho da fonte do elemento pai           |
+| `rem`   | Tamanho da fonte do elemento raiz (`html`) |
+
+Por exemplo:
+
+```css
+html {
+    font-size: 16px;
+}
+
+div {
+    font-size: 20px;
+}
+
+p {
+    font-size: 2em;
+}
+```
+
+O `<p>` terá:
+
+```text
+2 × 20px = 40px
+```
+
+Porque `em` utiliza como referência o tamanho da fonte do elemento pai.
+
+Agora:
+
+```css
+p {
+    font-size: 2rem;
+}
+```
+
+O `<p>` terá:
+
+```text
+2 × 16px = 32px
+```
+
+Porque `rem` utiliza como referência o `<html>`.
+
+------
+
+#### 6. Porcentagem (`%`)
+
+A unidade `%` representa uma **porcentagem relativa a uma referência definida pelo contexto da propriedade**.
+
+No caso mais comum de `width` e `height`, a porcentagem é calculada em relação ao tamanho do elemento pai.
+
+##### Exemplo
+
+Imagine um elemento pai com:
+
+```css
+width: 1000px;
+```
+
+E um elemento filho com:
+
+```css
+width: 50%;
+```
+
+O filho terá:
+
+```text
+50% de 1000px = 500px
+```
+
+##### Exemplo
+
+```css
+.container {
+    width: 1000px;
+}
+
+.caixa {
+    width: 50%;
+}
+```
+
+A `.caixa` ocupará `50%` da largura disponível do elemento pai.
+
+##### Aplicabilidade
+
+A porcentagem é muito utilizada para criar elementos que se adaptem ao tamanho do elemento que os contém.
+
+Por exemplo:
+
+```css
+img {
+    width: 100%;
+}
+```
+
+A imagem poderá ocupar toda a largura disponível do seu elemento pai.
+
+> **`%` → geralmente relativo ao tamanho do elemento pai, dependendo da propriedade utilizada.**
+
+------
+
+#### 7. `vw` — Viewport Width
+
+`vw` significa **Viewport Width**.
+
+A unidade representa uma porcentagem da **largura da área de visualização (viewport)**.
+
+> **1vw corresponde a 1% da largura da viewport.**
+
+Portanto:
+
+```text
+100vw = 100% da largura da viewport
+```
+
+##### Exemplo
+
+```css
+div {
+    width: 50vw;
+}
+```
+
+O elemento terá uma largura correspondente a **50% da largura da viewport**.
+
+Se a viewport tiver `1000px` de largura:
+
+```text
+50vw = 500px
+```
+
+Se a viewport tiver `500px`:
+
+```text
+50vw = 250px
+```
+
+##### Aplicabilidade
+
+O `vw` é bastante útil para criar elementos cujo tamanho deve acompanhar a **largura da tela**.
+
+Exemplo:
+
+```css
+.banner {
+    width: 100vw;
+}
+```
+
+O banner terá uma largura correspondente à largura da viewport.
+
+------
+
+#### 8. Comparando as unidades
+
+| Unidade | Referência                                                   |
+| ------- | ------------------------------------------------------------ |
+| `px`    | Tamanho definido em pixels                                   |
+| `em`    | Tamanho da fonte do elemento pai                             |
+| `rem`   | Tamanho da fonte do elemento raiz (`html`)                   |
+| `%`     | Percentual relativo ao contexto da propriedade, frequentemente ao elemento pai |
+| `vw`    | Largura da viewport                                          |
+
+------
+
+#### 9. Exemplo prático
+
+Podemos utilizar várias unidades na mesma página:
+
+```css
+html {
+    font-size: 16px;
+}
+
+.container {
+    width: 80%;
+}
+
+.titulo {
+    font-size: 2rem;
+}
+
+.texto {
+    font-size: 1.2em;
+}
+
+.banner {
+    width: 100vw;
+}
+
+.caixa {
+    width: 300px;
+}
+```
+
+Cada unidade possui uma referência diferente:
+
+```text
+300px → tamanho definido em pixels
+
+80% → relativo ao contexto do elemento pai
+
+2rem → relativo à fonte do html
+
+1.2em → relativo à fonte do elemento pai
+
+100vw → relativo à largura da viewport
+```
+
+------
+
+#### Resumo
+
+##### `px`
+
+> Unidade de tamanho em pixels.
+
+```css
+font-size: 16px;
+```
+
+------
+
+##### `em`
+
+> Relativo ao tamanho da fonte do elemento pai.
+
+```css
+font-size: 2em;
+```
+
+------
+
+##### `rem`
+
+> Relativo ao tamanho da fonte do elemento raiz (`html`).
+
+```css
+font-size: 2rem;
+```
+
+------
+
+##### `%`
+
+> Representa uma porcentagem relativa a uma referência determinada pelo contexto da propriedade, sendo frequentemente relacionada ao elemento pai.
+
+```css
+width: 50%;
+```
+
+------
+
+##### `vw`
+
+> Relativo à largura da viewport.
+
+```css
+width: 100vw;
+```
+
+#### Regra para memorizar
+
+```text
+px  → tamanho em pixels
+
+em  → fonte do pai
+
+rem → fonte do html
+
+%   → porcentagem relativa ao contexto/pai
+
+vw  → largura da viewport
+```
+
+Essas unidades são fundamentais para desenvolver páginas que possam **se adaptar a diferentes tamanhos de tela**, especialmente quando combinamos unidades relativas com técnicas de **design responsivo**.
 
 
 
+---
+
+---
 
 
 
-
-
-
-
-
+### 57. Unidades de medidas CSS - Parte 2
 
 
 
