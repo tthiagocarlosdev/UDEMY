@@ -9415,6 +9415,1394 @@ Essas unidades são fundamentais para desenvolver páginas que possam **se adapt
 
 ### 57. Unidades de medidas CSS - Parte 2
 
+#### Arquivo completo - porcentagem-pixel.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porcentagem e Pixel</title>
+    <style>
+        .pixel {
+            border: 1pz solid black;
+            background-color: red;
+            padding: 8px;
+            width: 200px;
+        }
+
+        .porcentagem {
+            border: 1px solid black;
+            background-color: orange;
+            padding: 8px;
+            width: 50%;
+        }
+
+        #area {
+            border: 3px solid black;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Porcentagem e Pixel</h1>
+
+    <div class="pixel">Pixel é a menor parte de uma i</div>
+    <div class="porcentagem">Porcentagem (50%)</div>
+
+    <hr>
+
+    <div id="area">
+        <div class="pixel">Pixel é a menor parte de uma i</div>
+        <div class="porcentagem">Porcentagem (50%)</div>
+    </div>
+
+</body>
+</html>
+```
+
+
+
+---
+
+
+
+#### Arquivo completo - vw-vh.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vw & vh</title>
+    <style>
+    body {
+        /* border: 3px solid purple; */
+        margin: 0;
+    }
+
+    .pixel {
+        border: 1pz solid black;
+        background-color: red;
+        padding: 8px;
+        width: 200px;
+    }
+
+    .porcentagem {
+        border: 1px solid black;
+        background-color: orange;
+        padding: 8px;
+        width: 50%;
+    }
+
+    .vw {
+        border: 1px solid black;
+        background-color: orange;
+        padding: 8px;
+        width: 50vw;
+    }
+
+    #area {
+        border: 3px solid black;
+        width: 500px;
+    }
+    </style>
+</head>
+<body>
+    <h1>vw & vh</h1>
+
+    <div class="pixel">Pixel é a menor parte de uma i</div>
+    <div class="porcentagem">Porcentagem (50%)</div>
+    <div class="vw">VW (50vw)</div>
+
+    <hr>
+
+    <div id="area">
+        <div class="pixel">Pixel é a menor parte de uma i</div>
+        <div class="porcentagem">Porcentagem (50%)</div>
+        <div class="vw">VW (50vw)</div>
+    </div>
+</body>
+</html>
+```
+
+
+
+---
+
+
+
+#### Arquivo completo - em-rem.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em & rem</title>
+    <style>
+        html {
+            font-size: 16px;
+        }
+        body {
+            font-size: 16px;
+        }
+        p {
+            font-size: 2em;
+        }
+        .caixa-pequena {
+            border: 3px solid black;
+            font-size: 16px;
+        }
+        .caixa-grande {
+            border: 3px solid red;
+            font-size: 32px;
+        }
+
+        .um-em {
+            font-size: 1em;
+        }
+        .dois-em {
+            font-size: 2em;
+        }
+        .tres-em {
+            font-size: 3em;
+        }
+
+        .em {
+            font-size: 1em;
+            border: 3px solid red;
+        }
+        .rem {
+            font-size: 1rem;
+            border: 3px solid purple;
+        }
+        .porcentagem {
+            font-size: 100%;
+            border: 3px solid green;
+        }
+        #area {
+            border: 3px solid black;
+            width: 500px;
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+    <h1>em & rem</h1>
+
+    <div class="caixa-pequena">
+        <p>Thiago Carlos</p>
+            Thiago Carlos
+    </div>
+
+    <hr>
+
+    <div class="caixa-grande">
+        <p>Thiago Carlos</p>
+            Thiago Carlos
+    </div>
+
+    <p class="tres-em">Destaque</p>
+    <p class="um-em">Menor</p>
+    <p class="dois-em">Médio</p>
+
+    <hr>
+
+    <div id="area">
+        <p class="em">EM</p>
+        <p class="rem">REM</p>
+        <p class="porcentagem">PORCENTAGEM</p>
+    </div>
+
+</body>
+</html>
+```
+
+
+
+---
+
+---
+
+
+
+### 58. Fontes customizadas
+
+Ao desenvolver um site, podemos utilizar diferentes fontes para melhorar a **aparência, identidade visual e legibilidade** da página.
+
+O CSS permite utilizar fontes que já existem no sistema, fontes disponibilizadas por serviços externos e também **arquivos de fontes armazenados dentro do próprio projeto**.
+
+No código da aula, temos três formas diferentes de trabalhar com fontes:
+
+1. **Fontes instaladas no sistema**
+2. **Fontes externas usando `@import`**
+3. **Fontes personalizadas usando `@font-face`**
+
+------
+
+#### 1. Fontes instaladas no sistema
+
+Uma maneira simples de utilizar fontes é informar o nome de uma fonte que já esteja disponível no computador do usuário.
+
+Exemplo:
+
+```css
+p {
+    font-family: Arial;
+}
+```
+
+Nesse caso, o navegador tentará utilizar a fonte `Arial`.
+
+Também podemos informar uma **lista de fontes alternativas**:
+
+```css
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+```
+
+Nesse caso, o navegador tenta utilizar as fontes na ordem apresentada:
+
+1. `Arial`
+2. `Helvetica`
+3. `sans-serif`
+
+Se `Arial` não estiver disponível, tenta `Helvetica`.
+
+Se nenhuma das duas estiver disponível, utiliza uma fonte da família genérica `sans-serif`.
+
+------
+
+#### 2. Família de fontes
+
+A propriedade:
+
+```css
+font-family
+```
+
+define a família tipográfica que será utilizada pelo elemento.
+
+Exemplo:
+
+```css
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+```
+
+No código da aula:
+
+```css
+h1 {
+    font-family: 'CursedGothic', Arial, Helvetica, sans-serif;
+}
+```
+
+Aqui existe uma fonte personalizada (`CursedGothic`) seguida de fontes alternativas.
+
+Essa técnica é conhecida como **font stack**.
+
+> **Font stack** é uma lista de fontes utilizada para fornecer alternativas caso determinada fonte não esteja disponível.
+
+------
+
+#### 3. Utilizando fontes externas com `@import`
+
+Outra possibilidade é importar uma fonte de um serviço externo.
+
+No código da aula foi utilizado o **Google Fonts**:
+
+```css
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+```
+
+O `@import` permite importar uma folha de estilos externa para o CSS.
+
+Nesse caso, a folha de estilos disponibilizada pelo Google Fonts fornece a fonte **Black Ops One**.
+
+Depois de importada, ela pode ser utilizada normalmente:
+
+```css
+p {
+    font-family: "Black Ops One", system-ui;
+}
+```
+
+Assim, o navegador poderá utilizar a fonte `Black Ops One`.
+
+------
+
+#### 4. Como funciona o `@import`
+
+Podemos dividir:
+
+```css
+@import url('endereço-da-fonte');
+```
+
+Em:
+
+- `@import` → regra CSS utilizada para importar outro recurso CSS;
+- `url()` → informa o endereço do recurso;
+- URL → endereço onde está localizada a folha de estilos.
+
+No exemplo:
+
+```css
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+```
+
+o endereço aponta para uma folha de estilos do Google Fonts.
+
+------
+
+#### 5. Utilizando arquivos de fontes do próprio projeto
+
+Também podemos armazenar arquivos de fontes dentro do próprio projeto.
+
+Para isso, utilizamos:
+
+```css
+@font-face
+```
+
+O `@font-face` permite **definir uma fonte personalizada** e informar ao navegador onde está localizado o arquivo dessa fonte.
+
+No código:
+
+```css
+@font-face {
+    font-family: 'CursedGothic';
+    src: url("./css/fonts/cursed_gothic/CursedGothic.ttf"), 
+         url(./css/fonts/cursed_gothic/CursedGothic-Wood.ttf);
+}
+```
+
+------
+
+#### 6. `font-family` dentro do `@font-face`
+
+A propriedade:
+
+```css
+font-family
+```
+
+define o **nome que será utilizado para referenciar a fonte no CSS**.
+
+No exemplo:
+
+```css
+font-family: 'CursedGothic';
+```
+
+Esse nome será utilizado posteriormente:
+
+```css
+h1 {
+    font-family: 'CursedGothic';
+}
+```
+
+Portanto, podemos pensar:
+
+```text
+@font-face
+    ↓
+define um nome para a fonte
+    ↓
+font-family: 'CursedGothic'
+    ↓
+h1 utiliza esse nome
+```
+
+------
+
+#### 7. `src` dentro do `@font-face`
+
+A propriedade:
+
+```css
+src
+```
+
+informa **onde está localizado o arquivo da fonte**.
+
+No exemplo:
+
+```css
+src: url("./css/fonts/cursed_gothic/CursedGothic.ttf");
+```
+
+O navegador procura o arquivo:
+
+```text
+./css/fonts/cursed_gothic/CursedGothic.ttf
+```
+
+Como o caminho começa com `./`, ele é um **caminho relativo** ao arquivo CSS/documento em que essa regra está sendo interpretada, conforme a estrutura do projeto.
+
+------
+
+#### 8. Vários arquivos de fonte
+
+O código também apresenta mais de uma URL:
+
+```css
+@font-face {
+    font-family: 'CursedGothic';
+    src: url("./css/fonts/cursed_gothic/CursedGothic.ttf"), 
+         url(./css/fonts/cursed_gothic/CursedGothic-Wood.ttf);
+}
+```
+
+A propriedade `src` pode indicar diferentes fontes/formas de carregamento para uma mesma família, mas, para um projeto real, é importante configurar corretamente os formatos e variantes da fonte.
+
+------
+
+#### 9. Outra fonte personalizada com `@font-face`
+
+O código possui outra definição:
+
+```css
+@font-face {
+    font-family: 'Audiowide';
+    src: url("css/fonts/Audiowide/Audiowide-Regular.ttf");
+}
+```
+
+Aqui temos:
+
+- Nome definido → `Audiowide`;
+- Arquivo da fonte → `Audiowide-Regular.ttf`.
+
+Depois ela é utilizada:
+
+```css
+h2 {
+    font-family: 'Audiowide';
+}
+```
+
+------
+
+#### 10. Formatos de arquivos de fontes
+
+Existem diferentes formatos de arquivos de fontes que podem ser utilizados na Web.
+
+Alguns dos mais conhecidos são:
+
+| Formato                | Extensão |
+| ---------------------- | -------- |
+| TrueType               | `.ttf`   |
+| OpenType               | `.otf`   |
+| Web Open Font Format   | `.woff`  |
+| Web Open Font Format 2 | `.woff2` |
+
+No código da aula são utilizados arquivos:
+
+```text
+.ttf
+```
+
+como:
+
+```text
+CursedGothic.ttf
+Audiowide-Regular.ttf
+```
+
+------
+
+#### 11. `font-weight`
+
+Além da família da fonte, podemos controlar o **peso** da fonte utilizando:
+
+```css
+font-weight
+```
+
+No código:
+
+```css
+p {
+    font-family: "Black Ops One", system-ui;
+    font-weight: 400;
+}
+```
+
+O valor `400` normalmente representa o peso **normal**.
+
+Alguns valores comuns:
+
+```text
+100 → muito fino
+200 → fino
+300 → leve
+400 → normal
+500 → médio
+600 → seminegrito
+700 → negrito
+800 → muito negrito
+900 → extremamente negrito
+```
+
+A disponibilidade desses pesos depende da fonte utilizada.
+
+------
+
+#### 12. `font-style`
+
+A propriedade:
+
+```css
+font-style
+```
+
+define o estilo da fonte.
+
+No código:
+
+```css
+p {
+    font-style: normal;
+}
+```
+
+O valor `normal` indica que a fonte será exibida no estilo normal.
+
+Um valor bastante conhecido é:
+
+```css
+font-style: italic;
+```
+
+que aplica o estilo itálico, desde que a fonte tenha suporte apropriado.
+
+------
+
+#### 13. `font-size`
+
+A propriedade:
+
+```css
+font-size
+```
+
+define o tamanho da fonte.
+
+No código:
+
+```css
+h2 {
+    font-size: 3em;
+}
+```
+
+O tamanho é definido utilizando a unidade relativa `em`.
+
+No parágrafo:
+
+```css
+p {
+    font-size: 1.5em;
+}
+```
+
+Portanto, além de escolher a fonte, também podemos controlar seu tamanho.
+
+------
+
+#### 14. Analisando o `<h1>` da aula
+
+O código possui:
+
+```css
+h1 {
+    font-family: 'CursedGothic', Arial, Helvetica, sans-serif;
+}
+```
+
+A prioridade será:
+
+1. `CursedGothic`
+2. `Arial`
+3. `Helvetica`
+4. `sans-serif`
+
+A ideia é que `CursedGothic` seja a fonte principal e as demais funcionem como alternativas.
+
+------
+
+#### 15. Analisando o `<h2>` da aula
+
+O `<h2>` utiliza:
+
+```css
+h2 {
+    font-family: 'Audiowide';
+    font-size: 3em;
+}
+```
+
+Aqui temos duas propriedades:
+
+##### `font-family`
+
+Define a família:
+
+```css
+font-family: 'Audiowide';
+```
+
+##### `font-size`
+
+Define o tamanho:
+
+```css
+font-size: 3em;
+```
+
+Portanto, o `<h2>` utiliza a fonte personalizada `Audiowide` e possui tamanho de `3em`.
+
+------
+
+#### 16. Analisando o `<p>` da aula
+
+O parágrafo utiliza:
+
+```css
+p {
+    font-family: "Black Ops One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5em;
+}
+```
+
+Temos:
+
+| Propriedade   | Valor                        | Função           |
+| ------------- | ---------------------------- | ---------------- |
+| `font-family` | `Black Ops One`, `system-ui` | Define a família |
+| `font-weight` | `400`                        | Define o peso    |
+| `font-style`  | `normal`                     | Define o estilo  |
+| `font-size`   | `1.5em`                      | Define o tamanho |
+
+------
+
+#### 17. Três maneiras apresentadas na aula
+
+Podemos resumir as formas utilizadas no código:
+
+##### 1. Fonte já disponível no sistema
+
+```css
+font-family: Arial, Helvetica, sans-serif;
+```
+
+Utiliza fontes que podem estar disponíveis no sistema do usuário.
+
+------
+
+##### 2. Fonte externa com `@import`
+
+```css
+@import url('https://fonts.googleapis.com/...');
+```
+
+Carrega uma folha de estilos externa que disponibiliza a fonte.
+
+No exemplo da aula:
+
+```css
+p {
+    font-family: "Black Ops One", system-ui;
+}
+```
+
+------
+
+##### 3. Fonte personalizada com `@font-face`
+
+```css
+@font-face {
+    font-family: 'Audiowide';
+    src: url("css/fonts/Audiowide/Audiowide-Regular.ttf");
+}
+```
+
+Permite utilizar um arquivo de fonte armazenado no projeto.
+
+Depois:
+
+```css
+h2 {
+    font-family: 'Audiowide';
+}
+```
+
+------
+
+#### Resumo
+
+| Recurso       | Para que serve                                        |
+| ------------- | ----------------------------------------------------- |
+| `font-family` | Define a família da fonte                             |
+| `@import`     | Importa uma folha de estilos externa                  |
+| `@font-face`  | Define uma fonte personalizada a partir de um arquivo |
+| `src`         | Indica a localização do arquivo da fonte              |
+| `font-weight` | Define o peso da fonte                                |
+| `font-style`  | Define o estilo da fonte                              |
+| `font-size`   | Define o tamanho da fonte                             |
+
+#### Regra para memorizar
+
+```text
+font-family → qual fonte usar
+
+@import → importar fonte/folha de estilos externa
+
+@font-face → cadastrar uma fonte personalizada
+
+src → onde está o arquivo da fonte
+
+font-size → tamanho
+
+font-weight → peso
+
+font-style → estilo
+```
+
+Assim, no desenvolvimento Web, você pode trabalhar tanto com **fontes disponíveis no sistema**, quanto com **fontes externas** e **fontes personalizadas armazenadas no próprio projeto**.
+
+---
+
+#### Arquivo completo - fontes-customizadas.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes customizadas</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+        @font-face {
+            font-family: 'CursedGothic';
+            src: url("./css/fonts/cursed_gothic/CursedGothic.ttf"), 
+                 url(./css/fonts/cursed_gothic/CursedGothic-Wood.ttf);
+        }
+        @font-face {
+            font-family: 'Audiowide';
+            src: url("css/fonts/Audiowide/Audiowide-Regular.ttf");
+        }
+
+        h1 {
+            font-family: 'CursedGothic', Arial, Helvetica, sans-serif;
+        }
+        h2 {
+            font-family: 'Audiowide';
+            font-size: 3em;
+        }
+        p {
+            font-family: "Black Ops One", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.5em;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Feliz Natal</h1>
+    <h2>boas festas</h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis voluptatem, quisquam nemo aut ex quod illum? Vero reprehenderit eius repudiandae mollitia eum ratione ab, officia ut quaerat neque, sequi eveniet!
+    </p>
+</body>
+</html>
+```
+
+---
+
+
+
+#### Links da aula
+
+[Dafont](https://www.dafont.com/pt/) - diversas fontes
+
+[Transfonter](https://transfonter.org/) - Webfont generator
+
+[Google](https://fonts.google.com/) Fonts
+
+[3Wschool](https://www.w3schools.com/cssref/atrule_font-face.php) - CSS @font-face Rule
+
+[Developer Mozilla](https://developer.mozilla.org/pt-BR/docs/conflicting/Web/CSS/Reference/At-rules/@font-face) - glyphRef
+
+
+
+---
+
+---
+
+### 59. Fontes, estilos e alinhamentos
+
+As propriedades de texto do CSS permitem controlar a **aparência, o tamanho, o espaçamento, o alinhamento e a disposição dos textos** dentro de uma página.
+
+Nesta aula veremos:
+
+- `font-weight`
+- `font-style`
+- `text-transform`
+- `text-decoration`
+- `line-height`
+- `letter-spacing`
+- `word-spacing`
+- `text-indent`
+- `text-align`
+
+------
+
+#### 1. `font-weight`
+
+A propriedade `font-weight` define o **peso ou espessura da fonte**.
+
+Ela pode receber valores como `normal`, `bold` ou valores numéricos de `100` a `900`.
+
+##### Valores `normal` e `bold`
+
+```css
+p {
+    font-weight: normal;
+}
+```
+
+Utiliza o peso normal da fonte.
+
+```css
+p {
+    font-weight: bold;
+}
+```
+
+Utiliza uma versão em **negrito** da fonte.
+
+##### Valores de 100 a 900
+
+Também podemos utilizar valores numéricos:
+
+```css
+p {
+    font-weight: 700;
+}
+```
+
+Os valores normalmente seguem esta escala:
+
+| Valor | Peso aproximado |
+| ----- | --------------- |
+| `100` | Muito fino      |
+| `200` | Extra fino      |
+| `300` | Fino            |
+| `400` | Normal          |
+| `500` | Médio           |
+| `600` | Seminegrito     |
+| `700` | Negrito         |
+| `800` | Extra negrito   |
+| `900` | Muito negrito   |
+
+Uma associação comum é:
+
+```text
+400 → normal
+700 → bold
+```
+
+> **Importante:** a fonte utilizada precisa possuir o peso solicitado ou uma variação próxima poderá ser utilizada pelo navegador.
+
+------
+
+#### 2. `font-style`
+
+A propriedade `font-style` define o **estilo da fonte**.
+
+Os principais valores são:
+
+- `normal`
+- `italic`
+- `oblique`
+
+##### `normal`
+
+Exibe o texto normalmente.
+
+```css
+p {
+    font-style: normal;
+}
+```
+
+##### `italic`
+
+Exibe o texto em **itálico**.
+
+```css
+p {
+    font-style: italic;
+}
+```
+
+##### `oblique`
+
+Inclina o texto, produzindo um efeito oblíquo.
+
+```css
+p {
+    font-style: oblique;
+}
+```
+
+##### Diferença entre `italic` e `oblique`
+
+De forma simplificada:
+
+- `italic` → normalmente utiliza uma variante itálica da fonte;
+- `oblique` → normalmente utiliza uma versão inclinada da fonte.
+
+------
+
+#### 3. `text-transform`
+
+A propriedade `text-transform` controla a **transformação das letras do texto**.
+
+Os principais valores são:
+
+- `uppercase`
+- `lowercase`
+- `capitalize`
+
+##### `uppercase`
+
+Transforma todas as letras em **maiúsculas**.
+
+```css
+h1 {
+    text-transform: uppercase;
+}
+```
+
+Exemplo:
+
+```text
+desenvolvimento web
+```
+
+Resultado:
+
+```text
+DESENVOLVIMENTO WEB
+```
+
+------
+
+##### `lowercase`
+
+Transforma todas as letras em **minúsculas**.
+
+```css
+h1 {
+    text-transform: lowercase;
+}
+```
+
+Exemplo:
+
+```text
+DESENVOLVIMENTO WEB
+```
+
+Resultado:
+
+```text
+desenvolvimento web
+```
+
+------
+
+##### `capitalize`
+
+Coloca a primeira letra de cada palavra em maiúscula.
+
+```css
+h1 {
+    text-transform: capitalize;
+}
+```
+
+Exemplo:
+
+```text
+desenvolvimento web
+```
+
+Resultado:
+
+```text
+Desenvolvimento Web
+```
+
+------
+
+#### 4. `text-decoration`
+
+A propriedade `text-decoration` adiciona ou remove **decorações no texto**.
+
+Os principais valores são:
+
+- `none`
+- `underline`
+- `overline`
+- `line-through`
+
+##### `none`
+
+Remove a decoração do texto.
+
+```css
+a {
+    text-decoration: none;
+}
+```
+
+É muito utilizado para remover o sublinhado padrão dos links.
+
+------
+
+##### `underline`
+
+Adiciona uma linha **abaixo** do texto.
+
+```css
+p {
+    text-decoration: underline;
+}
+```
+
+Resultado:
+
+```text
+Texto sublinhado
+```
+
+------
+
+##### `overline`
+
+Adiciona uma linha **acima** do texto.
+
+```css
+p {
+    text-decoration: overline;
+}
+```
+
+------
+
+##### `line-through`
+
+Adiciona uma linha **atravessando** o texto.
+
+```css
+p {
+    text-decoration: line-through;
+}
+```
+
+É muito utilizado para representar algo riscado.
+
+Exemplo:
+
+```text
+Preço antigo
+```
+
+------
+
+#### 5. `line-height`
+
+A propriedade `line-height` define a **altura das linhas de texto**, controlando o espaço vertical entre elas.
+
+Exemplo:
+
+```css
+p {
+    line-height: 1.5;
+}
+```
+
+Nesse caso, a altura da linha será proporcional ao tamanho da fonte.
+
+Também podemos utilizar valores com unidades:
+
+```css
+p {
+    line-height: 24px;
+}
+```
+
+##### Exemplo
+
+Um texto com várias linhas:
+
+```text
+Lorem ipsum dolor sit amet,
+consectetur adipisicing elit.
+```
+
+Com um `line-height` maior, haverá mais espaço vertical entre as linhas.
+
+##### Aplicabilidade
+
+É muito utilizada para melhorar a **legibilidade de textos**, principalmente em parágrafos.
+
+Por exemplo:
+
+```css
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+```
+
+------
+
+#### 6. `letter-spacing`
+
+A propriedade `letter-spacing` controla o **espaçamento entre as letras**.
+
+##### Exemplo
+
+```css
+h1 {
+    letter-spacing: 2px;
+}
+```
+
+As letras ficarão mais afastadas.
+
+Também podemos utilizar valores negativos:
+
+```css
+h1 {
+    letter-spacing: -1px;
+}
+```
+
+Nesse caso, as letras ficarão mais próximas.
+
+##### Aplicabilidade
+
+Pode ser utilizada para criar efeitos tipográficos, principalmente em:
+
+- Títulos;
+- Menus;
+- Textos em letras maiúsculas;
+- Elementos de destaque.
+
+------
+
+#### 7. `word-spacing`
+
+A propriedade `word-spacing` controla o **espaçamento entre as palavras**.
+
+Exemplo:
+
+```css
+p {
+    word-spacing: 10px;
+}
+```
+
+O espaço entre uma palavra e outra será aumentado.
+
+Também podemos utilizar valores negativos:
+
+```css
+p {
+    word-spacing: -2px;
+}
+```
+
+##### Diferença
+
+É importante não confundir:
+
+```text
+letter-spacing → espaço entre letras
+
+word-spacing   → espaço entre palavras
+```
+
+------
+
+#### 8. `text-indent`
+
+A propriedade `text-indent` define o **recuo da primeira linha de um texto**.
+
+É semelhante ao recuo utilizado no início de um parágrafo em textos impressos.
+
+Exemplo:
+
+```css
+p {
+    text-indent: 30px;
+}
+```
+
+A primeira linha do parágrafo será deslocada `30px` para a direita.
+
+##### Exemplo visual
+
+Sem `text-indent`:
+
+```text
+Lorem ipsum dolor sit amet, consectetur...
+```
+
+Com `text-indent: 30px`:
+
+```text
+     Lorem ipsum dolor sit amet, consectetur...
+Lorem ipsum dolor sit amet, consectetur...
+```
+
+Observe que normalmente **apenas a primeira linha** recebe o recuo.
+
+------
+
+#### 9. `text-align`
+
+A propriedade `text-align` define o **alinhamento horizontal do conteúdo textual**.
+
+Os principais valores estudados são:
+
+- `left`
+- `right`
+- `center`
+- `justify`
+
+------
+
+##### `left`
+
+Alinha o texto à esquerda.
+
+```css
+p {
+    text-align: left;
+}
+```
+
+É o alinhamento padrão mais comum para textos em idiomas como português.
+
+------
+
+##### `right`
+
+Alinha o texto à direita.
+
+```css
+p {
+    text-align: right;
+}
+```
+
+------
+
+##### `center`
+
+Centraliza o texto.
+
+```css
+h1 {
+    text-align: center;
+}
+```
+
+Muito utilizado em títulos.
+
+------
+
+##### `justify`
+
+Justifica o texto.
+
+```css
+p {
+    text-align: justify;
+}
+```
+
+O navegador ajusta os espaços entre as palavras para que as linhas ocupem a largura disponível, deixando as bordas do bloco de texto mais alinhadas.
+
+É bastante comum em parágrafos de textos longos.
+
+------
+
+#### Resumo
+
+| Propriedade       | Função                           | Exemplos de valores                             |
+| ----------------- | -------------------------------- | ----------------------------------------------- |
+| `font-weight`     | Define o peso da fonte           | `normal`, `bold`, `100`–`900`                   |
+| `font-style`      | Define o estilo da fonte         | `normal`, `italic`, `oblique`                   |
+| `text-transform`  | Transforma maiúsculas/minúsculas | `uppercase`, `lowercase`, `capitalize`          |
+| `text-decoration` | Adiciona/remove decoração        | `none`, `underline`, `overline`, `line-through` |
+| `line-height`     | Define a altura das linhas       | `1.5`, `24px`                                   |
+| `letter-spacing`  | Define o espaço entre letras     | `2px`, `-1px`                                   |
+| `word-spacing`    | Define o espaço entre palavras   | `10px`, `-2px`                                  |
+| `text-indent`     | Define o recuo da primeira linha | `30px`                                          |
+| `text-align`      | Define o alinhamento do texto    | `left`, `right`, `center`, `justify`            |
+
+#### Para memorizar
+
+```text
+font-weight     → espessura
+font-style      → estilo
+text-transform  → maiúsculas/minúsculas
+text-decoration → decoração
+line-height     → altura das linhas
+letter-spacing  → espaço entre letras
+word-spacing    → espaço entre palavras
+text-indent     → recuo da primeira linha
+text-align      → alinhamento
+```
+
+Essas propriedades, combinadas com `font-family` e `font-size`, formam a base para controlar a **tipografia e apresentação dos textos em CSS**.
+
+
+
+---
+
+---
+
+### 60. Imagens de fundo
+
+
+
+
+
+
+
 
 
 
