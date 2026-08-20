@@ -46,7 +46,7 @@
 
 ---
 
-## [Seção 4](secao-4-introdução-ao-html.md): Introdução ao HTML
+## [Seção 4](secao-4-introducao-ao-html/secao-4-introducao-ao-html): Introdução ao HTML
 
 ### 17. Elementos de parágrafos HTML.....
 
