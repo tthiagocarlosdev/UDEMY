@@ -778,7 +778,7 @@ Assim como `cursive`, o resultado pode variar de acordo com as fontes disponíve
 
 ### 47. Fontes e Cores (Prática)
 
-#### Arquivo completo - fontes-ores.html
+#### Arquivo completo - fontes-cores.html
 
 ```html
 <!DOCTYPE html>

@@ -230,7 +230,7 @@ color: brown;
 
 Define a cor do texto como `brown`.
 
-
+#### Código completo - pagina-principal.html
 
 ```html
 <!DOCTYPE html>
@@ -266,8 +266,6 @@ Define a cor do texto como `brown`.
 </body>
 </html>
 ```
-
-
 
 
 
@@ -577,50 +575,5 @@ td {
 -----
 
 -----
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

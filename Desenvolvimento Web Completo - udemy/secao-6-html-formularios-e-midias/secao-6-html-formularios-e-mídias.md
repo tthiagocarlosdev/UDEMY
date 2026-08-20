@@ -8,7 +8,7 @@
 
 Revisão de Tabelas, elementos e atributos.
 
-#### Código completo - tabela2.html
+#### Código completo - tabelas2.html
 
 ```html
 <!DOCTYPE html>
@@ -882,7 +882,7 @@ O uso de `<legend>` melhora tanto a organização visual quanto a acessibilidade
 
 ------
 
-#### Código completo - arquivo mais-formulario.html
+#### Arquivo completo - mais-formulario.html
 
 ```html
 <!DOCTYPE html>
@@ -2298,58 +2298,5 @@ pode ser lido como:
 -----
 
 -----
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
