@@ -176,7 +176,49 @@ _____
 
 ### 60. Imagens de fundo
 
+### 61. [Exercício] Cores e Imagens de Fundo
 
+### 62. Mais sobre seletores (Teoria)
+
+### 63. Seletores (Prática) - Universal, Classe e ID
+
+### 64. Seletores (Prática) - Filho, Descendente e Irmão
+
+### 65. Pseudo-Classes & Pseudo-Elementos
+
+### 66. Herança e Especificidade
+
+### 67. [Projeto] Anna Bella - Página principal
+
+### 68. [Projeto] Anna Bella - Formatação CSS
+
+### 69. [Projeto] Anna Bella - Navegação
+
+---
+
+---
+
+---
+
+
+
+> **Assunto: CSS — background**
+>
+> ```
+> código da aula
+> ```
+
+E acrescenta:
+
+> **Comente o assunto respondendo:**
+>
+> - O que é?
+> - Para que serve?
+> - Como funciona?
+> - Qual é a sintaxe?
+> - Quais são as principais propriedades, atributos e valores?
+> - Dê exemplos de uso.
+> - Para memorizar
 
 
 

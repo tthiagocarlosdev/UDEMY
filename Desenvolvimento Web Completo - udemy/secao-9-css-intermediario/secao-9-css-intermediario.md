@@ -1423,6 +1423,44 @@ Se uma propriedade herdável for definida no pai, os filhos poderão receber ess
 
 Esses dois conceitos são fundamentais para compreender por que determinado estilo aparece em um elemento e por que uma regra CSS pode ou não sobrescrever outra.
 
+---
+
+### Arquivo compleo - cascata.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascata e Herança no CSS</title>
+    <style>
+        p {
+            background-color: peru;
+        }
+        div {
+            color: brown;
+        }
+        div p{
+            background-color: plum;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cascata e Herança no CSS</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima odit atque voluptatum sunt, et doloremque nemo nisi ea sequi eos soluta natus! Non reiciendis ad sapiente. Necessitatibus consequatur aspernatur fuga.
+    </p>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima odit atque voluptatum sunt, et doloremque nemo nisi ea sequi eos soluta natus! Non reiciendis ad sapiente. Necessitatibus consequatur aspernatur fuga.
+        </p>
+    </div>
+    
+</body>
+</html>
+```
+
 
 
 -----
@@ -3291,25 +3329,672 @@ Essas propriedades, combinadas com `font-family` e `font-size`, formam a base pa
 
 
 
----
+#### Arquivo completo - estilos-alinhamentos.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos & alinhamentos</title>
+    <style>
+        body {
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .negrito {
+            /* bold, normal, 100 até 900 */
+            font-weight: 800;
+        }
+        .estilo {
+            /* normal, italic, oblique */
+            font-style: oblique;
+        }
+        .trasformacao {
+            /* uppercase, lowercase, capitalize */
+            text-transform: capitalize;
+        }
+        h1 {
+            text-transform: uppercase;
+        }
+        .decoracao {
+            /* none, underline, overline, line-through */
+            text-decoration: line-through;
+        }
+        a {
+            text-decoration: none;
+        }
+        .entrelinhas {
+            border: 1px solid red;
+            line-height: 2em;
+        }
+        .espacamento {
+            letter-spacing: 0.5em; /* Espaçamento entre linhas */
+            word-spacing: 2em; /* Espaçamento entre palavras */
+        }
+        .recuado {
+            text-indent: 2em;
+        }
+        .alinhamento {
+            /* left, right, center, justify */
+            text-align: justify;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Formatação de texto</h1>
+    <p class="negrito">Texto em negrito</p>
+    <p class="estilo">Texto com estilo</p>
+    <p class="trasformacao">Texto com transformação</p>
+    <p class="decoracao">Texto com decoração</p>
+    <a href="">Google</a>
+    <p class="entrelinhas">Texto entrelinhas</p>
+    <p class="espacamento">Texto com espaço entre letras e palavras</p>
+    <p class="recuado">Texto recuado</p>
+    <p>Texto normal</p>
+
+    <h1>Alinhamento de texto</h1>
+    <p class="alinhamento">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam cumque ut, distinctio incidunt nobis nam minima tempora maiores vero dolorum eaque, perferendis nesciunt in error, sapiente debitis ad. Blanditiis, enim?
+    </p>
+</body>
+</html>
+```
+
+
 
 ---
 
-### 
+---
+
+
 
 ### 60. Imagens de fundo
 
+A propriedade `background` permite definir e controlar o **fundo de um elemento HTML**, podendo envolver cor, imagem, posição, repetição, fixação e outros aspectos.
+
+No seu código, você utilizou praticamente os principais recursos relacionados a imagens de fundo.
+
+------
+
+#### 1. O que é?
+
+Em CSS, o **background** é o conjunto de propriedades responsáveis pela aparência do fundo de um elemento.
+
+Por exemplo:
+
+```css
+.caixa {
+    background-color: lightgreen;
+}
+```
+
+Define uma cor de fundo para a `.caixa`.
+
+Também podemos utilizar uma imagem:
+
+```css
+.caixa {
+    background-image: url('./img/fundo-css-claro.png');
+}
+```
+
+Nesse caso, a imagem passa a ser utilizada como **imagem de fundo**.
+
+> **Importante:** `background` não é uma propriedade exclusiva para imagens. Ele pode controlar **cor, imagem, repetição, posição, tamanho, comportamento da imagem, entre outros aspectos**.
+
+------
+
+#### 2. Para que serve?
+
+É utilizado para colocar elementos visuais **no fundo de outros elementos**.
+
+Por exemplo:
+
+- imagens decorativas;
+- texturas;
+- padrões;
+- gradientes;
+- imagens de destaque;
+- fundos de seções;
+- imagens que ficam atrás de textos ou outros elementos.
+
+Uma diferença importante:
+
+```html
+<img src="imagem.jpg">
+```
+
+é utilizado quando a imagem faz **parte do conteúdo** da página.
+
+Já:
+
+```css
+background-image: url("imagem.jpg");
+```
+
+é mais apropriado quando a imagem é **parte da apresentação/decoração** do elemento.
+
+------
+
+#### 3. Como funciona?
+
+No seu código, temos uma `<div>`:
+
+```html
+<div class="caixa">
+```
+
+E no CSS:
+
+```css
+.caixa {
+    width: 700px;
+    height: 300px;
+}
+```
+
+Portanto, temos uma área de **700 × 300 pixels** onde o background será aplicado.
+
+Você pode definir diferentes características desse fundo:
+
+```css
+background-color: lightgreen;
+background-image: url('./img/fundo-css-claro.png');
+background-repeat: no-repeat;
+background-attachment: scroll;
+background-position: right top;
+```
+
+Cada propriedade controla uma característica diferente.
+
+##### `background-color`
+
+Define a cor de fundo:
+
+```css
+background-color: lightgreen;
+```
+
+##### `background-image`
+
+Define uma imagem:
+
+```css
+background-image: url('./img/fundo-css-claro.png');
+```
+
+##### `background-repeat`
+
+Define se a imagem será repetida:
+
+```css
+background-repeat: no-repeat;
+```
+
+##### `background-position`
+
+Define a posição da imagem:
+
+```css
+background-position: right top;
+```
+
+##### `background-attachment`
+
+Define como a imagem se comporta em relação à rolagem da página:
+
+```css
+background-attachment: scroll;
+```
+
+------
+
+#### 4. Qual é a sintaxe?
+
+Cada propriedade possui sua própria sintaxe.
+
+##### Imagem
+
+```css
+background-image: url("imagem.jpg");
+```
+
+##### Repetição
+
+```css
+background-repeat: no-repeat;
+```
+
+##### Posição
+
+```css
+background-position: right top;
+```
+
+##### Cor
+
+```css
+background-color: purple;
+```
+
+Também existe a propriedade **shorthand** `background`, que permite juntar várias configurações:
+
+```css
+background: purple url("imagem.jpg") no-repeat scroll right top;
+```
+
+A ideia é:
+
+```text
+background: cor imagem repetição fixação posição;
+```
+
+Mas nem todos os valores precisam obrigatoriamente aparecer.
+
+------
+
+#### 5. Principais propriedades e valores
+
+#### `background-image`
+
+Define a imagem.
+
+```css
+background-image: url("imagem.jpg");
+```
+
+Também pode receber:
+
+```css
+background-image: none;
+```
+
+E pode trabalhar com múltiplas imagens:
+
+```css
+background-image:
+    url("imagem1.png"),
+    url("imagem2.png");
+```
+
+------
+
+#### `background-repeat`
+
+Controla a repetição da imagem.
+
+| Valor       | Comportamento                           |
+| ----------- | --------------------------------------- |
+| `repeat`    | repete horizontal e verticalmente       |
+| `repeat-x`  | repete horizontalmente                  |
+| `repeat-y`  | repete verticalmente                    |
+| `no-repeat` | não repete                              |
+| `space`     | distribui as imagens deixando espaços   |
+| `round`     | ajusta as imagens para preencher a área |
+
+O mais importante inicialmente:
+
+```css
+background-repeat: no-repeat;
+```
+
+------
+
+#### `background-position`
+
+Controla a posição da imagem.
+
+Exemplos:
+
+```css
+background-position: left top;
+background-position: center;
+background-position: right bottom;
+```
+
+Também podemos utilizar valores:
+
+```css
+background-position: 50px 100px;
+```
+
+A primeira posição representa o eixo **X** e a segunda o eixo **Y**.
+
+------
+
+#### `background-position-x`
+
+Controla especificamente a posição horizontal:
+
+```css
+background-position-x: left;
+```
+
+Valores comuns:
+
+```css
+left
+center
+right
+```
+
+------
+
+#### `background-position-y`
+
+Controla especificamente a posição vertical:
+
+```css
+background-position-y: top;
+```
+
+Valores comuns:
+
+```css
+top
+center
+bottom
+```
+
+No seu código:
+
+```css
+background-position-x: left;
+background-position-y: bottom;
+```
+
+seria equivalente, em termos de posição, a:
+
+```css
+background-position: left bottom;
+```
+
+------
+
+#### `background-attachment`
+
+Controla o comportamento da imagem durante a rolagem.
+
+Principais valores:
+
+```css
+background-attachment: scroll;
+```
+
+A imagem acompanha o elemento durante a rolagem normal.
+
+```css
+background-attachment: fixed;
+```
+
+A imagem fica fixa em relação à área de visualização.
+
+Existe também:
+
+```css
+background-attachment: local;
+```
+
+que está relacionado à rolagem do próprio elemento.
+
+------
+
+#### `background-color`
+
+Define a cor de fundo:
+
+```css
+background-color: lightgreen;
+```
+
+É importante lembrar que uma cor pode funcionar como **fundo de segurança** caso uma imagem não seja carregada.
+
+------
+
+#### 6. A propriedade `background` — shorthand
+
+Essa é uma das partes mais importantes da sua aula.
+
+Em vez de escrever:
+
+```css
+background-color: purple;
+background-image: url("imagem.jpg");
+background-repeat: no-repeat;
+background-attachment: scroll;
+background-position: right top;
+```
+
+podemos escrever:
+
+```css
+background: purple url("imagem.jpg") no-repeat scroll right top;
+```
+
+Isso é chamado de **shorthand**.
+
+Ou seja, `background` consegue reunir várias propriedades relacionadas ao fundo em uma única declaração.
+
+------
+
+#### 7. Múltiplas imagens de fundo
+
+Você utilizou algo muito interessante no final:
+
+```css
+background: 
+    url('./img/fundo-css-escuro.png') no-repeat right top,
+    url('./img/fundo-css-claro.png') no-repeat left bottom;
+```
+
+O CSS permite colocar **mais de uma imagem de fundo**.
+
+As imagens são separadas por vírgula:
+
+```css
+background: imagem1, imagem2;
+```
+
+No seu exemplo:
+
+```text
+fundo-css-escuro.png → canto superior direito
+fundo-css-claro.png  → canto inferior esquerdo
+```
+
+A **primeira imagem fica sobre as seguintes** quando existe sobreposição.
+
+Isso permite criar fundos bastante complexos utilizando várias imagens.
+
+------
+
+#### 8. Um detalhe importante no seu código
+
+Você escreveu várias declarações de `background`:
+
+```css
+background-color: lightgreen;
+background-image: url('./img/fundo-css-claro.png');
+background-repeat: no-repeat;
+background-attachment: scroll;
+background-position: right top;
+background-position-x: left;
+background-position-y: bottom;
+```
+
+Depois:
+
+```css
+background: purple url('./img/fundo-css-claro.png') no-repeat scroll right top;
+```
+
+E finalmente:
+
+```css
+background: 
+    url('./img/fundo-css-escuro.png') no-repeat right top,
+    url('./img/fundo-css-claro.png') no-repeat left bottom;
+```
+
+**A última declaração é a que prevalece sobre as anteriores quando há conflito.**
+
+Isso acontece por causa da **cascata do CSS**.
+
+Então, para estudar esse código, não pense que todas essas declarações estão sendo aplicadas simultaneamente.
+
+As últimas declarações de `background` estão sobrescrevendo as configurações anteriores correspondentes.
+
+------
+
+#### 9. O que é importante saber/memorizar?
+
+Para essa aula, eu focaria principalmente nestes pontos:
+
+```css
+background-color
+background-image
+background-repeat
+background-position
+background-attachment
+background
+```
+
+E memorize principalmente:
+
+```css
+background-image: url("imagem.jpg");
+background-repeat: no-repeat;
+background-position: center;
+```
+
+e o shorthand:
+
+```css
+background: cor imagem repetição posição;
+```
+
+Além disso:
+
+**`background` pode receber múltiplas imagens**, separadas por vírgulas.
+
+```css
+background:
+    url("imagem1.png"),
+    url("imagem2.png");
+```
+
+#### Resumo mental
+
+Pense assim:
+
+> **Imagem → repete? → onde fica? → acompanha a página? → qual é a cor de fundo?**
+
+Isso já representa grande parte do que você precisa dominar sobre `background` nesse momento.
+
+---
+
+#### Arquivo completo - imagem-fundo.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens de fundo</title>
+    <style>
+        .caixa {
+            width: 700px;
+            height: 300px;
+            border: 3px dotted red;
+            background-color: lightgreen;
+            background-image: url('./img/fundo-css-claro.png');
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-position: right top;
+            background-position-x: left;
+            background-position-y: bottom;
+            background: purple url('./img/fundo-css-claro.png') no-repeat scroll right top;
+            background: 
+                        url('./img/fundo-css-escuro.png') no-repeat right top,
+                        url('./img/fundo-css-claro.png') no-repeat left bottom;
+        }
+       
+    </style>
+</head>
+<body>
+    
+    <div class="caixa">
+        <h1>Título do texto</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, vel maxime! Natus ea, deleniti culpa vitae non omnis tenetur nulla alias exercitationem temporibus magni molestiae nostrum sit harum iure eaque.
+        </p>
+    </div>
+
+
+</body>
+</html>
+```
 
 
 
+---
+
+---
 
 
 
+### 61. [Exercício] Cores e Imagens de Fundo
+
+#### Código completo - exercicio-imagem-fundo.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cores e imagens de fundo</title>
+    <style>
+        body {
+            background: white url('./img/fundo-site.png') repeat scroll left top;
+        }
+        .caixa {
+            background: #d9d7b6 url('./img/fundo-h1.png') repeat-x scroll left top;
+            padding: 0.5em 1em;
+        }
+        h2 {
+            color: #827f65;
+        }
+    </style>
+</head>
+<body>
+    <h1>Logo do site</h1>
+    <div class="caixa">
+        <h2>Título do texto</h2>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum doloremque consectetur, veniam amet, iusto placeat adipisci similique praesentium voluptas tempore enim in. Cupiditate consequuntur a temporibus maxime sint voluptates repudiandae!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aliquam facilis sequi unde ipsam temporibus, error ullam corporis delectus molestias in sit minus maiores culpa odio voluptate deleniti eveniet dicta?
+        </p>
+    </div>
+</body>
+</html>
+```
 
 
 
+---
+
+---
 
 
+
+### 62. Mais sobre seletores (Teoria)
 
 
 

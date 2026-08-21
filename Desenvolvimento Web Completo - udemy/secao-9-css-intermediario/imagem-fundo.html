@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens de fundo</title>
+    <style>
+        .caixa {
+            width: 700px;
+            height: 300px;
+            border: 3px dotted red;
+            background-color: lightgreen;
+            background-image: url('./img/fundo-css-claro.png');
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-position: right top;
+            background-position-x: left;
+            background-position-y: bottom;
+            background: purple url('./img/fundo-css-claro.png') no-repeat scroll right top;
+            background: 
+                        url('./img/fundo-css-escuro.png') no-repeat right top,
+                        url('./img/fundo-css-claro.png') no-repeat left bottom;
+        }
+       
+    </style>
+</head>
+<body>
+    
+    <div class="caixa">
+        <h1>Título do texto</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, vel maxime! Natus ea, deleniti culpa vitae non omnis tenetur nulla alias exercitationem temporibus magni molestiae nostrum sit harum iure eaque.
+        </p>
+    </div>
+
+
+</body>
+</html>
