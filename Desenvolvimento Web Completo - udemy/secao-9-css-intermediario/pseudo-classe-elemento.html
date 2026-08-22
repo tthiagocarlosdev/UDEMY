@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-classe-elemento.html</title>
+
+    <style>
+
+        /* links */
+        a {
+            text-decoration: none;
+            color: green;
+            padding: 5px 10px;
+        }
+
+        /* links não visitados */
+        a:link {
+            color: grey;
+        }
+
+        /* links visitados */
+        a:visited {
+            color: red;
+        }
+        
+        /* links hover, passar o cursor sobre o link */
+        a:hover {
+            background-color: green;
+            color: white;
+        }
+
+        /* links ativos */
+        a:active {
+            background-color: purple;
+        }
+
+        /* Formulários */
+        input:checked {
+            margin-left: 20px
+        }
+
+        input:focus {
+            background-color: purple;
+            color: white;
+        }
+
+        input:required {
+            border: 2px solid red;
+        }
+
+        /* Pseudo-elemento */
+        p::first-line {
+            color: red;
+        }
+
+        p::first-letter {
+            font-size: 3em;
+            color: purple;
+        }
+
+        p::selection {
+            background-color: yellow;
+        }
+
+        h2::before {
+            content: "{";
+            color: violet;
+        }
+        h2::after {
+            content: "}";
+            color: violet;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div>
+        Conteúdo da div
+    </div>
+
+    <h2>Conteúdo do h2</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, architecto. Ipsa, ea a amet doloribus magnam numquam aperiam, quam iste exercitationem praesentium sit et veniam nulla, culpa optio fuga fugit?
+    </p>
+
+    <a href="https://www.google.com/">Google</a> | 
+    <a href="https://www.facebook.com/">Facebook</a> | 
+    <a href="https://www.instagram.com/">Instagram</a>
+
+    <h2>Formulários</h2>
+    <input type="checkbox" name="" id=""> aceito <br>
+    <input type="radio" name="opcao" id=""> Sim <br>
+    <input type="radio" name="opcao" id=""> Não <br>
+    <input type="text" required placeholder="Digite seu nome" name="" id="">
+    <input type="text" placeholder="Digite seu nome" name="" id="">
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam facere, illo sapiente ipsam alias mollitia dicta magni, quos, soluta quam odit ducimus ab! Odio sapiente accusamus possimus aliquid soluta enim?
+    </p>
+
+</body>
+</html>

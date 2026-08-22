@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais sobre seletores (pŕatica)</title>
+
+    <style>
+        /* seletor universal */
+        * {
+            border: solid 1px red;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* seletor de tipo/elemento */
+        h1, p, h2 {
+            padding: 10px;
+            border: solid 1px purple;
+        }
+
+        /* seletor de classe */
+        .destaque {
+            background-color: red;
+        }
+
+        /* seletor de classe */
+        .titulo {
+            color: white;
+        }
+
+        /* seletor de ID */
+        #promocao {
+            background-color: purple;
+            color: white;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1 class="destaque titulo">Título da página</h1>
+
+    <h2 class="destaque">Subtítulo da página</h2>
+
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam veniam nemo tempora maxime est impedit expedita, omnis esse magni quisquam? Voluptatum quaerat quae odio sit. Corporis pariatur beatae aperiam explicabo!
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi molestias earum qui molestiae aspernatur eligendi quos unde eaque error, assumenda nobis. Eos maxime ratione laudantium modi quaerat, praesentium placeat sapiente.
+    </p>
+
+    <div id="promocao">
+        <h2>Subtítulo da página</h2>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium nobis eius alias aspernatur vero cum deleniti aperiam, nam eligendi consequuntur facilis voluptatibus, non provident voluptatum dicta labore harum est.
+        </p>
+    </div>
+    
+
+</body>
+</html>

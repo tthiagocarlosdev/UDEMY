@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio seletores</title>
+
+    <style>
+
+        h1 {
+            color: green;
+        }
+
+        h1+p {
+            border-top: 3px solid gray;
+            padding-top: 10px;
+        }
+
+        p>a {
+            background-color: purple;
+            color: white;
+        }
+
+        p.destaque {
+            color: purple;
+        }
+
+    </style>
+</head>
+<body>
+        <h1>Título da página</h1>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum totam in soluta, repellendus illo obcaecati labore molestias provident neque consectetur cumque recusandae veritatis aliquam ab atque error molestiae eius doloremque! <br>
+            <a href="">Leia mais</a> - 
+            <a href="">Gostei (10)</a>
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, quaerat fugit? Eius expedita cumque, cum sunt sequi aliquam quos fugiat harum ipsam quo laudantium! Impedit nobis perspiciatis eveniet saepe cumque.
+        </p>
+
+        <h2>Subtítulo da página</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea consectetur laboriosam dolorum minima exercitationem cumque ab quos at? Voluptatem dolore laboriosam numquam dolorum minus, quaerat dolorem molestias ex voluptate neque.
+        </p>
+        <p class="destaque">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iusto aliquid at eligendi enim atque veniam non recusandae repudiandae dolore perferendis, minima odio veritatis optio vel amet sint quam aspernatur.
+        </p>
+</body>
+</html>

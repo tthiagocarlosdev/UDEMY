@@ -3996,6 +3996,1523 @@ Isso já representa grande parte do que você precisa dominar sobre `background`
 
 ### 62. Mais sobre seletores (Teoria)
 
+Os **seletores CSS** são usados para indicar **quais elementos HTML serão afetados por uma regra CSS**.
+
+A ideia básica é:
+
+```css
+seletor {
+    propriedade: valor;
+}
+```
+
+Por exemplo:
+
+```css
+h1 {
+    color: blue;
+}
+```
+
+Aqui, `h1` é o seletor. A regra será aplicada aos elementos `<h1>`.
+
+------
+
+#### 1. Seletor universal `*`
+
+##### O que é?
+
+O `*` representa **todos os elementos HTML**.
+
+##### Para que serve?
+
+Serve para aplicar uma regra a todos os elementos da página.
+
+##### Como funciona?
+
+```css
+* {
+    margin: 0;
+}
+```
+
+Todo elemento receberá `margin: 0`.
+
+##### Sintaxe
+
+```css
+* {
+    propriedade: valor;
+}
+```
+
+##### Exemplo
+
+```css
+* {
+    box-sizing: border-box;
+}
+```
+
+É bastante comum utilizar o seletor universal para fazer uma configuração inicial da página.
+
+------
+
+#### 2. Seletor de tipo/tag
+
+**Seletor de tipo** ou **seletor de elemento**.
+
+Exemplos:
+
+```css
+h1 {}
+h2 {}
+p {}
+div {}
+```
+
+##### O que é?
+
+Seleciona elementos HTML pelo **nome da tag**.
+
+##### Para que serve?
+
+Serve para aplicar uma regra a **todos os elementos daquele tipo**.
+
+##### Como funciona?
+
+```css
+h1 {
+    color: red;
+}
+```
+
+Todos os `<h1>` da página receberão `color: red`.
+
+##### Sintaxe
+
+```css
+elemento {
+    propriedade: valor;
+}
+```
+
+##### Exemplo
+
+HTML:
+
+```html
+<h1>Título 1</h1>
+<h1>Título 2</h1>
+<p>Um parágrafo.</p>
+```
+
+CSS:
+
+```css
+h1 {
+    color: blue;
+}
+```
+
+Os dois `<h1>` serão selecionados.
+
+------
+
+#### 3. Seletor de classe `.destaque`
+
+##### O que é?
+
+Seleciona elementos que possuem determinada **classe**.
+
+##### Para que serve?
+
+É um dos seletores mais utilizados para criar estilos que podem ser aplicados a **vários elementos diferentes**.
+
+##### Como funciona?
+
+HTML:
+
+```html
+<p class="destaque">Texto importante</p>
+<p>Texto normal</p>
+<h2 class="destaque">Título importante</h2>
+```
+
+CSS:
+
+```css
+.destaque {
+    color: red;
+}
+```
+
+Tanto o `<p>` quanto o `<h2>` serão selecionados porque possuem a classe `destaque`.
+
+##### Sintaxe
+
+```css
+.nome-da-classe {
+    propriedade: valor;
+}
+```
+
+##### Exemplo
+
+```css
+.destaque {
+    background-color: yellow;
+    font-weight: bold;
+}
+```
+
+##### Ponto importante
+
+Uma classe pode ser utilizada em **vários elementos**:
+
+```html
+<p class="destaque">Texto 1</p>
+<p class="destaque">Texto 2</p>
+<div class="destaque">Texto 3</div>
+```
+
+Essa é uma das principais diferenças em relação ao `id`.
+
+------
+
+#### 4. Seletor de ID `#principal`
+
+##### O que é?
+
+Seleciona um elemento através do seu atributo `id`.
+
+##### Para que serve?
+
+Serve para selecionar um elemento específico que possui determinado ID.
+
+##### Como funciona?
+
+HTML:
+
+```html
+<h1 id="principal">Título</h1>
+```
+
+CSS:
+
+```css
+#principal {
+    color: red;
+}
+```
+
+O elemento com `id="principal"` será selecionado.
+
+##### Sintaxe
+
+```css
+#nome-do-id {
+    propriedade: valor;
+}
+```
+
+##### Exemplo
+
+```html
+<div id="cabecalho">
+    <h1>Meu site</h1>
+</div>
+#cabecalho {
+    background-color: black;
+}
+```
+
+##### Classe × ID
+
+Uma forma simples de lembrar:
+
+```text
+.class → pode ser usada em vários elementos
+#id    → identifica um elemento específico
+```
+
+Além disso, um `id` deve ser **único dentro da página**.
+
+------
+
+#### 5. Seletor de filho `div > h1`
+
+##### O que é?
+
+Seleciona um elemento que é **filho direto** de outro elemento.
+
+##### Para que serve?
+
+Quando você quer selecionar apenas elementos que estão **imediatamente dentro** de outro elemento.
+
+##### Como funciona?
+
+HTML:
+
+```html
+<div>
+    <h1>Título</h1>
+</div>
+```
+
+CSS:
+
+```css
+div > h1 {
+    color: red;
+}
+```
+
+O `<h1>` é filho direto do `<div>`, portanto será selecionado.
+
+Mas observe:
+
+```html
+<div>
+    <section>
+        <h1>Título</h1>
+    </section>
+</div>
+```
+
+Nesse caso:
+
+```css
+div > h1 {
+    color: red;
+}
+```
+
+**não selecionará o `<h1>`**, porque ele não é filho direto do `<div>`.
+
+A relação é:
+
+```text
+div
+└── section
+    └── h1
+```
+
+O `<h1>` é descendente do `div`, mas não é seu filho direto.
+
+##### Sintaxe
+
+```css
+pai > filho {
+    propriedade: valor;
+}
+```
+
+------
+
+#### 6. Seletor de descendente `div h1`
+
+##### O que é?
+
+Seleciona elementos que estão **dentro de outro elemento**, independentemente de quantos níveis existam entre eles.
+
+##### Para que serve?
+
+Quando você quer selecionar um elemento que seja descendente de outro.
+
+##### Como funciona?
+
+```html
+<div>
+    <section>
+        <h1>Título</h1>
+    </section>
+</div>
+div h1 {
+    color: blue;
+}
+```
+
+O `<h1>` será selecionado.
+
+A relação pode ser:
+
+```text
+div
+└── section
+    └── article
+        └── h1
+```
+
+Ainda assim:
+
+```css
+div h1 {}
+```
+
+selecionará o `<h1>`.
+
+##### Sintaxe
+
+```css
+ancestral descendente {
+    propriedade: valor;
+}
+```
+
+##### Diferença importante
+
+```css
+div > h1
+```
+
+→ somente **filho direto**
+
+```css
+div h1
+```
+
+→ qualquer **descendente**
+
+------
+
+#### 7. Seletor de irmão adjacente `h1 + p`
+
+##### O que é?
+
+Seleciona um elemento que é o **irmão imediatamente seguinte** de outro elemento.
+
+##### Para que serve?
+
+Quando você quer aplicar um estilo ao elemento que aparece **logo depois** de outro.
+
+##### Como funciona?
+
+HTML:
+
+```html
+<h1>Título</h1>
+<p>Primeiro parágrafo.</p>
+<p>Segundo parágrafo.</p>
+```
+
+CSS:
+
+```css
+h1 + p {
+    color: red;
+}
+```
+
+Somente o **primeiro `<p>`** será selecionado.
+
+Porque ele vem imediatamente depois do `<h1>`.
+
+Visualmente:
+
+```text
+h1
+↓
+p     ← selecionado
+↓
+p     ← não selecionado
+```
+
+##### Sintaxe
+
+```css
+elemento1 + elemento2 {
+    propriedade: valor;
+}
+```
+
+------
+
+#### 8. Seletor de irmão geral `h1 ~ p`
+
+##### O que é?
+
+Seleciona os **irmãos que aparecem depois** de determinado elemento.
+
+##### Para que serve?
+
+Quando você quer selecionar vários elementos irmãos posteriores, e não apenas o primeiro.
+
+##### Como funciona?
+
+```html
+<h1>Título</h1>
+<p>Primeiro parágrafo.</p>
+<p>Segundo parágrafo.</p>
+<p>Terceiro parágrafo.</p>
+h1 ~ p {
+    color: red;
+}
+```
+
+Os **três `<p>`** serão selecionados.
+
+```text
+h1
+↓
+p ← selecionado
+↓
+p ← selecionado
+↓
+p ← selecionado
+```
+
+##### Sintaxe
+
+```css
+elemento1 ~ elemento2 {
+    propriedade: valor;
+}
+```
+
+------
+
+#### Diferença entre `+` e `~`
+
+Essa é uma diferença que vale muito a pena memorizar:
+
+##### `+` — irmão adjacente
+
+Seleciona **somente o próximo irmão**.
+
+```css
+h1 + p {}
+h1
+ ↓
+ p ← selecionado
+ ↓
+ p ← não
+```
+
+##### `~` — irmão geral
+
+Seleciona **todos os irmãos posteriores compatíveis**.
+
+```css
+h1 ~ p {}
+h1
+ ↓
+ p ← selecionado
+ ↓
+ p ← selecionado
+ ↓
+ p ← selecionado
+```
+
+------
+
+#### Resumo dos seletores
+
+| Seletor      | Nome            | Seleciona                                     |
+| ------------ | --------------- | --------------------------------------------- |
+| `*`          | Universal       | Todos os elementos                            |
+| `h1`         | Tipo/elemento   | Todos os `<h1>`                               |
+| `.destaque`  | Classe          | Elementos com essa classe                     |
+| `#principal` | ID              | Elemento com esse ID                          |
+| `div > h1`   | Filho           | `<h1>` filho direto de `<div>`                |
+| `div h1`     | Descendente     | `<h1>` dentro de `<div>`, em qualquer nível   |
+| `h1 + p`     | Irmão adjacente | Primeiro `<p>` imediatamente depois de `<h1>` |
+| `h1 ~ p`     | Irmão geral     | Todos os `<p>` irmãos depois de `<h1>`        |
+
+#### Uma maneira fácil de memorizar
+
+```text
+*       → todos
+h1      → pela tag
+.classe → pela classe
+#id     → pelo ID
+
+A > B   → B é filho direto de A
+A B     → B é descendente de A
+
+A + B   → primeiro B depois de A
+A ~ B   → todos os B depois de A
+```
+
+---
+
+---
+
+
+
+### 63. Seletores (Prática) - Universal, Classe e ID
+
+#### Arquivo completo - mais-sobre-seletores.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais sobre seletores (pŕatica)</title>
+
+    <style>
+        /* seletor universal */
+        * {
+            border: solid 1px red;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* seletor de tipo/elemento */
+        h1, p, h2 {
+            padding: 10px;
+            border: solid 1px purple;
+        }
+
+        /* seletor de classe */
+        .destaque {
+            background-color: red;
+        }
+
+        /* seletor de classe */
+        .titulo {
+            color: white;
+        }
+
+        /* seletor de ID */
+        #promocao {
+            background-color: purple;
+            color: white;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1 class="destaque titulo">Título da página</h1>
+
+    <h2 class="destaque">Subtítulo da página</h2>
+
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam veniam nemo tempora maxime est impedit expedita, omnis esse magni quisquam? Voluptatum quaerat quae odio sit. Corporis pariatur beatae aperiam explicabo!
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi molestias earum qui molestiae aspernatur eligendi quos unde eaque error, assumenda nobis. Eos maxime ratione laudantium modi quaerat, praesentium placeat sapiente.
+    </p>
+
+    <div id="promocao">
+        <h2>Subtítulo da página</h2>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium nobis eius alias aspernatur vero cum deleniti aperiam, nam eligendi consequuntur facilis voluptatibus, non provident voluptatum dicta labore harum est.
+        </p>
+    </div>
+    
+
+</body>
+</html>
+```
+
+---
+
+---
+
+
+
+### 64. Seletores (Prática) - Filho, Descendente e Irmão
+
+#### Arquivo completo - mais-sobre-seletores2.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais sobre seletores (pŕatica)</title>
+
+    <style>
+        /* seletor de filho direto */
+        div>h1 {
+            background-color: orange;
+        }
+
+        /* seletor de filho direto */
+        li>a {
+            color: brown;
+            text-decoration: none;
+        }
+
+        /* seletor de descendente */
+        div h2 {
+            background-color: olivedrab;
+            color: whitesmoke;
+        }
+
+        /* seletor de irmão adjacente */
+        h2+p {
+            color: brown;
+            border: 1px solid brown;
+        }
+
+        /* seletor de irmão geral */
+        h3~p {
+            color: brown;
+            border: 1px solid brown;
+        }
+    </style>
+
+</head>
+<body>
+    <div style="border: solid 1px black;">
+        <h1 class="destaque titulo">Título da página</h1>
+        <div style="background-color: grey;">
+            <h1 class="destaque titulo">Título da página</h1>
+        </div>
+    </div>
+
+    <ul>
+        <li>
+            <a href="">Home</a>
+            <span><a href="">Outro link</a></span>
+        </li>
+        <li><a href="">Sobre</a></li>
+    </ul>
+
+    <div style="border: solid 1px black;">
+        <h2 class="destaque titulo">Subtítulo da página</h2>
+        <div style="background-color: grey;">
+            <h2 class="destaque titulo">Subtítulo da página</h2>
+        </div>
+    </div>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem tempore dolore quos excepturi consectetur sunt minima quae commodi eveniet voluptatibus dolorem impedit et sint quibusdam, ea, suscipit cum odit voluptatum?
+    </p>
+
+    <h2>Seletor de irmão adjacente</h2>
+
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam veniam nemo tempora maxime est impedit expedita, omnis esse magni quisquam? Voluptatum quaerat quae odio sit. Corporis pariatur beatae aperiam explicabo!
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi molestias earum qui molestiae aspernatur eligendi quos unde eaque error, assumenda nobis. Eos maxime ratione laudantium modi quaerat, praesentium placeat sapiente.
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ducimus adipisci, nihil odit assumenda dicta saepe fugiat. Quisquam molestias delectus pariatur praesentium optio. Recusandae, dolor obcaecati! Dolor necessitatibus deserunt excepturi.
+    </p>
+
+    <h3>Seletor de irmão geral</h3>
+
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam veniam nemo tempora maxime est impedit expedita, omnis esse magni quisquam? Voluptatum quaerat quae odio sit. Corporis pariatur beatae aperiam explicabo!
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi molestias earum qui molestiae aspernatur eligendi quos unde eaque error, assumenda nobis. Eos maxime ratione laudantium modi quaerat, praesentium placeat sapiente.
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga hic repellat eius, necessitatibus in et. Minus, sapiente assumenda officia sint hic illum iusto minima quia unde, culpa perferendis, fugit omnis.
+    </p>
+
+</body>
+</html>
+```
+
+---
+
+#### Arquivo completo - desafio-seletores.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio seletores</title>
+
+    <style>
+
+        h1 {
+            color: green;
+        }
+
+        h1+p {
+            border-top: 3px solid gray;
+            padding-top: 10px;
+        }
+
+        p>a {
+            background-color: purple;
+            color: white;
+        }
+
+        p.destaque {
+            color: purple;
+        }
+
+    </style>
+</head>
+<body>
+        <h1>Título da página</h1>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum totam in soluta, repellendus illo obcaecati labore molestias provident neque consectetur cumque recusandae veritatis aliquam ab atque error molestiae eius doloremque! <br>
+            <a href="">Leia mais</a> - 
+            <a href="">Gostei (10)</a>
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, quaerat fugit? Eius expedita cumque, cum sunt sequi aliquam quos fugiat harum ipsam quo laudantium! Impedit nobis perspiciatis eveniet saepe cumque.
+        </p>
+
+        <h2>Subtítulo da página</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea consectetur laboriosam dolorum minima exercitationem cumque ab quos at? Voluptatem dolore laboriosam numquam dolorum minus, quaerat dolorem molestias ex voluptate neque.
+        </p>
+        <p class="destaque">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iusto aliquid at eligendi enim atque veniam non recusandae repudiandae dolore perferendis, minima odio veritatis optio vel amet sint quam aspernatur.
+        </p>
+</body>
+</html>
+```
+
+---
+
+---
+
+
+
+### 65. Pseudo-Classes & Pseudo-Elementos
+
+Pseudo-classes e pseudo-elementos permitem aplicar estilos a elementos HTML com base em **um estado, uma condição ou uma parte específica do elemento**.
+
+A principal diferença é:
+
+> **Pseudo-classe → estado ou condição do elemento.**
+> **Pseudo-elemento → parte específica do elemento ou conteúdo criado pelo CSS.**
+
+------
+
+#### 1. Pseudo-classes
+
+##### O que são?
+
+Pseudo-classes são palavras-chave adicionadas a um seletor para selecionar um elemento quando ele está em **determinado estado ou condição**.
+
+Elas utilizam **um `:`**:
+
+```css
+seletor:pseudo-classe {
+    propriedade: valor;
+}
+```
+
+Por exemplo:
+
+```css
+a:hover {
+    color: red;
+}
+```
+
+O estilo será aplicado quando o mouse estiver sobre o link.
+
+------
+
+##### Para que servem?
+
+São muito utilizadas para criar **interatividade e comportamentos visuais** sem precisar de JavaScript.
+
+Por exemplo:
+
+- mudar um link quando o mouse passa sobre ele;
+- identificar links visitados;
+- alterar um campo quando ele recebe foco;
+- estilizar checkbox marcado;
+- estilizar campos obrigatórios;
+- selecionar elementos com determinadas condições.
+
+------
+
+#### 2. `:link`
+
+Seleciona links que **ainda não foram visitados**.
+
+```css
+a:link {
+    color: grey;
+}
+```
+
+os links não visitados ficam cinza.
+
+------
+
+#### 3. `:visited`
+
+Seleciona links que o navegador considera **já visitados**.
+
+```css
+a:visited {
+    color: red;
+}
+```
+
+O link visitado ficará vermelho.
+
+É importante saber que os navegadores restringem algumas propriedades que podem ser alteradas em `:visited`, principalmente por questões de privacidade.
+
+------
+
+#### 4. `:hover`
+
+É uma das pseudo-classes mais utilizadas.
+
+Seleciona o elemento quando o **cursor está sobre ele**.
+
+```css
+a:hover {
+    background-color: green;
+    color: white;
+}
+```
+
+Quando o mouse passa sobre o link:
+
+- o fundo fica verde;
+- o texto fica branco.
+
+Também pode ser usado em outros elementos:
+
+```css
+button:hover {
+    background-color: black;
+    color: white;
+}
+```
+
+------
+
+#### 5. `:active`
+
+Representa o momento em que o elemento está sendo **ativado**.
+
+Por exemplo, ao clicar e manter o botão do mouse pressionado sobre um link:
+
+```css
+a:active {
+    background-color: purple;
+}
+```
+
+Uma maneira simples de memorizar:
+
+```text
+:hover  → mouse sobre
+:active → momento da ativação/clique
+```
+
+------
+
+#### 6. `:checked`
+
+Seleciona elementos de formulário que estão **marcados/selecionados**.
+
+No seu código:
+
+```css
+input:checked {
+    margin-left: 20px;
+}
+```
+
+Isso pode afetar:
+
+```html
+<input type="checkbox">
+<input type="radio">
+```
+
+quando estiverem selecionados.
+
+Por exemplo:
+
+```css
+input:checked {
+    accent-color: green;
+}
+```
+
+------
+
+#### 7. `:focus`
+
+Seleciona um elemento que está **recebendo foco**.
+
+Por exemplo, quando você clica em um campo de texto:
+
+```css
+input:focus {
+    background-color: purple;
+    color: white;
+}
+```
+
+No seu código, ao clicar no `<input>`:
+
+```html
+<input type="text">
+```
+
+ele recebe `focus` e o CSS é aplicado.
+
+É muito utilizado para melhorar a experiência de preenchimento de formulários.
+
+------
+
+#### 8. `:required`
+
+Seleciona elementos que possuem o atributo HTML `required`.
+
+```css
+input:required {
+    border: 2px solid red;
+}
+```
+
+Este campo:
+
+```html
+<input type="text" required>
+```
+
+será selecionado.
+
+Enquanto este:
+
+```html
+<input type="text">
+```
+
+não será.
+
+#### Atenção
+
+`required` é um **atributo HTML**.
+
+`:required` é uma **pseudo-classe CSS** que permite selecionar elementos que possuem essa condição.
+
+------
+
+#### 9. Pseudo-elementos
+
+##### O que são?
+
+Pseudo-elementos permitem selecionar e estilizar **uma parte específica de um elemento** ou inserir determinado conteúdo através do CSS.
+
+A sintaxe moderna utiliza **dois `::`**:
+
+```css
+seletor::pseudo-elemento {
+    propriedade: valor;
+}
+```
+
+Por exemplo:
+
+```css
+p::first-letter {
+    color: red;
+}
+```
+
+Seleciona a primeira letra do `<p>`.
+
+------
+
+#### 10. `::first-line`
+
+Seleciona a **primeira linha visual** de um texto.
+
+```css
+p::first-line {
+    color: red;
+}
+```
+
+A primeira linha do parágrafo ficará vermelha.
+
+Importante: a primeira linha depende do tamanho disponível para o texto.
+
+Se você aumentar ou diminuir a janela do navegador, a quantidade de palavras que cabem na primeira linha pode mudar.
+
+------
+
+#### 11. `::first-letter`
+
+Seleciona a **primeira letra**.
+
+```css
+p::first-letter {
+    font-size: 3em;
+    color: purple;
+}
+```
+
+Faz com que a primeira letra fique:
+
+- maior;
+- roxa.
+
+É bastante utilizado para criar efeitos de **letra capitular**.
+
+------
+
+#### 12. `::selection`
+
+Controla a aparência do texto enquanto o usuário o **seleciona com o mouse**.
+
+```css
+p::selection {
+    background-color: yellow;
+}
+```
+
+Ao selecionar o texto do `<p>`, o fundo da seleção ficará amarelo.
+
+Também podemos fazer:
+
+```css
+p::selection {
+    background-color: black;
+    color: white;
+}
+```
+
+------
+
+#### 13. `::before`
+
+O `::before` cria um pseudo-elemento **antes do conteúdo** do elemento.
+
+```css
+h2::before {
+    content: "{";
+    color: violet;
+}
+```
+
+O CSS adicionará `{` antes do conteúdo do `<h2>`.
+
+Se tivermos:
+
+```html
+<h2>Conteúdo do h2</h2>
+```
+
+visualmente teremos algo semelhante a:
+
+```text
+{Conteúdo do h2
+```
+
+##### Importante
+
+Quando utilizamos `::before` para inserir conteúdo, normalmente precisamos utilizar:
+
+```css
+content: "...";
+```
+
+------
+
+#### 14. `::after`
+
+É semelhante ao `::before`, mas insere o conteúdo **depois**.
+
+```css
+h2::after {
+    content: "}";
+    color: violet;
+}
+```
+
+Resultado:
+
+```text
+Conteúdo do h2}
+```
+
+Juntando os dois:
+
+```css
+h2::before {
+    content: "{";
+}
+
+h2::after {
+    content: "}";
+}
+```
+
+Temos:
+
+```text
+{Conteúdo do h2}
+```
+
+------
+
+#### Pseudo-classe × pseudo-elemento
+
+Essa é provavelmente a parte **mais importante para memorizar**.
+
+|            | Pseudo-classe   | Pseudo-elemento            |
+| ---------- | --------------- | -------------------------- |
+| Símbolo    | `:`             | `::`                       |
+| Representa | estado/condição | parte do elemento/conteúdo |
+| Exemplo    | `:hover`        | `::first-letter`           |
+| Exemplo    | `:focus`        | `::before`                 |
+| Exemplo    | `:checked`      | `::after`                  |
+
+#### Pense assim:
+
+```text
+:hover
+   ↓
+"Quando isso acontecer com o elemento..."
+
+::first-letter
+   ↓
+"Quero mexer nesta parte do elemento..."
+```
+
+------
+
+#### Sintaxe
+
+##### Pseudo-classe
+
+```css
+seletor:pseudo-classe {
+    propriedade: valor;
+}
+```
+
+Exemplo:
+
+```css
+a:hover {
+    color: red;
+}
+```
+
+##### Pseudo-elemento
+
+```css
+seletor::pseudo-elemento {
+    propriedade: valor;
+}
+```
+
+Exemplo:
+
+```css
+p::first-letter {
+    color: red;
+}
+```
+
+------
+
+#### Principais pseudo-classes desta aula
+
+| Pseudo-classe | Função                     |
+| ------------- | -------------------------- |
+| `:link`       | link não visitado          |
+| `:visited`    | link visitado              |
+| `:hover`      | cursor sobre o elemento    |
+| `:active`     | elemento sendo ativado     |
+| `:checked`    | checkbox/radio selecionado |
+| `:focus`      | elemento recebeu foco      |
+| `:required`   | elemento possui `required` |
+
+Existem muitas outras, como:
+
+```css
+:first-child
+:last-child
+:nth-child()
+:not()
+:disabled
+:enabled
+:valid
+:invalid
+```
+
+Você provavelmente estudará várias delas posteriormente.
+
+------
+
+#### Principais pseudo-elementos desta aula
+
+| Pseudo-elemento  | Função            |
+| ---------------- | ----------------- |
+| `::first-line`   | primeira linha    |
+| `::first-letter` | primeira letra    |
+| `::selection`    | texto selecionado |
+| `::before`       | conteúdo antes    |
+| `::after`        | conteúdo depois   |
+
+Também existem outros, como:
+
+```css
+::placeholder
+::marker
+::file-selector-button
+```
+
+------
+
+#### Um detalhe importante sobre `:` e `::`
+
+Você verá códigos antigos usando apenas um `:` para pseudo-elementos:
+
+```css
+p:first-letter {}
+p:before {}
+```
+
+A sintaxe moderna/preferida é:
+
+```css
+p::first-letter {}
+p::before {}
+```
+
+Portanto, para seus estudos, **prefira `::` para pseudo-elementos**.
+
+------
+
+#### Para memorizar
+
+Eu guardaria apenas estas ideias inicialmente:
+
+##### 1. Pseudo-classe = estado/condição
+
+```css
+a:hover {}
+input:focus {}
+input:checked {}
+```
+
+Pense:
+
+> **"Em que estado o elemento está?"**
+
+------
+
+##### 2. Pseudo-elemento = parte do elemento
+
+```css
+p::first-letter {}
+p::first-line {}
+```
+
+Pense:
+
+> **"Qual parte do elemento quero modificar?"**
+
+------
+
+##### 3. `::before` e `::after` = conteúdo criado pelo CSS
+
+```css
+h2::before {
+    content: "{";
+}
+
+h2::after {
+    content: "}";
+}
+```
+
+------
+
+##### 4. Decore esta diferença
+
+```text
+:   → PSEUDO-CLASSE  → estado/condição
+::  → PSEUDO-ELEMENTO → parte/conteúdo
+```
+
+E uma observação importante: **pseudo-classes e pseudo-elementos não são propriedades, atributos ou valores**. Eles são **seletores especiais** usados para determinar quais elementos ou partes dos elementos receberão as regras CSS.
+
+---
+
+#### Arquivo completo - pseudo-classe-elemento.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-classe-elemento.html</title>
+
+    <style>
+
+        /* links */
+        a {
+            text-decoration: none;
+            color: green;
+            padding: 5px 10px;
+        }
+
+        /* links não visitados */
+        a:link {
+            color: grey;
+        }
+
+        /* links visitados */
+        a:visited {
+            color: red;
+        }
+        
+        /* links hover, passar o cursor sobre o link */
+        a:hover {
+            background-color: green;
+            color: white;
+        }
+
+        /* links ativos */
+        a:active {
+            background-color: purple;
+        }
+
+        /* Formulários */
+        input:checked {
+            margin-left: 20px
+        }
+
+        input:focus {
+            background-color: purple;
+            color: white;
+        }
+
+        input:required {
+            border: 2px solid red;
+        }
+
+        /* Pseudo-elemento */
+        p::first-line {
+            color: red;
+        }
+
+        p::first-letter {
+            font-size: 3em;
+            color: purple;
+        }
+
+        p::selection {
+            background-color: yellow;
+        }
+
+        h2::before {
+            content: "{";
+            color: violet;
+        }
+        h2::after {
+            content: "}";
+            color: violet;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div>
+        Conteúdo da div
+    </div>
+
+    <h2>Conteúdo do h2</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, architecto. Ipsa, ea a amet doloribus magnam numquam aperiam, quam iste exercitationem praesentium sit et veniam nulla, culpa optio fuga fugit?
+    </p>
+
+    <a href="https://www.google.com/">Google</a> | 
+    <a href="https://www.facebook.com/">Facebook</a> | 
+    <a href="https://www.instagram.com/">Instagram</a>
+
+    <h2>Formulários</h2>
+    <input type="checkbox" name="" id=""> aceito <br>
+    <input type="radio" name="opcao" id=""> Sim <br>
+    <input type="radio" name="opcao" id=""> Não <br>
+    <input type="text" required placeholder="Digite seu nome" name="" id="">
+    <input type="text" placeholder="Digite seu nome" name="" id="">
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam facere, illo sapiente ipsam alias mollitia dicta magni, quos, soluta quam odit ducimus ab! Odio sapiente accusamus possimus aliquid soluta enim?
+    </p>
+
+</body>
+</html>
+```
+
+---
+
+#### Arquivo completo - desafio-pseudo-classe-elemento.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio pseudo-classe-elemento</title>
+
+    <style>
+        a {
+            text-decoration: none;
+            padding: 0.5em 1em;
+            color: blueviolet;
+        }
+
+        a:hover {
+            background-color: blueviolet;
+            color: white;
+            
+        }
+
+        a:active {
+            color: lightblue;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <a href="">Home</a> | 
+    <a href="">Sobre</a> | 
+    <a href="">Empresa</a> |
+    <a href="">Produtos</a> |
+    <a href="">Contato</a>
+</body>
+</html>
+```
+
+---
+
+---
+
+
+
+### 66. Herança e Especificidade
+
+
+
 
 
 

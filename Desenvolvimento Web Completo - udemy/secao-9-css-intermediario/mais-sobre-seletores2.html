@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais sobre seletores (pŕatica)</title>
+
+    <style>
+        /* seletor de filho direto */
+        div>h1 {
+            background-color: orange;
+        }
+
+        /* seletor de filho direto */
+        li>a {
+            color: brown;
+            text-decoration: none;
+        }
+
+        /* seletor de descendente */
+        div h2 {
+            background-color: olivedrab;
+            color: whitesmoke;
+        }
+
+        /* seletor de irmão adjacente */
+        h2+p {
+            color: brown;
+            border: 1px solid brown;
+        }
+
+        /* seletor de irmão geral */
+        h3~p {
+            color: brown;
+            border: 1px solid brown;
+        }
+    </style>
+
+</head>
+<body>
+    <div style="border: solid 1px black;">
+        <h1 class="destaque titulo">Título da página</h1>
+        <div style="background-color: grey;">
+            <h1 class="destaque titulo">Título da página</h1>
+        </div>
+    </div>
+
+    <ul>
+        <li>
+            <a href="">Home</a>
+            <span><a href="">Outro link</a></span>
+        </li>
+        <li><a href="">Sobre</a></li>
+    </ul>
+
+    <div style="border: solid 1px black;">
+        <h2 class="destaque titulo">Subtítulo da página</h2>
+        <div style="background-color: grey;">
+            <h2 class="destaque titulo">Subtítulo da página</h2>
+        </div>
+    </div>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem tempore dolore quos excepturi consectetur sunt minima quae commodi eveniet voluptatibus dolorem impedit et sint quibusdam, ea, suscipit cum odit voluptatum?
+    </p>
+
+    <h2>Seletor de irmão adjacente</h2>
+
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam veniam nemo tempora maxime est impedit expedita, omnis esse magni quisquam? Voluptatum quaerat quae odio sit. Corporis pariatur beatae aperiam explicabo!
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi molestias earum qui molestiae aspernatur eligendi quos unde eaque error, assumenda nobis. Eos maxime ratione laudantium modi quaerat, praesentium placeat sapiente.
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ducimus adipisci, nihil odit assumenda dicta saepe fugiat. Quisquam molestias delectus pariatur praesentium optio. Recusandae, dolor obcaecati! Dolor necessitatibus deserunt excepturi.
+    </p>
+
+    <h3>Seletor de irmão geral</h3>
+
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam veniam nemo tempora maxime est impedit expedita, omnis esse magni quisquam? Voluptatum quaerat quae odio sit. Corporis pariatur beatae aperiam explicabo!
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi molestias earum qui molestiae aspernatur eligendi quos unde eaque error, assumenda nobis. Eos maxime ratione laudantium modi quaerat, praesentium placeat sapiente.
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga hic repellat eius, necessitatibus in et. Minus, sapiente assumenda officia sint hic illum iusto minima quia unde, culpa perferendis, fugit omnis.
+    </p>
+
+</body>
+</html>
