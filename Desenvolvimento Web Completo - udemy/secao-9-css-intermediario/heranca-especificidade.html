@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herança & especificidade</title>
+    <style>
+        /* Herança */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            border: 1px solid red;
+            /* background-color: blueviolet; */
+            padding: 3em;
+        }
+
+        h1 {
+            color: violet;
+            border: inherit;
+        }
+
+        p {
+            border: 1px solid red;
+            padding: 0.5em;
+        }
+
+        /* Especificidade
+        é a maneira de como os navegadores definem quais valores de proprieddes são os mais relevantes para o elemento a ser utilizado. a especificidade é baseada apenas nas regras impostas na composição de diferentes tipos de seletores.
+
+        Ordem de aplicação das formatações:
+        1. Regra com !important
+        2. Seletores mais específicos
+        3. Última regra processada
+        
+        */
+
+        #promocao {
+            color: brown;
+        }
+
+        p {
+            color: red;
+        }
+
+        .destaque {
+            color: blueviolet;
+        }
+
+        /* PARTE 2
+        Seletores mais específicos
+        1) Estilo em linha (inline style)
+        2) IDs
+        3) Classes, atributos e pseudo-classes
+        4) Elementos e pseudo-elementos
+        */
+        
+        p[class] {
+            border: 2px solid green;
+        }
+
+        p[id] {
+            background-color: bisque;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Herança & especificidade</h1>
+    <p class="destaque" id="promocao">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis iusto itaque saepe quasi ipsam perferendis, doloribus obcaecati doloremque, ab expedita harum quas maiores tempora excepturi accusantium illum perspiciatis consequatur cupiditate!
+    </p>
+
+    <p class="teste">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis iusto itaque saepe quasi ipsam perferendis, doloribus obcaecati doloremque, ab expedita harum quas maiores tempora excepturi accusantium illum perspiciatis consequatur cupiditate!
+    </p>
+
+    <span>Texto</span>
+</body>
+</html>

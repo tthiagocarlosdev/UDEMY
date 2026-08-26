@@ -5511,31 +5511,1206 @@ E uma observação importante: **pseudo-classes e pseudo-elementos não são pro
 
 ### 66. Herança e Especificidade
 
+Esses dois conceitos são fundamentais para entender **por que determinado estilo CSS é aplicado a um elemento**, principalmente quando existem várias regras que poderiam afetá-lo.
+
+------
+
+#### 1. Herança
+
+##### O que é?
+
+**Herança** é o mecanismo pelo qual algumas propriedades CSS de um elemento são transmitidas para seus **elementos filhos**.
+
+Por exemplo:
+
+```css
+body {
+    color: black;
+    font-family: Arial, sans-serif;
+}
+```
+
+Os elementos dentro do `<body>` normalmente herdam essas propriedades.
+
+Então:
+
+```html
+<body>
+    <h1>Título</h1>
+    <p>Texto</p>
+</body>
+```
+
+pode herdar:
+
+```css
+color: black;
+font-family: Arial;
+```
+
+sem que você precise declarar essas propriedades novamente em `h1` e `p`.
+
+------
+
+##### Para que serve?
+
+A herança evita repetição de código.
+
+Em vez de:
+
+```css
+h1 {
+    font-family: Arial;
+}
+
+p {
+    font-family: Arial;
+}
+
+span {
+    font-family: Arial;
+}
+```
+
+podemos fazer:
+
+```css
+body {
+    font-family: Arial;
+}
+```
+
+E os elementos descendentes poderão herdar essa propriedade.
+
+------
+
+#### 2. Como funciona?
+
+A herança acontece de **elemento pai para elemento filho**.
+
+Por exemplo:
+
+```html
+<div>
+    <p>
+        <span>Texto</span>
+    </p>
+</div>
+```
+
+Podemos imaginar:
+
+```text
+div
+└── p
+    └── span
+```
+
+Se definirmos:
+
+```css
+div {
+    color: red;
+}
+```
+
+o `p` e o `span` poderão herdar `color: red`.
+
+##### Mas atenção:
+
+**Nem todas as propriedades são herdadas.**
+
+Por exemplo:
+
+```css
+body {
+    color: red;
+}
+```
+
+`color` é herdável.
+
+Mas:
+
+```css
+body {
+    border: 1px solid red;
+}
+```
+
+o `border` **não é herdado automaticamente** pelos filhos.
+
+É exatamente por isso que no código temos:
+
+```css
+h1 {
+    border: inherit;
+}
+```
+
+------
+
+#### 3. `inherit`
+
+##### O que é?
+
+`inherit` é um valor CSS que diz:
+
+> **"Use o valor que o elemento pai possui para esta propriedade."**
+
+No seu código:
+
+```css
+body {
+    border: 1px solid red;
+}
+
+h1 {
+    border: inherit;
+}
+```
+
+Normalmente o `<h1>` não herdaria `border`.
+
+Mas `inherit` força o `<h1>` a utilizar o valor de `border` do pai.
+
+Resultado:
+
+```text
+body → border: 1px solid red
+           ↓
+h1   → border: 1px solid red
+```
+
+##### Sintaxe
+
+```css
+elemento {
+    propriedade: inherit;
+}
+```
+
+Exemplo:
+
+```css
+p {
+    color: inherit;
+}
+```
+
+------
+
+#### 4. Outros valores importantes relacionados à herança
+
+Além de `inherit`, existem alguns valores especiais que você encontrará durante seus estudos.
+
+##### `inherit`
+
+Herda explicitamente do elemento pai:
+
+```css
+color: inherit;
+```
+
+##### `initial`
+
+Volta para o valor inicial definido pela especificação CSS:
+
+```css
+color: initial;
+```
+
+##### `unset`
+
+Funciona como `inherit` para propriedades herdáveis e como `initial` para propriedades que não são herdáveis.
+
+```css
+color: unset;
+```
+
+Por enquanto, o mais importante é memorizar:
+
+> **`inherit` = herdar do pai.**
+
+------
+
+#### 5. Especificidade
+
+##### O que é?
+
+**Especificidade** é o mecanismo utilizado pelo CSS para determinar qual regra deve prevalecer quando **mais de uma regra pode ser aplicada ao mesmo elemento**.
+
+Por exemplo:
+
+```css
+p {
+    color: red;
+}
+
+.destaque {
+    color: blue;
+}
+```
+
+E:
+
+```html
+<p class="destaque">Texto</p>
+```
+
+As duas regras selecionam o `<p>`.
+
+Então surge a pergunta:
+
+> Qual cor será aplicada?
+
+A resposta é: **azul**.
+
+Porque `.destaque` é mais específico que `p`.
+
+------
+
+#### 6. Como funciona?
+
+A especificidade pode ser entendida como uma espécie de **pontuação**.
+
+De forma simplificada, temos:
+
+| Seletor             | Peso de especificidade |
+| ------------------- | ---------------------- |
+| Inline              | maior prioridade       |
+| `#id`               | 100                    |
+| `.classe`           | 10                     |
+| `:pseudo-classe`    | 10                     |
+| `[atributo]`        | 10                     |
+| `elemento`          | 1                      |
+| `::pseudo-elemento` | 1                      |
+
+Por exemplo:
+
+```css
+p {
+    color: red;
+}
+
+.destaque {
+    color: blue;
+}
+
+#promocao {
+    color: brown;
+}
+```
+
+HTML:
+
+```html
+<p class="destaque" id="promocao">
+    Texto
+</p>
+```
+
+Temos:
+
+```text
+p             → 1
+.destaque     → 10
+#promocao     → 100
+```
+
+Portanto:
+
+```text
+#promocao
+   ↓
+vence
+```
+
+O texto ficará **marrom**.
+
+------
+
+#### 7. Exemplo de especificidade
+
+No código temos:
+
+```css
+#promocao {
+    color: brown;
+}
+
+p {
+    color: red;
+}
+
+.destaque {
+    color: blueviolet;
+}
+```
+
+E:
+
+```html
+<p class="destaque" id="promocao">
+```
+
+Todas as três regras se aplicam.
+
+Mas:
+
+```text
+p          → 1
+.destaque  → 10
+#promocao  → 100
+```
+
+Logo:
+
+```css
+#promocao {
+    color: brown;
+}
+```
+
+vence as outras.
+
+------
+
+#### 8. E se a especificidade for igual?
+
+Nesse caso entra em ação a **ordem das regras**.
+
+Por exemplo:
+
+```css
+p {
+    color: red;
+}
+
+p {
+    color: blue;
+}
+```
+
+Os dois seletores têm a mesma especificidade.
+
+Então a última regra vence:
+
+```css
+p {
+    color: blue;
+}
+```
+
+Resultado: **azul**.
+
+Isso é chamado de **regra posterior** ou **ordem de origem**.
+
+------
+
+#### 9. `!important`
+
+> Regra com `!important`
+
+Podemos escrever:
+
+```css
+p {
+    color: red !important;
+}
+```
+
+O `!important` dá uma prioridade especial à declaração.
+
+Por exemplo:
+
+```css
+p {
+    color: red !important;
+}
+
+#promocao {
+    color: brown;
+}
+```
+
+Mesmo o `#promocao` sendo mais específico, a declaração com `!important` pode prevalecer.
+
+##### Porém:
+
+**Evite usar `!important` sem necessidade.**
+
+Ele pode tornar o CSS difícil de manter porque cria uma prioridade que depois pode ser difícil de sobrescrever.
+
+------
+
+#### 10. Inline, ID, classe e elemento
+
+Regra simplificada para estudar especificidade:
+
+```text
+1) Estilo em linha
+2) IDs
+3) Classes, atributos e pseudo-classes
+4) Elementos e pseudo-elementos
+```
+
+Por exemplo:
+
+```html
+<p
+    id="promocao"
+    class="destaque"
+    style="color: green;">
+    Texto
+</p>
+```
+
+Temos:
+
+```text
+style=""       → inline
+#promocao      → ID
+.destaque      → classe
+p              → elemento
+```
+
+Em termos de especificidade:
+
+```text
+inline
+  ↓
+ID
+  ↓
+classe/atributo/pseudo-classe
+  ↓
+elemento/pseudo-elemento
+```
+
+------
+
+#### 11. Seletor de atributo e especificidade
+
+No código:
+
+```css
+p[class] {
+    border: 2px solid green;
+}
+```
+
+Aqui temos duas coisas:
+
+```text
+p       → seletor de elemento
+[class] → seletor de atributo
+```
+
+O seletor:
+
+```css
+p[class]
+```
+
+seleciona `<p>` que possuem o atributo `class`.
+
+Por exemplo:
+
+```html
+<p class="destaque">Texto</p>
+```
+
+será selecionado.
+
+Mas:
+
+```html
+<p>Texto</p>
+```
+
+não será.
+
+A especificidade de:
+
+```css
+p[class]
+```
+
+é maior que simplesmente:
+
+```css
+p
+```
+
+porque possui:
+
+```text
+elemento + atributo
+```
+
+------
+
+#### 12. `p[id]`
+
+No código:
+
+```css
+p[id] {
+    background-color: bisque;
+}
+```
+
+Isso significa:
+
+> Selecione elementos `<p>` que possuem o atributo `id`.
+
+Por exemplo:
+
+```html
+<p id="promocao">Texto</p>
+```
+
+será selecionado.
+
+Isso é diferente de:
+
+```css
+#promocao
+```
+
+porque `#promocao` procura especificamente um elemento cujo ID seja `promocao`.
+
+Enquanto:
+
+```css
+p[id]
+```
+
+procura **qualquer `<p>` que tenha um atributo `id`**, independentemente do valor.
+
+------
+
+#### 13. Um detalhe importante: especificidade não é simplesmente "quem vem por último"
+
+> 1. `!important`
+> 2. Seletores mais específicos
+> 3. Última regra processada
+
+Isso é uma **boa simplificação para começar**, mas existe uma hierarquia mais completa no CSS, porque entram também conceitos como **origem, importância, especificidade, ordem de declaração e camadas (`@layer`)**.
+
+Para o seu nível atual, pense assim:
+
+##### Primeiro:
+
+**Existe uma regra `!important`?**
+
+↓
+
+##### Depois:
+
+**Qual regra possui maior especificidade?**
+
+↓
+
+##### Se houver empate:
+
+**Qual foi declarada por último?**
+
+Isso já é suficiente para compreender a grande maioria dos exemplos básicos de especificidade.
+
+------
+
+#### Exemplos para fixar
+
+##### Exemplo 1 — classe vence elemento
+
+```css
+p {
+    color: red;
+}
+
+.destaque {
+    color: blue;
+}
+<p class="destaque">Texto</p>
+```
+
+Resultado:
+
+**azul**
+
+------
+
+##### Exemplo 2 — ID vence classe
+
+```css
+.destaque {
+    color: blue;
+}
+
+#principal {
+    color: green;
+}
+<p id="principal" class="destaque">Texto</p>
+```
+
+Resultado:
+
+**verde**
+
+------
+
+##### Exemplo 3 — empate
+
+```css
+p {
+    color: red;
+}
+
+p {
+    color: blue;
+}
+```
+
+Resultado:
+
+**azul**, porque a segunda regra vem depois.
+
+------
+
+##### Exemplo 4 — herança
+
+```css
+body {
+    color: red;
+}
+<body>
+    <p>Texto vermelho</p>
+</body>
+```
+
+O `<p>` pode herdar `color: red`.
+
+------
+
+##### Exemplo 5 — `inherit`
+
+```css
+body {
+    border: 1px solid red;
+}
+
+h1 {
+    border: inherit;
+}
+```
+
+O `<h1>` recebe explicitamente a borda do `body`.
+
+------
+
+#### Para memorizar
+
+##### Herança
+
+Pense:
+
+> **"O filho pode receber algumas propriedades do pai."**
+
+```text
+PAI
+ ↓
+FILHO
+ ↓
+NETO
+```
+
+Mas **nem todas as propriedades são herdadas**.
+
+E:
+
+```css
+inherit
+```
+
+significa:
+
+> **"Pegue o valor do pai."**
+
+------
+
+##### Especificidade
+
+Pense em uma disputa:
+
+```text
+!important
+     ↓
+inline
+     ↓
+ID
+     ↓
+classe / atributo / pseudo-classe
+     ↓
+elemento / pseudo-elemento
+     ↓
+se houver empate → última regra
+```
+
+Uma forma ainda mais fácil de decorar a pontuação:
+
+```text
+ID          = 100
+classe      = 10
+elemento    = 1
+```
+
+Por exemplo:
+
+```css
+#id.classe p
+```
+
+tem:
+
+```text
+ID       → 100
+classe   → 10
+elemento → 1
+
+total → 111
+```
+
+**E o ponto mais importante:** especificidade é utilizada quando **duas ou mais regras disputam a mesma propriedade no mesmo elemento**.
+
+---
+
+#### Arquivo completo - herança-especificidade.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herança & especificidade</title>
+    <style>
+        /* Herança */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            border: 1px solid red;
+            /* background-color: blueviolet; */
+            padding: 3em;
+        }
+
+        h1 {
+            color: violet;
+            border: inherit;
+        }
+
+        p {
+            border: 1px solid red;
+            padding: 0.5em;
+        }
+
+        /* Especificidade
+        é a maneira de como os navegadores definem quais valores de proprieddes são os mais relevantes para o elemento a ser utilizado. a especificidade é baseada apenas nas regras impostas na composição de diferentes tipos de seletores.
+
+        Ordem de aplicação das formatações:
+        1. Regra com !important
+        2. Seletores mais específicos
+        3. Última regra processada
+        
+        */
+
+        #promocao {
+            color: brown;
+        }
+
+        p {
+            color: red;
+        }
+
+        .destaque {
+            color: blueviolet;
+        }
+
+        /* PARTE 2
+        Seletores mais específicos
+        1) Estilo em linha (inline style)
+        2) IDs
+        3) Classes, atributos e pseudo-classes
+        4) Elementos e pseudo-elementos
+        */
+        
+        p[class] {
+            border: 2px solid green;
+        }
+
+        p[id] {
+            background-color: bisque;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Herança & especificidade</h1>
+    <p class="destaque" id="promocao">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis iusto itaque saepe quasi ipsam perferendis, doloribus obcaecati doloremque, ab expedita harum quas maiores tempora excepturi accusantium illum perspiciatis consequatur cupiditate!
+    </p>
+
+    <p class="teste">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis iusto itaque saepe quasi ipsam perferendis, doloribus obcaecati doloremque, ab expedita harum quas maiores tempora excepturi accusantium illum perspiciatis consequatur cupiditate!
+    </p>
+
+    <span>Texto</span>
+</body>
+</html>
+```
+
+---
+
+#### Link da aula
+
+[Specificity Calculator](https://specificity.keegan.st/#google_vignette) - *A visual way to understand* [CSS specificity](https://www.w3.org/TR/selectors-4/#specificity)*. Change the selectors or paste in your own.*
 
 
 
+----
+
+---
 
 
 
+### 67. [Projeto] Anna Bella - Página principal
+
+#### Arquivo completo - index.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna Bella</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div id="principal">
+        <img src="./img/capa.png" alt="capa">
+
+        <div id="menu">
+            <a href="">Home</a> |
+            <a href="">Biografia</a> |
+            <a href="">Campanhas publicitárias</a> |
+            <a href="">Contato</a> |
+        </div>
+
+        <div id="conteudo">
+
+            <h1>Sobre Anna Bella</h1>
+
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos similique amet corrupti illo sequi id unde quisquam, vitae aliquid quia ullam adipisci, reiciendis minima corporis! Perspiciatis consequuntur expedita corporis harum.
+            </p>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos similique amet corrupti illo sequi id unde quisquam, vitae aliquid quia ullam adipisci, reiciendis minima corporis! Perspiciatis consequuntur expedita corporis harum.
+            </p>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos similique amet corrupti illo sequi id unde quisquam, vitae aliquid quia ullam adipisci, reiciendis minima corporis! Perspiciatis consequuntur expedita corporis harum.
+            </p>
+        </div> <!--conteudo-->
+
+        <div id="rodape">
+            <h4>Todos os direitos reservados</h4>
+        </div>
+
+    </div> <!--principal-->
+</body>
+</html>
+```
 
 
 
+---
+
+---
 
 
 
+### 68. [Projeto] Anna Bella - Formatação CSS
+
+#### Arquivo completo - estilo.css
+
+ ```css
+ /* 
+ menu: #c5c5b2
+ conteudo: #e8e8d9
+ link: #4b566a
+ h1: #828271
+  */
+ 
+  body {
+     background: #d2d2c1 url('img/fundo.png');
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+ 
+  #principal {
+     width: 900px;
+  }
+ 
+  #menu {
+     background: #c5c5b2;
+     padding: 20px;
+  }
+ 
+  #conteudo {
+     background: #e8e8d9;
+     padding: 10px;
+  }
+ 
+  #rodape {
+     text-align: center;
+  }
+ 
+  a {
+     color: #4b566a;
+     text-decoration: none;
+     font-weight: bold;
+     text-transform: uppercase;
+  }
+ 
+  h1 {
+     color: #828271;
+     font-size: 1.3em;
+  }
+ ```
 
 
 
+---
+
+---
 
 
 
+### 69. [Projeto] Anna Bella - Navegação
+
+#### Arquivo completo - index.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna Bella</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div id="principal">
+        <img src="./img/capa.png" alt="capa">
+
+        <div id="menu">
+            <a href="index.html">Home</a> |
+            <a href="./conteudo/biografia.html">Biografia</a> |
+            <a href="./conteudo/campanhas.html">Campanhas publicitárias</a> |
+            <a href="./conteudo/contato.html">Contato</a> |
+        </div>
+
+        <div id="conteudo">
+
+            <h1>Sobre Anna Bella</h1>
+
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos similique amet corrupti illo sequi id unde quisquam, vitae aliquid quia ullam adipisci, reiciendis minima corporis! Perspiciatis consequuntur expedita corporis harum.
+            </p>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos similique amet corrupti illo sequi id unde quisquam, vitae aliquid quia ullam adipisci, reiciendis minima corporis! Perspiciatis consequuntur expedita corporis harum.
+            </p>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos similique amet corrupti illo sequi id unde quisquam, vitae aliquid quia ullam adipisci, reiciendis minima corporis! Perspiciatis consequuntur expedita corporis harum.
+            </p>
+        </div> <!--conteudo-->
+
+        <div id="rodape">
+            <h4>Todos os direitos reservados</h4>
+        </div>
+
+    </div> <!--principal-->
+</body>
+</html>
+```
+
+---
+
+#### Arquivo completo - biografia.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biografia - Anna Bella</title>
+    <link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+    <div id="principal">
+        <img src="../img/capa.png" alt="capa">
+
+        <div id="menu">
+            <a href="../index.html">Home</a> |
+            <a href="./biografia.html">Biografia</a> |
+            <a href="./campanhas.html">Campanhas publicitárias</a> |
+            <a href="./contato.html">Contato</a> |
+        </div>
+
+        <div id="conteudo">
+
+            <h1>Biografia</h1>
+
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos similique amet corrupti illo sequi id unde quisquam, vitae aliquid quia ullam adipisci, reiciendis minima corporis! Perspiciatis consequuntur expedita corporis harum.
+            </p>
+
+            <img src="../img/foto1.png" alt="foto1">
+
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos similique amet corrupti illo sequi id unde quisquam, vitae aliquid quia ullam adipisci, reiciendis minima corporis! Perspiciatis consequuntur expedita corporis harum.
+            </p>
+
+            <img src="../img/foto2.png" alt="foto2">
+
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos similique amet corrupti illo sequi id unde quisquam, vitae aliquid quia ullam adipisci, reiciendis minima corporis! Perspiciatis consequuntur expedita corporis harum.
+            </p>
+
+            <img src="../img/foto3.png" alt="foto3">
+
+        </div> <!--conteudo-->
+
+        <div id="rodape">
+            <h4>Todos os direitos reservados</h4>
+        </div>
+
+    </div> <!--principal-->
+</body>
+</html>
+```
+
+---
+
+#### Arquivo completo - campanhas.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campanhas - Anna Bella</title>
+    <link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+    <div id="principal">
+        <img src="../img/capa.png" alt="capa">
+
+        <div id="menu">
+            <a href="../index.html">Home</a> |
+            <a href="./biografia.html">Biografia</a> |
+            <a href="./campanhas.html">Campanhas publicitárias</a> |
+            <a href="./contato.html">Contato</a> |
+        </div>
+
+        <div id="conteudo">
+
+            <h1>Campanhas Publicitárias</h1>
+
+            <p>
+                Lorem ipsum, dolor sit amet.
+            </p>
+
+            <img src="../img/foto1.png" alt="foto1">
+
+            <p>
+                Lorem ipsum, dolor sit amet.
+            </p>
+
+            <img src="../img/foto2.png" alt="foto2">
+
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </p>
+
+            <img src="../img/foto3.png" alt="foto3">
+        </div> <!--conteudo-->
+
+        <div id="rodape">
+            <h4>Todos os direitos reservados</h4>
+        </div>
+
+    </div> <!--principal-->
+</body>
+</html>
+```
+
+---
+
+#### Arquivo completo - contato.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Anna Bella</title>
+    <link rel="stylesheet" href="../estilo.css">
+</head>
+<body>
+    <div id="principal">
+        <img src="../img/capa.png" alt="capa">
+
+        <div id="menu">
+            <a href="../index.html">Home</a> |
+            <a href="./biografia.html">Biografia</a> |
+            <a href="./campanhas.html">Campanhas publicitárias</a> |
+            <a href="./contato.html">Contato</a> |
+        </div>
+
+        <div id="conteudo">
+
+            <h1>Contato</h1>
+
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos similique amet corrupti illo sequi id unde quisquam, vitae aliquid quia ullam adipisci, reiciendis minima corporis!
+            </p>
+
+            <img src="../img/foto3.png" alt="">
+
+            <div>
+                <strong>Telefone: (11) 99999-9999</strong> <br>
+                <strong>E-mail: annabella@email.com</strong> <br>
+            </div>
+            
+        </div> <!--conteudo-->
+
+        <div id="rodape">
+            <h4>Todos os direitos reservados</h4>
+        </div>
+
+    </div> <!--principal-->
+</body>
+</html>
+```
 
 
 
+---
 
+---
 
-
-
-
-
+---
 
