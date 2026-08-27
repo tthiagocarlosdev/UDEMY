@@ -216,11 +216,11 @@ _____
 
 ## Seção 11: CSS Avançado 
 
-### 73. Posicionamentos (Teoria) :pushpin::round_pushpin:
+### 73. Posicionamentos (Teoria) 
 
 ### 74. Posicionamentos (Prática)
 
-### 75. Posicionamentos (Exercício)
+### 75. Posicionamentos (Exercício) :pushpin::round_pushpin:
 
 ### 76. Propriedade Overflow
 

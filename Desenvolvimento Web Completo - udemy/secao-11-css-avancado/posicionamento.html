@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamento</title>
+    <style>
+        body {
+            background-color: purple;
+        }
+
+        #container {
+            width: 700px;
+            background-color: white;
+            margin: 10px auto;
+            padding: 8px;
+            position: relative;
+        }
+        .borda {
+            border: 1px solid red;
+        }
+
+        /* Fluxo normal */
+        .estatica { 
+            position: static;
+        }
+
+        .relativa {
+            position: relative;
+            top: 30px;
+            right: 30px;
+        }
+
+        #container-absoluta {
+            position: relative;
+            border: 1px solid purple;
+            padding: 10px;
+        }
+
+        .absoluta {
+            background-color: lightpink;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 450px;
+            margin: 0;
+        }
+
+        #div-chat {
+            background-color: green;
+        }
+
+        .fixa {
+            position: fixed;
+            width: 200px;
+            height: 120px;
+            bottom: 0;
+            right: 0;
+            z-index: 10;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+
+        <div id="div-chat" class="fixa">
+            <h3>chat</h3>
+            <button>Enviar mensagem</button>
+        </div>
+
+        <hr>
+
+        <div id="container-absoluta">
+            <h1 class="borda">Posição absoluta</h1>
+            <p class="borda absoluta">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla doloremque sequi odit accusamus quod optio reprehenderit non quas voluptatibus numquam autem, rerum quo similique praesentium earum harum eveniet dicta quos.
+            </p>
+
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere sunt officia ratione dolore quos ullam! Animi possimus dolore harum doloremque excepturi nemo quisquam, atque sit voluptatum? Libero ullam dignissimos nulla.
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere sunt officia ratione dolore quos ullam! Animi possimus dolore harum doloremque excepturi nemo quisquam, atque sit voluptatum? Libero ullam dignissimos nulla.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius rerum ipsa quis consequatur voluptate perferendis facere molestias quos libero necessitatibus numquam laborum autem quae animi eum sequi, quidem iusto.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eius rerum ipsa quis consequatur voluptate perferendis facere molestias quos libero necessitatibus numquam laborum autem quae animi eum sequi, quidem iusto.
+            </p>
+        </div>
+
+        <hr>
+
+        <h1 class="borda">Posição relativa</h1>
+        <p class="borda relativa" style="background-color: lightgreen;">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla doloremque sequi odit accusamus quod optio reprehenderit non quas voluptatibus numquam autem, rerum quo similique praesentium earum harum eveniet dicta quos.
+        </p>
+
+        <p class="borda ">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit natus harum architecto, eligendi ducimus perspiciatis corporis tempore aliquid a consequatur? Dignissimos illum placeat ut maiores nobis natus, est optio at?
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo tempora voluptates excepturi rem laborum nihil earum quae accusamus a eos repudiandae, culpa odio id sint labore obcaecati aspernatur dolorem adipisci.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo tempora voluptates excepturi rem laborum nihil earum quae accusamus a eos repudiandae, culpa odio id sint labore obcaecati aspernatur dolorem adipisci.
+        </p>
+
+        <hr>
+
+        <h1 class="borda estatica">Fluxo normal</h1>
+        <p class="borda estatica">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla doloremque sequi odit accusamus quod optio reprehenderit non quas voluptatibus numquam autem, rerum quo similique praesentium earum harum eveniet dicta quos.
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque optio dolore temporibus blanditiis eos officiis animi rem quas quo ducimus nihil, dignissimos voluptatibus commodi illo voluptatem reprehenderit velit facilis accusamus?
+        </p>
+
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi neque, fuga laboriosam beatae veritatis nihil incidunt molestiae, dignissimos id dolores provident, eaque quae hic nobis repudiandae est quod vel. Sunt.
+        </p>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi neque, fuga laboriosam beatae veritatis nihil incidunt molestiae, dignissimos id dolores provident, eaque quae hic nobis repudiandae est quod vel. Sunt.
+        </p>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi neque, fuga laboriosam beatae veritatis nihil incidunt molestiae, dignissimos id dolores provident, eaque quae hic nobis repudiandae est quod vel. Sunt.
+        </p>
+
+    </div>
+</body>
+</html>
