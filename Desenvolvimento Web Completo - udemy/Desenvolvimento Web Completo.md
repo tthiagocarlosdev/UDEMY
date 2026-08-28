@@ -220,13 +220,13 @@ _____
 
 ### 74. Posicionamentos (Prática)
 
-### 75. Posicionamentos (Exercício) :pushpin::round_pushpin:
+### 75. Posicionamentos (Exercício) 
 
 ### 76. Propriedade Overflow
 
 ### 77. Sobrepondo elementos com z-index
 
-### 78. Elementos Flutuantes (Teoria)  :pushpin::round_pushpin:
+### 78. Elementos Flutuantes (Teoria)  :pushpin::round_pushpin: 
 
 ### 79. Elementos Flutuantes (Prática) - Parte 1
 
@@ -234,7 +234,7 @@ _____
 
 ### 81. Elementos Flutuantes (Exercício)
 
-### 82. Elementos Flutuantes (Clear) - Parte 1
+### 82. Elementos Flutuantes (Clear) - Parte 1 :pushpin::round_pushpin:
 
 ### 83. [Exercício] Criando barra de navegação vertical
 

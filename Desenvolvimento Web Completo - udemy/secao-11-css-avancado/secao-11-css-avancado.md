@@ -2867,15 +2867,1108 @@ Leia o código assim:
 
 
 
-### 78. Elementos Flutuantes (Teoria)    :pushpin::round_pushpin:
+### 78. Elementos Flutuantes (Teoria)
+
+#### 📚 Elementos flutuantes — `float` no CSS
+
+O `float` é uma propriedade CSS **mais antiga**, muito importante para entender a evolução do layout na Web.
+
+Hoje, para construir layouts, normalmente usamos **Flexbox** e **CSS Grid**. Porém, `float` ainda aparece em códigos antigos e continua sendo útil em uma situação específica: **fazer texto envolver uma imagem ou outro elemento**.
+
+------
+
+#### 1. O que é?
+
+`float` é uma propriedade CSS que faz um elemento **flutuar para um dos lados do seu contêiner**, permitindo que outros conteúdos, principalmente texto, ocupem o espaço ao seu redor.
+
+Os valores principais são:
+
+```css
+float: left;
+float: right;
+float: none;
+```
+
+Imagine uma imagem:
+
+```text
+┌────────────────────────────────────┐
+│ ┌─────────────┐                    │
+│ │             │  Este é um texto   │
+│ │   IMAGEM    │  que fica ao lado  │
+│ │             │  da imagem.        │
+│ └─────────────┘                    │
+│ Este texto continua abaixo quando  │
+│ não houver mais espaço ao lado.    │
+└────────────────────────────────────┘
+```
+
+A imagem está **flutuando** e o texto se adapta ao espaço disponível.
+
+------
+
+#### 2. Para que serve?
+
+Originalmente, `float` foi criado principalmente para permitir que conteúdo, especialmente **texto, contornasse imagens**.
+
+Por exemplo:
+
+```html
+<img src="foto.jpg" alt="Foto">
+<p>
+    Este é um texto relacionado à imagem...
+</p>
+```
+
+Com:
+
+```css
+img {
+    float: left;
+}
+```
+
+O resultado será aproximadamente:
+
+```text
+┌───────────────────────────────┐
+│ ┌───────────┐ Este é um texto │
+│ │           │ que envolve a   │
+│ │  IMAGEM   │ imagem.         │
+│ │           │                 │
+│ └───────────┘                 │
+│ O texto continua aqui...      │
+└───────────────────────────────┘
+```
+
+------
+
+#### 3. Como funciona?
+
+Quando aplicamos:
+
+```css
+float: left;
+```
+
+o elemento é deslocado para o **lado esquerdo** do seu contêiner.
+
+O conteúdo que vem depois pode ocupar o espaço restante ao seu redor.
+
+Com:
+
+```css
+float: right;
+```
+
+o elemento vai para a direita.
+
+##### Exemplo:
+
+```css
+img {
+    float: left;
+    width: 200px;
+}
+```
+
+Imagine:
+
+```text
+┌───────────────────────────────────┐
+│ ┌──────────────┐                  │
+│ │              │  Lorem ipsum     │
+│ │    IMAGEM    │  dolor sit amet, │
+│ │              │  consectetur...  │
+│ └──────────────┘                  │
+│ Lorem ipsum dolor sit amet...     │
+└───────────────────────────────────┘
+```
+
+O texto aproveita o espaço disponível ao lado da imagem.
+
+Quando o texto não consegue mais ficar ao lado:
+
+```text
+┌───────────────────────────────────┐
+│ ┌──────────────┐  texto texto     │
+│ │              │  texto texto     │
+│ │    IMAGEM    │  texto texto     │
+│ └──────────────┘                  │
+│ texto texto texto texto texto     │
+│ texto texto texto texto texto     │
+└───────────────────────────────────┘
+```
+
+------
+
+#### 4. Sintaxe
+
+A sintaxe básica é:
+
+```css
+seletor {
+    float: valor;
+}
+```
+
+Exemplo:
+
+```css
+img {
+    float: left;
+}
+```
+
+Ou:
+
+```css
+img {
+    float: right;
+}
+```
+
+------
+
+#### 5. Principais valores
+
+Os principais valores são:
+
+```css
+float: left;
+float: right;
+float: none;
+```
+
+Também existe:
+
+```css
+float: inline-start;
+float: inline-end;
+```
+
+Esses valores são mais modernos e consideram a direção de escrita do documento.
+
+Para quem está começando, concentre-se primeiro em:
+
+> `left`, `right` e `none`.
+
+------
+
+#### 6. `float: left`
+
+##### O que faz?
+
+Faz o elemento flutuar para a **esquerda**.
+
+```css
+img {
+    float: left;
+}
+```
+
+Visualmente:
+
+```text
+┌──────────────────────────────┐
+│ ┌───────────┐                │
+│ │           │ Texto texto    │
+│ │  IMAGEM   │ Texto texto    │
+│ │           │ Texto texto    │
+│ └───────────┘                │
+│ Texto continua...            │
+└──────────────────────────────┘
+```
+
+##### Para memorizar:
+
+> **`left` → flutua para a esquerda.**
+
+------
+
+#### 7. `float: right`
+
+Faz o elemento flutuar para a **direita**.
+
+```css
+img {
+    float: right;
+}
+```
+
+Resultado:
+
+```text
+┌──────────────────────────────┐
+│                ┌───────────┐ │
+│ Texto texto    │           │ │
+│ Texto texto    │  IMAGEM   │ │
+│ Texto texto    │           │ │
+│                └───────────┘ │
+│ Texto continua...            │
+└──────────────────────────────┘
+```
+
+##### Para memorizar:
+
+> **`right` → flutua para a direita.**
+
+------
+
+#### 8. `float: none`
+
+É o valor padrão.
+
+```css
+img {
+    float: none;
+}
+```
+
+Significa:
+
+> O elemento não deve flutuar.
+
+##### Para memorizar:
+
+> **`none` → sem flutuação.**
+
+------
+
+#### 9. Exemplo completo
+
+##### HTML
+
+```html
+<img src="foto.jpg" alt="Minha foto">
+
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Este texto ficará ao lado da imagem enquanto houver espaço.
+    Quando não houver mais espaço, ele continuará abaixo.
+</p>
+```
+
+##### CSS
+
+```css
+img {
+    width: 200px;
+    float: left;
+    margin-right: 20px;
+}
+```
+
+Observe que adicionamos:
+
+```css
+margin-right: 20px;
+```
+
+Isso cria espaço entre a imagem e o texto.
+
+```text
+┌─────────────────────────────────────┐
+│ ┌─────────────┐                     │
+│ │             │  Texto relacionado  │
+│ │   IMAGEM    │  à imagem...        │
+│ │             │                     │
+│ └─────────────┘                     │
+│                                     │
+│ O texto continua normalmente...     │
+└─────────────────────────────────────┘
+```
+
+------
+
+#### 10. `float` + `margin`
+
+É muito comum usar `margin` junto com `float`.
+
+Por exemplo:
+
+```css
+img {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+```
+
+Isso cria um espaço entre a imagem e o conteúdo.
+
+##### Importante
+
+O `float` determina:
+
+> **Para qual lado o elemento flutua.**
+
+O `margin` determina:
+
+> **Quanto espaço queremos ao redor dele.**
+
+------
+
+#### 11. Float não é a mesma coisa que `position`
+
+Essa diferença é muito importante.
+
+##### `float`
+
+```css
+.elemento {
+    float: left;
+}
+```
+
+É usado para criar uma **flutuação**, permitindo que conteúdo ao redor se adapte.
+
+##### `position`
+
+```css
+.elemento {
+    position: absolute;
+}
+```
+
+É usado para **posicionar o elemento** de acordo com regras de posicionamento.
+
+Não pense que:
+
+```css
+float: left;
+```
+
+significa:
+
+> "Coloque o elemento exatamente 50px à esquerda."
+
+Não é isso.
+
+------
+
+#### 12. `float` e o fluxo do documento
+
+Aqui está uma característica importante.
+
+Um elemento com `float` é retirado do fluxo normal de uma maneira diferente de `position: absolute`, mas **não é correto pensar que ele simplesmente desaparece do layout**.
+
+O conteúdo ao redor passa a se posicionar considerando a área ocupada pelo elemento flutuante.
+
+Por isso o texto consegue "contornar" a imagem.
+
+Compare:
+
+##### Sem `float`
+
+```text
+┌────────────────────────┐
+│ IMAGEM                 │
+└────────────────────────┘
+Texto começa abaixo.
+Texto continua abaixo.
+```
+
+##### Com `float: left`
+
+```text
+┌────────────────────────┐
+│ IMAGEM   Texto texto   │
+│          Texto texto   │
+│          Texto texto   │
+│ Texto continua abaixo.│
+└────────────────────────┘
+```
+
+------
+
+#### 13. O problema do `float`: o elemento pai pode não reconhecer sua altura
+
+Essa é uma das partes mais importantes historicamente.
+
+Imagine:
+
+```html
+<div class="pai">
+    <div class="filho"></div>
+    <div class="filho"></div>
+</div>
+.filho {
+    float: left;
+}
+```
+
+Dependendo da estrutura, o contêiner pai pode parecer não possuir altura suficiente para envolver os elementos flutuantes.
+
+Visualmente:
+
+```text
+┌──────────────────────────┐
+│ PAI                      │
+│                          │
+└──────────────────────────┘
+
+   ┌────────┐ ┌────────┐
+   │ FILHO  │ │ FILHO  │
+   └────────┘ └────────┘
+```
+
+Isso ficou conhecido como o problema de **"float containment"**.
+
+Foi uma das razões pelas quais desenvolvedores precisavam utilizar técnicas como o **clearfix**.
+
+------
+
+#### 14. `clear`
+
+Para entender `float`, você precisa conhecer também a propriedade:
+
+```css
+clear
+```
+
+Ela determina que um elemento **não deve ficar ao lado de elementos flutuantes** de determinado lado.
+
+Os valores principais são:
+
+```css
+clear: none;
+clear: left;
+clear: right;
+clear: both;
+```
+
+------
+
+##### `clear: left`
+
+Impede que o elemento fique ao lado de elementos com:
+
+```css
+float: left;
+```
+
+Exemplo:
+
+```css
+.footer {
+    clear: left;
+}
+```
+
+------
+
+##### `clear: right`
+
+Impede que o elemento fique ao lado de elementos com:
+
+```css
+float: right;
+.footer {
+    clear: right;
+}
+```
+
+------
+
+##### `clear: both`
+
+É o mais conhecido.
+
+Impede que o elemento fique ao lado de elementos flutuados **à esquerda ou à direita**.
+
+```css
+.footer {
+    clear: both;
+}
+```
+
+Imagine:
+
+```text
+┌───────────┐    ┌───────────┐
+│ FLOAT     │    │ FLOAT     │
+│ LEFT      │    │ RIGHT     │
+└───────────┘    └───────────┘
+
+
+────────────────────────────────
+            FOOTER
+────────────────────────────────
+```
+
+##### Para memorizar:
+
+> **`float` → flutua.**
+> **`clear` → limpa a flutuação.**
+
+------
+
+#### 15. Exemplo com `clear`
+
+HTML:
+
+```html
+<div class="caixa">
+    Caixa
+</div>
+
+<div class="caixa">
+    Caixa
+</div>
+
+<footer>
+    Rodapé
+</footer>
+```
+
+CSS:
+
+```css
+.caixa {
+    float: left;
+    width: 200px;
+    height: 100px;
+}
+
+footer {
+    clear: both;
+}
+```
+
+O `footer` não ficará ao lado das caixas flutuantes.
+
+Ele será colocado **abaixo delas**.
+
+------
+
+#### 16. Float para criar colunas — uso antigo
+
+Antes de Flexbox e Grid, era muito comum criar layouts inteiros usando `float`.
+
+Por exemplo:
+
+```html
+<div class="coluna esquerda">
+    Conteúdo esquerdo
+</div>
+
+<div class="coluna direita">
+    Conteúdo direito
+</div>
+.coluna {
+    width: 50%;
+    float: left;
+}
+```
+
+Resultado:
+
+```text
+┌─────────────────────────────────────┐
+│                                     │
+│  COLUNA ESQUERDA │ COLUNA DIREITA  │
+│                  │                 │
+│                  │                 │
+└─────────────────────────────────────┘
+```
+
+Essa técnica funcionava, mas exigia várias soluções adicionais para lidar com o comportamento dos floats.
+
+------
+
+#### 17. Hoje: Flexbox e Grid
+
+Atualmente, **não é recomendado usar `float` para criar o layout principal de uma página**.
+
+Para isso, normalmente usamos:
+
+##### Flexbox
+
+```css
+.container {
+    display: flex;
+}
+```
+
+##### Grid
+
+```css
+.container {
+    display: grid;
+}
+```
+
+Em comparação:
+
+| Técnica | Uso recomendado atualmente |
+| ------- | -------------------------- |
+| `float` | Texto envolvendo imagens   |
+| Flexbox | Layout em uma dimensão     |
+| Grid    | Layout em duas dimensões   |
+
+Portanto:
+
+> **Não abandone o estudo de `float`; apenas entenda que ele não é mais a principal ferramenta de layout.**
+
+------
+
+#### 18. Exemplo moderno de uso de `float`
+
+Um exemplo em que `float` ainda faz bastante sentido:
+
+```html
+<article>
+    <img src="foto.jpg" alt="Foto de uma paisagem">
+
+    <p>
+        Esta é uma descrição da fotografia.
+        O texto ficará ao redor da imagem,
+        criando um efeito semelhante ao encontrado
+        em jornais e revistas.
+    </p>
+</article>
+article img {
+    float: left;
+    width: 250px;
+    margin: 0 20px 10px 0;
+}
+```
+
+Esse é justamente o tipo de situação em que `float` continua sendo uma ferramenta apropriada.
+
+------
+
+#### 🧠 Para memorizar
+
+##### Regra principal
+
+> **`float` faz um elemento flutuar para um lado e permite que o conteúdo ao redor ocupe o espaço disponível.**
+
+Memorize:
+
+```text
+float: left;
+     ↓
+⬅️ flutua para a esquerda
+
+float: right;
+     ↓
+➡️ flutua para a direita
+
+float: none;
+     ↓
+🚫 sem flutuação
+```
+
+E lembre da propriedade complementar:
+
+```text
+float
+  ↓
+cria a flutuação
+
+clear
+  ↓
+impede/encerra a influência da flutuação
+```
+
+------
+
+#### 🎯 Resumo para seus estudos
+
+| Propriedade | Valor   | Função                      |
+| ----------- | ------- | --------------------------- |
+| `float`     | `left`  | Flutua para a esquerda      |
+| `float`     | `right` | Flutua para a direita       |
+| `float`     | `none`  | Remove a flutuação          |
+| `clear`     | `left`  | Limpa float à esquerda      |
+| `clear`     | `right` | Limpa float à direita       |
+| `clear`     | `both`  | Limpa floats dos dois lados |
+
+##### ⭐ A frase que eu quero que você memorize:
+
+> **`float` é usado principalmente para fazer um elemento flutuar e permitir que o conteúdo ao redor — especialmente texto — o contorne.**
+
+E, para desenvolvimento moderno:
+
+> **Float para envolver conteúdo; Flexbox e Grid para construir layouts.**
+
+
+
+---
+
+---
+
+
 
 ### 79. Elementos Flutuantes (Prática) - Parte 1
 
+#### Arquivo completo - elementos-flutuantes.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos flutuantes</title>
+    <style>
+        #area-float {
+            border: 1px solid green;
+            padding: 5px;
+            width: 100%;
+        }
+
+        p {
+            border: 1px solid red;
+        }
+
+        img {
+            border: 1px solid blue;
+            float: right;
+        }
+
+        #area-caixas {
+            border: 3px solid orangered;
+            width: 100%;
+        }
+
+        .caixa {
+            background-color: blue;
+            color: white;
+            border: 3px solid purple;
+            width: 100px;
+            height: 100px;
+            margin: 0.3em;
+
+        }
+
+        .esquerda {
+            float: left;
+        }
+
+        .direita {
+            float: right;
+        }
+
+        .float-none {
+            float: none;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Elementos flutuantes</h1>
+
+    <div id="area-float">
+        <img src="./img/celular1.png" width="200" alt="">
+
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam commodi nam minus veritatis quas facilis incidunt debitis cumque maiores enim ullam recusandae assumenda facere, fugit placeat beatae saepe magni. Modi.
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, commodi nisi? Reprehenderit error voluptate repudiandae est. Atque repellat sequi veritatis nemo rerum aut tenetur magnam, facere, incidunt est amet mollitia?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, commodi nisi? Reprehenderit error voluptate repudiandae est. Atque repellat sequi veritatis nemo rerum aut tenetur magnam, facere, incidunt est amet mollitia?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, harum. Impedit adipisci eum eos recusandae velit earum non, odio voluptas nihil esse rerum, natus suscipit nobis quia dicta facere laudantium?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, harum. Impedit adipisci eum eos recusandae velit earum non, odio voluptas nihil esse rerum, natus suscipit nobis quia dicta facere laudantium?
+        </p>
+    </div>
+
+    <div id="area-caixas">
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum cum omnis eligendi, dolorem perferendis deserunt necessitatibus, voluptatum iusto facere impedit repellat at veritatis fugit tempora et, est sunt nisi fugiat?
+        </p>
+
+        <div class="caixa esquerda" >
+            Caixa 1
+        </div>
+
+        <div class="caixa esquerda" >
+            Caixa 2
+        </div>
+
+        <div class="caixa esquerda" >
+            Caixa 3
+        </div>
+    </div>
+</body>
+</html>
+```
+
+
+
+---
+
+---
+
+
+
 ### 80. Elementos Flutuantes (Prática) - Parte 2
+
+#### Arquivo completo - elementos-flutuantes.html 
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos flutuantes</title>
+    <style>
+        #area-float {
+            border: 1px solid green;
+            padding: 5px;
+            width: 100%;
+        }
+
+        p {
+            border: 1px solid red;
+        }
+
+        img {
+            border: 1px solid blue;
+            float: right;
+        }
+
+        #area-caixas {
+            border: 3px solid orangered;
+            width: 100%;
+        }
+
+        .caixa {
+            background-color: red;
+            color: white;
+            border: 3px solid purple;
+            width: 180px;
+            height: 180px;
+            margin: 0.3em;
+
+        }
+
+        .esquerda {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+
+        .direita {
+            float: right;
+        }
+
+        .float-none {
+            float: none;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Elementos flutuantes</h1>
+
+    <div id="area-float">
+        <img src="./img/celular1.png" width="200" alt="">
+
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam commodi nam minus veritatis quas facilis incidunt debitis cumque maiores enim ullam recusandae assumenda facere, fugit placeat beatae saepe magni. Modi.
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, commodi nisi? Reprehenderit error voluptate repudiandae est. Atque repellat sequi veritatis nemo rerum aut tenetur magnam, facere, incidunt est amet mollitia?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, commodi nisi? Reprehenderit error voluptate repudiandae est. Atque repellat sequi veritatis nemo rerum aut tenetur magnam, facere, incidunt est amet mollitia?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, harum. Impedit adipisci eum eos recusandae velit earum non, odio voluptas nihil esse rerum, natus suscipit nobis quia dicta facere laudantium?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, harum. Impedit adipisci eum eos recusandae velit earum non, odio voluptas nihil esse rerum, natus suscipit nobis quia dicta facere laudantium?
+        </p>
+    </div>
+
+    <div id="area-caixas">
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum cum omnis eligendi, dolorem perferendis deserunt necessitatibus, voluptatum iusto facere impedit repellat at veritatis fugit tempora et, est sunt nisi fugiat?
+        </p>
+
+        <div class="caixa esquerda" >
+            Caixa 1
+        </div>
+
+        <div class="caixa " >
+            Caixa 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum cum omnis eligendi
+        </div>
+
+        <div class="caixa " >
+            Caixa 3
+        </div>
+    </div>
+</body>
+</html>
+```
+
+
+
+
+
+---
+
+---
+
+
 
 ### 81. Elementos Flutuantes (Exercício)
 
-### 82. Elementos Flutuantes (Clear) - Parte 1
+#### Arquivo completo - exercicio-float.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio float</title>
+    <style>
+
+        #principal {
+            border: 1px solid red;
+            width: 920px;
+            margin: 0 auto;
+        }
+
+        .caixa {
+            background-color: lightgray;
+            width: 280px;
+            padding: 5px;
+            margin: 7px;
+            float: left;
+        }
+
+        #container {
+            width: 920px;
+            margin: 0 auto;
+        }
+
+        .area-materias {
+            width: 600px;
+            float: left;
+        }
+
+        .area-tecnologias {
+            width: 300px;
+            float: right;
+        }
+
+        .area-tecnologias h3 {
+            text-align: center;
+        }
+
+        .area-tecnologias li {
+            list-style-type: none;
+            border: 1px solid #e5e5e5;
+            padding: 5px;
+            margin: 2px 8px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="principal">
+        <div class="caixa">
+            <h2>Lorem ipsum dolor sit, amet 1</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum debitis mollitia nesciunt aliquam repellat vel tenetur maiores, quaerat voluptatum commodi necessitatibus consequatur eveniet saepe. Iusto impedit esse laudantium beatae praesentium?
+            </p>
+        </div>
+        <div class="caixa">
+            <h2>Lorem ipsum dolor sit, amet 2</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum debitis mollitia nesciunt aliquam repellat vel tenetur maiores, quaerat voluptatum commodi necessitatibus consequatur eveniet saepe. Iusto impedit esse laudantium beatae praesentium?
+            </p>
+        </div>
+        <div class="caixa">
+            <h2>Lorem ipsum dolor sit, amet 3</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum debitis mollitia nesciunt aliquam repellat vel tenetur maiores, quaerat voluptatum commodi necessitatibus consequatur eveniet saepe. Iusto impedit esse laudantium beatae praesentium?
+            </p>
+        </div>
+    </div>
+
+    <h1>Exercício 2</h1>
+    <hr>
+
+    <div id="container">
+
+        <div class="area-materias">
+            <div class="caixa-materias">
+                <h2>Lorem ipsum dolor sit amet</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ducimus velit. Porro fugiat commodi nulla sint nesciunt est aliquam corporis! Ex, expedita. Ex nesciunt nulla dolor eveniet molestiae velit inventore.
+                </p>
+            </div>
+            <hr>
+            <div class="caixa-materias">
+                <h2>Lorem ipsum dolor sit amet</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ducimus velit. Porro fugiat commodi nulla sint nesciunt est aliquam corporis! Ex, expedita. Ex nesciunt nulla dolor eveniet molestiae velit inventore.
+                </p>
+            </div>
+            <hr>
+            <div class="caixa-materias">
+                <h2>Lorem ipsum dolor sit amet</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ducimus velit. Porro fugiat commodi nulla sint nesciunt est aliquam corporis! Ex, expedita. Ex nesciunt nulla dolor eveniet molestiae velit inventore.
+                </p>
+            </div>
+        </div> <!--area-materias-->
+
+        <div class="area-tecnologias">
+            <h3>Descubra o que é importante</h3>
+            <ul>
+                <li>Tecnologia</li>
+                <li>Java</li>
+                <li>Kotlin</li>
+                <li>Multiplataforma</li>
+                <li>Desenvolvimento Web</li>
+                <li>JavaScript</li>
+            </ul>
+        </div> <!--area-tecnologias-->
+
+    </div> <!--container-->
+    
+</body>
+</html>
+```
+
+
+
+
+
+---
+
+---
+
+
+
+### 82. Elementos Flutuantes (Clear) - Parte 1    :pushpin::round_pushpin:
+
+
+
+
+
+---
+
+---
+
+
 
 ### 83. [Exercício] Criando barra de navegação vertical
 
