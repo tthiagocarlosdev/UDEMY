@@ -10,39 +10,40 @@ body {
 #container {
     background-color: white;
     position: relative;
-    width: 900px;
-    margin: 15px auto;
-    padding: 15px;
+    width: 700px;
+    margin: 1em auto;
+    padding: 0.8em;
 }
 
 #img-novo-site {
     position: absolute;
     right: 0;
     top: 0;
-    width: 120px;
+    width: 100px;
     z-index: 10;
 }
 
 #cabecalho {
-    background-color: deepskyblue;
+    background-color: #0497f3;
+    padding: 1em;
     position: relative;
 }
 
 #cabecalho img {
-    width: 150px;
-    padding: 20px;
+    width: 100px;
 }
 
 #cabecalho a {
-    padding: 10px;
+    padding: 0.5em;
     text-decoration: none;
     color: white;
     font-weight: bold;
+    border-radius: 0.3em;
 }
 
 #cabecalho a:hover {
     background-color: white;
-    color: deepskyblue;
+    color: #0497f3;
 }
 
 #principal {
@@ -53,10 +54,15 @@ body {
     padding: 10px 0;
 }
 
+#conteudos p {
+    padding: 0.5em 0;
+}
+
 #chat {
-    background-color: hotpink;
-    width: 200px;
-    padding: 20px 15px;
+    background-color: violet;
+    width: 150px;
+    height: 200px;
+    padding: 0.5em;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -64,8 +70,4 @@ body {
 
 #chat h3 {
     padding: 10px 0;
-}
-
-#chat input {
-    height: 50px;
 }

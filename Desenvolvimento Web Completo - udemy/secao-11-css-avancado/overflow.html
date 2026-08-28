@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow e dimensões de caixa</title>
+    <style>
+        .caixa {
+            width: 600px;
+            height: 300px;
+            border: 1px solid red;
+            background-color: lightgray;
+            padding: 1em;
+            /*
+            visible: Exibe o conte´do de forma vazada, fora da caixa de conteúdo.
+            hidden: Esconde o conteúdo excedente
+            scroll: Sempre exibe barras de rolagem
+            auto: adiciona scroll somente se necessário
+            */
+            /* overflow: auto; */
+            overflow-x: hidden; /*Horizontal*/
+            overflow-y: auto; /*Vertical*/
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="caixa">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, unde? Molestias soluta commodi, impedit sed repudiandae recusandae deleniti provident velit quos nihil officia consequatur minus ducimus earum, perferendis suscipit atque.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, unde? Molestias soluta commodi, impedit sed repudiandae recusandae deleniti provident velit quos nihil officia consequatur minus ducimus earum, perferendis suscipit atque.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, unde? Molestias soluta commodi, impedit sed repudiandae recusandae deleniti provident velit quos nihil officia consequatur minus ducimus earum, perferendis suscipit atque.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, unde? Molestias soluta commodi, impedit sed repudiandae recusandae deleniti provident velit quos nihil officia consequatur minus ducimus earum, perferendis suscipit atque.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, unde? Molestias soluta commodi, impedit sed repudiandae recusandae deleniti provident velit quos nihil officia consequatur minus ducimus earum, perferendis suscipit atque.
+        </p>
+    </div>
+
+</body>
+</html>

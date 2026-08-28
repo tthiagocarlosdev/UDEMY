@@ -226,7 +226,7 @@ _____
 
 ### 77. Sobrepondo elementos com z-index
 
-### 78. Elementos Flutuantes (Teoria)
+### 78. Elementos Flutuantes (Teoria)  :pushpin::round_pushpin:
 
 ### 79. Elementos Flutuantes (Prática) - Parte 1
 
@@ -337,6 +337,8 @@ _____
 > ```
 
 E acrescenta:
+
+Haja como um professor de desenvolvimento web
 
 > **Comente o assunto respondendo:**
 >
