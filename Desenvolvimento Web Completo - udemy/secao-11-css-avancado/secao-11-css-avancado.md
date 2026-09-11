@@ -3958,9 +3958,272 @@ E, para desenvolvimento moderno:
 
 
 
-### 82. Elementos Flutuantes (Clear) - Parte 1    :pushpin::round_pushpin:
+### 82. Elementos Flutuantes (Clear) - Parte 1  
+
+ **`clear` é uma propriedade CSS** usada para controlar o comportamento de elementos em relação aos elementos que estão flutuando.
+
+#### `clear` no CSS
+
+##### O que é?
+
+`clear` determina **de que lado um elemento não pode ficar ao lado de elementos que possuem `float`**.
+
+Em outras palavras:
+
+> **`float` faz um elemento flutuar; `clear` impede que outro elemento fique ao lado desse elemento flutuante.**
+
+------
+
+#### Como funciona?
+
+Imagine:
+
+```html
+<div class="imagem"></div>
+
+<p>Texto...</p>
+
+<footer>Rodapé</footer>
+.imagem {
+    width: 200px;
+    height: 150px;
+    float: left;
+}
+```
+
+A imagem fica à esquerda e o conteúdo seguinte pode ocupar o espaço ao lado:
+
+```text
+┌───────────┐
+│           │  Texto Texto Texto
+│  IMAGEM   │  Texto Texto Texto
+│           │  Texto Texto Texto
+└───────────┘
+```
+
+Se quisermos que o `footer` **comece somente depois da imagem**, usamos:
+
+```css
+footer {
+    clear: left;
+}
+```
+
+Resultado:
+
+```text
+┌───────────┐
+│           │  Texto Texto
+│  IMAGEM   │  Texto Texto
+│           │
+└───────────┘
+
+────────────────────
+       RODAPÉ
+────────────────────
+```
+
+------
+
+#### Principais valores
+
+##### `clear: none`
+
+Valor padrão.
+
+O elemento pode ficar ao lado de elementos flutuantes.
+
+```css
+clear: none;
+```
+
+##### `clear: left`
+
+O elemento não ficará ao lado de elementos com:
+
+```css
+float: left;
+clear: left;
+```
+
+##### `clear: right`
+
+Impede que o elemento fique ao lado de elementos com:
+
+```css
+float: right;
+clear: right;
+```
+
+##### `clear: both`
+
+É o mais importante para memorizar.
+
+Impede que o elemento fique ao lado de **floats dos dois lados**.
+
+```css
+clear: both;
+```
+
+------
+
+#### Exemplo clássico
+
+```html
+<div class="caixa">Caixa 1</div>
+<div class="caixa">Caixa 2</div>
+
+<footer>Rodapé</footer>
+.caixa {
+    width: 200px;
+    height: 100px;
+    float: left;
+}
+
+footer {
+    clear: both;
+}
+```
+
+As caixas:
+
+```text
+┌──────────┐  ┌──────────┐
+│  CAIXA 1 │  │  CAIXA 2 │
+└──────────┘  └──────────┘
+```
+
+E o `footer` fica abaixo:
+
+```text
+──────────────────────────
+          RODAPÉ
+──────────────────────────
+```
+
+------
+
+#### 🧠 Para memorizar
+
+Pense em uma **rua**:
+
+> **`float` coloca uma caixa para o lado da rua.**
+> **`clear` diz: "não quero passar ao lado dessa caixa; vou começar depois dela".**
+
+A associação mais importante é:
+
+```text
+float → flutua
+clear → limpa a flutuação
+```
+
+E memorize principalmente:
+
+```css
+clear: both;
+```
+
+> **`both` = não importa se o float está à esquerda ou à direita; fique abaixo dos dois.**
+
+##### ⚠️ Uma correção de terminologia
+
+Não chamamos `clear` de **elemento flutuante**.
+
+O correto é:
+
+> **A propriedade `clear` controla como um elemento deve se comportar em relação aos elementos flutuantes (`float`).**
 
 
+
+#### Arquivo completo - clear.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear</title>
+    <style>
+        #principal {
+            border: 1px solid red;
+            width: 920px;
+            margin: 0 auto;
+        }
+
+        #rodape {
+            width: 920px;
+            margin: 0 auto;
+            background-color: gray;
+            color: black;
+        }
+
+        .noticia {
+            background-color: lightgray;
+            width: 280px;
+            padding: 5px;
+            margin: 7px;
+            float: left;
+        }
+
+        .item-galeria {
+            border: 1px solid gray;
+            padding: 0.5em;
+            background-color: white;
+            width: 200px;
+            float: right;
+        }
+
+        .limpar {
+            clear: both;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="principal">
+
+        <img class="item-galeria" src="./img/celular1.png" alt="">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo laboriosam eum eius nisi nesciunt, error ad ab non temporibus nulla laborum dignissimos magnam? Numquam sit ut quas, repudiandae tempora aspernatur?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo laboriosam eum eius nisi nesciunt, error ad ab non temporibus nulla laborum dignissimos magnam? Numquam sit ut quas, repudiandae tempora aspernatur?
+        </p>
+        <p class="limpar">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo laboriosam eum eius nisi nesciunt, error ad ab non temporibus nulla laborum dignissimos magnam? Numquam sit ut quas, repudiandae tempora aspernatur?
+        </p>
+
+        <div class="noticia">
+            <h2>Lorem ipsum dolor sit, amet 1</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum debitis mollitia nesciunt aliquam repellat vel tenetur maiores, quaerat voluptatum commodi necessitatibus consequatur eveniet saepe. Iusto impedit esse laudantium beatae praesentium?
+            </p>
+        </div>
+        <div class="noticia">
+            <h2>Lorem ipsum dolor sit, amet 2</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum debitis mollitia nesciunt aliquam repellat vel tenetur maiores, quaerat voluptatum commodi necessitatibus consequatur eveniet saepe. Iusto impedit esse laudantium beatae praesentium?
+            </p>
+        </div>
+        <div class="noticia">
+            <h2>Lorem ipsum dolor sit, amet 3</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum debitis mollitia nesciunt aliquam repellat vel tenetur maiores, quaerat voluptatum commodi necessitatibus consequatur eveniet saepe. Iusto impedit esse laudantium beatae praesentium?
+            </p>
+        </div>
+
+    </div> <!--principal-->
+
+    <div id="rodape">
+        <h3>Todos os direitos reservados</h3>
+    </div>
+
+</body>
+</html>
+```
 
 
 
@@ -3971,6 +4234,83 @@ E, para desenvolvimento moderno:
 
 
 ### 83. [Exercício] Criando barra de navegação vertical
+
+#### exercicio-naegacao-vertical
+
+#### Arquivo completo - index.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegação Vertical</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1>Menu de navegação</h1>
+
+    <div id="menu">
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Produtos</a>
+            </li>
+            <li>
+                <a href="#">Carrinho</a>
+            </li>
+            <li>
+                <a href="#">Contato</a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
+```
+
+---
+
+
+
+#### Arquivo completo - estilo.css
+
+```css
+#menu ul {
+    list-style-type: none;    
+    padding: 0;
+    width: 200px;
+}
+
+#menu li a {
+    display: block;
+    padding: 0.5em 1.5em;
+    color: black;
+    text-decoration: none;
+    background: #f7b600 url("../img/seta.png") no-repeat 0.5em center;
+}
+
+#menu li a:hover {
+    padding-left: 2.5em;
+    color: white;
+    background: #f99200 url("../img/seta.png") no-repeat 1.5em center;
+}
+
+#menu li a:active {
+    background-color: #885000;
+}
+```
+
+
+
+---
+
+---
+
+
 
 ### 84. Marcando página atual
 
