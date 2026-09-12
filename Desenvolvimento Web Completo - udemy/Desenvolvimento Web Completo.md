@@ -234,15 +234,15 @@ _____
 
 ### 81. Elementos Flutuantes (Exercício)
 
-### 82. Elementos Flutuantes (Clear) - Parte 1 :pushpin::round_pushpin:
+### 82. Elementos Flutuantes (Clear) - Parte 1
 
 ### 83. [Exercício] Criando barra de navegação vertical
 
 ### 84. Marcando página atual :pushpin::round_pushpin: 
 
-### 85. Criando barra de navegação horizontal
+### 85. Criando barra de navegação horizontal 
 
-### 86. Tags: Header, Nav, Main e Footer 
+### 86. Tags: Header, Nav, Main e Footer  :pushpin::round_pushpin:
 
 ### 87. Tags: Article, Section, Aside e Time
 

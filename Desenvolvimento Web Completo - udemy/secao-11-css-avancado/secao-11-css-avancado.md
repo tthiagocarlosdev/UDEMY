@@ -4235,7 +4235,7 @@ O correto é:
 
 ### 83. [Exercício] Criando barra de navegação vertical
 
-#### exercicio-naegacao-vertical
+#### exercicio-navegacao-vertical
 
 #### Arquivo completo - index.html
 
@@ -4314,7 +4314,269 @@ O correto é:
 
 ### 84. Marcando página atual
 
+#### navegacao-home
+
+#### Arquivo completo navegacao-home.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegação Home</title>
+    <link rel="stylesheet" href="navegacao-estilo.css">
+</head>
+<body id="home">
+    <h1>Navegação (home)</h1>
+
+    <div id="menu">
+        <ul>
+            <li class="home">
+                <a href="navegacao-home.html">Home</a>
+            </li>
+            <li class="produtos">
+                <a href="navegacao-produtos.html">Produtos</a>
+            </li>
+            <li class="carrinho">
+                <a href="navegacao-carrinho.html">Carrinho</a>
+            </li>
+            <li>
+                <a href="#">Contato</a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
+```
+
+---
+
+#### Arquivo completo navegacao-produtos.html
+
+ ```html
+ <!DOCTYPE html>
+ <html lang="pt-BR">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Navegação Produtos</title>
+     <link rel="stylesheet" href="navegacao-estilo.css">
+ </head>
+ <body id="produtos">
+     <h1>Navegação (produtos)</h1>
+ 
+     <div id="menu">
+         <ul>
+             <li class="home">
+                 <a href="navegacao-home.html">Home</a>
+             </li>
+             <li class="produtos">
+                 <a href="navegacao-produtos.html">Produtos</a>
+             </li>
+             <li class="carrinho">
+                 <a href="navegacao-carrinho.html">Carrinho</a>
+             </li>
+             <li>
+                 <a href="#">Contato</a>
+             </li>
+         </ul>
+     </div>
+ 
+ </body>
+ </html>
+ ```
+
+---
+
+#### Arquivo completo navegacao-carrinho.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegação Carrinho</title>
+    <link rel="stylesheet" href="navegacao-estilo.css">
+</head>
+<body id="carrinho">
+    <h1>Navegação (carrinho)</h1>
+
+    <div id="menu">
+        <ul>
+            <li class="home">
+                <a href="navegacao-home.html">Home</a>
+            </li>
+            <li class="produtos">
+                <a href="navegacao-produtos.html">Produtos</a>
+            </li>
+            <li class="carrinho">
+                <a href="navegacao-carrinho.html">Carrinho</a>
+            </li>
+            <li>
+                <a href="#">Contato</a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
+```
+
+---
+
+#### Arquivo completo navegacao-estilo.css
+
+```css
+#menu ul {
+    list-style-type: none;    
+    padding: 0;
+    width: 200px;
+}
+
+#menu li a {
+    display: block;
+    padding: 0.5em 1.5em;
+    color: black;
+    text-decoration: none;
+    background: #f7b600 url("../img/seta.png") no-repeat 0.5em center;
+}
+
+#menu li a:hover {
+    padding-left: 2.5em;
+    color: white;
+    background: #f99200 url("../img/seta.png") no-repeat 1.5em center;
+}
+
+#menu li a:active {
+    background-color: #885000;
+}
+
+/* #menu li.selecionado a {
+    padding-left: 2.5em;
+    color: white;
+    background: #f99200 url("../img/seta.png") no-repeat 1.5em center;
+} */
+
+#home #menu li.home a,
+#produtos #menu li.produtos a,
+#carrinho #menu li.carrinho a {
+    padding-left: 2.5em;
+    color: white;
+    background: purple url("../img/seta.png") no-repeat 1.5em center;
+}
+```
+
+
+
+---
+
+---
+
+
+
 ### 85. Criando barra de navegação horizontal
+
+#### navegacao-horizontal
+
+#### Arquivo completo navegacao-horizontal.css
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegação Horizontal</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body id="home">
+    <h1>Menu de navegação</h1>
+
+    <div id="menu">
+        <ul>
+            <li class="home">
+                <a href="#">Home</a>
+            </li>
+            <li class="produtos">
+                <a href="#">Produtos</a>
+            </li>
+            <li class="carrinho">
+                <a href="#">Carrinho</a>
+            </li>
+            <li>
+                <a href="#">Contato</a>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>Conteúdo</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minus, et ullam sed dolores cumque voluptatibus dicta voluptates, quia quibusdam quis qui? Excepturi, quia. Praesentium inventore veritatis minima quos doloribus!
+        </p>
+    </div>
+
+</body>
+</html>
+```
+
+---
+
+#### Arquivo completo estilo.css
+
+```css
+#menu ul {
+    list-style-type: none;    
+    padding: 0;
+    width: 720px;
+    background-color: #24252a;
+    padding: 0.5em;
+}
+
+#menu ul::after {
+    content: " ";
+    clear: both;
+    display: table;
+}
+
+#menu li a {
+    display: block;
+    padding: 0.5em 1.5em;
+    color: white;
+    text-decoration: none;
+    float: left;
+    margin: 0 0.5em;
+}
+
+#menu li a:hover {
+    background-color: #0582ac;
+    border-radius: 1.2em;
+}
+
+#menu li a:active {
+    background-color: #7a7a7a;
+}
+
+#home #menu li.home a,
+#produtos #menu li.produtos a,
+#carrinho #menu li.carrinho a {
+    padding-left: 2.5em;
+    color: white;
+    background: purple url("../img/seta.png") no-repeat 1.5em center;
+    border-radius: 1.2em;
+}
+```
+
+
+
+---
+
+---
+
+
 
 ### 86. Tags: Header, Nav, Main e Footer 
 
