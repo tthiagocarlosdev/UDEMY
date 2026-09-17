@@ -238,7 +238,7 @@ _____
 
 ### 83. [Exercício] Criando barra de navegação vertical
 
-### 84. Marcando página atual :pushpin::round_pushpin: 
+### 84. Marcando página atual 
 
 ### 85. Criando barra de navegação horizontal 
 
@@ -246,7 +246,7 @@ _____
 
 ### 87. Tags: Article, Section, Aside e Time
 
-### 88. projeto4 Site de Notícias Cidade - Criando topo
+### 88. projeto4 Site de Notícias Cidade - Criando topo :pushpin::round_pushpin: 
 
 ### 89. projeto4 Site de Notícias Cidade - Barra de navegação
 

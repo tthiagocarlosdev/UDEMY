@@ -4580,9 +4580,1058 @@ O correto é:
 
 ### 86. Tags: Header, Nav, Main e Footer 
 
+Essas quatro tags são **elementos semânticos do HTML5**. Elas servem principalmente para organizar a estrutura da página e deixar claro **qual é a função de cada parte do conteúdo**.
+
+Uma estrutura comum é:
+
+```text
+<body>
+│
+├── <header>  → Cabeçalho
+│     └── <nav> → Navegação
+│
+├── <main>    → Conteúdo principal
+│
+└── <footer>  → Rodapé
+</body>
+```
+
+------
+
+#### 1. `<header>`
+
+##### O que é?
+
+A tag `<header>` representa o **cabeçalho** de uma página ou de uma seção.
+
+Ela normalmente contém informações introdutórias, como:
+
+- Logo
+- Nome do site
+- Título
+- Slogan
+- Menu de navegação
+- Informações introdutórias
+
+##### Exemplo
+
+```html
+<header>
+    <h1>Meu Site</h1>
+    <p>Bem-vindo ao meu site!</p>
+</header>
+```
+
+Visualmente:
+
+```text
+┌──────────────────────────────┐
+│          MEU SITE            │  ← header
+│    Bem-vindo ao meu site!    │
+└──────────────────────────────┘
+```
+
+##### Importante
+
+`<header>` **não significa necessariamente o topo da página**.
+
+Ele também pode existir dentro de outras seções:
+
+```html
+<article>
+    <header>
+        <h2>Meu primeiro artigo</h2>
+        <p>Publicado em 16/09/2026</p>
+    </header>
+
+    <p>Conteúdo do artigo...</p>
+</article>
+```
+
+Nesse caso, o `<header>` é o cabeçalho **do artigo**, não da página inteira.
+
+------
+
+#### 2. `<nav>`
+
+##### O que é?
+
+`<nav>` representa uma área que contém **links de navegação**.
+
+É usada para menus que permitem ao usuário navegar pelo site ou pela página.
+
+##### Exemplo
+
+```html
+<nav>
+    <a href="index.html">Início</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="contato.html">Contato</a>
+</nav>
+```
+
+Visualmente:
+
+```text
+┌───────────────────────────────────┐
+│ Início | Sobre | Contato           │
+└───────────────────────────────────┘
+              ↑
+             nav
+```
+
+##### `<nav>` normalmente aparece dentro do `<header>`
+
+```html
+<header>
+    <h1>Meu Site</h1>
+
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+    </nav>
+</header>
+```
+
+Mas **não é obrigatório** que `<nav>` esteja dentro de `<header>`.
+
+Pode existir, por exemplo:
+
+```html
+<nav>
+    <a href="#capitulo1">Capítulo 1</a>
+    <a href="#capitulo2">Capítulo 2</a>
+</nav>
+```
+
+##### Atenção
+
+Não significa que **todo conjunto de links** deve estar dentro de `<nav>`.
+
+Por exemplo:
+
+```html
+<p>
+    Leia também nosso
+    <a href="#">manual</a>.
+</p>
+```
+
+Isso é apenas um link dentro do conteúdo, não necessariamente uma área de navegação.
+
+------
+
+#### 3. `<main>`
+
+##### O que é?
+
+`<main>` representa o **conteúdo principal da página**.
+
+É aquilo que é mais importante e específico daquela página.
+
+Por exemplo, em um site de notícias:
+
+```text
+<header>
+    Logo + menu
+</header>
+
+<main>
+    Notícia
+</main>
+
+<footer>
+    Informações do site
+</footer>
+```
+
+##### Exemplo
+
+```html
+<main>
+    <h1>Como aprender HTML</h1>
+
+    <p>
+        HTML é uma linguagem utilizada para estruturar
+        páginas da web.
+    </p>
+</main>
+```
+
+------
+
+##### Uma regra importante
+
+Normalmente, uma página deve ter **um único `<main>`** representando o conteúdo principal.
+
+Por exemplo:
+
+```html
+<body>
+
+    <header>
+        <h1>Meu Site</h1>
+    </header>
+
+    <main>
+        <h2>Conteúdo principal</h2>
+        <p>...</p>
+    </main>
+
+    <footer>
+        <p>Copyright © 2026</p>
+    </footer>
+
+</body>
+```
+
+##### O que NÃO deve ficar no `<main>`?
+
+Conteúdos que se repetem em várias páginas, como:
+
+- menu principal
+- logo/cabeçalho global
+- rodapé
+- informações gerais de navegação
+
+Esses normalmente ficam fora do `<main>`.
+
+------
+
+#### 4. `<footer>`
+
+##### O que é?
+
+`<footer>` representa o **rodapé** de uma página ou de uma seção.
+
+Pode conter:
+
+- Copyright
+- Informações de contato
+- Links
+- Política de privacidade
+- Termos de uso
+- Informações sobre o autor
+- Redes sociais
+
+##### Exemplo
+
+```html
+<footer>
+    <p>© 2026 Meu Site</p>
+    <a href="#">Política de Privacidade</a>
+</footer>
+```
+
+Visualmente:
+
+```text
+┌──────────────────────────────┐
+│                              │
+│       CONTEÚDO DA PÁGINA     │
+│                              │
+├──────────────────────────────┤
+│ © 2026 Meu Site              │ ← footer
+│ Política de Privacidade      │
+└──────────────────────────────┘
+```
+
+Assim como `<header>`, o `<footer>` também pode pertencer a uma seção específica.
+
+```html
+<article>
+
+    <header>
+        <h2>Meu artigo</h2>
+    </header>
+
+    <p>Conteúdo do artigo...</p>
+
+    <footer>
+        <p>Escrito por Thiago</p>
+    </footer>
+
+</article>
+```
+
+Nesse exemplo, o `<footer>` é o rodapé **do artigo**, não necessariamente o rodapé de todo o site.
+
+------
+
+#### 5. Juntando tudo
+
+Uma estrutura bastante comum seria:
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Site</title>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Meu Site</h1>
+
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <h2>Conteúdo principal</h2>
+
+        <p>
+            Este é o conteúdo principal da página.
+        </p>
+
+    </main>
+
+
+    <footer>
+
+        <p>© 2026 Meu Site</p>
+
+    </footer>
+
+</body>
+
+</html>
+```
+
+A estrutura fica:
+
+```text
+<body>
+│
+├── HEADER
+│   │
+│   ├── h1 → título/logo
+│   │
+│   └── NAV
+│       ├── link
+│       ├── link
+│       └── link
+│
+├── MAIN
+│   ├── conteúdo principal
+│   ├── textos
+│   ├── imagens
+│   └── artigos...
+│
+└── FOOTER
+    ├── copyright
+    ├── links
+    └── informações
+```
+
+------
+
+#### 6. Por que usar essas tags?
+
+A grande vantagem é a **semântica**.
+
+Você poderia fazer tudo com `<div>`:
+
+```html
+<div class="header">
+    ...
+</div>
+
+<div class="menu">
+    ...
+</div>
+
+<div class="conteudo">
+    ...
+</div>
+
+<div class="footer">
+    ...
+</div>
+```
+
+Funciona visualmente.
+
+Mas HTML semântico deixa mais claro para **navegadores, mecanismos de busca, tecnologias assistivas e outros desenvolvedores** qual é a função de cada parte:
+
+```html
+<header>  → "isto é um cabeçalho"
+<nav>     → "isto é uma navegação"
+<main>    → "isto é o conteúdo principal"
+<footer>  → "isto é um rodapé"
+```
+
+------
+
+#### Para memorizar
+
+| Tag        | Função             |
+| ---------- | ------------------ |
+| `<header>` | Cabeçalho          |
+| `<nav>`    | Navegação          |
+| `<main>`   | Conteúdo principal |
+| `<footer>` | Rodapé             |
+
+Uma forma simples de lembrar:
+
+```text
+HEADER → começo / apresentação
+NAV    → navegação
+MAIN   → conteúdo principal
+FOOTER → final / informações finais
+```
+
+**E uma diferença importante:** essas tags são **semânticas**, não são responsáveis, por si só, pela aparência. Para definir cores, tamanho, posição, espaçamento etc., você usa **CSS**.
+
+---
+
+#### tags
+
+#### Arquivo completo - index.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags</title>
+    <style>
+
+        header, main, nav, footer {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Logo
+        <nav> Home | Produtos | Loja </nav>
+    </header>
+
+    <main>
+        Conteúdos principais
+    </main>
+
+    <footer>
+        Todos os direitos reservados
+    </footer>
+
+</body>
+</html>
+```
+
+
+
+---
+
+---
+
+
+
 ### 87. Tags: Article, Section, Aside e Time
 
+Essas quatro tags também fazem parte do **HTML semântico**, mas cada uma tem uma função diferente. A principal dificuldade é entender a diferença entre **`article` e `section`**, então vou dar bastante atenção a isso.
+
+------
+
+#### 1. `<article>`
+
+##### O que é?
+
+`<article>` representa um **conteúdo independente e completo**, que poderia fazer sentido mesmo se fosse retirado daquela página.
+
+Pense em algo que poderia ser **publicado ou distribuído separadamente**.
+
+##### Exemplos
+
+- Uma notícia
+- Uma postagem de blog
+- Um comentário de usuário
+- Um produto
+- Uma publicação em um fórum
+- Um artigo
+
+##### Exemplo
+
+```html
+<article>
+    <h2>Como aprender HTML</h2>
+
+    <p>
+        HTML é utilizado para estruturar páginas web.
+    </p>
+</article>
+```
+
+A ideia é:
+
+```text
+┌─────────────────────────────┐
+│ ARTICLE                     │
+│                             │
+│ Como aprender HTML           │
+│                             │
+│ HTML é utilizado para...    │
+│                             │
+└─────────────────────────────┘
+```
+
+Esse conteúdo poderia ser colocado em outra página ou até ser compartilhado como uma publicação independente.
+
+------
+
+##### Exemplo com várias notícias
+
+```html
+<main>
+
+    <h1>Notícias</h1>
+
+    <article>
+        <h2>Notícia 1</h2>
+        <p>Conteúdo da notícia...</p>
+    </article>
+
+    <article>
+        <h2>Notícia 2</h2>
+        <p>Conteúdo da notícia...</p>
+    </article>
+
+    <article>
+        <h2>Notícia 3</h2>
+        <p>Conteúdo da notícia...</p>
+    </article>
+
+</main>
+```
+
+Aqui temos:
+
+```text
+MAIN
+│
+├── ARTICLE → Notícia 1
+├── ARTICLE → Notícia 2
+└── ARTICLE → Notícia 3
+```
+
+##### Para memorizar
+
+> **`article` = conteúdo independente.**
+
+------
+
+#### 2. `<section>`
+
+#### O que é?
+
+`<section>` representa uma **seção ou agrupamento temático de conteúdo**.
+
+Ela serve para dividir uma página em diferentes assuntos ou partes.
+
+##### Exemplo
+
+```html
+<section>
+    <h2>HTML</h2>
+
+    <p>
+        HTML é utilizado para estruturar páginas.
+    </p>
+</section>
+
+<section>
+    <h2>CSS</h2>
+
+    <p>
+        CSS é utilizado para estilizar páginas.
+    </p>
+</section>
+```
+
+Temos:
+
+```text
+┌──────────────────────────────┐
+│ SECTION                      │
+│ HTML                         │
+│ conteúdo sobre HTML          │
+└──────────────────────────────┘
+
+┌──────────────────────────────┐
+│ SECTION                      │
+│ CSS                          │
+│ conteúdo sobre CSS           │
+└──────────────────────────────┘
+```
+
+------
+
+#### 3. Diferença entre `<article>` e `<section>`
+
+Essa é uma das partes mais importantes.
+
+##### `<article>`
+
+Pergunte:
+
+> **"Esse conteúdo poderia existir independentemente?"**
+
+Se sim, `article` pode ser apropriado.
+
+##### `<section>`
+
+Pergunte:
+
+> **"Estou agrupando conteúdo que pertence ao mesmo assunto?"**
+
+Se sim, `section` pode ser apropriado.
+
+------
+
+##### Exemplo prático
+
+Imagine uma página sobre **HTML**:
+
+```html
+<main>
+
+    <h1>Aprendendo HTML</h1>
+
+    <section>
+        <h2>Introdução</h2>
+        <p>O que é HTML...</p>
+    </section>
+
+    <section>
+        <h2>Elementos HTML</h2>
+        <p>HTML possui diversos elementos...</p>
+    </section>
+
+    <section>
+        <h2>Exemplos</h2>
+        <p>Veja alguns exemplos...</p>
+    </section>
+
+</main>
+```
+
+Aqui `section` faz sentido porque estamos dividindo **um conteúdo maior em partes temáticas**.
+
+Agora imagine um site de notícias:
+
+```html
+<main>
+
+    <h1>Últimas notícias</h1>
+
+    <article>
+        <h2>Brasil vence partida</h2>
+        <p>...</p>
+    </article>
+
+    <article>
+        <h2>Nova tecnologia é lançada</h2>
+        <p>...</p>
+    </article>
+
+</main>
+```
+
+Cada notícia é um conteúdo independente → `article`.
+
+------
+
+#### 4. `<aside>`
+
+##### O que é?
+
+`<aside>` representa um conteúdo **relacionado ao conteúdo principal, mas que não é essencial para ele**.
+
+É o famoso conteúdo "à parte".
+
+Pode ser usado para:
+
+- Barra lateral
+- Informações complementares
+- Links relacionados
+- Publicidade
+- Recomendações
+- Glossário
+- Conteúdo adicional
+
+##### Exemplo
+
+```html
+<main>
+
+    <h1>O que é HTML?</h1>
+
+    <p>
+        HTML é uma linguagem de marcação utilizada
+        para estruturar páginas web.
+    </p>
+
+    <aside>
+        <h2>Você sabia?</h2>
+
+        <p>
+            HTML significa HyperText Markup Language.
+        </p>
+    </aside>
+
+</main>
+```
+
+A ideia:
+
+```text
+┌───────────────────────────────────────────┐
+│ MAIN                                      │
+│                                           │
+│ O que é HTML?                             │
+│                                           │
+│ HTML é uma linguagem...                   │
+│                                           │
+│ ┌───────────────────────────────┐         │
+│ │ ASIDE                         │         │
+│ │ Você sabia?                   │         │
+│ │ HTML significa...             │         │
+│ └───────────────────────────────┘         │
+│                                           │
+└───────────────────────────────────────────┘
+```
+
+------
+
+##### `<aside>` como barra lateral
+
+Um uso muito comum:
+
+```html
+<main>
+    <article>
+        <h1>Como aprender HTML</h1>
+        <p>Conteúdo principal...</p>
+    </article>
+
+    <aside>
+        <h2>Artigos relacionados</h2>
+
+        <a href="#">Aprenda CSS</a>
+        <a href="#">Aprenda JavaScript</a>
+    </aside>
+</main>
+```
+
+Com CSS, o `aside` poderia ficar ao lado do `article`:
+
+```text
+┌──────────────────────────┬──────────────────┐
+│                          │                  │
+│       ARTICLE            │      ASIDE       │
+│                          │                  │
+│ Conteúdo principal       │ Artigos          │
+│                          │ relacionados     │
+│                          │                  │
+└──────────────────────────┴──────────────────┘
+```
+
+**Importante:** `<aside>` não significa obrigatoriamente "barra lateral". A barra lateral é apenas um dos usos possíveis.
+
+##### Para memorizar
+
+> **`aside` = conteúdo adicional/à parte.**
+
+------
+
+#### 5. `<time>`
+
+##### O que é?
+
+`<time>` representa **uma data ou um horário**.
+
+Ela é utilizada para marcar informações temporais de forma semântica.
+
+##### Exemplo simples
+
+```html
+<p>
+    A aula será às <time>20:00</time>.
+</p>
+```
+
+Ou:
+
+```html
+<p>
+    Publicado em <time>16/09/2026</time>.
+</p>
+```
+
+------
+
+##### Atributo `datetime`
+
+O grande destaque da tag `<time>` é o atributo `datetime`.
+
+Ele permite colocar uma representação **estruturada da data/hora**, enquanto o usuário pode visualizar uma forma mais amigável.
+
+```html
+<time datetime="2026-09-16">
+    16 de setembro de 2026
+</time>
+```
+
+Para o usuário:
+
+```text
+16 de setembro de 2026
+```
+
+Mas no HTML:
+
+```text
+datetime="2026-09-16"
+```
+
+Isso facilita a interpretação do conteúdo por máquinas, como navegadores e outros sistemas.
+
+------
+
+##### Exemplos
+
+##### Data
+
+```html
+<time datetime="2026-09-16">
+    16 de setembro de 2026
+</time>
+```
+
+##### Horário
+
+```html
+<time datetime="20:30">
+    20h30
+</time>
+```
+
+##### Data e horário
+
+```html
+<time datetime="2026-09-16T20:30">
+    16 de setembro, às 20h30
+</time>
+```
+
+##### Data de publicação
+
+```html
+<article>
+
+    <h2>Aprendendo HTML</h2>
+
+    <p>
+        Publicado em
+        <time datetime="2026-09-16">
+            16 de setembro de 2026
+        </time>
+    </p>
+
+    <p>
+        HTML é uma linguagem de marcação...
+    </p>
+
+</article>
+```
+
+------
+
+#### 6. Juntando todas
+
+Podemos construir uma página utilizando as quatro tags:
+
+```html
+<main>
+
+    <section>
+
+        <h1>Notícias de Tecnologia</h1>
+
+        <article>
+
+            <header>
+                <h2>Nova tecnologia é lançada</h2>
+
+                <p>
+                    Publicado em
+                    <time datetime="2026-09-16">
+                        16 de setembro de 2026
+                    </time>
+                </p>
+            </header>
+
+            <p>
+                Uma nova tecnologia foi apresentada
+                nesta semana...
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <h2>Aprenda HTML</h2>
+
+            <p>
+                HTML é fundamental para o desenvolvimento web.
+            </p>
+
+        </article>
+
+    </section>
+
+
+    <aside>
+
+        <h2>Artigos relacionados</h2>
+
+        <a href="#">Aprenda CSS</a>
+        <a href="#">Aprenda JavaScript</a>
+
+    </aside>
+
+</main>
+```
+
+A estrutura seria:
+
+```text
+MAIN
+│
+├── SECTION
+│   │
+│   ├── ARTICLE
+│   │   ├── HEADER
+│   │   ├── TIME
+│   │   └── conteúdo
+│   │
+│   └── ARTICLE
+│       └── conteúdo
+│
+└── ASIDE
+    └── conteúdo complementar
+```
+
+------
+
+#### Para memorizar
+
+| Tag         | Pense em...   | Função                            |
+| ----------- | ------------- | --------------------------------- |
+| `<article>` | 📰 **Artigo**  | Conteúdo independente             |
+| `<section>` | 📦 **Seção**   | Agrupamento temático              |
+| `<aside>`   | ➡️ **À parte** | Conteúdo relacionado/complementar |
+| `<time>`    | 🕐 **Tempo**   | Data ou horário                   |
+
+#### Regra rápida:
+
+```text
+ARTICLE  → "Isso é um conteúdo independente."
+SECTION  → "Isso é uma parte de um conteúdo maior."
+ASIDE    → "Isso é informação complementar."
+TIME     → "Isso representa uma data ou horário."
+```
+
+**Uma observação importante:** `<article>` e `<section>` não são apenas "caixas" para organizar visualmente a página. A escolha entre elas deve refletir o **significado do conteúdo**. O posicionamento e a aparência dessas áreas são responsabilidade do CSS.
+
+---
+
+#### tags
+
+#### Arquivo completo - index.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags</title>
+    <style>
+
+        header, main, nav, footer {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Logo
+        <nav> Home | Produtos | Loja </nav>
+    </header>
+
+    <main>
+
+        <article>
+            <h1>Noticia de programação</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa consectetur molestias, ex autem dolorem soluta adipisci libero iste vero, nobis expedita nisi facilis rem tempora deleniti. Quas, placeat ratione? Quisquam.
+            </p>
+            postada em: <time datetime="2026-09-16">16 de setembro de 2026</time>
+            <section>Dsenvolvimento Mobile</section>
+
+        </article>
+
+        <section>
+            <h2>Conteúdos vistos recentemente</h2>
+            Postagens que você ja viu
+        </section>
+
+        <aside>
+            Filtros de pesquisa
+        </aside>
+
+    </main>
+
+    <footer>
+        Todos os direitos reservados
+    </footer>
+
+</body>
+</html>
+```
+
+
+
+---
+
+---
+
+
+
 ### 88. projeto4 Site de Notícias Cidade - Criando topo
+
+
+
+
+
+
 
 ### 89. projeto4 Site de Notícias Cidade - Barra de navegação
 
