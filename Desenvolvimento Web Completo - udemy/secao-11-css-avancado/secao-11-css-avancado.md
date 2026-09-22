@@ -5627,13 +5627,201 @@ TIME     → "Isso representa uma data ou horário."
 
 ### 88. projeto4 Site de Notícias Cidade - Criando topo
 
+#### Arquivo completo index.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Notícias cidade - Seu site de notícias</title>
+        <link rel="stylesheet" href="./css/estilo.css">
+    </head>
+    <body>
+        
+        <div id="container">
+
+            <div id="topo">
+                <h1 class="logo">Notícias cidade</h1>
+            </div>
+
+        </div>
+
+    </body>
+</html>
+```
+
+---
+
+#### Arquivo completo estilo.css
+
+```css
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #fff url(../imagens/fundo.png) repeat-x;
+}
+
+#container {
+    width: 750px;
+    margin: 0 auto;
+}
+
+#topo {
+    height: 150px;
+    background: url(../imagens/detalhe-topo.png) no-repeat right top;
+    padding-top: 25px;
+    border: 1px solid red;
+}
+
+.logo {
+    width: 152px;
+    height: 66px;
+    background: url(../imagens/logo.png) no-repeat center;
+    text-indent: -3000px;
+}
+```
 
 
 
+---
+
+---
 
 
 
 ### 89. projeto4 Site de Notícias Cidade - Barra de navegação
+
+#### Arquivo completo index.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Notícias cidade - Seu site de notícias</title>
+        <link rel="stylesheet" href="./css/estilo.css">
+    </head>
+    <body class="home">
+        
+        <div id="container">
+
+            <div id="topo">
+                <h1 class="logo">Notícias cidade</h1>
+                <ul id="navegacao">
+                    <li class="primeiro">
+                        <a id="home" href="index.html">home</a></li>
+                    <li>
+                        <a id="brasil" href="./conteudo/brasil.html">Brasil</a></li>
+                    <li>
+                        <a id="internacional" href="./conteudo/internacional.html">Internacional</a></li>
+                    <li>
+                        <a id="economia" href="./conteudo/economia.html">Economia</a></li>
+                    <li>
+                        <a id="saude" href="./conteudo/saude.html">Saude</a></li>
+                    <li>
+                        <a id="ciencia" href="./conteudo/ciencia.html">Ciencia</a></li>
+                    <li>
+                        <a id="fotos" href="./conteudo/fotos.html">Fotos</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </body>
+</html>
+```
+
+---
+
+### Arquivo completo estilo.css
+
+```css
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #fff url(../imagens/fundo.png) repeat-x;
+}
+
+#container {
+    width: 750px;
+    margin: 0 auto;
+}
+
+#topo {
+    height: 150px;
+    background: url(../imagens/detalhe-topo.png) no-repeat right top;
+    padding-top: 25px;
+    /* border: 1px solid red; */
+}
+
+.logo {
+    width: 152px;
+    height: 66px;
+    background: url(../imagens/logo.png) no-repeat center;
+    text-indent: -3000px;
+}
+
+/* Barra de navegação */
+ul {
+    list-style: none;
+}
+
+#topo ul {
+    background-color: #b10333;
+    margin-top: 30px;
+    float: left;
+}
+
+#topo ul li {
+    float: left;
+}
+
+#topo ul a {
+    font-size: 0.9em;
+    display: block;
+    padding: 0.5em 1.5em;
+    line-height: 2.1em;
+    text-decoration: none;
+    color: #fff;
+    background: url(../imagens/divisor.png) no-repeat left center;
+}
+
+#topo ul .primeiro a {
+    background: none;
+}
+
+#topo ul a:hover {
+    color: #69001d;
+}
+
+body.home #navegacao a#home,
+body.brasil #navegacao a#brasil,
+body.internacional #navegacao a#internacional,
+body.economia #navegacao a#economia,
+body.saude #navegacao a#saude,
+body.ciencia #navegacao a#ciencia,
+body.fotos #navegacao a#fotos
+{
+    color: #fff;
+    background: #de003e;
+    cursor: text;
+}
+```
+
+
+
+
 
 ### 90. projeto4 Site de Notícias Cidade - Layout em colunas - parte 1
 

@@ -242,15 +242,15 @@ _____
 
 ### 85. Criando barra de navegação horizontal 
 
-### 86. Tags: Header, Nav, Main e Footer  :pushpin::round_pushpin:
+### 86. Tags: Header, Nav, Main e Footer 
 
 ### 87. Tags: Article, Section, Aside e Time
 
 ### 88. projeto4 Site de Notícias Cidade - Criando topo :pushpin::round_pushpin: 
 
-### 89. projeto4 Site de Notícias Cidade - Barra de navegação
+### 89. projeto4 Site de Notícias Cidade - Barra de navegação 
 
-### 90. projeto4 Site de Notícias Cidade - Layout em colunas - parte 1
+### 90. projeto4 Site de Notícias Cidade - Layout em colunas - parte 1  :pushpin::round_pushpin:
 
 ### 91. projeto4 Site de Notícias Cidade - Layout em colunas - parte 2
 
