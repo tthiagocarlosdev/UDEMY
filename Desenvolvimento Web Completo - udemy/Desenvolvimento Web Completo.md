@@ -246,13 +246,13 @@ _____
 
 ### 87. Tags: Article, Section, Aside e Time
 
-### 88. projeto4 Site de Notícias Cidade - Criando topo :pushpin::round_pushpin: 
+### 88. projeto4 Site de Notícias Cidade - Criando topo
 
 ### 89. projeto4 Site de Notícias Cidade - Barra de navegação 
 
 ### 90. projeto4 Site de Notícias Cidade - Layout em colunas - parte 1  :pushpin::round_pushpin:
 
-### 91. projeto4 Site de Notícias Cidade - Layout em colunas - parte 2
+### 91. projeto4 Site de Notícias Cidade - Layout em colunas - parte 2  
 
 ### 92. projeto4 Site de Notícias Cidade - Barra lateral
 
@@ -266,7 +266,19 @@ _____
 
 ---
 
-## Seção 12: Projeto Chalé Hotel - Hora de praticar
+## Seção 12: Projeto Chalé Hotel - Hora de praticar  :pushpin::round_pushpin: 
+
+### 95. projeto5 Chalé Hotel - Criando topo
+
+### 96. projeto5 Chalé Hotel - Ajustando topo
+
+### 97. projeto5 Chalé Hotel - Criando menu vertical
+
+### 98. projeto5 Chalé Hotel - Área de conteúdos
+
+### 99. projeto5 Chalé Hotel - Conteúdo lateral e rodapé
+
+
 
 ---
 
