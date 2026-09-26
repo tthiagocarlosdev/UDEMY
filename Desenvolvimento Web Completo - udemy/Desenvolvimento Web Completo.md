@@ -250,7 +250,7 @@ _____
 
 ### 89. projeto4 Site de Notícias Cidade - Barra de navegação 
 
-### 90. projeto4 Site de Notícias Cidade - Layout em colunas - parte 1  :pushpin::round_pushpin:
+### 90. projeto4 Site de Notícias Cidade - Layout em colunas - parte 1 
 
 ### 91. projeto4 Site de Notícias Cidade - Layout em colunas - parte 2  
 
@@ -266,17 +266,17 @@ _____
 
 ---
 
-## Seção 12: Projeto Chalé Hotel - Hora de praticar  :pushpin::round_pushpin: 
+## Seção 12: Projeto Chalé Hotel - Hora de praticar 
 
-### 95. projeto5 Chalé Hotel - Criando topo
+### 95. projeto5 Chalé Hotel - Criando topo   :arrow_forward: :play_or_pause_button: 
 
-### 96. projeto5 Chalé Hotel - Ajustando topo
+### 96. projeto5 Chalé Hotel - Ajustando topo 
 
-### 97. projeto5 Chalé Hotel - Criando menu vertical
+### 97. projeto5 Chalé Hotel - Criando menu vertical 
 
-### 98. projeto5 Chalé Hotel - Área de conteúdos
+### 98. projeto5 Chalé Hotel - Área de conteúdos 
 
-### 99. projeto5 Chalé Hotel - Conteúdo lateral e rodapé
+### 99. projeto5 Chalé Hotel - Conteúdo lateral e rodapé :stop_sign: :pushpin::round_pushpin:
 
 
 
@@ -287,6 +287,20 @@ _____
 ---
 
 ## Seção 13: Projeto Museu Nacional - Hora de praticar
+
+### 100. projeto6 Museu Nacional - Criando topo  :soon: 
+
+### 101. projeto6 Museu Nacional - Barra lateral
+
+### 102. projeto6 Museu Nacional - Finalizando
+
+
+
+---
+
+---
+
+---
 
 ## Seção 14: CSS FlexBox
 
