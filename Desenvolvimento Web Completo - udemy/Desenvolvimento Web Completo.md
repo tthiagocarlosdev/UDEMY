@@ -1,4 +1,4 @@
-# Desenvolvimento Web Completo
+#  ​Desenvolvimento Web Completo
 
 ## Professor Hamilton Damasceno
 
@@ -268,7 +268,7 @@ _____
 
 ## Seção 12: Projeto Chalé Hotel - Hora de praticar 
 
-### 95. projeto5 Chalé Hotel - Criando topo   :arrow_forward: :play_or_pause_button: 
+### 95. projeto5 Chalé Hotel - Criando topo   
 
 ### 96. projeto5 Chalé Hotel - Ajustando topo 
 
@@ -276,7 +276,7 @@ _____
 
 ### 98. projeto5 Chalé Hotel - Área de conteúdos 
 
-### 99. projeto5 Chalé Hotel - Conteúdo lateral e rodapé :stop_sign: :pushpin::round_pushpin:
+### 99. projeto5 Chalé Hotel - Conteúdo lateral e rodapé :round_pushpin:
 
 
 
@@ -288,9 +288,9 @@ _____
 
 ## Seção 13: Projeto Museu Nacional - Hora de praticar
 
-### 100. projeto6 Museu Nacional - Criando topo  :soon: 
+### 100. projeto6 Museu Nacional - Criando topo :arrow_forward: :play_or_pause_button:   :stop_sign: :pushpin:
 
-### 101. projeto6 Museu Nacional - Barra lateral
+### 101. projeto6 Museu Nacional - Barra lateral :soon: 
 
 ### 102. projeto6 Museu Nacional - Finalizando
 
@@ -302,7 +302,7 @@ _____
 
 ---
 
-## Seção 14: CSS FlexBox
+## Seção 14: CSS FlexBox 
 
 ## Seção 15: CSS Grid Layout
 
