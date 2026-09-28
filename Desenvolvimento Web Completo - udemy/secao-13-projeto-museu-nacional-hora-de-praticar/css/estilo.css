@@ -24,6 +24,9 @@ a:hover {
 
 /* Logo
 -------------------------------------- */
+#logo h1 {
+    float: left;
+}
 
 #logo a {
     width: 248px;
@@ -60,4 +63,41 @@ nav ul li a {
 
 nav ul li a:hover {
     border-bottom: 1px solid #535858;
+}
+
+/* Principal
+-------------------------------------- */
+#conteudo {
+    width: 710px;
+    float: left;
+    background: green;
+}
+
+aside {
+    width: 350px;
+    float: right;
+    background: #ebe7dd;
+}
+
+section#visita {
+    background: #cdc8b1;
+    padding: 10px 27px 27px 27px;
+    margin-top: 10px;
+}
+
+h4 {
+    color: #86521a;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+    margin-bottom: 0;
+}
+
+/* Formulários
+-------------------------------------- */
+input {
+    height: 20px;
+    width: 80px;
+    background: #fff;
+    border: none;
+    font-size: 1em;
 }

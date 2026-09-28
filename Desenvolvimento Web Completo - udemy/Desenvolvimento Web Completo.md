@@ -1,4 +1,4 @@
-#  ​Desenvolvimento Web Completo
+#  Desenvolvimento Web Completo
 
 ## Professor Hamilton Damasceno
 
@@ -288,9 +288,9 @@ _____
 
 ## Seção 13: Projeto Museu Nacional - Hora de praticar
 
-### 100. projeto6 Museu Nacional - Criando topo :arrow_forward: :play_or_pause_button:   :stop_sign: :pushpin:
+### 100. projeto6 Museu Nacional - Criando topo:stop_sign: :pushpin:
 
-### 101. projeto6 Museu Nacional - Barra lateral :soon: 
+### 101. projeto6 Museu Nacional - Barra lateral :arrow_forward: :play_or_pause_button:    :soon: 
 
 ### 102. projeto6 Museu Nacional - Finalizando
 

@@ -2,7 +2,7 @@
 
 ## Professor Hamilton Damasceno
 
-## Seção 13: Projeto Museu Nacional - Hora de praticar :soon: 
+## Seção 13: Projeto Museu Nacional - Hora de praticar ​ 
 
 ### 100. projeto6 Museu Nacional - Criando topo
 
@@ -508,3 +508,21 @@ template {
 #### 
 
 ### 102. projeto6 Museu Nacional - Finalizando
+
+#### Arquivo completo - index.html
+
+```html
+
+```
+
+---
+
+#### Arquivo completo - estilo.css
+
+```css
+
+```
+
+---
+
+#### 
