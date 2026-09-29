@@ -288,9 +288,9 @@ _____
 
 ### 100. projeto6 Museu Nacional - Criando topo
 
-### 101. projeto6 Museu Nacional - Barra lateral :arrow_forward: :play_or_pause_button:    
+### 101. projeto6 Museu Nacional - Barra lateral 
 
-### 102. projeto6 Museu Nacional - Finalizando​ :stop_sign: :pushpin:
+### 102. projeto6 Museu Nacional - Finalizando
 
 
 
@@ -302,9 +302,9 @@ _____
 
 ## Seção 14: CSS FlexBox 
 
-### 103. Introdução ao Flexbox e Grid :soon: 
+### 103. Introdução ao Flexbox e Grid :arrow_forward: :play_or_pause_button:  :stop_sign: :pushpin:
 
-### 104. Fundamentos do Flexbox e Grid
+### 104. Fundamentos do Flexbox e Grid  :soon:
 
 ### 105. Display Flex
 
