@@ -302,19 +302,19 @@ _____
 
 ## Seção 14: CSS FlexBox 
 
-### 103. Introdução ao Flexbox e Grid :arrow_forward: :play_or_pause_button:  :stop_sign: :pushpin:
+### 103. Introdução ao Flexbox e Grid  
 
-### 104. Fundamentos do Flexbox e Grid  :soon:
+### 104. Fundamentos do Flexbox e Grid  :arrow_forward: :play_or_pause_button: 
 
 ### 105. Display Flex
 
-### 106. Flex Direction, Flex Wrap e Flex Flow
+### 106. Flex Direction, Flex Wrap e Flex Flow 
 
-### 107. Alinhamentos: Justify Content
+### 107. Alinhamentos: Justify Content :soon::stop_sign: :pushpin:
 
-### 108. Alinhamentos: Align Items
+### 108. Alinhamentos: Align Items  :soon:
 
-### 109. Alinhamentos: Align Content
+### 109. Alinhamentos: Align Content 
 
 ### 110. Align Self
 
