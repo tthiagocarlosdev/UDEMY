@@ -1738,15 +1738,1590 @@ Isso evita uma das confusões mais comuns de quem está começando Flexbox.
 
 ### 108. Alinhamentos: Align Items
 
+A propriedade `align-items` controla **como os Flex Items são alinhados no Cross Axis (eixo transversal)** dentro do Flex Container.
 
+```css
+.container {
+    display: flex;
+    align-items: center;
+}
+```
+
+A regra mais importante para memorizar é:
+
+> **`justify-content` → Main Axis**
+> **`align-items` → Cross Axis**
+
+Portanto, `align-items` depende da direção definida por `flex-direction`.
+
+#### Com `row`
+
+```css
+flex-direction: row;
+```
+
+Temos:
+
+```text
+          Cross Axis
+               ↓
+               │
+[ Item 1 ] [ Item 2 ] [ Item 3 ]
+────────────────────────────────→
+             Main Axis
+```
+
+Nesse caso, `align-items` controla o alinhamento **vertical**.
+
+#### Com `column`
+
+```css
+flex-direction: column;
+```
+
+Os eixos ficam:
+
+```text
+        Main Axis
+             ↓
+       [ Item 1 ]
+       [ Item 2 ]
+       [ Item 3 ]
+             │
+             ↓
+
+←───────────────→
+   Cross Axis
+```
+
+Agora `align-items` controla o alinhamento **horizontal**.
+
+------
+
+#### 1. `stretch`
+
+É o valor **padrão** de `align-items`.
+
+```css
+.container {
+    display: flex;
+    align-items: stretch;
+}
+```
+
+`stretch` faz com que os itens sejam **esticados no Cross Axis**, desde que eles não tenham um tamanho explícito nesse eixo.
+
+Com `row`:
+
+```text
+┌──────────────────────────────────┐
+│          Item 1          │
+├──────────────────────────────────┤
+│          Item 2          │
+├──────────────────────────────────┤
+│          Item 3          │
+└──────────────────────────────────┘
+```
+
+Uma forma mais simples de visualizar:
+
+```text
+┌───────────────────────────────┐
+│ Item 1 │ Item 2 │ Item 3     │
+│        │        │             │
+│        │        │             │
+│        │        │             │
+└───────────────────────────────┘
+```
+
+Os elementos ocupam a altura disponível do container.
+
+##### Importante
+
+Se você definir uma altura explícita no item:
+
+```css
+.item {
+    height: 50px;
+}
+```
+
+o comportamento de `stretch` deixa de poder esticar o item além dessa altura.
+
+##### Memorize:
+
+> `stretch` → **estica os itens no Cross Axis**.
+
+------
+
+#### 2. `flex-start`
+
+Coloca os itens **no início do Cross Axis**.
+
+```css
+.container {
+    display: flex;
+    align-items: flex-start;
+}
+```
+
+Com `row`, o Cross Axis é vertical:
+
+```text
+┌───────────────────────────────┐
+│ [1]    [2]    [3]             │
+│                               │
+│                               │
+│                               │
+└───────────────────────────────┘
+  ↑
+  início do Cross Axis
+```
+
+Os itens ficam alinhados no **topo**.
+
+Com `column`, o Cross Axis é horizontal, então eles ficam no **lado inicial**:
+
+```text
+┌───────────────────────────────┐
+│ [1]                           │
+│ [2]                           │
+│ [3]                           │
+└───────────────────────────────┘
+  ↑
+ início
+```
+
+##### Memorize:
+
+> `flex-start` → **início do Cross Axis**.
+
+------
+
+#### 3. `flex-end`
+
+Coloca os itens **no final do Cross Axis**.
+
+```css
+.container {
+    display: flex;
+    align-items: flex-end;
+}
+```
+
+Com `row`:
+
+```text
+┌───────────────────────────────┐
+│                               │
+│                               │
+│ [1]    [2]    [3]             │
+└───────────────────────────────┘
+                         ↑
+                  fim do Cross Axis
+```
+
+Os itens ficam alinhados na parte inferior.
+
+Com `column`, ficam no final horizontal:
+
+```text
+┌───────────────────────────────┐
+│                           [1] │
+│                           [2] │
+│                           [3] │
+└───────────────────────────────┘
+                            ↑
+                           fim
+```
+
+##### Memorize:
+
+> `flex-end` → **final do Cross Axis**.
+
+------
+
+#### 4. `center`
+
+Centraliza os itens no **Cross Axis**.
+
+```css
+.container {
+    display: flex;
+    align-items: center;
+}
+```
+
+Com `row`:
+
+```text
+┌───────────────────────────────┐
+│                               │
+│   [1]    [2]    [3]           │
+│                               │
+└───────────────────────────────┘
+```
+
+Os itens ficam centralizados **verticalmente**.
+
+Com `column`:
+
+```text
+┌───────────────────────────────┐
+│                               │
+│       [1]                     │
+│       [2]                     │
+│       [3]                     │
+│                               │
+└───────────────────────────────┘
+```
+
+Agora ficam centralizados **horizontalmente**.
+
+##### Memorize:
+
+> `center` → **centro do Cross Axis**.
+
+------
+
+#### 5. `baseline`
+
+O valor `baseline` alinha os elementos de acordo com a **linha de base do conteúdo**, normalmente a linha de base do texto.
+
+```css
+.container {
+    display: flex;
+    align-items: baseline;
+}
+```
+
+Isso é especialmente útil quando temos elementos com **textos de tamanhos diferentes**.
+
+Por exemplo:
+
+```text
+┌─────────────────────────────────┐
+│  Texto pequeno   TEXTO GRANDE   │
+│       ────────────────           │
+│          baseline               │
+└─────────────────────────────────┘
+```
+
+Imagine:
+
+```html
+<div class="container">
+    <span>Texto pequeno</span>
+    <h1>Título</h1>
+    <span>Outro texto</span>
+</div>
+```
+
+Com:
+
+```css
+.container {
+    display: flex;
+    align-items: baseline;
+}
+```
+
+A ideia é fazer com que a **base dos textos fique alinhada**, mesmo que eles tenham tamanhos diferentes.
+
+##### Exemplo visual
+
+Sem alinhamento pela baseline:
+
+```text
+Texto pequeno
+
+        TÍTULO
+
+                Texto
+```
+
+Com `baseline`:
+
+```text
+Texto pequeno      TÍTULO      Texto
+──────────────      ──────      ─────
+       mesma linha de base
+```
+
+É muito útil em situações como:
+
+- títulos e textos lado a lado;
+- preços com tamanhos diferentes;
+- textos e números;
+- elementos tipográficos de tamanhos diferentes.
+
+------
+
+#### Comparando os valores
+
+Imagine um container:
+
+```text
+┌──────────────────────────────────┐
+│                                  │
+│                                  │
+│                                  │
+│                                  │
+└──────────────────────────────────┘
+```
+
+Com `flex-direction: row`:
+
+##### `stretch`
+
+```text
+┌──────────────────────────────────┐
+│ [1]      [2]      [3]            │
+│                                  │
+│                                  │
+└──────────────────────────────────┘
+```
+
+Os itens são esticados verticalmente.
+
+##### `flex-start`
+
+```text
+┌──────────────────────────────────┐
+│ [1]      [2]      [3]            │
+│                                  │
+│                                  │
+└──────────────────────────────────┘
+```
+
+Itens no topo.
+
+##### `flex-end`
+
+```text
+┌──────────────────────────────────┐
+│                                  │
+│                                  │
+│ [1]      [2]      [3]            │
+└──────────────────────────────────┘
+```
+
+Itens embaixo.
+
+##### `center`
+
+```text
+┌──────────────────────────────────┐
+│                                  │
+│       [1]  [2]  [3]              │
+│                                  │
+└──────────────────────────────────┘
+```
+
+Itens no centro.
+
+##### `baseline`
+
+```text
+┌──────────────────────────────────┐
+│                                  │
+│  pequeno    GRANDE    pequeno    │
+│  ───────────────────────────     │
+│                                  │
+└──────────────────────────────────┘
+```
+
+As **linhas de base dos conteúdos** ficam alinhadas.
+
+------
+
+#### `justify-content` × `align-items`
+
+Essa comparação é fundamental:
+
+| Propriedade       | Eixo           | Função                    |
+| ----------------- | -------------- | ------------------------- |
+| `justify-content` | **Main Axis**  | Distribui/alinha os itens |
+| `align-items`     | **Cross Axis** | Alinha os itens           |
+
+Por exemplo:
+
+```css
+.container {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+}
+```
+
+Como `row` define o Main Axis horizontal:
+
+```text
+       align-items
+       ↓       ↓
+┌───────────────────────────────┐
+│                               │
+│       [1] [2] [3]             │
+│                               │
+└───────────────────────────────┘
+        ← justify-content →
+```
+
+O resultado é que os itens ficam **centralizados nos dois eixos**.
+
+##### 🧠 Para memorizar
+
+> **`justify-content` → Main Axis**
+> **`align-items` → Cross Axis**
+
+E os valores do `align-items`:
+
+```text
+stretch      → estica
+flex-start   → início
+flex-end     → final
+center       → centro
+baseline     → linha de base do conteúdo
+```
+
+Essa relação entre **Main Axis + Cross Axis + `justify-content` + `align-items`** é uma das bases mais importantes para entender Flexbox.
+
+---
+
+#### Arquivo completo - 2_alinhamento.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        h2 {
+            color: white;
+            text-align: center;
+        }
+        .container-flex {
+            height: 180px;
+            border: 4px solid red;
+            display: flex;
+            flex-direction: row;
+            /* justify-content: flex-start, flex-end, center, space-between, space-around e space-evenly*/
+            justify-content: center;
+            /* align-items: stretch, flex-start, flex-end, center, baseline */
+            align-items: flex-start;
+        }
+        .container-flex > div {
+            color: white;
+            border: 4px solid white;
+            padding: 4px;
+            margin: 4px;
+        }
+        .texto-grande {
+            font-size: 3em;
+        }
+        .coluna {
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alinhamentos</h1>
+
+    <h2>Row</h2>
+    <div class="container-flex">
+        <div>01</div>
+        <div class="texto-grande">02</div>
+        <div>03</div>
+    </div>
+
+    <h2>Column</h2>
+    <div class="container-flex coluna">
+        <div>01</div>
+        <div class="texto-grande">02</div>
+        <div>03</div>
+    </div>
+</body>
+</html>
+```
+
+
+
+---
+
+---
 
 
 
 ### 109. Alinhamentos: Align Content
 
+A propriedade `align-content` é usada para **distribuir as linhas ou colunas de um Flex Container no Cross Axis**.
+
+Ela é parecida com `align-items`, mas existe uma diferença **muito importante**:
+
+> **`align-items` alinha os itens dentro de uma linha.**
+> **`align-content` distribui as linhas/colunas do Flex Container.**
+
+Por isso, `align-content` normalmente só apresenta efeito quando:
+
+```css
+flex-wrap: wrap;
+```
+
+está sendo utilizado e existem **duas ou mais linhas/colunas**.
+
+------
+
+#### 1. Antes de entender `align-content`
+
+Imagine este container:
+
+```css
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+```
+
+Temos vários itens:
+
+```text
+┌──────────────────────────────────┐
+│ [1] [2] [3] [4]                 │
+│ [5] [6] [7] [8]                 │
+│ [9] [10]                         │
+└──────────────────────────────────┘
+```
+
+Aqui temos **três linhas de Flex Items**.
+
+O `align-content` controla **como essas linhas serão distribuídas dentro do container**.
+
+------
+
+#### 2. `align-content: flex-start`
+
+Coloca as linhas **no início do Cross Axis**.
+
+```css
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+```
+
+Resultado:
+
+```text
+┌──────────────────────────────────┐
+│ [1] [2] [3] [4]                 │
+│ [5] [6] [7] [8]                 │
+│ [9] [10]                        │
+│                                  │
+│                                  │
+└──────────────────────────────────┘
+```
+
+As linhas ficam agrupadas no início.
+
+Com `flex-direction: row`, o Cross Axis é vertical. Portanto, elas ficam no **topo**.
+
+##### Memorize:
+
+> `flex-start` → linhas no início do Cross Axis.
+
+------
+
+#### 3. `align-content: flex-end`
+
+Coloca as linhas **no final do Cross Axis**.
+
+```css
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+```
+
+Resultado:
+
+```text
+┌──────────────────────────────────┐
+│                                  │
+│                                  │
+│ [1] [2] [3] [4]                 │
+│ [5] [6] [7] [8]                 │
+│ [9] [10]                        │
+└──────────────────────────────────┘
+```
+
+Com `row`, as linhas ficam na parte inferior.
+
+##### Memorize:
+
+> `flex-end` → linhas no final do Cross Axis.
+
+------
+
+#### 4. `align-content: center`
+
+Centraliza **o conjunto de linhas** no Cross Axis.
+
+```css
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+```
+
+Resultado:
+
+```text
+┌──────────────────────────────────┐
+│                                  │
+│ [1] [2] [3] [4]                 │
+│ [5] [6] [7] [8]                 │
+│ [9] [10]                        │
+│                                  │
+└──────────────────────────────────┘
+```
+
+Observe que não estamos centralizando cada item individualmente.
+
+Estamos centralizando **as linhas como um conjunto**.
+
+Essa diferença é muito importante.
+
+------
+
+#### 5. `align-content: space-between`
+
+Distribui o espaço disponível **entre as linhas**, sem espaço nas extremidades.
+
+```css
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+```
+
+Resultado:
+
+```text
+┌──────────────────────────────────┐
+│ [1] [2] [3] [4]                 │
+│                                  │
+│                                  │
+│ [5] [6] [7] [8]                 │
+│                                  │
+│                                  │
+│ [9] [10]                        │
+└──────────────────────────────────┘
+```
+
+O espaço disponível é colocado **entre as linhas**.
+
+É semelhante ao:
+
+```css
+justify-content: space-between;
+```
+
+mas existe uma diferença:
+
+- `justify-content` → distribui os **itens** no Main Axis;
+- `align-content` → distribui as **linhas/colunas** no Cross Axis.
+
+------
+
+#### 6. `align-content: space-around`
+
+Distribui espaço **ao redor de cada linha**.
+
+```css
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+```
+
+Visualmente:
+
+```text
+┌──────────────────────────────────┐
+│                                  │
+│ [1] [2] [3] [4]                 │
+│                                  │
+│ [5] [6] [7] [8]                 │
+│                                  │
+│ [9] [10]                        │
+│                                  │
+└──────────────────────────────────┘
+```
+
+Existe espaço:
+
+- antes da primeira linha;
+- entre as linhas;
+- depois da última linha.
+
+Assim como acontece com `justify-content: space-around`, o espaço entre duas linhas acaba sendo maior que o espaço nas extremidades.
+
+------
+
+#### 7. `align-content: space-evenly`
+
+Distribui o espaço de maneira **igual entre todas as linhas e também nas extremidades**.
+
+```css
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+}
+```
+
+Resultado:
+
+```text
+┌──────────────────────────────────┐
+│                                  │
+│ [1] [2] [3] [4]                 │
+│                                  │
+│ [5] [6] [7] [8]                 │
+│                                  │
+│ [9] [10]                        │
+│                                  │
+└──────────────────────────────────┘
+```
+
+A ideia é:
+
+```text
+espaço
+   ↓
+linha 1
+   ↓
+mesmo espaço
+   ↓
+linha 2
+   ↓
+mesmo espaço
+   ↓
+linha 3
+   ↓
+mesmo espaço
+```
+
+Todos os espaços são iguais.
+
+------
+
+#### 8. `align-content` × `align-items`
+
+Essa é provavelmente a parte **mais importante** para memorizar.
+
+Imagine:
+
+```text
+┌──────────────────────────────┐
+│ [1] [2] [3]                  │ ← Linha 1
+│                              │
+│ [4] [5] [6]                  │ ← Linha 2
+│                              │
+│ [7] [8] [9]                  │ ← Linha 3
+└──────────────────────────────┘
+```
+
+##### `align-items`
+
+Controla o alinhamento dos **itens dentro de cada linha**.
+
+```text
+Linha 1 → [1] [2] [3]
+Linha 2 → [4] [5] [6]
+Linha 3 → [7] [8] [9]
+```
+
+##### `align-content`
+
+Controla a **distribuição das próprias linhas**:
+
+```text
+┌──────────────────────────────┐
+│                              │
+│ Linha 1                      │
+│                              │
+│ Linha 2                      │
+│                              │
+│ Linha 3                      │
+│                              │
+└──────────────────────────────┘
+```
+
+Uma maneira simples de memorizar:
+
+> **`align-items` → itens**
+> **`align-content` → conteúdo/linhas**
+
+------
+
+#### 9. `align-content` precisa de `flex-wrap`
+
+Normalmente você verá:
+
+```css
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+```
+
+Isso acontece porque precisamos ter **múltiplas linhas ou colunas** para que `align-content` tenha algo para distribuir.
+
+Por exemplo:
+
+```css
+flex-wrap: nowrap;
+```
+
+tem apenas uma linha:
+
+```text
+[1] [2] [3] [4] [5]
+```
+
+Nesse caso, `align-content` normalmente **não terá efeito perceptível**.
+
+Com:
+
+```css
+flex-wrap: wrap;
+```
+
+podemos ter:
+
+```text
+[1] [2] [3]
+[4] [5] [6]
+[7] [8] [9]
+```
+
+Agora existem várias linhas, e `align-content` pode distribuí-las.
+
+------
+
+#### 10. Comparação dos valores
+
+| Valor           | O que faz com as linhas        |
+| --------------- | ------------------------------ |
+| `flex-start`    | Coloca no início               |
+| `flex-end`      | Coloca no final                |
+| `center`        | Centraliza                     |
+| `space-between` | Espaço somente entre as linhas |
+| `space-around`  | Espaço ao redor das linhas     |
+| `space-evenly`  | Espaços iguais entre tudo      |
+
+------
+
+#### 11. Uma comparação visual
+
+Imagine três linhas:
+
+```text
+Linha 1
+Linha 2
+Linha 3
+```
+
+##### `flex-start`
+
+```text
+┌───────────────┐
+│ Linha 1       │
+│ Linha 2       │
+│ Linha 3       │
+│               │
+│               │
+└───────────────┘
+```
+
+##### `flex-end`
+
+```text
+┌───────────────┐
+│               │
+│               │
+│ Linha 1       │
+│ Linha 2       │
+│ Linha 3       │
+└───────────────┘
+```
+
+##### `center`
+
+```text
+┌───────────────┐
+│               │
+│ Linha 1       │
+│ Linha 2       │
+│ Linha 3       │
+│               │
+└───────────────┘
+```
+
+##### `space-between`
+
+```text
+┌───────────────┐
+│ Linha 1       │
+│               │
+│ Linha 2       │
+│               │
+│ Linha 3       │
+└───────────────┘
+```
+
+Não há espaço extra nas extremidades.
+
+##### `space-around`
+
+```text
+┌───────────────┐
+│               │
+│ Linha 1       │
+│               │
+│ Linha 2       │
+│               │
+│ Linha 3       │
+│               │
+└───────────────┘
+```
+
+Existe espaço ao redor das linhas.
+
+##### `space-evenly`
+
+```text
+┌───────────────┐
+│               │
+│ Linha 1       │
+│               │
+│ Linha 2       │
+│               │
+│ Linha 3       │
+│               │
+└───────────────┘
+```
+
+Todos os espaços são iguais.
+
+------
+
+#### 🧠 Resumo para memorizar
+
+```text
+align-content
+       ↓
+Distribui as LINHAS/COLUNAS
+       ↓
+      Cross Axis
+```
+
+Valores:
+
+```text
+flex-start    → início
+flex-end      → final
+center        → centro
+space-between → espaço entre
+space-around  → espaço ao redor
+space-evenly  → espaços iguais
+```
+
+E a diferença fundamental:
+
+```text
+┌─────────────────────────────────────┐
+│ align-items                         │
+│ → alinha os ITENS dentro das linhas│
+│                                     │
+│ align-content                       │
+│ → distribui as LINHAS do container  │
+└─────────────────────────────────────┘
+```
+
+**Regra de ouro:**
+
+> `align-items` trabalha com os **itens**.
+> `align-content` trabalha com o **conjunto de linhas/colunas**.
+
+---
+
+#### Arquivo completo - 2_alinhamento.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        h2 {
+            color: white;
+            text-align: center;
+        }
+        .container-flex {
+            width: 250px;
+            height: 400px;
+            border: 4px solid red;
+            display: flex;
+            flex-direction: row;
+            /* justify-content: flex-start, flex-end, center, space-between, space-around e space-evenly*/
+            justify-content: center;
+            /* align-items: stretch, flex-start, flex-end, center, baseline */
+            align-items: center;
+            /* align-content: flex-start, flex-end, center, space-between, space-around e space-evenly*/
+            flex-wrap: wrap;
+            align-content: space-evenly;
+        }
+        .container-flex > div {
+            font-size: 2em;
+            color: white;
+            border: 4px solid white;
+            padding: 4px;
+            margin: 4px;
+        }
+        .texto-grande {
+            font-size: 3em;
+        }
+        .coluna {
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alinhamentos</h1>
+
+    <h2>Row</h2>
+    <div class="container-flex">
+        <div>01</div>
+        <div class="texto-grande">02</div>
+        <div>03</div>
+        <div>04</div>
+        <div>05</div>
+        <div>06</div>
+        <div>07</div>
+        <div>08</div>
+        <div>09</div>
+        <div>10</div>
+    </div>
+
+    <h2>Column</h2>
+    <div class="container-flex coluna">
+        <div>01</div>
+        <div class="texto-grande">02</div>
+        <div>03</div>
+        <div>04</div>
+        <div>05</div>
+        <div>06</div>
+        <div>07</div>
+        <div>08</div>
+        <div>09</div>
+        <div>10</div>
+    </div>
+</body>
+</html>
+```
+
+
+
+---
+
+---
+
+
+
 ### 110. Align Self
 
+A propriedade `align-self` é usada para **alterar o alinhamento de um Flex Item individualmente no Cross Axis**.
+
+Essa é a principal diferença em relação ao `align-items`:
+
+> **`align-items` → controla todos os itens do container.**
+> **`align-self` → controla um item específico.**
+
+------
+
+#### 1. Entendendo a diferença
+
+Imagine este Flex Container:
+
+```css
+.container {
+    display: flex;
+    align-items: center;
+}
+```
+
+Temos:
+
+```text
+┌──────────────────────────────────┐
+│                                  │
+│  [Item 1] [Item 2] [Item 3]     │
+│                                  │
+└──────────────────────────────────┘
+```
+
+O `align-items: center` centraliza **todos os itens** no Cross Axis.
+
+Mas podemos alterar apenas um deles:
+
+```css
+.item2 {
+    align-self: flex-start;
+}
+```
+
+Agora:
+
+```text
+┌──────────────────────────────────┐
+│  [Item 2]                        │
+│                                  │
+│  [Item 1]        [Item 3]       │
+│                                  │
+└──────────────────────────────────┘
+```
+
+O `Item 1` e o `Item 3` continuam seguindo o `align-items: center`.
+
+O `Item 2` possui seu próprio alinhamento.
+
+------
+
+#### 2. `align-self: flex-start`
+
+Coloca **aquele item específico** no início do Cross Axis.
+
+```css
+.item {
+    align-self: flex-start;
+}
+```
+
+Com:
+
+```css
+flex-direction: row;
+```
+
+o Cross Axis é vertical:
+
+```text
+┌──────────────────────────────────┐
+│ [Item 2]                         │
+│                                  │
+│ [Item 1]        [Item 3]       │
+│                                  │
+└──────────────────────────────────┘
+```
+
+O `Item 2` foi para o início do Cross Axis, enquanto os outros podem continuar centralizados.
+
+##### Memorize:
+
+> `flex-start` → item no **início** do Cross Axis.
+
+------
+
+#### 3. `align-self: flex-end`
+
+Coloca o item específico no **final do Cross Axis**.
+
+```css
+.item {
+    align-self: flex-end;
+}
+```
+
+Resultado:
+
+```text
+┌──────────────────────────────────┐
+│                                  │
+│ [Item 1]        [Item 3]        │
+│                                  │
+│                  [Item 2]        │
+└──────────────────────────────────┘
+```
+
+Com `flex-direction: row`, isso significa colocar o item na parte inferior.
+
+##### Memorize:
+
+> `flex-end` → item no **final** do Cross Axis.
+
+------
+
+#### 4. `align-self: center`
+
+Centraliza o item específico no Cross Axis.
+
+```css
+.item {
+    align-self: center;
+}
+```
+
+Por exemplo:
+
+```css
+.container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.item2 {
+    align-self: center;
+}
+```
+
+Resultado:
+
+```text
+┌──────────────────────────────────┐
+│ [Item 1]                         │
+│                                  │
+│          [Item 2]                │
+│                                  │
+│ [Item 3]                         │
+└──────────────────────────────────┘
+```
+
+O `Item 1` e o `Item 3` estão no início, enquanto o `Item 2` foi individualmente centralizado.
+
+##### Memorize:
+
+> `center` → item no **centro** do Cross Axis.
+
+------
+
+#### 5. `align-self: baseline`
+
+Alinha o item individual de acordo com a **linha de base do conteúdo**.
+
+```css
+.item {
+    align-self: baseline;
+}
+```
+
+É especialmente útil quando temos elementos com textos de tamanhos diferentes.
+
+Por exemplo:
+
+```html
+<div class="container">
+    <span>Texto</span>
+    <h1>Título</h1>
+    <span>Outro texto</span>
+</div>
+```
+
+Podemos utilizar:
+
+```css
+.container {
+    display: flex;
+}
+
+.item {
+    align-self: baseline;
+}
+```
+
+A ideia é alinhar a base dos conteúdos:
+
+```text
+Texto pequeno     TÍTULO     Texto
+────────────      ──────     ─────
+          ↑
+      baseline
+```
+
+Isso pode ser útil em layouts que misturam diferentes tamanhos de texto, números ou elementos tipográficos.
+
+------
+
+#### 6. `align-self` × `align-items`
+
+Essa comparação é fundamental:
+
+##### `align-items`
+
+É definido no **Flex Container**:
+
+```css
+.container {
+    display: flex;
+    align-items: center;
+}
+```
+
+Afeta os **itens como grupo**:
+
+```text
+       ↓ todos seguem center
+
+[Item 1] [Item 2] [Item 3]
+```
+
+------
+
+##### `align-self`
+
+É definido no **Flex Item**:
+
+```css
+.item2 {
+    align-self: flex-start;
+}
+```
+
+Afeta **somente aquele item**:
+
+```text
+[Item 2]
+
+        [Item 1] [Item 3]
+```
+
+Portanto:
+
+> **`align-items` define a regra geral.**
+> **`align-self` permite criar uma exceção para um item.**
+
+------
+
+#### 7. Exemplo completo
+
+HTML:
+
+```html
+<div class="container">
+    <div class="item item1">Item 1</div>
+    <div class="item item2">Item 2</div>
+    <div class="item item3">Item 3</div>
+</div>
+```
+
+CSS:
+
+```css
+.container {
+    display: flex;
+    height: 300px;
+    align-items: center;
+}
+
+.item2 {
+    align-self: flex-start;
+}
+
+.item3 {
+    align-self: flex-end;
+}
+```
+
+Resultado aproximado:
+
+```text
+┌───────────────────────────────┐
+│          Item 2              │
+│                               │
+│  Item 1                       │
+│                               │
+│                         Item 3│
+└───────────────────────────────┘
+```
+
+Temos:
+
+```text
+Container
+│
+├── align-items: center
+│       ↓
+│   regra geral
+│
+├── Item 1 → center
+│
+├── Item 2 → flex-start
+│
+└── Item 3 → flex-end
+```
+
+------
+
+#### 8. E o `stretch`?
+
+Embora você tenha perguntado especificamente sobre `flex-start`, `flex-end`, `baseline` e `center`, é importante saber que `align-self` também aceita:
+
+```css
+align-self: stretch;
+```
+
+E também:
+
+```css
+align-self: auto;
+```
+
+`auto` é o valor padrão e, normalmente, faz o item seguir o valor definido por `align-items` no container.
+
+Por exemplo:
+
+```css
+.container {
+    align-items: center;
+}
+
+.item {
+    align-self: auto;
+}
+```
+
+O item seguirá o `align-items: center`.
+
+------
+
+#### 🧠 Resumo
+
+```text
+align-self
+     ↓
+Controla UM Flex Item
+     ↓
+     Cross Axis
+```
+
+Principais valores:
+
+| Valor        | Função                             |
+| ------------ | ---------------------------------- |
+| `flex-start` | Início do Cross Axis               |
+| `flex-end`   | Final do Cross Axis                |
+| `center`     | Centro do Cross Axis               |
+| `baseline`   | Alinha pela linha de base          |
+| `stretch`    | Estica no Cross Axis               |
+| `auto`       | Segue o `align-items` do container |
+
+#### Regra para memorizar
+
+> **`align-items` = todos os itens**
+> **`align-self` = um item específico**
+
+E lembre-se:
+
+> **`align-self` sempre trabalha no Cross Axis.**
+
+---
+
+#### Arquivo completo - 3_align-self.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align Self</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        h2 {
+            color: white;
+        }
+        .container-flex {
+            width: 250px;
+            height: 200px;
+            border: 4px solid red;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        .container-flex > div {
+            font-size: 2em;
+            color: white;
+            border: 4px solid white;
+            padding: 4px;
+            margin: 4px;
+        }
+        
+        .coluna {
+            flex-direction: column;
+        }
+
+        /* align-self: flex-start, flex-end, baseline, center */
+        .item {
+            align-self: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alinhamentos</h1>
+
+    <h2>Row</h2>
+    <div class="container-flex">
+        <div>01</div>
+        <div class="item">02</div>
+        <div>03</div>
+    </div>
+
+    <h2>Column</h2>
+    <div class="container-flex coluna">
+        <div>01</div>
+        <div class="item">02</div>
+        <div>03</div>
+        
+    </div>
+</body>
+</html>
+```
+
+
+
+---
+
+---
+
+
+
 ### 111. Flex Basis
+
+
+
+
 
 ### 112. Flex Grow115. Order
 
