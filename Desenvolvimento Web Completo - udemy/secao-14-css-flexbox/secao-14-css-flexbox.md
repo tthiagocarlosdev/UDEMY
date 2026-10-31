@@ -3319,13 +3319,543 @@ E lembre-se:
 
 ### 111. Flex Basis
 
+A propriedade `flex-basis` define o tamanho inicial de um Flex Item ao longo do Main Axis (eixo principal), antes de o Flexbox distribuir o espaço disponível ou ajustar os itens para caber no container.
+
+Em outras palavras:
+
+> `flex-basis` determina o tamanho inicial que um elemento deve ocupar no layout Flexbox.
+
+Sua sintaxe:
+
+```
+.item {
+    flex-basis: auto;
+}
+```
+
+Os valores que vamos estudar são:
+
+- `auto`
+- `0`
+- `230px`
+
+#### 1. `flex-basis: auto`
+
+O valor `auto` faz com que o Flexbox considere o tamanho definido para o elemento por meio de propriedades como `width` ou `height`, dependendo da direção do Main Axis.
+
+Se não existir um tamanho principal definido, o Flexbox normalmente utiliza o tamanho do conteúdo como referência.
+
+Exemplo:
+
+```
+.container {
+    display: flex;
+}
+
+.item {
+    width: 200px;
+    flex-basis: auto;
+}
+```
+
+Nesse caso, como estamos utilizando o `flex-direction: row`, o tamanho inicial de cada item será de 200px.
+
+Visualmente:
+
+```
+┌──────────────────────────────────────┐
+│                                      │
+│ ┌────────┐ ┌────────┐ ┌────────┐    │
+│ │ Item 1 │ │ Item 2 │ │ Item 3 │    │
+│ │ 200px  │ │ 200px  │ │ 200px  │    │
+│ └────────┘ └────────┘ └────────┘    │
+│                                      │
+└──────────────────────────────────────┘
+```
+
+Importante: `auto` não significa necessariamente que o elemento ocupará todo o espaço disponível. Ele utiliza o tamanho principal definido ou, na ausência dele, considera o conteúdo.
+
+---
+
+#### 2. `flex-basis: 0`
+
+O valor `0` determina que o tamanho inicial do item no Main Axis seja zero.
+
+```
+.container {
+    display: flex;
+}
+
+.item {
+    flex-basis: 0;
+}
+```
+
+Mas atenção: isso não significa necessariamente que o elemento ficará invisível ou terá largura zero!
+
+O Flexbox ainda poderá distribuir espaço entre os itens por meio de `flex-grow`.
+
+Por exemplo:
+
+```
+.container {
+    display: flex;
+}
+
+.item {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+```
+
+Resultado:
+
+##### Container dividido igualmente
+
+```tex
+┌──────────────────────────────────────────────────────────┐
+│       Item 1       │       Item 2       │       Item 3   │
+│         1/3        │         1/3        │         1/3    │
+└──────────────────────────────────────────────────────────┘
+```
+
+Os três itens recebem a mesma proporção do espaço disponível.
+
+Isso acontece porque:
+
+- `flex-basis: 0` → estabelece tamanho inicial zero;
+- `flex-grow: 1` → permite que cada item cresça igualmente.
+
+Esse comportamento é muito utilizado para criar colunas com larguras proporcionais.
+
+---
+
+#### 3. `flex-basis: 230px`
+
+Define um tamanho inicial de 230 pixels para o item no Main Axis.
+
+```
+.container {
+    display: flex;
+}
+
+.item {
+    flex-basis: 230px;
+}
+```
+
+Com `flex-direction: row`, cada item terá uma base inicial de 230px:
+
+##### Exemplo: flex-basis: 230px
+
+```markdown
+┌──────────────────┬──────────────────┬──────────────────┐
+│      Item 1      │      Item 2      │      Item 3      │
+│      230px       │      230px       │      230px       │
+└──────────────────┴──────────────────┴──────────────────┘
+```
+
+Representação ilustrativa, considerando que há espaço suficiente e que os itens não crescem nem encolhem.
+
+Se utilizarmos:
+
+```
+.item {
+    flex-basis: 230px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+```
+
+os itens manterão seus 230px, mesmo que o espaço disponível seja insuficiente, podendo ultrapassar o container.
+
+Atenção: `flex-basis` define um tamanho inicial, não necessariamente o tamanho final. As propriedades `flex-grow` e `flex-shrink` podem alterar esse tamanho.
+
+#### 4. Comparando os três valores
+
+| Propriedade         | Comportamento                                        |
+| ------------------- | ---------------------------------------------------- |
+| `flex-basis: auto`  | Considera o tamanho principal definido ou o conteúdo |
+| `flex-basis: 0`     | Começa com tamanho principal zero                    |
+| `flex-basis: 230px` | Começa com 230 pixels                                |
+
+Para entender melhor, imagine três elementos com:
+
+```
+.item {
+    width: 200px;
+}
+```
+
+Veja a diferença:
+
+| Configuração        | Tamanho inicial |
+| ------------------- | --------------- |
+| `flex-basis: auto`  | 200px           |
+| `flex-basis: 0`     | 0px             |
+| `flex-basis: 230px` | 230px           |
+
+Esses valores representam as bases iniciais, antes da distribuição de espaço pelo Flexbox.
+
+#### 5. Relação entre `flex-basis`, `flex-grow` e `flex-shrink`
+
+Essas três propriedades trabalham juntas.
+
+| Propriedade   | Função                   |
+| ------------- | ------------------------ |
+| `flex-basis`  | Define o tamanho inicial |
+| `flex-grow`   | Controla o crescimento   |
+| `flex-shrink` | Controla o encolhimento  |
+
+Exemplo:
+
+```
+.container {
+    display: flex;
+}
+
+.item {
+    flex-basis: 200px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+```
+
+Nesse caso:
+
+1. Cada item começa com uma base de 200px.
+2. Se existir espaço livre, `flex-grow` permite que os itens cresçam.
+3. Se faltar espaço, `flex-shrink` permite que os itens diminuam.
+
+##### Um detalhe importante
+
+O Flexbox considera também fatores como proporções de crescimento, encolhimento, tamanhos mínimos e máximos e o tamanho do conteúdo. Portanto, a distribuição final nem sempre será uma divisão simples do espaço.
+
+---
+
+#### Arquivo completo - 4_flex_basis.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex basis</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        h2 {
+            color: white;
+        }
+        .container-flex {
+            /* width: 250px; */
+            height: 200px;
+            border: 4px solid red;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .container-flex > div {
+            font-size: 2em;
+            color: white;
+            border: 4px solid white;
+            padding: 4px;
+            margin: 4px;
+        }
+        
+        .coluna {
+            flex-direction: column;
+        }
+
+        .item1 {
+            flex-basis: auto;
+        }
+
+        .item2 {
+            flex-basis: 230px;
+        }
+
+        .item3 {
+            flex-basis: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Alinhamentos</h1>
+
+    <h2>Row</h2>
+    <div class="container-flex">
+        <div class="item1">Item teste 01</div>
+        <div class="item2">Item teste 02</div>
+        <div class="item3">Item teste 03</div>
+    </div>
+
+    <h2>Column</h2>
+    <div class="container-flex coluna">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+        
+    </div>
+</body>
+</html>
+```
 
 
 
+---
 
-### 112. Flex Grow115. Order
+---
+
+
+
+### 112. Flex Grow
+
+A propriedade `flex-grow` define a capacidade de um flex item crescer para ocupar o espaço livre disponível dentro do Flex Container.
+
+Em outras palavras, ela determina quanto cada item pode crescer em relação aos outros itens.
+
+#### 1. Sintaxe
+
+```
+.item {
+    flex-grow: 1;
+}
+```
+
+O valor padrão é `0`.
+
+| Valor | Comportamento                                                |
+| ----- | ------------------------------------------------------------ |
+| `0`   | O item não cresce para ocupar o espaço livre.                |
+| `1`   | O item pode crescer e recebe uma proporção do espaço livre.  |
+| `2`   | O item recebe uma proporção duas vezes maior que um item com valor `1`. |
+| `3`   | O item recebe uma proporção três vezes maior que um item com valor `1`. |
+
+Importante: `flex-grow` não define diretamente a largura ou a altura do elemento. Ele determina a proporção de crescimento do item.
+
+#### 2. Exemplo básico: `flex-grow: 1`
+
+Imagine um container com 600px de largura e três itens com tamanho inicial de 100px cada.
+
+```
+.container {
+    display: flex;
+    width: 600px;
+}
+
+.item {
+    flex-basis: 100px;
+    flex-grow: 1;
+}
+```
+
+Como funciona?
+
+- Espaço total do container: 600px.
+- Espaço inicial ocupado: 300px.
+- Espaço livre: 300px.
+- Os três itens possuem `flex-grow: 1`.
+
+Portanto, cada item recebe 100px adicionais.
+
+Resultado:
+
+```
+┌────────────────────┬────────────────────┬────────────────────┐
+│       Item 1       │       Item 2       │       Item 3       │
+│       200px        │       200px        │       200px        │
+└────────────────────┴────────────────────┴────────────────────┘
+
+                    Total: 600px
+```
+
+#### 3. Exemplo: valores diferentes de `flex-grow`
+
+Agora imagine que cada item possui um valor diferente:
+
+```
+.item-1 {
+    flex-grow: 1;
+}
+
+.item-2 {
+    flex-grow: 2;
+}
+
+.item-3 {
+    flex-grow: 3;
+}
+```
+
+Considerando que os três itens possuem `flex-basis: 100px` e o container tem 700px de largura:
+
+- Espaço inicial ocupado: 300px.
+- Espaço livre: 400px.
+- Soma dos fatores de crescimento: 1 + 2 + 3 = 6.
+
+A distribuição será:
+
+| Item   | `flex-grow` | Espaço adicional | Tamanho final |
+| ------ | ----------- | ---------------- | ------------- |
+| Item 1 | 1           | 66,67px          | 166,67px      |
+| Item 2 | 2           | 133,33px         | 233,33px      |
+| Item 3 | 3           | 200px            | 300px         |
+| Total  | 6           | 400px            | 700px         |
+
+Representação ilustrativa:
+
+```
+┌──────────────┬──────────────────┬────────────────────────┐
+│    Item 1    │      Item 2      │        Item 3          │
+│    166,67px  │      233,33px    │        300px           │
+└──────────────┴──────────────────┴────────────────────────┘
+```
+
+Observe que o Item 3 cresce três vezes mais que o Item 1, enquanto o Item 2 cresce duas vezes mais.
+
+#### 4. Exemplo: `flex-grow: 0`
+
+Quando utilizamos `flex-grow: 0`, o item não cresce para ocupar o espaço livre.
+
+```
+.item {
+    flex-basis: 150px;
+    flex-grow: 0;
+}
+```
+
+Imagine um container de 600px com três itens de 150px.
+
+Resultado:
+
+```
+┌────────────────┬────────────────┬────────────────┐
+│     Item 1     │     Item 2     │     Item 3     │
+│     150px      │     150px      │     150px      │
+└────────────────┴────────────────┴────────────────┘
+
+                Espaço livre: 150px
+```
+
+Os itens permanecem com seus tamanhos iniciais, deixando o espaço restante livre.
+
+#### 5. Diferença entre `flex-basis` e `flex-grow`
+
+Essas duas propriedades trabalham juntas, mas possuem funções diferentes:
+
+| Propriedade  | Função                                                       |
+| ------------ | ------------------------------------------------------------ |
+| `flex-basis` | Define o tamanho inicial do item no eixo principal.          |
+| `flex-grow`  | Define a proporção em que o item cresce para ocupar o espaço livre. |
+
+Uma maneira simples de memorizar:
+
+- `flex-basis` = tamanho inicial.
+- `flex-grow` = capacidade de crescimento.
+
+#### 6. Resumo para memorizar
+
+```
+.item {
+    flex-basis: 100px;
+    flex-grow: 1;
+}
+```
+
+- `flex-basis: 100px` → começa com uma base de 100px.
+- `flex-grow: 1` → participa igualmente da distribuição do espaço livre, se os outros itens também tiverem fator 1.
+
+Atenção: o tamanho final também pode ser influenciado por `flex-shrink`, `min-width`, `max-width` e outras restrições.
+
+---
+
+#### Arquivo completo - 5_flex_grow.html
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Grow</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        h2 {
+            color: white;
+        }
+        .container-flex {
+            /* width: 250px; */
+            border: 4px solid red;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .container-flex > div {
+            font-size: 2em;
+            color: white;
+            border: 4px solid white;
+            padding: 4px;
+            margin: 4px;
+            flex-basis: 180px;
+        }
+        
+        .coluna {
+            height: 500px;
+            flex-direction: column;
+        }
+
+        .item1, .item3 {
+            flex-grow: 1;
+        }
+
+        .item2 {
+            flex-grow: 2;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <h1>Alinhamentos</h1>
+
+    <h2>Row</h2>
+    <div class="container-flex">
+        <div class="item1">Item teste 01</div>
+        <div class="item2">Item teste 02</div>
+        <div class="item3">Item teste 03</div>
+    </div>
+
+    <h2>Column</h2>
+    <div class="container-flex coluna">
+        <div class="item1">01</div>
+        <div class="item2">02</div>
+        <div class="item3">03</div>
+        
+    </div>
+</body>
+</html>
+```
+
+
+
+---
+
+---
+
+
 
 ### 113. Flex Shrink
+
+
 
 ### 114. Flex
 

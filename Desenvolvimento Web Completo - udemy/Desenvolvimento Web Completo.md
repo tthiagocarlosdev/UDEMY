@@ -312,17 +312,17 @@ _____
 
 ### 107. Alinhamentos: Justify Content
 
-### 108. Alinhamentos: Align Items   :arrow_forward: :play_or_pause_button:  
+### 108. Alinhamentos: Align Items  
 
 ### 109. Alinhamentos: Align Content  
 
-### 110. Align Self ​ :stop_sign: :pushpin:
+### 110. Align Self 
 
-### 111. Flex Basis :soon:
+### 111. Flex Basis  :arrow_forward: :play_or_pause_button:   
 
-### 112. Flex Grow115. Order
+### 112. Flex Grow  :stop_sign: :pushpin:
 
-### 113. Flex Shrink
+### 113. Flex Shrink :soon:
 
 ### 114. Flex
 
